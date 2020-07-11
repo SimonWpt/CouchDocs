@@ -1,6 +1,7 @@
 ---
 title: Core Concepts
 layout: default
+has_children: true 
 ---
 
 # Core Concepts
