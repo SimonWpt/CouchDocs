@@ -1,6 +1,7 @@
 ---
 title: Tutorials
 layout: default
+has_children: true 
 ---
 
 # Tutorials
