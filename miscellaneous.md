@@ -1,6 +1,7 @@
 ---
 title: Miscellaneous
 layout: default
+has_children: true 
 ---
 
 # Miscellaneous
