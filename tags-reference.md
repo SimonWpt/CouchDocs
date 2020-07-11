@@ -1,6 +1,7 @@
 ---
 title: Tags Reference
 layout: default
+has_children: true
 ---
 
 # Tags Reference
