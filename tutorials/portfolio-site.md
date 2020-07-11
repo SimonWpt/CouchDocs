@@ -1,6 +1,6 @@
 ---
 title: Sample Portfolio Site
-category: tutorial
+parent: tutorials
 layout: default
 ---
 
