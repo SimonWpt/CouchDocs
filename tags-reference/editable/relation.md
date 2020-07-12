@@ -1,7 +1,7 @@
 ---
 title: type = 'relation'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -29,7 +29,7 @@ Mandatory. Uniquely identifies an editable region.
 This parameter specifies the template the cloned pages of which will be listed in this region.<br/>
 This represents the 'other' end of the relationship.
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' />
 ```
 
@@ -52,19 +52,19 @@ If 'one' is specified, the listing shows only the pages that have not yet been a
 This parameter can be used to list only the page belonging to a particular folder (or folders).<br/>
 Also supports negation (where pages of the specified folder(s) will be skipped).
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' folder='classical' />
 ```
 
 The example above will list only pages belonging to 'classical' folder (and its sub-folders).
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' folder='classical, jazz' />
 ```
 
 The example above will list only pages belonging to either 'classical' or 'jazz' folders (or their sub-folders).
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' folder='NOT classical, jazz' />
 ```
 
@@ -75,7 +75,7 @@ The example above will list all pages of the template except those belonging to 
 The default value of this parameter is '1' and this causes the 'folder' parameter mentioned above to list pages belonging to the specified folder AND all sub-folders in the hierarchy below it.<br/>
 Setting 'include\_subfolders' to '0' will make this tag list only pages that are located directly within the specified folder.
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' folder='classical' include_subfolders='1' />
 ```
 
@@ -100,20 +100,3 @@ The acceptable values are
 *   asc
 
 If unspecified, 'desc' is used as the default.
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)

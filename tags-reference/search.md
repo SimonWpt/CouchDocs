@@ -1,6 +1,6 @@
 ---
 title: search
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -22,19 +22,19 @@ This parameter can set to the terms to be searched. If skipped, the **search** t
 
 Normally pages of all available templates will be searched for the specified terms. You can set this parameter to limit he search to only some of the templates or to exclude certain templates from the search.
 
-```
+```html
 <cms:search masterpage='news.php' >..</cms:search>
 ```
 
 This example would search only pages of news.php.
 
-```
+```html
 <cms:search masterpage='news.php, blog.php' >..</cms:search>
 ```
 
 This example would search only pages of news.php and blog.php.
 
-```
+```html
 <cms:search masterpage='NOT news.php' >..</cms:search>
 ```
 

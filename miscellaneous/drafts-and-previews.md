@@ -1,6 +1,6 @@
 ---
 title: Drafts and Previews
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 

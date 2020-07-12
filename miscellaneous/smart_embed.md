@@ -1,6 +1,6 @@
 ---
 title: Smart embed - an alternative method of structuring sites
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 
@@ -10,7 +10,7 @@ If you have been using Couch for anytime now, you are no doubt familiar with the
 
 A typical (skeletal) code handling the views in a template could go something like this
 
-```
+```html
 <cms:if k_is_page >
     <!-- Page view - display current page here -->
 <cms:else />
@@ -20,7 +20,7 @@ A typical (skeletal) code handling the views in a template could go something li
 
 or
 
-```
+```html
 <cms:if k_is_page >
     <!-- Page view - display current page here -->
 <cms:else />
@@ -43,7 +43,7 @@ In the above approach, a prudent way of coding up the various views is to create
 
 So, for example, if we had snippets named 'page\_view.html', 'folder\_view.html' etc. for the respective views, the snippet given above would now become
 
-```
+```html
 <cms:if k_is_page >
     <!-- Page view - display current page here -->
     <cms:embed 'page_view.html' />
@@ -55,7 +55,7 @@ So, for example, if we had snippets named 'page\_view.html', 'folder\_view.html'
 
 or
 
-```
+```html
 <cms:if k_is_page >
     <!-- Page view - display current page here -->
     <cms:embed 'page_view.html' />
@@ -82,7 +82,7 @@ Since all the embedded snippets are kept at a single location, if there was anot
 
 The 'smart\_embed' tag makes it easier for us to implement the outlined approach by making it possible to replace the snippets above with this single line of code -
 
-```
+```html
 <cms:smart_embed />
 ```
 
@@ -185,7 +185,7 @@ By 'chunking' I mean the ubiqutous practice of breaking up templates into re-usa
 The 'smart\_embed' tag accepts a second (optional) parameter using which we can specify the folder where the tags searches for the matching snippets.<br/>
 For example, in the following code
 
-```
+```html
 <cms:smart_embed 'header' />
 ```
 
@@ -194,7 +194,7 @@ the 'smart\_embed' searches for the suitable snippet within a sub-folder named '
 We can use this feature to organize our chunks within the snippets folder. For example this could be one way of doing so -<br/>
 snippets (folder)
 
-```
+```html
 |_header  (folder)
   |_default.html (file)
 |_menu    (folder)
@@ -211,7 +211,7 @@ The chunks we had (header.html, menu.html and footer.html) are all named 'defaul
 Now to test out the flexibility of this feature, use a couple of templates from your site - let us begin with index.php.<br/>
 Place the following code within it -
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template>
     <!-- Editable regions unique to this template can be defined here -->
@@ -237,7 +237,7 @@ within the specified folders and output the one it found.
 
 Let us take one other template - 'about.php'. Place the following within it -
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template>
     <!-- Editable regions unique to this template can be defined here -->
@@ -278,7 +278,7 @@ However, it differs in only a very minor way - say, it only adds a few HTML tags
 We know that we can place a snippet named 'about-default.html' within the 'header' folder and this snippet will be automatically picked up for about.php.<br/>
 We create this snippet but instead of putting in the entire header code (which will duplicate the one used in 'default.html' snippet) we can do the following -
 
-```
+```html
 <cms:embed 'header/default.html' />
 <script type="text/javascript" src="<cms:show k_site_link />js/jquery-1.7.1.min.js"></script>
 ```
@@ -292,13 +292,13 @@ An easy way to find this out is by using the 'debug' parameter of 'smart\_embed'
 
 As an example, the following statement
 
-```
+```html
 <cms:smart_embed debug='1' />
 ```
 
 will output the following for a template named 'movies.php' accessed in home-view
 
-```
+```html
 Looking for files in folder snippets:
 
     * movies-home

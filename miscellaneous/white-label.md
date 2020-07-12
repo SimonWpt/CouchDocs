@@ -1,6 +1,6 @@
 ---
 title: Rebranding (White-Label)
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 
@@ -12,14 +12,14 @@ Once you have received our email confirming your purchase, there are two places 
 
 **1\.** In **couch/config.php**, scroll down and find the following line. Change the **0** to **1**.
 
-```
+```html
 define( 'K_PAID_LICENSE', 0 );
 ```
 
 Immediately below the above setting you'll find the following lines.<br/>
 Uncomment the ones containing 'define' (i.e. remove the '//' prefixed to 'define') and add your own info -
 
-```
+```html
 // Rebranding. Uncomment the following defines and add your info.
 
 // 99a. Company Logo on light background  (Max. 171 x 64 pixels. Needs to be placed within 'couch/theme/images/' folder)
@@ -34,7 +34,7 @@ Uncomment the ones containing 'define' (i.e. remove the '//' prefixed to 'define
 
 **2\.** In the **language file** being used by your site (default being **EN.php**) found in the 'couch/lang' folder, find the following lines and modify them to suit your needs. This will change the title of the admin-panel and login box.
 
-```
+```html
 // Addendum to Version 1.1 /////////////////////////////////////
 // Admin Panel
 $t['admin_panel'] = 'Admin Panel';

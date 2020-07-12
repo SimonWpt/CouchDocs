@@ -1,6 +1,6 @@
 ---
 title: Events Calendar
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -21,7 +21,7 @@ These three tags are slightly different from all the other Couch tags we have se
 
 The following example will make the relationship clear where we are displaying a calendar for the current month -
 
-```
+```html
 <cms:calendar >
     <table class="calendar_small">
         <cms:weeks>
@@ -73,7 +73,7 @@ We can use these variables to format the display of the calendar more finely.
 
 Let us start by adding a few headers
 
-```
+```html
 <cms:calendar >
     <table class="calendar_small">
         <tr>
@@ -103,7 +103,7 @@ The result of the changes -
 Next we'll format the table cells to indicate whether the day represented by a cell lies in the past, present or future.<br/>
 The modified code of our calendar -
 
-```
+```html
 <cms:calendar >
     <table class="calendar_small">
         <tr>
@@ -143,7 +143,7 @@ Notice how for days that belong to previous and next months we set up a class na
 The calendar generated is for the current date. To generate one for any arbitrary date, use the calendar tag's _date_ parameter.<br/>
 For example, the following addition to our code will display the calendar for month of September, 2010 -
 
-```
+```html
 <cms:calendar date='2010-09-01' >
     ...
 </cms:calendar>
@@ -156,7 +156,7 @@ Once a template gets associated with a calendar, the days tag starts supporting 
 The entries tag, when used within the days tag, will iterate through all cloned pages of the template that were published on the day being iterated through.<br/>
 The days tag also sets a variable named *k\_count\_entries* to indicate the number of entries (i.e. cloned pages) present for each day.
 
-```
+```html
 <cms:calendar date='2010-09-01' masterpage='events.php'>
     <table class="calendar_small">
         <tr>
@@ -204,7 +204,7 @@ Notice how we are displaying the dates that have cloned pages in a different col
 
 If we wish, we can display the names and links of pages right within the table cell they fall in by creating a bigger table.
 
-```
+```html
 <cms:calendar date='2010-09-01' masterpage='events.php'>
     <table class="calendar_big">
         <tr>
@@ -264,7 +264,7 @@ The date of the calendar shown is still hard-coded. As final modification, let u
 
 Following is a real-world template that uses the concepts discussed above to build a working events calendar. You can use it as the starting point for your events calendar -
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template title='Events' clonable='1'>
     <cms:editable name='desc' label='Description' type='textarea' />

@@ -1,7 +1,7 @@
 ---
 title: type = 'thumbnail'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -17,13 +17,13 @@ Once the thumbnail has been created, this editable region then holds its fully q
 
 Suppose we have an editable region, named *my\_image*, of type _image_ -
 
-```
+```html
 <cms:editable name='my_image' label='Image' desc='Upload main image here' type="image" />
 ```
 
 To create a thumbnail automatically for any image that gets selected into it, we can define a new editable region of type _thumbnail_ and associate it with the region above by using the *assoc\_field* parameter -
 
-```
+```html
 <cms:editable
     name='my_image_thumb'
     label='Image Thumbnail'
@@ -49,7 +49,7 @@ Anytime the user changes the main image (and saves the changes), the thumbnail a
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <img src="<cms:show my_image_thumb />" />
 ```
 
@@ -74,7 +74,7 @@ If neither _width_ nor _height_ are specified, the resulting thumbnail is of exa
 
 Specifying a single dimension only will create a thumbnail with that dimension of the specified value and the other dimension of a value that retains the original proportion of the image. e.g.
 
-```
+```html
 <cms:editable name='my_image_thumb' label='Image Thumbnail' desc='Thumbnail of main image'
     width='100'
     show_preview='1'
@@ -88,7 +88,7 @@ Specifying a single dimension only will create a thumbnail with that dimension o
 
 Specifying both the dimensions will create a thumbnail with each dimension of the specified values. The original proportion between the dimensions is preserved and hence this could lead to cropping off of any dimension that overshoots the specified value in the attempt to retain proportion. e.g.
 
-```
+```html
 <cms:editable name='my_image_thumb' label='Image Thumbnail' desc='Thumbnail of main image'
     width='100'
     height='80'
@@ -115,7 +115,7 @@ Setting this parameter will cause Couch to simply scale (instead of cropping as 
 
 ### quality
 
-```
+```html
 <cms:editable name='my_image_thumb' label='Image Thumbnail' desc='Thumbnail of main image'
     width='100'
     show_preview='1'
@@ -128,7 +128,7 @@ You can set _quality_ from 0 (worst quality, smaller file) to 100 (best quality,
 
 ### show_preview
 
-```
+```html
 <cms:editable name='my_image_thumb' label='Image Thumbnail' desc='Thumbnail of main image'
     width='100'
     show_preview='1'
@@ -146,7 +146,7 @@ Setting show\_preview to '1' makes Couch display a preview of the created thumbn
 
 As noted above, setting *show\_preview* to '1' causes a preview of the thumbnail to appear. The dimensions of this preview can be set by using *preview\_width* and *preview\_height* (needless to say, these two parameters take effect only with *show\_preview* set to '1').
 
-```
+```html
 <cms:editable name='my_image_thumb' label='Image Thumbnail' desc='Thumbnail of main image'
     width='100'
     show_preview='1'
@@ -156,20 +156,3 @@ As noted above, setting *show\_preview* to '1' causes a preview of the thumbnail
 ```
 
 <p class="success">If both *preview\_width* and *preview\_height* are omitted, the thumbnail preview is of exactly the same dimensions as the thumbnail. Usually this is what you'd want and you won't find yourself setting *preview\_width* or *preview\_height* too often.</p>
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

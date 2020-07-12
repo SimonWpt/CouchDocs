@@ -1,6 +1,7 @@
 ---
 title: Sample Portfolio Site
-parent: tutorials
+parent: Tutorials
+has_children: true
 layout: default
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: delete_cookie
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **delete\_cookie** tag can be used to delete any cookie created using the **set\_cookie** tag.
 
-```
+```html
 <cms:delete_cookie 'my_test_cookie' />
 ```
 

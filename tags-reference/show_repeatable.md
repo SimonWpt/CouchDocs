@@ -1,6 +1,6 @@
 ---
 title: show_repeatable
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -17,7 +17,7 @@ Please see [**Core Concepts - Repeatable Regions**](../../concepts/repeatable-re
 
 Default parameter (usually left unnamed). The name of the [**repeatable**](../repeatable.html) tag defining the repeatable regions.
 
-```
+```html
 <cms:show_repeatable 'my_multiple_images' >
    <b>Image: <img src="<cms:show my_image />" /> <br/>
    <b>Desc:</b> <cms:show my_desc />

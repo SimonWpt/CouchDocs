@@ -1,6 +1,6 @@
 ---
 title: Users
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -94,7 +94,7 @@ As can be seen, the higher the number, the more powerful an account is deemed to
 
 All the pages cloned from a particular template can be configured to be accessible by only users of a certain level by simply setting the *access\_level* parameter of the [__*template*__](../../tags-reference/template.html) tag to the minimum level required. Thus -
 
-```
+```html
 <cms:template title='News' clonable='1' access_level='2'>
     <!-- Editable regions and Folders are usually defined here -->
 </cms:template>
@@ -117,7 +117,7 @@ Access to any individual page can be controlled by selecting the minimum access 
 
 The most fine-grained access control can be achieved by restricting access to certain parts of a page - e.g. text or links to files that are to be made available to only registered users.
 
-```
+```html
 <cms:if k_user_access_level ge '4' >
     <h1>If you can see this you must atleast be an Authenticated User (Special)</h1>
 <cms:else />

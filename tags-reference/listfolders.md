@@ -1,6 +1,6 @@
 ---
 title: listfolders
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **listfolders** tag can be used to create a quick-n-dirty HTML unordered list of the folders belonging to a template.
 
-```
+```html
 <cms:listfolders masterpage='news.php' />
 ```
 

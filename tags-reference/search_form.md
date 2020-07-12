@@ -1,6 +1,6 @@
 ---
 title: search_form
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,11 +10,11 @@ The **search\_form** is a simple tag that creates a form that could be used with
 
 Examples -
 
-```
+```html
 <cms:search_form />
 ```
 
-```
+```html
 <cms:search_form msg='Search' processor="<cms:show k_site_link/>search.php" />
 ```
 

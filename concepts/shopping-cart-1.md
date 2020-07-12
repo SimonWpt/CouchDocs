@@ -1,6 +1,6 @@
 ---
 title: Shopping Cart (Part I)
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -45,7 +45,7 @@ So to use it, the first thing that we need to do is enable it. This is how we do
 In 'couch/addons' folder of your Couch installation, you'll find a file named 'kfunctions.php'.<br/>
 Open it up in your favorite text editor and find the following lines
 
-```
+```html
 //require_once( K_COUCH_DIR.'addons/cart/cart.php' ); // automatically includes session
 ```
 
@@ -57,7 +57,7 @@ More often than not, your design will already have these two templates (at least
 
 In CouchCart's configuration file ('addons/cart/config.php') you'll find the following lines where the names of the two templates are specified:
 
-```
+```html
 $pp['tpl_cart'] = 'cart.php';
 $pp['tpl_checkout'] = 'checkout.php';
 ```
@@ -117,21 +117,21 @@ You'll remember we discussed an editable region named '*pp\_options*' above. The
 The variants are defined using a special syntax.<br/>
 For example, to define an option named 'Color' having three option-values named 'Red', 'Black' and 'Green', the following text needs to be inputted:
 
-```
+```html
 Color[Red | Black | Green]
 ```
 
 If the product has another option, e.g. 'Size' with option-values of 'Large', 'Medium' and 'Small', this could be added on a separate line.<br/>
 The input will now become:
 
-```
+```html
 Color[Red | Black | Green]
 Size[Large | Medium | Small]
 ```
 
 If any of the option-values modify the base price of the product, the difference in price (negative or positive) can be added to the string this way:
 
-```
+```html
 Color[Red | Black=+3 | Green=-2]
 Size[Large | Medium | Small]
 ```
@@ -144,7 +144,7 @@ By default, CouchCart will render the option-values of these variants on the fro
 
 To display them as radio-buttons, simply add an **asterisk ('\*')** at the end of the string e.g. the following modification will make the option-values of 'Size' get displayed as a set of radio-buttons.
 
-```
+```html
 Color[Red | Black=+3 | Green=-2]
 Size[Large | Medium | Small]*
 ```
@@ -155,7 +155,7 @@ Each radio-button, by default, will be shown on a separate line.
 
 To make all the radio-buttons appear on the same line, simply **use two '\*'** e.g.
 
-```
+```html
 Color[Red | Black=+3 | Green=-2]
 Size[Large | Medium | Small]**
 ```
@@ -165,7 +165,7 @@ Size[Large | Medium | Small]**
 An option that is shown as a text-box (e.g. for allowing buyers to specify the text printed on mugs or T-Shirts) is a little different, from the other two we've seen, in that it does not consist of a pre-defined set of option-values. Any text that is entered into it by the buyer becomes an option-value in itself.<br/>
 The syntax used to define a text-box is also slightly different. So, for example, if the name of the option is 'Your Message', the following text can be used to define it:
 
-```
+```html
 Your Message[*TEXT*]
 ```
 
@@ -174,7 +174,7 @@ Your Message[*TEXT*]
 Please note that instead of a series of option-values that we used in the other variant types, we use only a single one which is always named **'\*TEXT\*'**.<br/>
 Of course, if for specifying a custom text the buyer has to pay a higher (or even a lower) price, the difference can be specified just as we did with the other variants. The following. for example. will add 5 to the base-price of the product:
 
-```
+```html
 Your Message[*TEXT*=5]
 ```
 
@@ -194,7 +194,7 @@ I'm sure you can easily add those on your own but just to speed up things, this 
 
 #### Raised Relief World Globe:
 
-```
+```html
 Illuminated[No | Yes=5]
 Stand Type[Tabletop | Floor=15]
 Stand Material[Plastic | Brass=10 | Wood=25]
@@ -202,14 +202,14 @@ Stand Material[Plastic | Brass=10 | Wood=25]
 
 #### Paper Airplane:
 
-```
+```html
 Color[Red | Green | Blue]
 Custom Text[*TEXT*]
 ```
 
 #### 500 Steel Paper Clips:
 
-```
+```html
 Size[Large | Medium | Small]*
 ```
 
@@ -241,7 +241,7 @@ If, however, you need absolute control over every byte of the markup being gener
 
 As an example, the following snippet of code outputs exactly the same HTML as that by the self-closing version of __*pp\_option\_values*__:
 
-```
+```html
 <div class="product-options">
    <cms:pp_product_options >
       <cms:if option_type='list'>
@@ -310,7 +310,7 @@ This seems to be a universal way of adding items to cart. The form submission po
 CouchCart simplifies this task for you by providing a handy tag named __*pp\_product\_form*__ that takes care of all the nitty-gritty.<br/>
 Simply replace the original **form** element (both the opening as well as the closing tag)
 
-```
+```html
 <form class="cart-form" action="cart.html" method="post" accept-charset="utf-8">
     <div class="product-top-box">
 
@@ -322,7 +322,7 @@ Simply replace the original **form** element (both the opening as well as the cl
 
 with __*pp\_product\_form*__ to make it
 
-```
+```html
 <cms:pp_product_form class="cart-form">
     <div class="product-top-box">
 
@@ -341,13 +341,13 @@ The data that the form posts back to the server, of other things, also includes 
 
 In the original markup, the following statement defines the textbox used to enter the quantity:
 
-```
+```html
 <input class="product-quantity" name="quantity" id="quantity" type="number" step="1" value="1" title="Quantity">
 ```
 
 As you can see, the 'name' of this field is "quantity". Simply modify it to make it "qty"
 
-```
+```html
 <input class="product-quantity" name="qty" id="quantity" type="number" step="1" value="1" title="Quantity">
 ```
 
@@ -375,7 +375,7 @@ Convert cart.html to a Couch managed template by following the usual drill of ch
 
 One additional bit of code that I've added to the very beginning of the template is this:
 
-```
+```html
 <cms:no_cache />
 ```
 
@@ -395,7 +395,7 @@ Enclose this solitary row within the __*pp\_cart\_items*__ tag pair and then sub
 
 Following is the original HTML showing a single row of the cart:
 
-```
+```html
 <tr>
     <td class="col-remove"><a href="cart.html?action=remove" class="cart-remove" title="Remove">&times;<span class="screen-reader">Remove</span></a></td>
     <td class="col-desc">
@@ -415,7 +415,7 @@ Following is the original HTML showing a single row of the cart:
 
 And following is the Couchified version:
 
-```
+```html
 <cms:pp_cart_items>
     <tr>
         <td class="col-remove"><a href="<cms:pp_remove_item_link />" class="cart-remove" title="Remove">&times;<span class="screen-reader">Remove</span></a></td>
@@ -460,14 +460,14 @@ Like its counterpart tag __*pp\_product\_options*__ that we discussed before, th
 
 **1. As a self-closing tag.** When used this way, it simply outputs a single line containing all the selected options separated by commas. You can specify any another separator by using its 'separator' parameter (as we do in the snippet above where we use &lt;BR&gt;). e.g.
 
-```
+```html
 <cms:pp_selected_options separator='<br>' />
 ```
 
 **2\. As a tag-pair.** When used this way, the tag simply iterates through all the selected options and makes data about them available as variables.<br/>
 We can now output the options in any desired manner, for example as follows -
 
-```
+```html
 <cms:pp_selected_options startcount='1'>
     <b><cms:show k_count />. <cms:show option_name /></b>: <cms:show option_value /><br />
 </cms:pp_selected_options>
@@ -487,7 +487,7 @@ If you take a look at the editable regions we defined for our products (in templ
 
 The '*pp\_*' prefixed to its name will make its value available as a variable named '**product\_thumb**'. This is how we are using it in the snippet shown:
 
-```
+```html
 <img src="<cms:show product_thumb />" width="70" height="64" alt="<cms:show title />">
 ```
 
@@ -500,7 +500,7 @@ Time to move on to the next core action of the cart.
 The implementation of this action is quite similar to the 'Add item to cart' action we've already seen.<br/>
 Take a look at the original HTML and you'll find that the table representing the cart is wrapped in a FORM element
 
-```
+```html
 <form action="" method="post" accept-charset="utf-8">
     <table>
 
@@ -511,14 +511,14 @@ Take a look at the original HTML and you'll find that the table representing the
 
 Note that each row in this table (representing each item in the cart) has a textbox input for entering the quantity
 
-```
+```html
 <td class="col-quantity"><input class="quantity-input" type="number" step="1" value="2"></td>
 ```
 
 It takes the **same two steps** as that required when we implemented the 'Add item' action, to quickly put the update function in place.<br/>
 **1\.** Replace the FORM tag with 'pp\_cart\_form' (another tag that CouchCart provides) to make it
 
-```
+```html
 <cms:pp_cart_form>
     <table>
 
@@ -530,7 +530,7 @@ It takes the **same two steps** as that required when we implemented the 'Add it
 **2\.** Set the 'name' of the input element to 'qty'. Since in this FORM, there can be multiple items and hence multiple quantity input boxes, we make the name an array. So the name we give to the input element is **qty\[&lt;cms:show line\_id /&gt;\]** (where '*line\_id*' is a unique ID allocated to each item in the cart by CouchCart).<br/>
 The line-item now becomes this after the modification
 
-```
+```html
 <td class="col-quantity"><input name="qty[<cms:show line_id />]" class="quantity-input" type="number" step="1" value="<cms:show quantity />" ></td>
 ```
 
@@ -545,13 +545,13 @@ It does not depend on the FORM element to work. Instead it is a simple link - a 
 To make things even easier, CouchCart provides a tag to output this link.<br/>
 This is the original HTML markup
 
-```
+```html
 <td class="col-remove"><a href="cart.html?action=remove" class="cart-remove" title="Remove">&times;<span class="screen-reader">Remove</span></a></td>
 ```
 
 Modify it to make it:
 
-```
+```html
 <td class="col-remove"><a href="<cms:pp_remove_item_link />" class="cart-remove" title="Remove">&times;<span class="screen-reader">Remove</span></a></td>
 ```
 
@@ -622,7 +622,7 @@ Shows the link of the cart template (taking prettyURLs into consideration).
 So armed with these 'global' tags now, we can complete the remaining bits of the cart template.<br/>
 First let us output the cart table only when there are any items in it -
 
-```
+```html
 <cms:if "<cms:pp_count_items />" >
     <div class="row">
         <div class="twelve columns">
@@ -641,13 +641,13 @@ First let us output the cart table only when there are any items in it -
 Next let us make the total always show the current value -<br/>
 Change the following
 
-```
+```html
 <td class="col-total">$230.00</td>
 ```
 
 to
 
-```
+```html
 <td class="col-total">$<cms:number_format "<cms:pp_total />" /></td>
 ```
 
@@ -655,7 +655,7 @@ Notice that we have nested the __*pp\_total*__ tag within the __*number\_format*
 
 Same thing needs to be done with the other price components of the cart, namely, _Subtotal_, _Discount_, _Shipping_ and _Taxes_.
 
-```
+```html
 <cms:if "<cms:pp_discount />" || "<cms:pp_shipping />" || "<cms:pp_taxes />" >
     <tr class="row-extras">
         <td class="col-extras-label" colspan="4">Subtotal</td>
@@ -697,13 +697,13 @@ Finally, the top navigation bar portion of cart.php (and also index.php) shows t
 
 ![](../../assets/img/contents/shopping-cart-15.png)
 
-```
+```html
 <a href="cart.html" class="nav cart"><span class="quantity">3</span> item(s) - $<span class="price">250.00</span></a>
 ```
 
 Replace the hard-coded values with the global tags -
 
-```
+```html
 <a href="<cms:pp_cart_link />" class="nav cart"><span class="quantity"><cms:pp_count_items /></span> item(s) - $<span class="price"><cms:number_format "<cms:pp_total />" /></span></a>
 ```
 
@@ -723,13 +723,13 @@ Use whichever of the two methods suits more the design you are working on.<br/>
 For the one we are porting in this example, it seems more convenient to use the 'submit' method.<br/>
 This is how the checkout button appears originally -
 
-```
+```html
 <input class="button checkout-button" type="submit" value="Begin Checkout">
 ```
 
 The only change required is to add to it a 'name' attribute with the value set to 'checkout'. It now becomes -
 
-```
+```html
 <input class="button checkout-button" type="submit" name="checkout" value="Checkout">
 ```
 
@@ -741,7 +741,7 @@ As it happens, the design we are porting has no checkout template. That is OK. W
 Create a new text file named 'checkout.php'. For now, we can do with a very bare-bone template so we'll put in it just the essential code required to register it with Couch.<br/>
 This is what our template looks like
 
-```
+```html
 <?php require_once 'couch/cms.php'; ?>
     <cms:no_cache />
 <?php COUCH::invoke(); ?>
@@ -750,7 +750,7 @@ This is what our template looks like
 The only additional bit of code is the __*no\_cache*__ tag to make sure Couch never caches the output of this template.<br/>
 Add this one final tag to the template and it is ready to execute the checkout action
 
-```
+```html
 <?php require_once 'couch/cms.php'; ?>
     <cms:no_cache />
     <cms:pp_payment_gateway
@@ -793,7 +793,7 @@ As for the 'shipping\_address' parameter, if there are any shippable items in th
 Try clicking the checkout button to test if the cart's current data gets transmitted to PayPal as expected.<br/>
 One little modification that we can do to our checkout.php template is to first make sure that the cart in not empty before invoking the __*pp\_payment\_gateway*__ tag. The _**if**_ tag coupled with __*pp\_count\_items*__ tag will see to this -
 
-```
+```html
 <?php require_once 'couch/cms.php'; ?>
     <cms:no_cache />
 
@@ -833,7 +833,7 @@ With the principle understood, any JS library can be used to create the AJAXifie
 
 **1\.** The first thing we do is add the 'cart-modal.js' script to the 'index.php' template (which is where we'll be showing the pop-up on).
 
-```
+```html
 <script type="text/javascript">
     // Set global values for 'js/cart-modal.js' that follows
     var cart_link = "<cms:link "<cms:pp_config 'tpl_ajax_cart' />" />";
@@ -848,17 +848,17 @@ These global variables are the URLs of the checkout template and a template (we'
 **2\.** As we've seen, both the 'Add' as well as the 'Update' actions make use of HTML forms. The 'Remove' action, on the other hand, is link based. The 'Checkout' action may be form based or may be a link.<br/>
 The code in 'cart-modal.js' 'hooks' into the 'submit' event of the two above-mentioned forms and the 'click' events of the two links
 
-```
+```html
 // Handle 'Add Item' & 'Update Cart' form submissions
 $(document).on('submit', '.cart-form', function(event) {
 ```
 
-```
+```html
 // Handle 'Remove Item' link
 $(document).on('click', '.cart-remove', function(e) {
 ```
 
-```
+```html
 // Handle 'Checkout' link
 $(document).on('click', '.checkout-button', function(e) {
 ```
@@ -867,7 +867,7 @@ By doing so, whenever these core actions are invoked on the cart, the JS functio
 
 These functions, simply execute the same actions as were originally intended (i.e. the forms get submitted to the original locations and the links invoke the same URLs). However (and this is the crux of using JavaScript), they do so using AJAX and so the actions take place in the background and index.php does not refresh.
 
-```
+```html
 // Execute action by submitting form
 $.ajax({
     type: 'post',
@@ -888,7 +888,7 @@ $.get($(this).attr("href"), function() {
 This time to a template named 'cart-modal.php' (we set this name as a global variable in the first step above).<br/>
 The cart-modal.php is a simple Couch managed template that makes use of CouchCart's tags to generate and return the HTML showing the current state of the cart. This HTML gets displayed in the pop-up window.
 
-```
+```html
 // Fetch updated cart
 $.get(url, function(response) {
     // Update modal window

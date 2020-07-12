@@ -1,6 +1,6 @@
 ---
 title: repeat
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **repeat** tag can be used to unconditionaly repeat all contents contained within its opening and closing tags the number of times specified by its _count_ parameter. This can be used to create HTML tables etc.
 
-```
+```html
 <TABLE>
 <cms:repeat count='4' >
     <TR>

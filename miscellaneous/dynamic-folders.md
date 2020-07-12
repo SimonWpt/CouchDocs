@@ -1,6 +1,6 @@
 ---
 title: Dynamic Folders
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 Uptil now the only way of creating virtual folders for templates in Couch had been by using the 'folder' tag e.g. -
 
-```
+```html
 <cms:folder name="asia" title="Asian News">
     <cms:folder name="china" title="China News" />
     <cms:folder name="japan" title="Japan News" />
@@ -24,7 +24,7 @@ By default the dynamic folders feature is turned off for all templates.<br/>
 To turn on this capability for a particular template, the designer needs to add the 'dynamic\_folders' attribute to the 'template' tag of this template.<br/>
 For example -
 
-```
+```html
 <cms:template clonable='1' title='Blog' dynamic_folders='1'>
 ```
 
@@ -49,7 +49,7 @@ So effectively, we'll have only one method of handling folders.
 **VERY IMPORTANT:** Take care NOT to turn off dynamic folders after once activating them. This is why -<br/>
 Suppose this was the folder hierarchy imposed upon the template by using the 'folder' tags before activating dynamic folders
 
-```
+```html
 <cms:folder name="asia" title="Asian News">
     <cms:folder name="china" title="China News" />
     <cms:folder name="japan" title="Japan News" />

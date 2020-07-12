@@ -1,6 +1,6 @@
 ---
 title: embed
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ e.g. most of the templates share the same header code. This can be cut and paste
 
 The following code then can be placed where the original code was -
 
-```
+```html
 <cms:embed 'header.inc' />
 ```
 
@@ -32,7 +32,7 @@ The advantage of using embedding is that if the code snippet is used in several 
 
 To illustrate the concept of embedding we use an ultra-trivial example here. In real life scenarios, the embedded snippets may be of any complexity. Suppose we have this piece of code somewhere in a template
 
-```
+```html
 <div class="right">
     <b class="title"><cms:show 'Hello World' /></b>
 </div>
@@ -40,7 +40,7 @@ To illustrate the concept of embedding we use an ultra-trivial example here. In 
 
 This does nothing except display 'Hello world'. We now cut and paste the bold part into a file named, say, 'greeting.inc' and save the file into 'couch/snippets' folder. The above code is modified thus -
 
-```
+```html
 <div class="right">
     <cms:embed 'greeting.inc' />
 </div>
@@ -50,7 +50,7 @@ and upon executing the page we get the same output as before.
 
 Embedded snippets can themselves contain other embedded snippets. Thus to stretch our, already contrived, example a little further, open the 'greeting.inc' file, remove the 'Hello world' part and save it into a separate file named 'message.inc'. Embed the new file within 'greeting.inc' thus -
 
-```
+```html
 <b class="title"><cms:show "<cms:embed 'message.inc' />" /></b>
 ```
 
@@ -63,7 +63,7 @@ Notice the use of double quotes. Executing the template results in the same outp
 Instead of using a physical file, **Embed** tag can be passed code directly to include  (see parameters section below).<br/>
 For example, in the template code mentioned above, we can use
 
-```
+```html
 <div class="right">
     <cms:set my_var="<b class='title'><cms:show 'Hello world' /></b>" />
     <cms:embed code=my_var />
@@ -81,20 +81,20 @@ Clearly we can now store snippets or even complete templates as editable regions
 
 If the first parameter is unnamed (i.e. only the value is passed) or it is anything other than 'code', it is considered to be a path to an embedded file. The path is always relative to the 'couch/snippets' folder. e.g.
 
-```
+```html
 <cms:embed 'message.inc' />
 ```
 
 However if the parameter is named 'code', the value is considered to be a valid code snippet and is executed thus.<br/>
 For example -
 
-```
+```html
 <cms:embed code="<b class='title'><cms:show 'Hello world' /></b>" />
 ```
 
 or
 
-```
+```html
 <cms:set my_var="<b class='title'><cms:show 'Hello world' /></b>" />
 <cms:embed code=my_var />
 ```

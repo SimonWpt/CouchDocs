@@ -1,6 +1,6 @@
 ---
 title: Nested Pages (AKA Menu Maker)
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -60,13 +60,13 @@ you'll notice that had this URL been of a regular cloned template (i.e. non-nest
 As mentioned above, a nested-page is just a variation of the regular cloned page. We create a nested-page exactly the same way a normal page gets created.<br/>
 The process, as usual, begins by declaring the template as 'clonable'.
 
-```
+```html
 <cms:template clonable='1'> ... </cms:template>
 ```
 
 The key is that we additionally also declare this clonable template as supporting nested-pages by using this new parameter -
 
-```
+```html
 <cms:template clonable='1' nested_pages='1'> ... </cms:template>
 ```
 
@@ -148,7 +148,7 @@ Since no page is indicated, none gets loaded. Only the empty template will show 
 We also know that in 'list-view', we usually list all the cloned pages of the template (we can choose to do any other thing we want to - point is we'll have to handle the view ourselves).<br/>
 As with any other clonable template, we'll add the following logic to the index.php template -
 
-```
+```html
 <cms:if k_is_page>
     <!-- Single page being visited. Show contents of its editable regions -->
 <cms:else />
@@ -300,7 +300,7 @@ Here is how we use them.
 
 Using the 'menu' tag is pretty straightforward. Following is a sample code -
 
-```
+```html
 <cms:menu masterpage='index.php' />
 ```
 
@@ -308,7 +308,7 @@ It couldn't get any simpler than that. Notice the mandatory 'masterpage' paramet
 
 This is the output we get -
 
-```
+```html
 <ul class="level-0">
    <li id="item-home" class="level-0 first "><a href="http://www.yoursite.com/index.php">Home</a></li>
    <li id="item-about-us" class="level-0 has-submenu active "><a href="http://www.yoursite.com/index.php?p=1">About Us</a>
@@ -359,7 +359,7 @@ Since the menu is likely to be shown on all the templates of our website, instea
 Create a snippet file named 'menu.html' placing it within the 'snippets' folder of Couch.<br/>
 Place the following code within it -
 
-```
+```html
 <cms:set path_to_superfish="<cms:show k_site_link />/superfish/" />
 <link rel="stylesheet" media="screen" href="<cms:show path_to_superfish />css/superfish.css" />
 
@@ -382,7 +382,7 @@ Place the following code within it -
 As you can see, the snippet starts off with linking to the Superfish CSS and JavaScript files.<br/>
 The portion that outputs the HTML markup for the menu using our cms:menu tag is at the end -
 
-```
+```html
 <div id="navwrap">
     <cms:menu masterpage='index.php' menu_class='sf-menu' />
 </div>
@@ -390,7 +390,7 @@ The portion that outputs the HTML markup for the menu using our cms:menu tag is 
 
 and this is the portion that actually attaches Superfish with the markup -
 
-```
+```html
 $(document).ready(function(){
     $("ul.sf-menu").superfish();
 });
@@ -400,7 +400,7 @@ Superfish needs to be informed about the classname of the menu's outermost list 
 
 Finally, embed the menu snippet within each of our templates by placing the following line within each of them -
 
-```
+```html
 <cms:embed 'menu.html' />
 ```
 
@@ -480,7 +480,7 @@ The Couch tag that can be used to easily create breadcrumbs is the '[nested\_cru
 
 **1\.** As self-closing tag. e.g.
 
-```
+```html
 <cms:nested_crumbs masterpage='index.php' />
 ```
 
@@ -488,7 +488,7 @@ where 'masterpage' points to the template behind the nested-pages tree.
 
 **2\.** As a tag-pair for better control over the generated breadcrumbs markup. e.g.
 
-```
+```html
 <cms:nested_crumbs masterpage='index.php' ignore_show_in_menux='1' prepend='<ul class="breadcrumb">' append='</ul>'>
     <li><a href="<cms:show k_crumb_link />"><cms:show k_crumb_text /></a><cms:if k_crumb_is_last='0'> &raquo; </cms:if></li>
 </cms:nested_crumbs>

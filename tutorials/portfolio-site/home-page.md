@@ -1,7 +1,6 @@
 ---
 title: Finally home
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 

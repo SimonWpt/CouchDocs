@@ -1,6 +1,6 @@
 ---
 title: Relationships
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -21,7 +21,7 @@ Any relationship, necessarily, will involve two parties (actually the templates 
 To define a relationship between the two templates, we use a new type of editable region introduced by Couch v1.3 - [**relation**](../../tags-reference/editable/relation.html).<br/>
 Place the following code snippet in the 'artists.php' template.
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' />
 ```
 
@@ -74,7 +74,7 @@ This is a 'One-to-Many relation' and is very commonly encountered. It might seem
 
 To define a One-to-Many relation in Couch, we make a small change to our code -
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' reverse_has='one' />
 ```
 
@@ -92,7 +92,7 @@ For the sake of illustration, now let us make the (preposterous) assumption that
 
 This is a 'Many-to-One relation' and to define such kind of a relation we need to make the following change to our code -
 
-```
+```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' has='one' />
 ```
 
@@ -107,7 +107,7 @@ As can be seen, instead of a list with checkboxes allowing multiple choices, we 
 Once again, this type of relation looks mighty contrived for our artists and albums example. But in realty, it is actually only the 'One-to-Many relation' we saw above in reverse.<br/>
 It would make a lot more sense if, instead of the 'artists' template, we define the relationship in the 'albums' templates (thus making the 'albums' template the 'primary' template).
 
-```
+```html
 <cms:editable type='relation' name='album_artists' masterpage='artists.php' has='one' />
 ```
 
@@ -123,7 +123,7 @@ As the name suggests, if our example artists and albums scenario were to be conv
 
 This is how we define this type of relation -
 
-```
+```html
 <cms:editable type='relation' name='album_artists' masterpage='artists.php' has='one' reverse_has='one' />
 ```
 
@@ -147,7 +147,7 @@ Couch provides two different tags to do this enumeration for us -
 We use the **related\_pages** tag to list pages of the opposite template that are related to a page of a primary template (i.e. the one defining the relationship).<br/>
 In our example, the 'artists' template is the primary so we use the following code in 'artists.php' -
 
-```
+```html
 <cms:if k_is_page >
    <!-- All variables of 'artists.php' are available here -->
    <h2>Artist: <cms:show k_page_title /></h2>
@@ -168,7 +168,7 @@ We use the **reverse\_related\_pages** to list the pages of the primary template
 In our example it is the 'albums' template that falls at the opposite end of the relationship.<br/>
 To list all 'artists' that are associated with the 'album' page being visited, we place the following code into 'albums.php' -
 
-```
+```html
 <cms:if k_is_page >
    <!-- All variables of 'albums.php' are available here -->
    <h2>Album: <cms:show k_page_title /></h2>
@@ -195,7 +195,7 @@ All the information regarding the page being currently viewed is already availab
 In fact, both the 'related\_pages' as well as the 'reverse\_related\_pages' tags cannot be directly given the id/name of a page to fetch the related pages of. They will only work if used in context of a page. For places where the context of a single-page is not available (e.g. list-view or even page-view of a different template), we can provide it with the context of the right page by using the 'pages' tag.<br/>
 For example, the following code will get all related albums of John Lennon -
 
-```
+```html
 <cms:pages masterpage='artists.php' page_name='john-lennon'>
    <h3>Albums of John Lennon:</h3>
    <cms:related_pages 'artist_albums' >

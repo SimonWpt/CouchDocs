@@ -1,6 +1,6 @@
 ---
 title: google_map
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,14 +8,14 @@ layout: default
 
 The **google\_map** tag can be used to easily create a Google map on a web page.
 
-```
+```html
 <cms:google_map
     name='my_map'
     address='1600 Amphitheatre Parkway, Mountain View, CA'
 />
 ```
 
-```
+```html
 <cms:google_map
     name='my_map'
     latitude='37.423021'
@@ -80,7 +80,7 @@ Regular CSS styles.
 
 A full example -
 
-```
+```html
 <cms:google_map
     name='my_office'
     latitude='37.423021'

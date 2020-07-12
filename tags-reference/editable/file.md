@@ -1,7 +1,7 @@
 ---
 title: type = 'file'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -23,7 +23,7 @@ define( 'K_UPLOAD_DIR', 'myuploads' );
 
 An editable region of _file_ type can be defined this way -
 
-```
+```html
 <cms:editable
   name='my_document'
   label='Downloadable File'
@@ -40,27 +40,10 @@ Clicking the 'Browse Server' button will bring up a window which can be used to 
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <a href="<cms:show my_document />" >Download file</a>
 ```
 
 ## Parameters
 
 Apart from the parameters common to all the other types of editable regions, this type does not accept any other parameter.
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

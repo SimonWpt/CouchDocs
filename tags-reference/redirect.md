@@ -1,6 +1,6 @@
 ---
 title: redirect
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,11 +8,11 @@ layout: default
 
 The **redirect** tag can be used to redirect the user to a new location.
 
-```
+```html
 <cms:redirect url='http://www.google.com/' />
 ```
 
-```
+```html
 <cms:redirect url="<cms:link masterpage=k_template_name page='test' />" />
 ```
 
@@ -31,7 +31,7 @@ This is the URL of the location being redirected to.
 
 By default, the **redirect** tag causes the server to send back a HTTP 302 redirection code. Setting this parameter to 1 will cause it to send back HTTP 301 (moved permanently) code instead.
 
-```
+```html
 <cms:redirect url="<cms:link masterpage=k_template_name page='test' />" permanently='1' />
 ```
 

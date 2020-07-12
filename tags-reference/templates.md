@@ -1,6 +1,6 @@
 ---
 title: templates
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,7 +10,7 @@ The **templates** tag can be used to enumerate all the templates that are manage
 
 Example -
 
-```
+```html
 <cms:templates show_hidden='1' order='desc'>
     <cms:dump />
 </cms:templates>

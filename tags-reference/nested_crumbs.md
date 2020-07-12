@@ -1,6 +1,6 @@
 ---
 title: nested_crumbs
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -19,7 +19,7 @@ This tag can be used in two ways -
 
 **1\.** As self-closing tag. e.g.
 
-```
+```html
 <cms:nested_crumbs masterpage='index.php' />
 ```
 
@@ -27,7 +27,7 @@ where 'masterpage' points to the template behind the nested-pages tree.
 
 **2\.** As a tag-pair for better control over the generated breadcrumbs markup. e.g.
 
-```
+```html
 <cms:nested_crumbs masterpage='index.php' ignore_show_in_menu='1' prepend='<ul class="breadcrumb">' append='</ul>'>
    <li><a href="<cms:show k_crumb_link />"><cms:show k_crumb_text /></a><cms:if k_crumb_is_last='0'> &raquo; </cms:if></li>
 </cms:nested_crumbs>

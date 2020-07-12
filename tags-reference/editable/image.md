@@ -1,7 +1,7 @@
 ---
 title: type = 'image'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -23,7 +23,7 @@ define( 'K_UPLOAD_DIR', 'myuploads' );
 
 An editable region of type _image_ can be defined this way -
 
-```
+```html
 <cms:editable
     name='prop_image'
     label='Image'
@@ -40,7 +40,7 @@ Clicking the 'Browse Server' button will bring up a window which can be used to 
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <img src="<cms:show prop_image />" />
 ```
 
@@ -61,7 +61,7 @@ Apart from the parameters common to all types of editable regions, the regions o
 
 ### height
 
-```
+```html
 <cms:editable name='prop_image' width='300' height='200' type='image' />
 ```
 
@@ -94,7 +94,7 @@ If both height and width are specified, enforcing the limit of one dimension mig
 
 #### Specifying only one dimension
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     width='150'
     type='image' />
@@ -114,7 +114,7 @@ If both height and width are specified, enforcing the limit of one dimension mig
 
 #### Specifying both dimensions
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     width='150'
     height='150'
@@ -137,7 +137,7 @@ If both height and width are specified, enforcing the limit of one dimension mig
 
 A short discussion is necessary about what happens if *enforce\_max* is explicitly set to '0' instead of implicitly doing it by setting _crop_ - e.g..
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     width='150'
     height='150'
@@ -167,7 +167,7 @@ If both width and height are specified, very often while matching one dimension 
 
 #### Specifying only one dimension
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     width='150'
     crop='1'
@@ -188,7 +188,7 @@ If both width and height are specified, very often while matching one dimension 
 
 #### Specifying both dimensions
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     width='150'
     height='150'
@@ -210,7 +210,7 @@ If both width and height are specified, very often while matching one dimension 
 
 ### quality
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     width='150'
     quality='50'
@@ -221,7 +221,7 @@ You can set _quality_ from 0 (worst quality, smaller file) to 100 (best quality,
 
 ### show_preview
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     show_preview='1'
     type='image' />
@@ -241,7 +241,7 @@ If *show\_preview* is not set at all or is set to '0', upon selecting an image a
 
 As illustrated above, setting *show\_preview* to '1' causes a preview of the selected image to appear. The dimensions of this preview can be set by using *preview\_width* and *preview\_height* (needless to say, these two parameters take effect only with *show\_preview* set to '1').
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image of property here'
     show_preview='1'
     preview_width='150'
@@ -251,20 +251,3 @@ As illustrated above, setting *show\_preview* to '1' causes a preview of the sel
 ![](../../../../assets/img/contents/editable-image-30.jpg)
 
 <p class="success">It is always a good idea to set at least one of the two dimensions while using *show\_preview*.</p>
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

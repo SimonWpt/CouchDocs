@@ -1,6 +1,6 @@
 ---
 title: Templates
-category: concept
+parent: Core Concepts
 layout: default
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Photo Gallery
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -29,7 +29,7 @@ This new feature is built upon the existing functionality of Couch and requires 
 The process begins, as is the norm, by creating a cloned template for the gallery. For our example, let us assume the name of our template is 'gallery.php'.<br/>
 We use the regular method of declaring the template as clonable -
 
-```
+```html
 <cms:template title='Gallery' clonable='1' dynamic_folders='1'>
 
 </cms:template>
@@ -39,7 +39,7 @@ Notice that we are also declaring the template as using dynamic folders because 
 
 Now comes the new part in this step. We add a new parameter to this declaration -
 
-```
+```html
 <cms:template title='Gallery' clonable='1' dynamic_folders='1' gallery='1'>
 
 </cms:template>
@@ -53,7 +53,7 @@ As mentioned before, any template meant to be used for a gallery will require at
 
 Let us add the following declarations to the code above -
 
-```
+```html
 <cms:template title='Gallery' clonable='1' dynamic_folders='1' gallery='1'>
 
    <cms:editable
@@ -142,7 +142,7 @@ This step is no different to what is used with the regular templates.<br/>
 The markup, as always, will be yours and you can use the cms:pages tag to output the list of the images in your gallery the regular way.<br/>
 Example -
 
-```
+```html
 <cms:pages masterpage="gallery.php" include_subfolders='0' >
    <a href="<cms:show gg_image />">
       <img src="<cms:show gg_thumb />" title="<cms:show k_page_title />" />
@@ -228,7 +228,7 @@ Following is the complete list of variables that may become available (depending
 These variables, however, are not available for direct use.<br/>
 To get to them, you need to make use of a new tag named 'exif'. The usage is simply -
 
-```
+```html
 <cms:pages masterpage="gallery.php" include_subfolders='0' >
    <a href="<cms:show gg_image />"><img src="<cms:show gg_thumb />" title="<cms:show k_page_title />" /></a>
    <cms:exif>

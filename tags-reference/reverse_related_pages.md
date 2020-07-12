@@ -1,6 +1,6 @@
 ---
 title: reverse_related_pages
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

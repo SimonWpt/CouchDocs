@@ -1,6 +1,6 @@
 ---
 title: Variables
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -10,7 +10,7 @@ Don't get put off by that programming term. Variable is simply a place that can 
 
 You can use the Couch tag named [__*set*__](../../tags-reference/set.html) to place values within variables. For example the following snippet -
 
-```
+```html
 <cms:set my_message='Hello World' />
 ```
 
@@ -19,13 +19,13 @@ This variable (*my\_message*) can then be used elsewhere.
 
 For example, in the following snippet -
 
-```
+```html
 <cms:show 'Hello' />
 ```
 
 \- we are passing 'Hello' as the parameter for [__*show*__](../../tags-reference/show.html) to display. If instead we do the following -
 
-```
+```html
 <cms:show my_message />
 ```
 
@@ -34,7 +34,7 @@ For example, in the following snippet -
 Thus we see that variables act as simple containers for values.<br/>
 The value can be changed anytime, thus -
 
-```
+```html
 <cms:set my_message='Salut!' />
 <cms:show my_message />
 ```

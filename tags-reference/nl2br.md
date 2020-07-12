@@ -1,6 +1,6 @@
 ---
 title: nl2br
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,7 +10,7 @@ The **nl2br** tag stands for 'newline to BR' and can be used to convert all newl
 
 It comes in handy in situations where you have an editable region of _textarea_ type and while displaying the data contained within it, you wish to replace all the newlines entered by the user with &lt;BR&gt; tags.
 
-```
+```html
 <cms:nl2br><cms:show some_variable /></cms:nl2br>
 ```
 

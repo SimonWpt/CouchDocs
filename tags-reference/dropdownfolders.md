@@ -1,6 +1,6 @@
 ---
 title: dropdownfolders
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **dropdownfolders** tag can be used to create a quick-n-dirty HTML dropdown list of the folders belonging to a template.
 
-```
+```html
 <cms:dropdownfolders masterpage='news.php' />
 ```
 

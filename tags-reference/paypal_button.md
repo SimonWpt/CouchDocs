@@ -1,6 +1,6 @@
 ---
 title: paypal_button
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -21,7 +21,7 @@ You can either choose to use an image of your own or you may use one of the butt
 
 **Using your own image -**
 
-```
+```html
 <cms:paypal_button image="<cms:show k_site_link />/images/my_button.gif" />
 ```
 
@@ -29,7 +29,7 @@ You can either choose to use an image of your own or you may use one of the butt
 
 To use these images, set the _image_ parameter to a number ranging from 0 to 8\.
 
-```
+```html
 <cms:paypal_button image='3' />
 ```
 

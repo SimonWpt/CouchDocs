@@ -1,6 +1,6 @@
 ---
 title: RSS Feeds
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -11,7 +11,7 @@ Let us first see how a RSS feed is created manually (i.e. without using Couch or
 For our example, we'll suppose you publish news items on your website and wish to offer these news items as a RSS feed.<br/>
 Place the following snippet within a plain text file and name it, say, _rss.xml_ (make sure there is no space between the beginning of the file and the _&lt;?xml version="1.0"?&gt;_ statement).
 
-```
+```html
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
@@ -28,7 +28,7 @@ In the snippet above, we are declaring one RSS channel that will carry your news
 
 Now add the individual news items to this channel -
 
-```
+```html
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
@@ -73,7 +73,7 @@ This conversion of the xml file to a php file is essential for Couch but it will
 The first problem can be rectified by breaking up the XML statement in a way that it does not confuse PHP.<br/>
 The following snippet using Couch's [__*concat*__](../../tags-reference/concat.html) tag will output exactly the same statement but because the '&lt;?' characters are now split up, PHP will have no problems.
 
-```
+```html
 <cms:concat '<' '?xml version="1.0" encoding="' k_site_charset '"?' '>' />
 ```
 
@@ -83,7 +83,7 @@ The second problem can be rectified by using the Couch's [__*content\_type*__](.
 
 The modified snippet should now look like this -
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:content_type 'text/xml' /><cms:concat '<' '?xml version="1.0" encoding="' k_site_charset '"?' '>' />
 <rss version="2.0">
@@ -116,7 +116,7 @@ The modified snippet should now look like this -
 
 We can now fetch the news items from the _news.php_ template by using [__*pages*__](../../tags-reference/pages.html) tag and add it to our feed to make it dynamic -
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:content_type 'text/xml' /><cms:concat '<' '?xml version="1.0" encoding="' k_site_charset '"?' '>' />
 <rss version="2.0">

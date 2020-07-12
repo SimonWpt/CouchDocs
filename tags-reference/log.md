@@ -1,6 +1,6 @@
 ---
 title: log
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,11 +8,11 @@ layout: default
 
 The **log** tag can be used to save arbitrary text into a log file. This may be useful for debugging or for actually keeping a log of events.
 
-```
+```html
 <cms:log 'Just a test message' />
 ```
 
-```
+```html
 <cms:log some_msg />
 ```
 
@@ -30,11 +30,11 @@ The string to be logged.
 The log file into which the _msg_ is to be logged. If this parameter is skipped, a log file named 'log.txt' in your site's root is used (created if not already existing) for logging.<br/>
 You can specify a path with the file that is relative to the site's root.
 
-```
+```html
 <cms:log some_msg file='mylog.txt' />
 ```
 
-```
+```html
 <cms:log k_page_title file='couch/uploads/file/secure/mylog.txt' />
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Editable Regions
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -11,7 +11,7 @@ You can use it to define areas within your HTML template that you wish to make e
 
 As an example, suppose the following is a chunk of HTML from a template named _property.php_ -
 
-```
+```html
 <div class="prop_desc">
     <b>Property Description:</b>
     <span class="gray">
@@ -26,7 +26,7 @@ As an example, suppose the following is a chunk of HTML from a template named _p
 The highlighted part is the description of some property. Suppose you wish to allow the user to edit this part himself.<br/>
 To do so, simply enclose this part by an [__*editable*__](../../tags-reference/editable.html) tag -
 
-```
+```html
 <div class="prop_desc">
     <b>Property Description:</b>
     <span class="gray">
@@ -70,7 +70,7 @@ The _type_ parameter of Editable text can bet set to the kind of editable region
 
 e.g. setting the type to 'richtext' -
 
-```
+```html
 <cms:editable name='prop_desc' type='richtext'>..</cms:editable>
 ```
 
@@ -115,7 +115,7 @@ When a page is executed, Couch makes available the current contents of all the e
 Thus in the example above, since the name of the editable region is *prop\_desc*, a variable by the same name will also be set by Couch during the execution of this page.<br/>
 So if you use the following snippet anywhere within your template -
 
-```
+```html
 <cms:show prop_desc />
 ```
 
@@ -144,7 +144,7 @@ In complex templates (_clonable_ templates, specifically) with several editable 
 For such cases, we can use the [__*editable*__](../../tags-reference/editable.html) tag to only define the editable regions and use the [__*show*__](../../tags-reference/show.html) tag to display the contents.<br/>
 A good practice is to define together all editable regions used by the template somewhere at the very top of the template -
 
-```
+```html
 <cms:template title='Index' clonable='1' >
     <cms:editable name="body" label="Body" type="richtext" />
     <cms:editable name="excerpt" label="Excerpt" type="textarea" />
@@ -157,7 +157,7 @@ If you do not wish to enclose the [__*editable*__](../../tags-reference/editable
 
 The content of these editable regions can be displayed where ever required by using the [__*show*__](../../tags-reference/show.html) tag -
 
-```
+```html
 <cms:show body />
 <cms:show excerpt />
 ```

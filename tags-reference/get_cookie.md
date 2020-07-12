@@ -1,6 +1,6 @@
 ---
 title: get_cookie
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **get\_cookie** tag can be used to fetch value contained within any cookie set by the **set\_cookie** tag.
 
-```
+```html
 <cms:get_cookie 'my_test_cookie' />
 ```
 

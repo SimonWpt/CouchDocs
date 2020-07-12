@@ -1,6 +1,6 @@
 ---
 title: archives
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

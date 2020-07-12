@@ -1,6 +1,6 @@
 ---
 title: zebra
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ The **zebra** tag can be used to output a different class to every alternate row
 
 Some examples:
 
-```
+```html
 <cms:repeat count='5'>
     <cms:zebra 'one' 'two' 'three' /><br>
 </cms:repeat>
@@ -20,7 +20,7 @@ Some examples:
 
 The snippet above will output -
 
-```
+```html
 one
 two
 three
@@ -30,7 +30,7 @@ two
 
 A more practical example -
 
-```
+```html
 <TABLE>
 <cms:repeat count='4' >
     <TR class="<cms:zebra 'row' 'alternate_row' />">

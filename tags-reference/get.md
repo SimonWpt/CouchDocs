@@ -1,6 +1,6 @@
 ---
 title: get
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **get** tag is used to output the value of the variable the name of which is supplied to it as its parameter.<br/>
 For example -
 
-```
+```html
 <cms:set my_var='10' />
 <cms:get 'my_var' />
 ```
@@ -21,7 +21,7 @@ Compare the **get** tag with the **show** tag that takes a value (not the name) 
 
 In the snippet given above, if we substitute the **get** tag with the **show** tag -
 
-```
+```html
 <cms:set my_var='10' />
 <cms:show 'my_var' />
 ```
@@ -30,7 +30,7 @@ In the snippet given above, if we substitute the **get** tag with the **show** t
 
 The snippet has to be written in the following manner to make it show the value contained within variable *my\_var* -
 
-```
+```html
 <cms:set my_var='10' />
 <cms:show my_var />
 ```
@@ -39,7 +39,7 @@ Notice how the absence of the quotes in the parameter which signifies that it is
 
 Consider what would happen with the **get** tag if we forgot the quotes around the first parameter -
 
-```
+```html
 <cms:set my_var='10' />
 <cms:get my_var />
 ```

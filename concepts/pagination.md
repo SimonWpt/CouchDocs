@@ -1,6 +1,6 @@
 ---
 title: Pagination
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -12,7 +12,7 @@ These tags, apart from the variables set to describe the current item being iter
 
 To explain these variables, we'll use the following snippet -
 
-```
+```html
 <cms:pages masterpage='blog.php' limit='10' paginate='1'>
     <!-- All the variables can be accessed here -->
 </cms:pages>
@@ -92,7 +92,7 @@ Link to the previous page (if any)
 
 ### EXAMPLES:
 
-```
+```html
 <cms:pages masterpage='blog.php' limit='10' paginate='1'>
     <cms:if k_paginated_top>
         <cms:if k_paginator_required >
@@ -117,7 +117,7 @@ Link to the previous page (if any)
 
 Instead of manually coding the 'next' and 'prev' buttons for navigating through the pages, the [__*paginator*__](../../tags-reference/paginator.html) tag can be used instead -
 
-```
+```html
 <cms:pages masterpage='blog.php' limit='10' paginate='1'>
     <cms:if k_paginated_top>
         <cms:if k_paginator_required >
@@ -135,7 +135,7 @@ Instead of manually coding the 'next' and 'prev' buttons for navigating through 
 
 If the [__*paginator*__](../../tags-reference/paginator.html) tag is used to generate the navigation buttons, the following CSS code may be used to properly style the buttons -
 
-```
+```html
 /*
     Paginator -
     Source: http://www.strangerstudios.com/sandbox/pagination/diggstyle.php (strangerstudios.com)

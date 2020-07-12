@@ -1,6 +1,6 @@
 ---
 title: each
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,13 +9,13 @@ layout: default
 The **Each** tag, given a string containing values separated by a known separator, splits it up along the separator and returns each value.<br/>
 For example, assume we have a variable 'msg' -
 
-```
+```html
 <cms:set msg='hello|world|how|do|you|do' />
 ```
 
 Passing variable 'msg' as parameter to **each** like this -
 
-```
+```html
 <cms:each msg sep='|' >
     <cms:show item /><br>
 </cms:each>
@@ -23,7 +23,7 @@ Passing variable 'msg' as parameter to **each** like this -
 
 will make available each of the '|' separated words as variable named 'item' (which is then being displayed using **show** tag).
 
-```
+```html
 hello
 world
 how
@@ -46,11 +46,11 @@ do
 
 The string to split. If passed as the first parameter, the name 'var' can be omitted and only the value passed. e.g.
 
-```
+```html
 <cms:each var=msg >..</cms:each>
 ```
 
-```
+```html
 <cms:each msg >..</cms:each>
 ```
 
@@ -62,7 +62,7 @@ Name of the variable as which each of the values obtained after splitting the st
 By default, the variable is named 'item'.<br/>
 If you wish to use some other name, it can be specified thus -
 
-```
+```html
 <cms:each msg as='my_var' >
     <cms:show my_var/><br>
 </cms:each>
@@ -74,7 +74,7 @@ The separator along which the provided string is split.<br/>
 By default, the pipe character '|' is assumed as the separator.<br/>
 If any other character is being used in the string, it can be specified this way -
 
-```
+```html
 <cms:each msg sep='@' >..</cms:each>
 ```
 

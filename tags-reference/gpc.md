@@ -1,6 +1,6 @@
 ---
 title: gpc
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,11 +8,11 @@ layout: default
 
 The **gpc** tag stands for **G**ET-**P**OST-**C**OOKIES and can be used to fetch values from variables contained in these.
 
-```
+```html
 <cms:gpc 'my_parameter' />
 ```
 
-```
+```html
 <cms:gpc 'my_parameter' method='post' />
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: menu
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -35,7 +35,7 @@ Please see [**Core Concepts - Nested Pages**](../../concepts/nested-pages-aka-me
 
 To illustrate the use of 'menu' tag, we'll use the same sample hierarchy of elements that we used in the '[folders](../../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.
 
-```
+```html
 menu.php
     |---World News
     |   |---North American News
@@ -55,7 +55,7 @@ menu.php
 This parameter is used to specify the template behind the nested-pages tree used to create the menu.<br/>
 If left empty, the template of the currently executing page is assumed (which is unlikely to be correct as you'll usually want to display the menu on all sections (templates) of your site - typically by using '[embed](../embed.html)' tag).
 
-```
+```html
 <cms:menu masterpage='menu.php'/>
 ```
 
@@ -64,13 +64,13 @@ If left empty, the template of the currently executing page is assumed (which is
 This parameter can be set to specify the maximum level in hierarchy (i.e. depth) that will be displayed in the menu.<br/>
 This can be used, for example, to list only the top-level pages in the tree by setting the depth to 1\. A depth of 0 means unlimited depth.
 
-```
+```html
 <cms:menu masterpage='menu.php' depth='1' />
 ```
 
 Output:
 
-```
+```html
 * World News
 * Sports News
 * Music News
@@ -82,13 +82,13 @@ Output:
 By default the menu-items get displayed in the order they are arranged in the admin-panel.<br/>
 This parameter can be set to order them according to the following criteria - name, title, id.
 
-```
+```html
 <cms:menu masterpage='menu.php' depth='2' orderby='title' />
 ```
 
 Output:
 
-```
+```html
 * Entertainment News
 * Music News
 * Sports News
@@ -102,13 +102,13 @@ Output:
 Can be set to specify whether the menu-items are ordered in the ascending order or in descending order.<br/>
 Valid values are 'asc' and 'desc'. Default is 'asc'.
 
-```
+```html
 <cms:menu masterpage='menu.php' depth='2' orderby='title' order='desc' />
 ```
 
 Output:
 
-```
+```html
 * World News
       o North American News
       o Asian News
@@ -123,13 +123,13 @@ Pages can be excluded from the menu by specifying their names using this paramet
 If an excluded page has children, they are excluded too.<br/>
 If multiple pages are to be excluded, separate them using comma.
 
-```
+```html
 <cms:menu masterpage='menu.php' exclude='united-states-news, china-news' />
 ```
 
 Output:
 
-```
+```html
 * World News
       o North American News
       o Asian News
@@ -145,7 +145,7 @@ The 'Advanced Settings' of each nested-page has a checkbox labeled 'Show in menu
 If that is unchecked, the page (an all its child pages) is not included by default in the menu.<br/>
 You can override this by setting 'ignore\_show\_in\_menu' parameter to '1'.
 
-```
+```html
 <cms:menu masterpage='menu.php' ignore_show_in_menu='1' />
 ```
 
@@ -154,13 +154,13 @@ You can override this by setting 'ignore\_show\_in\_menu' parameter to '1'.
 Only a sub-section of the nested-pages tree can be displayed in the menu by specifying the name of a nested-page as this parameter.<br/>
 The nested-page specified as the root is displayed along with all its children (compare with 'childof' parameter below where only the children are displayed).
 
-```
+```html
 <cms:menu masterpage='menu.php' root='united-states-news' />
 ```
 
 Output:
 
-```
+```html
 * United States News
       o Ohio News
       o Nevada News
@@ -173,13 +173,13 @@ Only the children of the nested-page specified are displayed (compare with 'root
 
 <p class="notice">If both 'childof' and 'root' are set, the 'root' parameter gets precedence.</p>
 
-```
+```html
 <cms:menu masterpage='menu.php' childof='united-states-news' />
 ```
 
 Output:
 
-```
+```html
 * Ohio News
 * Nevada News
 ```
@@ -255,7 +255,7 @@ Output:
 By default the HTML list element used to create the menu is &lt;UL&gt;.<br/>
 It can be set to &lt;OL&gt; but using this parameter.
 
-```
+```html
 <cms:menu masterpage='menu.php' list_type='ol' />
 ```
 
@@ -264,11 +264,11 @@ It can be set to &lt;OL&gt; but using this parameter.
 This parameter can be used to add class names to the outermost list container (&lt;UL&gt; or &lt;OL&gt;) of the menu.<br/>
 This is useful for styling the menu using CSS.
 
-```
+```html
 <cms:menu masterpage='menu.php' menu_class='sf-menu' />
 ```
 
-```
+```html
 <cms:menu masterpage='menu.php' menu_class='sf-menu sf-navbar' />
 ```
 
@@ -279,7 +279,7 @@ Notice that in the second example we are applying two classes to the menu.
 This parameter can be used to apply an ID to the outermost list container (&lt;UL&gt; or &lt;OL&gt;) of the menu.<br/>
 This is useful for styling the menu using CSS.
 
-```
+```html
 <cms:menu masterpage='menu.php' menu_id='top-menu' />
 ```
 
@@ -289,7 +289,7 @@ The default behavior of the menu tag is to apply a special class 'first' to the 
 This is useful for styling the menu using CSS.<br/>
 A different class name can be set by using this parameter.
 
-```
+```html
 <cms:menu masterpage='menu.php' first_class='begin' />
 ```
 
@@ -299,7 +299,7 @@ The default behavior of the menu tag is to apply a special class 'last' to the l
 This is useful for styling the menu using CSS.<br/>
 A different class name can be set by using this parameter.
 
-```
+```html
 <cms:menu masterpage='menu.php' first_class='begin' last_class='end' />
 ```
 
@@ -307,7 +307,7 @@ A different class name can be set by using this parameter.
 
 The default behavior of the menu tag is to apply a special class 'current' (can be changed using the 'selected\_class' parameter) to the menu-item that matches the page being visited. This behavior can be turned off by setting the 'no\_selected' parameter to '1'.
 
-```
+```html
 <cms:menu masterpage='menu.php' no_selected='1' />
 ```
 
@@ -316,7 +316,7 @@ The default behavior of the menu tag is to apply a special class 'current' (can 
 The default behavior of the menu tag is to apply a special class 'current' to the menu-item that matches the page being visited.<br/>
 A different class name can be set by using this parameter.
 
-```
+```html
 <cms:menu masterpage='menu.php' selected_class='selected' />
 ```
 
@@ -325,7 +325,7 @@ A different class name can be set by using this parameter.
 The default behavior of the menu tag is to apply a special class 'active' to all the menu-items leading up to (and including) the menu-item that matches the current page - thus marking out an 'active-trail' that can be used for CSS styling.<br/>
 This behavior can be turned off by setting the 'no\_active\_trail' parameter to '1'.
 
-```
+```html
 <cms:menu masterpage='menu.php' no_active_trail='1' />
 ```
 
@@ -334,7 +334,7 @@ This behavior can be turned off by setting the 'no\_active\_trail' parameter to 
 The default behavior of the menu tag is to apply a special class 'active' to all the menu-items leading up to (and including) the menu-item that matches the current page - thus marking out an 'active-trail' that can be used for CSS styling.<br/>
 A different class name can be set by using this parameter.
 
-```
+```html
 <cms:menu masterpage='menu.php' active_trail_class='selected-parent' />
 ```
 

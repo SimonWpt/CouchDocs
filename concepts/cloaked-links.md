@@ -1,6 +1,6 @@
 ---
 title: Cloaked Links
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -20,7 +20,7 @@ You can use Couch's [__*cloak\_url*__](../../tags-reference/cloak_url.html) tag 
 
 To get a gist of [__*cloak\_url*__](../../tags-reference/cloak_url.html), suppose following is a link in your template -
 
-```
+```html
 <a href="http://www.google.com" >Visit Site</a>
 ```
 
@@ -28,7 +28,7 @@ A visitor to your site will only see 'Visit Site' displayed but it cannot be mad
 
 Now consider the following modification made to the link above -
 
-```
+```html
 <a href="<cms:cloak_url link='http://www.google.com' redirect='1' />" >Visit Site</a>
 ```
 
@@ -55,7 +55,7 @@ deny from all
 Suppose an image file _test.jpg_ is stored in the aforesaid 'uploads/file/secure' folder (so that it is not directly downloadable).<br/>
 Placing the following snippet in your template -
 
-```
+```html
 <a href="<cms:cloak_url link='http://yoursite.com/couch/uploads/file/secure/test.jpg' />">Test Link</a>
 ```
 
@@ -77,7 +77,7 @@ This is because [__*cloak\_url*__](../../tags-reference/cloak_url.html) tries to
 If you'd rather have the download box shown for all types of files, set the *force\_download* parameter to '1'.<br/>
 Thus the following link will always force the user to download the image file -
 
-```
+```html
 <a href="
     <cms:cloak_url
     link='http://yoursite.com/couch/uploads/file/secure/test.jpg'
@@ -91,7 +91,7 @@ Thus the following link will always force the user to download the image file -
 The cloaked links can be made to expire after a fixed period by setting the _expiry_ parameter to the expiry period in seconds.<br/>
 Thus to allow a link to be valid for only 24 hours, the following snippet can be used -
 
-```
+```html
 <a href="
     <cms:cloak_url
     link="http://yoursite.com/couch/uploads/file/secure/test.jpg"
@@ -109,7 +109,7 @@ If you have gone through the [**Users and Access Control**](../users.html) secti
 
 Links can be configured to be accessible by only users of atleast a particular level by setting the *access\_level* parameter.
 
-```
+```html
 <a href="
     <cms:cloak_url
     link="http://yoursite.com/couch/uploads/file/secure/test.jpg"
@@ -123,7 +123,7 @@ In the snippet above, only authenticated users with access level equal to or hig
 If unauthenticated users try to access this link, they'll get a blank screen.<br/>
 To prompt them to login to download the file, set the *prompt\_login* parameter to '1' -
 
-```
+```html
 <a href="
     <cms:cloak_url
     link="http://yoursite.com/couch/uploads/file/secure/test.jpg"

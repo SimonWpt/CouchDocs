@@ -1,7 +1,6 @@
 ---
 title: Portfolio
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 
@@ -20,13 +19,13 @@ Begin by renaming _portfolio.html_ to *portfolio\_list.html* and the *portfolio\
 Enclose the entire contents of _portfolio.php_ with the boilerplate PHP code -<br/>
 Place
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 ```
 
 at the very top and
 
-```
+```html
 <?php COUCH::invoke(); ?>
 ```
 

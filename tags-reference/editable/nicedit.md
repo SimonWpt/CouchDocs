@@ -1,7 +1,7 @@
 ---
 title: type = 'nicedit'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -16,13 +16,13 @@ Unlike 'richtext' that uses CKEditor - a full fledged Wysiwyg editor, 'nicedit' 
 
 A region of this type may either be defined like this :
 
-```
+```html
 <cms:editable type='nicedit' label='Description' name='my_desc' />
 ```
 
 or
 
-```
+```html
 <cms:editable type='nicedit' label='Description' name='my_desc' >
 This enclosed text will appear as the default value of the editor
 </cms:editable>
@@ -45,7 +45,7 @@ In addition to the parameters common to all the types of editable regions, niced
 
 The dimensions of the editor can be changed by setting the **width**, **height**, and **maxheight** parameters. For example, the following will make it 400px wide and 200px high (and expand to 600px high as content is entered) -
 
-```
+```html
 <cms:editable type='nicedit' label='Description' name='my_desc'
     width='400'
     height='200'
@@ -56,7 +56,7 @@ The dimensions of the editor can be changed by setting the **width**, **height**
 
 This parameter can be used to specify which buttons are displayed in the toolbar of the editor.
 
-```
+```html
 <cms:editable type='nicedit' label='Description' name='my_desc'
     buttons='italic, bold' />
 ```
@@ -92,20 +92,3 @@ Following are the values that can be used:
 
 If the 'buttons' parameter is not specified, the following set of buttons is used as the default:<br/>
 bold, italic, underline, ol, ul, link, unlink, image, removeformat, source
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (relation)](../../relation.html)

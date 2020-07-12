@@ -1,7 +1,6 @@
 ---
 title: Building a real-world site
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 

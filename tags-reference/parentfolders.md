@@ -1,6 +1,6 @@
 ---
 title: parentfolders
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **parentfolders** tag enumerates all the ancestor folders of a given folder.
 
-```
+```html
 <cms:parentfolders folder='china' >
     <a href="<cms:show k_folder_link/>"><cms:show k_folder_title/></a>&nbsp;>
 </cms:parentfolders>

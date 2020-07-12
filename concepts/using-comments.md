@@ -1,6 +1,6 @@
 ---
 title: Comments
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -10,7 +10,7 @@ Couch allows the submission of comments on pages created by it but this must fir
 To do so, the _commentable_ parameter of the [__*template*__](../../tags-reference/template.html) tag has to be set to '1' for each template that you wish to allow comments for.<br/>
 Thus if, for example, comments are to be turned on for pages cloned out of _blog.php_, the following change needs to be done to the [__*template*__](../../tags-reference/template.html) tag (usually placed in the HTML head tag) within blog.php -
 
-```
+```html
 <cms:template title='Blog' clonable='1' commentable='1'>
     <!-- The editable and folder tags can go here -->
 </cms:template>
@@ -24,7 +24,7 @@ By default, '_Allow users to comment_' is checked for every new page. You can ch
 
 You'll find the following two settings in _config.php_ file which are worth noting -
 
-```
+```html
 // 20.
 // A setting of '1' will necessitate the admin to approve comments before they get published.
 // '0' will publish comments immediately.
@@ -51,7 +51,7 @@ On successful submission of the form, the [__*process\_comment*__](../../tags-re
 
 Following is a complete snippet that generates such a form -
 
-```
+```html
 <cms:if k_is_commentable >
 <div class="comment-form" >
     <h3>Post a comment</h3>
@@ -181,7 +181,7 @@ Usually only the comments belonging to a particular page need to be listed on th
 The [__*comments*__](../../tags-reference/comments.html) tag is used to list comments based on the parameters passed to it.<br/>
 It is closely related to the [__*pages*__](../../tags-reference/pages.html) tag and hence shares several of the [**parameters**](../../tags-reference/pages.html#parameters) accepted by the pages tag.
 
-```
+```html
 <cms:comments limit='5'>
     <!-- sets comment related variables here -->
 </cms:comments>
@@ -223,7 +223,7 @@ As an example of the [__*comments*__](../../tags-reference/comments.html) tag, t
 Notice the use of the variable *k\_page\_id* (always set by Couch to the id of the current page in _page-view_) to constrain the _comments_ tag to fetch only comments belonging to the current page.<br/>
 Also notice the use of the [__*gravatar*__](../../tags-reference/gravatar.html) tag.
 
-```
+```html
 <cms:if k_is_page >
     <cms:comments page_id=k_page_id limit='5' order='asc' paginate='1'>
         <cms:if k_paginated_top >

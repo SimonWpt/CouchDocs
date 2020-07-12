@@ -1,6 +1,6 @@
 ---
 title: send_mail
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The **send\_mail** tag, as the name suggests, can be used to send emails.
 
-```
+```html
 <cms:send_mail from='admin@mysite.com' to='johndoe@gmail.com' subject='Feedback from your site'>
 Anything here (between the opening and closing tags of send_mail)
 will form the body of the email that will be sent.

@@ -1,7 +1,7 @@
 ---
 title: type = 'radio'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -11,7 +11,7 @@ Editable region of _radio_ type is used to allow the user to choose one option f
 
 An editable region of _radio_ type can be defined this way -
 
-```
+```html
 <cms:editable
   name="my_property_type"
   label="Property Type"
@@ -27,7 +27,7 @@ The code above will result in -
 
 The option selected in this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <cms:show my_property_type />
 ```
 
@@ -45,7 +45,7 @@ In addition to the parameters common to all the types of editable regions, _radi
 
 This parameter takes a list of all the options that are displayed as radio buttons.
 
-```
+```html
 <cms:editable name="my_property_type" label="Property Type" desc="Select one from these"
   opt_values='Residential | Commercial | Rental'
   type='radio'
@@ -54,7 +54,7 @@ This parameter takes a list of all the options that are displayed as radio butto
 
 The selected option will get saved as the value of the editable region. For example, if the user selected _Rental_, the following code -
 
-```
+```html
 <cms:show my_property_type />
 ```
 
@@ -62,13 +62,13 @@ The selected option will get saved as the value of the editable region. For exam
 
 As can be seen, the saved value is the same as the option's name. However we can a specify a different value that can get saved into the editable region by using the following syntax -
 
-```
+```html
 opt_values='Residential=0 | Commercial=1 | Rental=2'
 ```
 
 Printing out the value contained within the editable region -
 
-```
+```html
 <cms:show my_property_type />
 ```
 
@@ -90,7 +90,7 @@ opt_values='Residential=0 | Commercial=1 | | Rental=2'
 
 By default, the first option in the list is shown as the selected option. You can show any other option as selected by setting *opt\_selected* to the **value** of that option. For example -
 
-```
+```html
 <cms:editable name="my_property_type" label="Property Type" desc="Select one from these"
   opt_values='Residential | Commercial | Rental'
   opt_selected = 'Rental'
@@ -100,7 +100,7 @@ By default, the first option in the list is shown as the selected option. You ca
 
 \- or -
 
-```
+```html
 <cms:editable name="my_property_type" label="Property Type" desc="Select one from these"
   opt_values='Residential=0 | Commercial=1 | Rental=2'
   opt_selected = '2'
@@ -115,7 +115,7 @@ will show _Rental_ as the option selected by default.
 As seen in the examples above, the list provided to *opt\_values* parameter consists of the options separated by a '|' (pipe) character.<br/>
 This is the default separator used by Couch. For some reason if you do not wish to have a pipe as separator (e.g. if any of the options contains the pipe character within itself, obviously the same character cannot be used as the separator), any other character can be designated as the separator by setting this parameter. For example as in follows -
 
-```
+```html
 <cms:editable name="my_property_type" label="Property Type" desc="Select one from these"
   opt_values='Residential=0 * Commercial=1 * Rental=2'
   separator='*'
@@ -129,7 +129,7 @@ Note how the opt\_values are separated by '\*'.
 
 Similar to the problem outlined above, sometimes the options in the list contain the '=' (equals to) character. This makes it imposible to use '=' between the option's name and value. You can set any other character for this purpose by setting this parameter. For example -
 
-```
+```html
 val_separator=':'
 ```
 
@@ -145,20 +145,3 @@ The default *search\_type* is (as with all other types of editable regions) _tex
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _numeric_ or _decimal_ (if the value can be fractional).
 
 <p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../../pages.html#custom_field).</p>
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

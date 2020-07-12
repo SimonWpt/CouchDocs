@@ -1,6 +1,6 @@
 ---
 title: On Page Editing
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -35,7 +35,7 @@ It requires the usual procedure of making an entry in the '_couch/addons/kfuncti
 
 Open _kfunctions.php_ in your text editor and add the following line to it
 
-```
+```html
 require_once( K_COUCH_DIR.'addons/inline/inline.php' );
 ```
 
@@ -72,7 +72,7 @@ Adding onpage editing to a template is a two-step procedure -
 
 **1\.** The first step is always the addition of the following tag in the HEAD section of the template
 
-```
+```html
 <cms:load_edit />
 ```
 
@@ -105,7 +105,7 @@ OK, so let us handle the non-text elements first.
 
 Following is how the markup for the image exists as of now
 
-```
+```html
 <div class="4u">
     <span class="me image image-full"><img src="<cms:show intro_image />" alt="" /></span>
 </div>
@@ -113,7 +113,7 @@ Following is how the markup for the image exists as of now
 
 We'll add a **popup\_edit** tag near it specifying the name of the editable region handled through the popup (the image region in this case)
 
-```
+```html
 <div class="4u">
     <span class="me image image-full"><img src="<cms:show intro_image />" alt="" /></span>
     <cms:popup_edit 'intro_image' />
@@ -142,13 +142,13 @@ The second non-text region i.e. the button text can be handled identically.
 
 The existing markup
 
-```
+```html
 <a href="#work" class="button button-big"><cms:show intro_button /></a>
 ```
 
 can be appended with a **popup\_edit** tag
 
-```
+```html
 <a href="#work" class="button button-big"><cms:show intro_button /></a>
 <cms:popup_edit 'intro_button' link_text='Edit button' />
 ```
@@ -157,7 +157,7 @@ can be appended with a **popup\_edit** tag
 
 In both the cases above, we've specified only one editable region as parameter to the **popup\_edit** tag. If the use-case requires, we can also specify multiple editable regions by separating the names with a '|' (pipe) character. For example, the following definition -
 
-```
+```html
 <cms:popup_edit 'intro_image|intro_title|intro_text' />
 ```
 
@@ -173,7 +173,7 @@ The tag for inline-editing is **inline\_edit**. Let us see how it works.
 
 The existing markup for the first text region is as follows
 
-```
+```html
 <header>
     <h1><cms:show intro_title /></h1>
 </header>
@@ -181,7 +181,7 @@ The existing markup for the first text region is as follows
 
 Add an **inline\_edit** tag to it as follows
 
-```
+```html
 <header>
     <h1 <cms:inline_edit 'intro_title' /> ><cms:show intro_title /></h1>
 </header>
@@ -211,7 +211,7 @@ Let us add inline editing to the final region and complete our tutorial.
 
 The existing markup is as follows -
 
-```
+```html
 <cms:show intro_text />
 ```
 
@@ -221,7 +221,7 @@ This is one place where a little fudging of the original markup becomes imperati
 
 This is what our code becomes -
 
-```
+```html
 <div <cms:inline_edit 'intro_text' /> ><cms:show intro_text /></div>
 ```
 
@@ -242,7 +242,7 @@ You can, however, turn these tags off even for the admins. This could be, for ex
 
 Place the following statement somewhere at the top of the template (i.e. before any of the three tags we have seen so far) -
 
-```
+```html
 <cms:no_edit />
 ```
 
@@ -255,7 +255,7 @@ We can use the standard Couch tags for doing that. I'll describe one quick metho
 
 My solution relies on using a session variable to conditionally output the **no\_edit** tag. The line of code mentioned above now becomes
 
-```
+```html
 <cms:if k_user_access_level ge '7' && "<cms:not "<cms:get_session 'inline_edit_on' />" />" >
     <cms:no_edit />
 </cms:if>
@@ -267,7 +267,7 @@ It now becomes a simple matter of setting the value of the session variable to e
 
 Place the following FORM code somewhere at the bottom of the template
 
-```
+```html
 <cms:if k_user_access_level ge '7' >
     <br style="clear:both">
     <cms:form method='post' anchor='0' style="float:left;">
@@ -304,7 +304,7 @@ The following 4 tags are made available by this module:
 
 This tag needs to be placed in the &lt;HEAD&gt; to load the js/css libraries required by the other tags. This is always first step in implementing on-page editing in any template.
 
-```
+```html
 <cms:load_edit />
 ```
 
@@ -326,13 +326,13 @@ If the user tries to navigate away from a page with unsaved contents, she is ask
 
 This tag is used to output an anchor element clicking on which opens up a pop-up window. The window shows the specified editable regions sought to be edited.
 
-```
+```html
 <cms:popup_edit 'my_text' />
 ```
 
 Multiple editable regions may be specified by using the 'pipe' separator between their names e.g.
 
-```
+```html
 <cms:popup_edit 'my_text|my_richtext|k_page_folder_id' />
 ```
 
@@ -342,7 +342,7 @@ So, for example, if the *popup\_edit* tag is used within the page\_view of a tem
 
 If, however, you wish to edit regions belonging to a different template or page than the one where this tag is being used (e.g. editing regions belonging to 'globals.php' with the link placed on 'blog.php'), the right context needs to be specifically provided. This can be done by wrapping the *popup\_edit* tag around by a _pages_ tag block that fetches the template/page containing the editable regions being edited e.g.
 
-```
+```html
 <cms:pages masterpage='globals.php' >
     <cms:popup_edit 'site_name|meta_desc' />
 </cms:pages>
@@ -350,7 +350,7 @@ If, however, you wish to edit regions belonging to a different template or page 
 
 or
 
-```
+```html
 <cms:pages masterpage='portfolio.php' page_name='some-work' >
     <cms:popup_edit 'description' />
 </cms:pages>
@@ -382,7 +382,7 @@ This tag is used to convert any block-level HTML element into a true inline edit
 
 For example, suppose a template has a richtext editable region named 'my\_description' and this is how it is being output on the front-end (without inline-editing being implemented yet) -
 
-```
+```html
 <div id="desc" >
     <cms:show my_description />
 </div>
@@ -390,7 +390,7 @@ For example, suppose a template has a richtext editable region named 'my\_descri
 
 \- this is how we can convert the container 'div' element into an inline editor that saves back its contents into the 'my\_description' field
 
-```
+```html
 <div id="desc" <cms:inline_edit 'my_description' /> >
     <cms:show my_description />
 </div>

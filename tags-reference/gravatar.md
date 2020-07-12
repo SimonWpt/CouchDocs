@@ -1,6 +1,6 @@
 ---
 title: gravatar
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 Given an email address, the **gravatar** tag outputs an HTML &lt;img&gt; tag (or link only). The source of this image is set to the Gravatar image registered for this email at _gravatar.com_. If the email is not registered, the default image is output.
 
-```
+```html
 <cms:gravatar email="johndoe@gmail.com" size="60" />
 ```
 

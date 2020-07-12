@@ -1,6 +1,6 @@
 ---
 title: else
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -11,7 +11,7 @@ Often you'd want to execute a certain set of statements when a given condition i
 **Else** provides this capability by extending the **If** tag. It does so by delimiting statements that will be executed when the condition given to the **if** does not evaluate to true.<br/>
 For example -
 
-```
+```html
 <cms:if my_var == 'hello' >
     <h3> Hello </h3>
 <cms:else />
@@ -26,7 +26,7 @@ In the snippet above, if variable 'my\_var' contains 'hello', all the statements
 In cases where there are more than two outcomes of the condition, the **else** block can be made to contain another nested **if** block -<br/>
 For example, here is a snippet that shows the stage of life by evaluating the variable 'age'.
 
-```
+```html
 <cms:if age lt '1' >
     <h3>Infant</h3>
 <cms:else />

@@ -1,6 +1,6 @@
 ---
 title: not_empty
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -11,7 +11,7 @@ The **not\_empty** tag can be used to find out whether or not an editable region
 It returns a '1' if the variable representing the editable region contains some value (i.e. is not empty) else it returns a '0'.<br/>
 This property makes it possible to use it with conditional tags, like **if** and **else**.
 
-```
+```html
 <cms:if "<cms:not_empty my_content />" >
    .. do something..
 </cms:if>
@@ -19,7 +19,7 @@ This property makes it possible to use it with conditional tags, like **if** and
 
 The snippet above, where we are checking if the editable region named *my\_content* contains any value,  could have been written in the following simpler manner -
 
-```
+```html
 <cms:if my_content >
    .. do something..
 </cms:if>

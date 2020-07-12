@@ -1,6 +1,6 @@
 ---
 title: exists
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,7 +10,7 @@ The **Exists** tag can be used to confirm the presence of a file or a folder on 
 It returns '1' if the object file/folder exists. Otherwise it returns a '0'.<br/>
 For example -
 
-```
+```html
 <cms:exists "contact.inc" />
 ```
 
@@ -34,7 +34,7 @@ will output either '1' or '0' depending on whether the file 'contact.inc' is pre
 Combined with the [**If**](../if.html) tag and [**Embed**](../embed.html) tag, the **Exists** tag provides a very powerful method of choosing the right template to display while showing a particular page.<br/>
 For example, let us say we have a template 'index.php' that is clonable and several pages have been made out of it - e.g. 'about-us', 'services',  'contact-us' etc.. The template has defined one editable richtext area named 'my\_content' and, as usual, every page has its own data in this area. The code within this template to display the data for each cloned page might go somewhat like this
 
-```
+```html
 <cms:if k_is_page >
    <cms:show my_content />
 </cms:if>
@@ -43,7 +43,7 @@ For example, let us say we have a template 'index.php' that is clonable and seve
 This is perfect for all pages but for 'contact-us', we do not want to display 'my\_content'. We wish to display a form (created by using [**Form**](../form.html) tag). One way to do this would be to make 'contact-us' a separate template in itself. However a better method would be to check in the code snippet above whether the page being displayed is 'contact-us' or not and if it is, instead of displaying the usual 'my\_content', display the form instead.<br/>
 Let us say we have saved the code for the form in a snippet called 'contact-us.inc' within 'couch/snippets' folder. The modified code will be -
 
-```
+```html
 <cms:if k_is_page >
    <cms:if k_page_name=='contact-us' >
       <cms:embed 'contact-us.inc' />
@@ -57,7 +57,7 @@ This will do the trick.<br/>
 However, suppose there is one other page, 'testimonials', where we wish to use the [**Pages**](../pages.html) tag to iterate through and display excerpts from pages created through some other template (or any other logic). Once again, instead of creating a separate template, we decide to check for 'testimonials' page and execute some different code. We'll assume that the code for this page has been saved in a snippet named 'testimonials.inc' within snippets folder.<br/>
 The code above can be modified to fit in the new condition -
 
-```
+```html
 <cms:if k_is_page >
    <cms:if k_page_name=='contact-us' >
       <cms:embed 'contact-us.inc' />
@@ -75,7 +75,7 @@ This works but it is now becoming painfully evident that this technique is crumb
 
 Employing **Exists** tag for the above task makes it a snap. Here is how -
 
-```
+```html
 <cms:if k_is_page >
     <cms:if "<cms:exists "<cms:show k_page_name/>.inc" />" >
         <cms:embed "<cms:show k_page_name/>.inc" />

@@ -1,6 +1,6 @@
 ---
 title: Google Maps
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -12,7 +12,7 @@ Couch abstracts away the complexity of creating a Google map behind a simple tag
 
 You'll need a key from Google to use its API. If you don't have one, get one free from the site mentioned below and set it at the following location _config.php_ -
 
-```
+```html
 // 16.
 // Google Maps API Key.
 // You'll have to get one for your site from 'http://code.google.com/apis/maps/'
@@ -22,7 +22,7 @@ define( 'K_GOOGLE_KEY', 'ABQIAAAAD7z_FToS5NSqosnG9No1ABQYPrehWcZJH1ec0SZqipYFbK_
 
 The following snippet given will quickly create a map showing the given address -
 
-```
+```html
 <cms:google_map
     name='my_map'
     address='1600 Amphitheatre Parkway, Mountain View, CA'
@@ -31,7 +31,7 @@ The following snippet given will quickly create a map showing the given address 
 
 You can use the latitude and the longitude of a place instead of its address -
 
-```
+```html
 <cms:google_map
     name='my_map'
     latitude='37.423021'

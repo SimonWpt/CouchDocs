@@ -1,6 +1,6 @@
 ---
 title: php
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -12,11 +12,11 @@ The **php** tag can be used to execute raw PHP code enclosed within its opening 
 
 Examples -
 
-```
+```html
 <cms:php> echo( "Hello World" ); </cms:php>
 ```
 
-```
+```html
 <cms:set k_success2="<cms:php>
     echo(str_replace( \"\n\", '|', \"<cms:show k_success/>\" ));
 </cms:php>" />

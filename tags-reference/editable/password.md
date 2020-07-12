@@ -1,7 +1,7 @@
 ---
 title: type = 'password'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -11,7 +11,7 @@ Editable region of _password_ type is very similar to the [_text_](../../text.ht
 
 An editable region of _password_ type can be defined this way -
 
-```
+```html
 <cms:editable
  name='my_password'
  label='Password'
@@ -26,7 +26,7 @@ The code above will result in the following (with some password typed in) -
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <cms:show my_password />
 ```
 
@@ -41,7 +41,7 @@ In addition to the parameters common to all the types of editable regions, _pass
 
 The width of the generated textbox can be changed by setting this parameter. For example, the following will make the textbox 200px wide -
 
-```
+```html
 <cms:editable name='my_password' label='Password'
  desc='Enter your password'
  width='200'
@@ -52,26 +52,9 @@ The width of the generated textbox can be changed by setting this parameter. For
 
 The maximum number of characters that can be inputted by the user in this textbox can be constrained by setting this parameter. For example, the following code will prevent the user from entering more than 40 characters -
 
-```
+```html
 <cms:editable name='my_password' label='Password'
  desc='Enter your password'
  maxlength='40'
  type='password' />
 ```
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

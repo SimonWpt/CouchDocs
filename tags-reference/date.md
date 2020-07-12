@@ -1,6 +1,6 @@
 ---
 title: date
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,15 +8,15 @@ layout: default
 
 The **date** tag outputs a string according to the given _format_ parameter using the given _date_ parameter. If no _date_ provided, the current time is used.
 
-```
+```html
 <cms:date />
 ```
 
-```
+```html
 <cms:date k_page_date />
 ```
 
-```
+```html
 <cms:date k_page_date format='jS M, Y' />
 ```
 
@@ -152,11 +152,11 @@ By setting this parameter to '1', you can get the GMT equivalent of the date pro
 
 If you use the locale-aware format characters mentioned above, this parameter can be set to the locale desired for formatting the provided date.
 
-```
+```html
 <cms:date k_page_date format='%B %d, %Y' locale='french' />
 ```
 
-```
+```html
 <cms:date k_page_date format='%B %d, %Y' locale='italian' />
 ```
 
@@ -169,11 +169,11 @@ The **date** tag can help converting the output to UTF8 if you can provide it wi
 
 For example -
 
-```
+```html
 <cms:date k_page_date format='%B %d, %Y' locale='greek' charset='ISO-8859-7' />
 ```
 
-```
+```html
 <cms:date k_page_date format='%B %d, %Y' locale='russian' charset='ISO-8859-5' />
 ```
 

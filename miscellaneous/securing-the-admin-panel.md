@@ -1,6 +1,6 @@
 ---
 title: Securing the Admin Panel
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 
@@ -22,7 +22,7 @@ It is a powerful way of securing your Couch installation from unwanted access an
 
 **2\.** Open up 'config.php' and find the following lines
 
-```
+```html
 // 1b.
 // For security purpose, the 'index.php' file of Couch can be renamed to anything else.
 // If you do so, uncomment the following line and enter the new name.
@@ -31,7 +31,7 @@ It is a powerful way of securing your Couch installation from unwanted access an
 
 Uncomment the 'define' after adding our new name to it. Thus it will now become
 
-```
+```html
 // 1b.
 // For security purpose, the 'index.php' file of Couch can be renamed to anything else.
 // If you do so, uncomment the following line and enter the new name.

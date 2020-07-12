@@ -1,6 +1,6 @@
 ---
 title: sub
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **sub** tag accepts two parameters and returns as its output the value obtained after subtracting the second parameter from the first.<br/>
 The parameters may be literal strings, variables or output of other tags.
 
-```
+```html
 <cms:sub my_count '1' />
 ```
 

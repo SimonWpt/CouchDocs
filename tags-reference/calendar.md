@@ -1,6 +1,6 @@
 ---
 title: calendar
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

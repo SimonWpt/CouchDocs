@@ -1,6 +1,6 @@
 ---
 title: excerpt
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -27,7 +27,7 @@ By setting the 'truncate\_chars' parameter (see below)  to '1', it can be made t
 The HTML elements you wish to preserve in the excerpt.<br/>
 If you wish to preserve multiple tags, separate the tagnames by using comma e.g.
 
-```
+```html
 allow='i, b'
 ```
 
@@ -40,7 +40,7 @@ By default the produced excerpt is appended with '...' (three ellipses). You can
 By default, the 'count' paramater is considered to be the number of words the excerpt can contain.<br/>
 By setting the 'truncate\_chars' to '1', the 'count' becomes the number of characters the excerpt can contain.
 
-```
+```html
 <cms:excerpt count='100' truncate_chars='1'>...blah blah...</cms:excerpt>
 ```
 

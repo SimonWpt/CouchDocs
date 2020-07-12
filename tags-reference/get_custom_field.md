@@ -1,6 +1,6 @@
 ---
 title: get_custom_field
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,7 +10,7 @@ The **get\_custom\_field** tag can be used to fetch the value contained within a
 
 It is an alternative method to using the **pages** tag and is well suited for fetching values from single fields (as opposed to the **pages** tag that fetches values of all the editable regions in a page).
 
-```
+```html
 <cms:get_custom_field 'site_name' masterpage='globals.php' />
 ```
 
@@ -33,7 +33,7 @@ The name of the template that defines the editable region. This parameter is man
 The name of the page that contains the editable region.<br/>
 For non-clonable pages this parameter can be skipped.
 
-```
+```html
 <cms:get_custom_field var='content' masterpage='blog.php' page='my_test_page' />
 ```
 

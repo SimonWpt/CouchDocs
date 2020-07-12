@@ -1,7 +1,7 @@
 ---
 title: type = 'group'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ It is meant to group together related editable regions and thus improve end user
 
 As an example, suppose a template has the following editable regions -
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image here' show_preview='1'
     type='image' />
 
@@ -38,13 +38,13 @@ Of the four regions, three are closely related (*prop\_image*, *prop\_image\_thu
 
 To visually convey this relation we can group them together. For this first we create an editable region of _group_ type -
 
-```
+```html
 <cms:editable name='prop_uploads' label='Uploads' desc='Your main uploads' type='group' />
 ```
 
 Next link the three aforementioned editable regions to this group by setting their group parameters to its name.
 
-```
+```html
 <cms:editable name='prop_image' label='Image' desc='Upload main image here' show_preview='1'
     group='prop_uploads'
     type='image' />
@@ -76,20 +76,3 @@ If there are multiple groups in the template (and hence multiple panels), only o
 ## Parameters
 
 Only the parameters common to all editable regions apply to this type.
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

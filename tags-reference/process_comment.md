@@ -1,6 +1,6 @@
 ---
 title: process_comment
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

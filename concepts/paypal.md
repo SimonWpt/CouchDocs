@@ -1,6 +1,6 @@
 ---
 title: PayPal
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -35,7 +35,7 @@ Couch takes away the complexity from both the steps by making it as simple as pl
 In the following paragraphs we'll discuss how we can use Couch to do all the heavy lifting for us - but before we can do that, a little groundwork needs to be done.<br/>
 First we need to inform Couch about some of our PayPal details. Open _config.php_ and set the following three values to that of yours.
 
-```
+```html
 // Set the following if you use PayPal buttons to sell products.
 // 17.
 // Set this to zero once you are ready to go live
@@ -70,7 +70,7 @@ Two fields are mandatory and need your special attention -
 
 As an example, the following snippet can be used to create such a field (as a good practice, we have added the vaiidations normally required for a price field) -
 
-```
+```html
 <cms:editable name='pp_price' label='Price' desc='Amount in USD (correct upto 2 decimal points)'
     maxlength='10'
     search_type='decimal'
@@ -84,7 +84,7 @@ With the groundwork behind us, the rest is easy.
 
 To create the PayPal 'Buy Button' simply place the following Couch tag in your _product.php_ template -
 
-```
+```html
 <cms:paypal_button />
 ```
 
@@ -104,7 +104,7 @@ Now we only need to handle the incoming IPN notification.
 
 To see how it works, place the following snippet somewhere at the top of your _product.php_ template -
 
-```
+```html
 <cms:paypal_processor debug='1' />
 ```
 
@@ -128,7 +128,7 @@ Try clicking an item's 'Buy Now' button and upon reaching the PayPal's site, com
 
 You'll find something like this in the log file -
 
-```
+```html
 =======================[25-Jul-2010 10:08:22 PM]=======================
 Received paypal IPN:
 
@@ -211,7 +211,7 @@ If the transaction is valid, it sets another variable named *k\_paypal\_success*
 
 A skeletal snippet will look like the following -
 
-```
+```html
 <cms:paypal_processor>
     <cms:if k_paypal_success>
 
@@ -229,7 +229,7 @@ A skeletal snippet will look like the following -
 
 A real world example could be -
 
-```
+```html
 <cms:paypal_processor>
     <cms:if k_paypal_success>
         <cms:send_mail from=pp_receiver_email to=pp_payer_email subject='Thank you for your purchase!' >

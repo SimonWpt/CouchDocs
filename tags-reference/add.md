@@ -1,6 +1,6 @@
 ---
 title: add
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **add** tag accepts two parameters and returns as its output the value obtained after adding together the two parameters.<br/>
 The parameters may be literal strings, variables or output of other tags.
 
-```
+```html
 <cms:add my_count '1' />
 ```
 

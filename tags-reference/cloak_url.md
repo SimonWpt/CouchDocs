@@ -1,6 +1,6 @@
 ---
 title: cloak_url
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

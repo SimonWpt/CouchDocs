@@ -1,7 +1,6 @@
 ---
 title: Starting off simple - the About-Us page
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 
@@ -23,7 +22,7 @@ This change of extension from _.html_ to _.php_ is necessary before Couch can be
 Time to fit Couch into _about.php_.<br/>
 Open up _about.php_ in your favorite text editor and paste the following line to the very top of the file -
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 ```
 
@@ -37,7 +36,7 @@ Open up _about.php_ in your favorite text editor and paste the following line to
 
 As the final step, paste the following to _about.php_ as the last line of the file (i.e. after all other content of the file) -
 
-```
+```html
 <?php COUCH::invoke(); ?>
 ```
 
@@ -66,7 +65,7 @@ With _about.php_ open in the text editor, find the HTML block representing the m
 
 and surround it with Couch's editable tags as follows -
 
-```
+```html
 <cms:editable name='main_content' type='richtext'> original content </cms:editable>
 ```
 
@@ -95,7 +94,7 @@ To further refine the experience for your client, a few minor enhancements can b
 The name of the template appears as _about.php_ in the admin panel. Let us make it appear as About Us.<br/>
 Couch has a tag named template. Add the following line containing the template tag to somewhere at the top of the page (below the boilerplate PHP include code we added, of course) -
 
-```
+```html
 <cms:template title='About Us' />
 ```
 

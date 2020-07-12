@@ -1,6 +1,6 @@
 ---
 title: Search
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -28,7 +28,7 @@ _Limit_ parameter can be set to display only a limited number of pages that were
 
 As noted above, this tag iterates through all the found pages setting up variables pertaining to each page as it steps through it. Thus the following snippet -
 
-```
+```html
 <cms:search masterpage='blog.php' limit='10' >
     <h3><a href="<cms:show k_page_link />"><cms:show k_search_title /></a></h3>
     <cms:show k_search_excerpt />
@@ -58,7 +58,7 @@ _http&#58;//www.yoursite.com/search.php?s=hello+world_
 
 **2\.** You can set the _keywords_ parameter of the **search** tag to the terms to be searched. This method makes possible the use of variables for specifying the search terms. In fact, we can even get values from the querystring of URL and pass it on to the **search** tag via the _keywords_ parameter -
 
-```
+```html
 <cms:search masterpage='blog.php' limit='10' keywords="<cms:gpc 's' />" >
     <h3><a href="<cms:show k_page_link />"><cms:show k_search_title /></a></h3>
     <cms:show k_search_excerpt />
@@ -75,7 +75,7 @@ We can set this parameter in the querystring by using a HTML form that has a tex
 
 Couch has a simple tag named [__*search\_form*__](../../tags-reference/search_form.html) that generates such a form for you that has a textfield named 's' -
 
-```
+```html
 <cms:search_form />
 ```
 
@@ -89,7 +89,7 @@ For example you might wish to place the search form on the homepage (_index.php_
 You can do this by placing the [__*search\_form*__](../../tags-reference/search_form.html) tag within _index.php_ and placing the [__*search*__](../../tags-reference/search.html) tag snippet within _search.php_.<br/>
 To make the [__*search\_form*__](../../tags-reference/search_form.html) tag invoke _search.php_ (instead of _index.php_) upon form submssion, its _processor_ parameter can be set in the following manner -
 
-```
+```html
 <cms:search_form msg='Enter keywords' processor="<cms:show k_site_link />search.php" />
 ```
 
@@ -97,7 +97,7 @@ The _msg_ parameter is used to display some message inside the search box. The d
 
 As a final example, following is a snippet that can be placed on a search page -
 
-```
+```html
 <cms:search_form />
 
 <cms:search limit='10' >

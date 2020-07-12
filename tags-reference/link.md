@@ -1,6 +1,6 @@
 ---
 title: link
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -12,25 +12,25 @@ The link tag can be used to dynamically generate appropriate links to the variou
 
 ### Home view
 
-```
+```html
 <a href="<cms:link masterpage='news.php' />" >Testing Link tag</a>
 ```
 
 ### Page view
 
-```
+```html
 <a href="<cms:link masterpage='news.php' page='first-news-item' />" >Testing Link tag</a>
 ```
 
 ### Folder view
 
-```
+```html
 <a href="<cms:link masterpage='news.php' folder='entertainment' />" >Testing Link tag</a>
 ```
 
 ### Archive view
 
-```
+```html
 <a href="<cms:link masterpage='news.php' year='2010' />" >Testing Link tag</a>
 
 <a href="<cms:link masterpage='news.php' year='2010' month='8' />" >Testing Link tag</a>

@@ -1,6 +1,6 @@
 ---
 title: nested_pages
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -15,7 +15,7 @@ For such cases, the 'nested\_pages' tag can be used as it is a lower level tag (
 To illustrate the use of 'nested\_pages', we'll use the same sample hierarchy of elements that we used in the '[folders](../../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.<br/>
 We'll assume that a template named 'index.php' has been used to create the nested-pages.
 
-```
+```html
 index.php
     |---World News
     |   |---North American News
@@ -32,7 +32,7 @@ index.php
 
 The simplest way to list the nested-pages would be as follows -
 
-```
+```html
 <cms:nested_pages masterpage='index.php'>
    <a href="<cms:show k_nestedpage_link />"><cms:show k_nestedpage_title /></a><br />
 </cms:nested_pages>
@@ -40,7 +40,7 @@ The simplest way to list the nested-pages would be as follows -
 
 The output -
 
-```
+```html
 World News
 North American News
 United States News
@@ -59,7 +59,7 @@ Notice how the hierarchical relationship between the pages has been preserved.
 As is the norm with other similar tags in Couch, the 'nested\_pages' tag too, as it iterates through the pages within the tree, makes available all the information pertaining the page it is currently on by setting various variables.<br/>
 Place a _&lt;cms:dump /&gt;_ statement inside the loop and you'll see that Couch provides all the information that was inputted in the admin-section for each nested-page.
 
-```
+```html
 <cms:nested_pages masterpage='index.php'>
    <cms:dump />
    <a href="<cms:show k_nestedpage_link />"><cms:show k_nestedpage_title /></a><br />
@@ -68,7 +68,7 @@ Place a _&lt;cms:dump /&gt;_ statement inside the loop and you'll see that Couch
 
 These, for example, are the variables that get set for page 'United States News' -
 
-```
+```html
 * k_level: 2
 * k_nestedpage_id: 1595
 * k_nestedpage_name: united-states-news
@@ -99,7 +99,7 @@ Let us use is to create one.
 
 A menu is normally created using nested &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; elements. To make the task of doing so easy, the 'nested\_pages' tag, like the '[folders](../folders.html)' tag, supports the 'extended\_info' parameter. Setting the 'extended\_info' parameter to '1' makes the 'nested\_pages' tag provide additional information that can be used to output the closing and opening &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; tags without any pain.
 
-```
+```html
 <cms:nested_pages masterpage='index.php' extended_info='1' >
    <cms:if k_level_start ><ul></cms:if>
    <cms:if k_element_start ><li>
@@ -112,7 +112,7 @@ A menu is normally created using nested &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; ele
 
 Output -
 
-```
+```html
 <ul>
     <li>
         Asian News
@@ -138,7 +138,7 @@ Output -
 
 Following is a complete example that makes use of the variables mentioned before to create a functioning menu -
 
-```
+```html
 <cms:nested_pages masterpage='index.php' extended_info='1' >
    <cms:if k_level_start >
       <cms:if k_level='0'>
@@ -160,7 +160,7 @@ Following is a complete example that makes use of the variables mentioned before
 
 The example shown above is equivalent to the following using '[menu](../menu.html)' tag -
 
-```
+```html
 <cms:menu masterpage='index.php' menu_class='my-menu-class-1 my-menu-class-2' menu_id='my-menu-id' first_class='first' last_class='last' active_trail_class='active' selected_class='current' />
 ```
 
@@ -170,7 +170,7 @@ Apart from being used to create a menu, the 'nested\_pages' tag may also be used
 
 If you are familiar with the '[pages](../pages.html)' tag, the following snippet will seem familiar -
 
-```
+```html
 <cms:nested_pages masterpage='index.php' extended_info='1' paginate='1' limit='5' >
    <cms:if k_paginated_top>
      <cms:if k_paginator_required >
@@ -190,7 +190,7 @@ If you are familiar with the '[pages](../pages.html)' tag, the following snippet
 
 Output -
 
-```
+```html
 Page 1 of 3
 11 records Found. Displaying: 1-5
 

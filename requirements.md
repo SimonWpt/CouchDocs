@@ -1,7 +1,6 @@
 ---
 title: Requirements
 layout: default
-has_children: true 
 ---
 
 # Requirements

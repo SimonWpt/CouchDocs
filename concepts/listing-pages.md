@@ -1,6 +1,6 @@
 ---
 title: Listing Pages
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 Couch has a powerful tag named [__*pages*__](../../tags-reference/pages.html) that can be used to list all pages belonging to a template.<br/>
 For example -
 
-```
+```html
 <cms:pages masterpage='blog.php'>
      <!-- All the variables of each page cloned out of this template are available here -->
      <cms:show k_page_title /><br>
@@ -46,7 +46,7 @@ It is ultimately upto you whether or not you choose to list pages in the expecte
 
 The *k\_is\_home* variable can be used to recognize this view and then the [__*pages*__](../../tags-reference/pages.html) tag can be used to list all pages cloned from the template being accessed.
 
-```
+```html
 <cms:if k_is_home >
     <cms:pages>
         <!-- All the variables of each page cloned out of this template are available here -->
@@ -58,7 +58,7 @@ The *k\_is\_home* variable can be used to recognize this view and then the [__*p
 
 The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\_name* variable made available by Couch in this view can then be used as a parameter of the [__*pages*__](../../tags-reference/pages.html) tag to list pages belonging to that folder -
 
-```
+```html
 <cms:if k_is_folder >
     <cms:pages folder=k_folder_name include_subfolders='1' >
         <!-- All the variables of each page in this folder are available here -->
@@ -70,7 +70,7 @@ The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\
 
 The *k\_is\_archive* can be used to recognize this view. In this view, Couch makes available the *k\_archive\_date* and *k\_next\_archive\_date* variables that denote the boundries of the archive's period. These two variables can then be used as parameters of the [__*pages*__](../../tags-reference/pages.html) tag to list pages belonging to that time period -
 
-```
+```html
 <cms:if k_is_archive >
     <cms:pages start_on=k_archive_date stop_before=k_next_archive_date >
         <!-- All the variables of each page belonging to this archive period are available here -->
@@ -82,7 +82,7 @@ The *k\_is\_archive* can be used to recognize this view. In this view, Couch mak
 
 The three list views can be handled separately if the way the pages and their contents are displayed differs between the views. However, if their is no difference in the way the list is displayed, the following is the preferred way of handling all the three list-views together -
 
-```
+```html
 <cms:if k_is_list >
     <cms:pages folder=k_folder_name include_subfolders='1' start_on=k_archive_date stop_before=k_next_archive_date >
         <!-- All the variables of each page belonging to this view are available here -->

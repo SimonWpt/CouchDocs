@@ -1,6 +1,6 @@
 ---
 title: comments
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -23,19 +23,19 @@ It can be constrained into fetching comments from only certain pages by setting 
 
 ### masterpage
 
-```
+```html
 <cms:comments masterpage='blog.php'></cms:comments>
 ```
 
 Fetch comments of only the pages that have been cloned out of blog.php.
 
-```
+```html
 <cms:comments masterpage='blog.php, testimonial.php'></cms:comments>
 ```
 
 Fetch comments of only the pages that have been cloned out of blog.php or testimonial.php.
 
-```
+```html
 <cms:comments masterpage='NOT blog.php, testimonial.php'></cms:comments>
 ```
 
@@ -43,19 +43,19 @@ Fetch comments of all the pages except those that have been cloned out of blog.p
 
 ### page_id
 
-```
+```html
 <cms:comments page_id='13'></cms:comments>
 ```
 
 Fetch comments of only the page with the id of '13'.
 
-```
+```html
 <cms:comments page_id='13, 17'></cms:comments>
 ```
 
 Fetch comments of only the pages that have an id of '13' or '17'.
 
-```
+```html
 <cms:comments page_id='NOT 13, 17'></cms:comments>
 ```
 
@@ -63,19 +63,19 @@ Fetch comments of all the pages except the pages that have an id of '13' or '17'
 
 ### page_name
 
-```
+```html
 <cms:comments page_name='my_first_entry'></cms:comments>
 ```
 
 Fetch comments of only the page named 'my\_first\_entry'.
 
-```
+```html
 <cms:comments page_name='my_first_entry, my_another_entry'></cms:comments>
 ```
 
 Fetch comments of only the pages named 'my\_first\_entry' or 'my\_another\_entry'.
 
-```
+```html
 <cms:comments page_name='NOT my_first_entry, my_another_entry'></cms:comments>
 ```
 
@@ -83,7 +83,7 @@ Fetch comments of all the pages except the pages named 'my\_first\_entry' or 'my
 
 ### limit
 
-```
+```html
 <cms:comments limit='5'></cms:comments>
 ```
 
@@ -91,7 +91,7 @@ Fetch five approved comments. (Since 'order' is not specified, the default value
 
 ### paginate
 
-```
+```html
 <cms:comments limit='5' paginate='1'></cms:comments>
 ```
 
@@ -99,7 +99,7 @@ Fetch ALL approved comments but show only 5 at one time. To move to the next 5 o
 
 ### offset
 
-```
+```html
 <cms:comments limit='5' offset='2'></cms:comments>
 ```
 
@@ -109,7 +109,7 @@ Fetch five approved comments after skipping the first two.
 
 Comments are always ordered by their dates. The order in which they are displayed can be made either ascending or descending by setting this parameter to 'asc' or 'desc' respectively. If omitted, 'desc' (latest first) is assumed.
 
-```
+```html
 <cms:comments order='asc'></cms:comments>
 ```
 

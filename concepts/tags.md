@@ -1,6 +1,6 @@
 ---
 title: Tags
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -15,7 +15,7 @@ Similar to the XML tags, a Couch tag is either _self-closing_ or consists of a _
 
 This is how a typical self closing Couch tag looks like -
 
-```
+```html
 <cms:show 'Hello World' />
 ```
 
@@ -23,7 +23,7 @@ This is how a typical self closing Couch tag looks like -
 
 This is how a typical paired tag looks like -
 
-```
+```html
 <cms:repeat count='4'>
     <h3>This heading will be repeated 4 times</h3>
 </cms:repeat>
@@ -45,13 +45,13 @@ Depending upon the parameters and the input, a tag executes some function (e.g. 
 
 Parameters are used to modify a tag's behaviour. They provide the tag with specific information about what it is supposed to do. In the following example, 'Hello World' is a parameter and is the message that [__*show*__](../../tags-reference/show.html) tag is supposed to display.
 
-```
+```html
 <cms:show 'Hello World' />
 ```
 
 In the following example, '4' is the parameter and it is the number of times that the [__*repeat*__](../../tags-reference/repeat.html) tag will repeat the contents enclosed by it.
 
-```
+```html
 <cms:repeat count='4'>
     <h3>This heading will be repeated 4 times</h3>
 </cms:repeat>
@@ -63,14 +63,14 @@ Please notice that in the second example above, we are explicitly naming the par
 
 In Couch, naming the parameters is entirely optional but then you'll have to make sure that you pass the parameters in the exact sequence the tag expects them in. Thus, for example, [__*repeat*__](../../tags-reference/repeat.html) tag can take two parameters 'count' and 'startcount' where 'startcount' is expected to be the second parameter. If we explicitly name the parameters, e.g. -
 
-```
+```html
 <cms:repeat count='4' startcount='1'></cms:repeat>
 <cms:repeat startcount='1' count='4'></cms:repeat>
 ```
 
 \- the sequence of the parameters does not matter as there is no ambiguity. However, if we were to pass them unnamed e.g. -
 
-```
+```html
 <cms:repeat '1' '4'></cms:repeat>
 ```
 

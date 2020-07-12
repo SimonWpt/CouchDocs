@@ -1,6 +1,6 @@
 ---
 title: pages
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 **Pages** tag can be used to list all pages belonging to a template.
 
-```
+```html
 <cms:pages masterpage='blog.php'>
      <!-- All the variables of each page cloned out of this template are available here -->
      <cms:show k_page_title /><br>
@@ -42,7 +42,7 @@ This tag iterates through each of the fetched page and makes available all the d
 
 ### masterpage
 
-```
+```html
 <cms:pages masterpage='blog.php'></cms:pages>
 ```
 
@@ -50,7 +50,7 @@ This example would fetch all pages cloned from blog.php.
 
 If this parameter is skipped, the template being currently executed is used instead. Thus -
 
-```
+```html
 <cms:pages></cms:pages>
 ```
 
@@ -58,19 +58,19 @@ This example would fetch all pages cloned from the template being currently exec
 
 ### id
 
-```
+```html
 <cms:pages masterpage='blog.php' id='14'></cms:pages>
 ```
 
 This example would fetch only page with id of 14 that has been cloned from blog.php.
 
-```
+```html
 <cms:pages masterpage='blog.php' id='14, 13'></cms:pages>
 ```
 
 This example would fetch only pages with id of 14 or 13 that have been cloned from blog.php.
 
-```
+```html
 <cms:pages masterpage='blog.php' id='NOT 14, 13'></cms:pages>
 ```
 
@@ -78,19 +78,19 @@ This example would fetch all pages cloned from blog.php except the two with the 
 
 ### page_name
 
-```
+```html
 <cms:pages masterpage='blog.php' page_name='my_first_entry'></cms:pages>
 ```
 
 This example would fetch the page named 'my\_first\_entry' that has been cloned from blog.php.
 
-```
+```html
 <cms:pages masterpage='blog.php' page_name='my_first_entry, my_another_entry'></cms:pages>
 ```
 
 This example would fetch pages named 'my\_first\_entry' or 'my\_another\_entry' that have been cloned from blog.php.
 
-```
+```html
 <cms:pages masterpage='blog.php' page_name='NOT my_first_entry, my_another_entry'></cms:pages>
 ```
 
@@ -98,7 +98,7 @@ This example would fetch all pages cloned from blog.php except the two named 'my
 
 ### limit
 
-```
+```html
 <cms:pages masterpage='blog.php' limit='5'></cms:pages>
 ```
 
@@ -106,7 +106,7 @@ This example would fetch five pages cloned from blog.php. (Since no 'orderby' an
 
 ### paginate
 
-```
+```html
 <cms:pages masterpage='blog.php' limit='5' paginate='1'></cms:pages>
 ```
 
@@ -114,7 +114,7 @@ This example would fetch ALL pages cloned from blog.php but show only 5 at one t
 
 ### offset
 
-```
+```html
 <cms:pages masterpage='blog.php' offset='2'></cms:pages>
 ```
 
@@ -122,7 +122,7 @@ This example would fetch pages cloned from blog.php after skipping the first two
 
 ### startcount
 
-```
+```html
 <cms:pages masterpage='blog.php' startcount='0'></cms:pages>
 ```
 
@@ -130,19 +130,19 @@ The *k\_count*, *k\_record\_from*, *k\_current\_record* and *k\_record\_to* vari
 
 ### folder
 
-```
+```html
 <cms:pages masterpage='blog.php' folder='classic-bikes'></cms:pages>
 ```
 
 This example would fetch pages cloned from blog.php and belonging to folder named 'classic-bikes'.
 
-```
+```html
 <cms:pages masterpage='blog.php' folder='classic-bikes, super-bikes'></cms:pages>
 ```
 
 This example would fetch pages cloned from blog.php and belonging to folders named 'classic-bikes' or 'super-bikes'.
 
-```
+```html
 <cms:pages masterpage='blog.php' folder='NOT classic-bikes, super-bikes'></cms:pages>
 ```
 
@@ -154,13 +154,13 @@ See below.
 
 In the _folder-view_ (see [**Views**](../../concepts/views.html)), the *k\_folder\_name* variable is set to the name of the current folder. It can be used to list the right pages -
 
-```
+```html
 <cms:pages folder=k_folder_name include_subfolders='1'></cms:pages>
 ```
 
 ### include_subfolders
 
-```
+```html
 <cms:pages masterpage='blog.php' folder='classic-bikes' include_subfolders='1'></cms:pages>
 ```
 
@@ -170,7 +170,7 @@ This parameter augments the _folder_ parameter given above which only fetches pa
 
 ### start_on
 
-```
+```html
 <cms:pages masterpage='blog.php' start_on='2010-02-01'></cms:pages>
 ```
 
@@ -178,7 +178,7 @@ This example would fetch all pages cloned from blog.php that have been published
 
 ### stop_before
 
-```
+```html
 <cms:pages masterpage='blog.php' stop_before='2010-03-01'></cms:pages>
 ```
 
@@ -186,7 +186,7 @@ This example would fetch all pages cloned from blog.php that have been published
 
 The parameters *start\_on* and *stop\_before* can be combined to fetch pages published betwen a particular time period. Thus -
 
-```
+```html
 <cms:pages masterpage='blog.php' start_on='2010-02-01' stop_before='2010-03-01'></cms:pages>
 ```
 
@@ -194,13 +194,13 @@ This example would fetch all pages cloned from blog.php that have been published
 
 In the _archive-view_ (see [**Views**](../../concepts/views.html)), the *k\_archive\_date* and the *k\_next\_archive\_date* are set to the first day of the archive and the first day of the next archive (month). These can be used to easily fetch pages that belong to only that archive period -
 
-```
+```html
 <cms:pages start_on=k_archive_date stop_before=k_next_archive_date ></cms:pages>
 ```
 
 ### show_future_entries
 
-```
+```html
 <cms:pages masterpage='blog.php' show_future_entries='0'></cms:pages>
 ```
 
@@ -219,13 +219,13 @@ The pages fetched can be sorted and ordered according to the following fields -
 
 Thus -
 
-```
+```html
 <cms:pages masterpage='blog.php' orderby='page_name'></cms:pages>
 ```
 
 Apart from the three fields mentioned above, any of the custom field defined in the template (i.e. the editable regions contained within the template) may be used for sorting the fetched pages. Thus, for example if the template 'blog.php' has three editable regions - *my\_blog\_text*, *my\_blog\_image* and *my\_blog\_author*, the following snippet -
 
-```
+```html
 <cms:pages masterpage='blog.php' orderby='my_blog_author'></cms:pages>
 ```
 
@@ -235,13 +235,13 @@ will sort the fetched pages by the custom field named 'my\_blog\_author'.
 
 Multiple fields can be used together for sorting e.g.
 
-```
+```html
 <cms:pages masterpage='blog.php' orderby='modification_date, page_name'></cms:pages>
 ```
 
 ### order
 
-```
+```html
 <cms:pages masterpage='blog.php' orderby='publish_date' order='desc'></cms:pages>
 ```
 
@@ -249,13 +249,13 @@ This example would fetch all pages cloned from blog.php and arrange them in desc
 
 If _order_ parameter is not set, the default value used is 'desc'. Since the default value used for _orderby_ is 'publish\_date', the above snippet is equivalent to the following -
 
-```
+```html
 <cms:pages masterpage='blog.php'></cms:pages>
 ```
 
 If multiple fields have been used in the _orderby_ parameter, separate sort orders can be set for each of the _orderby_ field. Thus -
 
-```
+```html
 <cms:pages orderby='my_custom_field_1, my_custom_field_2' order='asc, desc'></cms:pages>
 ```
 
@@ -265,7 +265,7 @@ The above will first sort pages in ascending order of 'my\_custom\_field\_1'. Th
 
 The editable regions defined for a template can be used to fetch cloned pages that contain certain values within those editable regions (custom fields) -
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author=jeffrey'></cms:pages>
 ```
 
@@ -273,11 +273,11 @@ This example would fetch all cloned pages of blog.php where the editable region 
 
 To fetch those pages where the editable region 'my\_blog\_author' exactly matches the term 'jeffrey', use '==' instead of '='. Thus -
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author==jeffrey'></cms:pages>
 ```
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author==jeffrey, arthur'></cms:pages>
 ```
 
@@ -292,19 +292,19 @@ This example would fetch all cloned pages of blog.php where the editable region 
     Similarly if any of the values contains a single quote ''' or double quote '"', it can be escaped likewise.
 </p>
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!=jeffrey'></cms:pages>
 ```
 
 This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' DOES NOT contain the word 'jeffrey' anywhere within it.
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!==jeffrey'></cms:pages>
 ```
 
 This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' DOES NOT exactly match the term 'jeffrey'.
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!=jeffrey, arthur'></cms:pages>
 ```
 
@@ -320,19 +320,19 @@ This example would fetch all cloned pages of blog.php where the editable region 
 Multiple custom fields may be combined together with a pipe '|' character (The pipe stands for a boolean AND) -<br/>
 The same custom field may be repeated.
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!=jeffrey | my_blog_author!=arthur'></cms:pages>
 ```
 
 This example would fetch all pages that do not contain 'jeffrey' AND do not contain 'arthur' anywhere within 'my\_blog\_author' (i.e. have neither jeffrey nor arthur).
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author=jeffrey | my_blog_author=arthur'></cms:pages>
 ```
 
 This example would fetch all pages that contain 'jeffery' AND contain 'arthur' somewhere within 'my\_blog\_author' (i.e. contain both jeffery as well as arthur).
 
-```
+```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author=jeffrey | my_blog_text=fellow countrymen'></cms:pages>
 ```
 
@@ -359,7 +359,7 @@ For example, we can fetch pages that have the value of a certain editable region
 
 As an example of numeric fields -
 
-```
+```html
 <cms:pages custom_field='distance<50 | price>=1000000 | price<=3000000'></cms:pages>
 ```
 

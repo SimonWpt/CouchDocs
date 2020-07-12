@@ -1,6 +1,6 @@
 ---
 title: capture
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **capture** tag can be used to store the output of its enclosed contents within any variable.<br/>
 The enclosed contents can be regular HTML code as well as the Couch tags.
 
-```
+```html
 <cms:capture into='my_variable' scope='global'>
     ...everything executed here will get stored in variable 'my_variable' at the requested scope...
 </cms:capture>

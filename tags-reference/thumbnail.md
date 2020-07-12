@@ -1,6 +1,6 @@
 ---
 title: thumbnail
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -15,7 +15,7 @@ The immediate reason for the introduction of this tag is to use it with [**repea
 
 Given the full path of an image, as in the following snippet
 
-```
+```html
 <cms:thumbnail src='http://www.mysite.com/couch/uploads/image/test.jpg' width='150' />
 ```
 
@@ -23,7 +23,7 @@ this tag will create a thumbnail of the specified image (in the same folder) and
 
 The proper way to use this tag's output in a template would be in tandem with the HTML 'img' tag - something like this
 
-```
+```html
 <img src="<cms:thumbnail src='http://www.mysite.com/couch/uploads/image/test.jpg' width='150' />" />
 ```
 
@@ -31,13 +31,13 @@ Instead of hardcoding the source image's path, as we did above, we are more like
 
 If, for example, the name of an [**image**](../editable/image.html) type region is 'my\_image', this is how we would output the image on the front-end
 
-```
+```html
 <img src="<cms:show my_image />" />
 ```
 
 and this is how we create and output the above image's thumbnail
 
-```
+```html
 <img src="<cms:thumbnail my_image width='150' />" />
 ```
 
@@ -48,7 +48,7 @@ and this is how we create and output the above image's thumbnail
 *   height
 *   enforce\_max
 
-```
+```html
 <img src="<cms:thumbnail my_image width='150' height='150' enforce_max='1' />" />
 ```
 

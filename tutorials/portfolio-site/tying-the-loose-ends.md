@@ -1,7 +1,6 @@
 ---
 title: Tying the loose ends
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 
@@ -36,7 +35,7 @@ We'll take this approach.
 Cut the code we have been working on above, paste it into a file and save the file as header.html in the snippets folder of Couch.<br/>
 Embed the following code at all the seven locations we mentioned -
 
-```
+```html
 <cms:embed 'header.html' />
 ```
 
@@ -125,7 +124,7 @@ becomes
 Sometimes you need to show only a few values from the global template. For such cases you can use the Couch get\_custom\_field tag to directly fetch the variable's value. This tag takes as parameters the name of the variable to be fetched, the template's name and the page's name if the template is clonable.<br/>
 Since our _globals.php_ template is non-clonable, we can skip the cloned page's name and simply state -
 
-```
+```html
 <cms:get_custom_field 'site_name' masterpage='globals.php' />
 ```
 

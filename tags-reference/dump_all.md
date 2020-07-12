@@ -1,6 +1,6 @@
 ---
 title: dump_all
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

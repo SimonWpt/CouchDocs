@@ -1,6 +1,6 @@
 ---
 title: Forms
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -15,7 +15,7 @@ A form of almost any complexity can be very easily created by using a few Couch 
 Let us begin with a very simple example.<br/>
 The following is the HTML code one would use to create a simple form. Note how a php script (_action="contact.php"_) is needed to handle the posted values, to validate them and then, probably, to email them somewhere.
 
-```
+```html
 <form method="post" action="contact.php">
     Name: <input type="text" size="10" maxlength="40" name="name"> <br />
     Email: <input type="text" size="10" name="email"> <br />
@@ -26,7 +26,7 @@ The following is the HTML code one would use to create a simple form. Note how a
 
 The same form created by using Couch tags would look like -
 
-```
+```html
 <cms:form method="post">
     Name: <cms:input type="text" size="10" maxlength="40" name="name" /> <br />
     Email: <cms:input type="text" size="10" name="email" /> <br />
@@ -73,7 +73,7 @@ The most common validation that is required is making sure that a field has not 
 
 For our example we'll make both the fields required and futher ensure that a valid email is always inputted in the email field by setting the _email_ validator. Modify the input fields as follows -
 
-```
+```html
 <cms:form method="post">
     Name: <cms:input type="text" size="10" maxlength="40" name="name" required='1' /> <br />
     Email: <cms:input type="text" size="10" name="email" required='1' validator='email' /> <br />
@@ -86,7 +86,7 @@ The following snippets demonstrate the validation process and both the aforement
 
 ### 1. Accessing input fields via k_success and k_error
 
-```
+```html
 <cms:form method="post">
     <cms:if k_success >
         <h3>Form successfully submitted</h3>
@@ -113,7 +113,7 @@ Note the use of each tag to get the individual values within *k\_success* and *k
 
 ### 2. Accessing input fields individually
 
-```
+```html
 <cms:form method="post">
     <cms:if k_success >
         <h3>Form successfully submitted</h3>
@@ -143,7 +143,7 @@ Submit the form and see how the validation takes place.
 In our examples given above we have simply been echoing back the submitted values upon successful submission of form.<br/>
 Usually you'll wish to do something more substantial - like emailing the values to some address etc. This is how it could be done -
 
-```
+```html
 <cms:form method="post">
     <cms:if k_success >
         <h3>Thanks for your submission. We'll get back to you.</h3>
@@ -188,7 +188,7 @@ Porting these HTML tags to Couch tags requires only the addition of the 'cms:' p
 
 HTML version -
 
-```
+```html
 <input type="text" size="10" maxlength="40" name="name">
 <input type="password" size="10" maxlength="10" name="password">
 <input type="submit" name="submit" value="Send">
@@ -197,7 +197,7 @@ HTML version -
 
 Couch equivalent -
 
-```
+```html
 <cms:input type="text" size="10" maxlength="40" name="name" />
 <cms:input type="password" size="10" maxlength="10" name="password" />
 <cms:input type="submit" name="submit" value="Send" />
@@ -210,7 +210,7 @@ Couch equivalent -
 
 HTML version -
 
-```
+```html
 <textarea rows="5" cols="20" wrap="physical" name="comments">
     Enter Comments Here
 </textarea>
@@ -218,7 +218,7 @@ HTML version -
 
 Couch equivalent -
 
-```
+```html
 <cms:input type='textarea' rows="5" cols="20" wrap="physical" name="comments">
     Enter Comments Here
 </cms:input>
@@ -228,7 +228,7 @@ Couch equivalent -
 
 HTML version -
 
-```
+```html
 What kind of shirt are you wearing? <br />
 
 Shade:
@@ -243,7 +243,7 @@ Size:
 
 Couch equivalent -
 
-```
+```html
 What kind of shirt are you wearing? <br />
 
 Shade:
@@ -257,7 +257,7 @@ Size:
 
 HTML version -
 
-```
+```html
 Select your favorite cartoon characters.
 <input type="checkbox" name="toon" value="Goofy">Goofy
 <input type="checkbox" name="toon" value="Donald">Donald
@@ -267,7 +267,7 @@ Select your favorite cartoon characters.
 
 Couch equivalent -
 
-```
+```html
 Select your favorite cartoon characters.
 <cms:input type="checkbox" name="toon" opt_values="Goofy | Donald | Bugs Bunny=Bugs | Scooby Doo=Scoob" />
 ```
@@ -278,7 +278,7 @@ Select your favorite cartoon characters.
 
 HTML version -
 
-```
+```html
 College Degree?
 <select name="degree">
     <option>Choose One</option>
@@ -291,7 +291,7 @@ College Degree?
 
 Couch equivalent -
 
-```
+```html
 <cms:input type="dropdown"
     name="degree"
     opt_values="Choose One | High School Degree | Some College | Bachelor's Degree | Doctorate"
@@ -320,7 +320,7 @@ It is used to create a CAPTCHA that prevents spammers from abusing your form.
 
 <p class="notice">_required_ parameter is always assumed to be set to '1' for a captcha.</p>
 
-```
+```html
 <cms:input type='captcha' name='my-captcha' />
 ```
 
@@ -340,7 +340,7 @@ r = reload text<br/>
 Since each of these characters represent a constituent element of the captcha, it is easy to see how these elements can be manipulated.<br/>
 e.g.
 
-```
+```html
 <cms:input type='captcha' name='my-captcha' format='i-r-t' />
 ```
 
@@ -350,7 +350,7 @@ will show -
 
 while
 
-```
+```html
 <cms:input type='captcha' name='my-captcha' format='r-i-t' />
 ```
 
@@ -360,7 +360,7 @@ will show
 
 If you do not wish the three elements to be separated by &lt;BR&gt;s, use this -
 
-```
+```html
 <cms:input type='captcha' name='my-captcha' format='rit' />
 ```
 
@@ -385,7 +385,7 @@ However, if are required to code a form from scratch, you can use the [__*fields
 
 The following Couch snippet -
 
-```
+```html
 <cms:fieldset>
     <cms:input type="text" size="10" maxlength="40" name="name" required='1' />
     <cms:input type="password" size="10" maxlength="10" name="password" />
@@ -394,7 +394,7 @@ The following Couch snippet -
 
 \- will output the following HTML code -
 
-```
+```html
 <fieldset>
     <dl>
         <dt><label for="name">name <span class="k_fielderror">*</span> </label></dt>
@@ -412,7 +412,7 @@ The following Couch snippet -
 
 Following is an example of a real-world form
 
-```
+```html
 <cms:form enctype="multipart/form-data" method="post" class="k_form">
 
         <cms:if k_success >

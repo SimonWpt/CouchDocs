@@ -1,6 +1,6 @@
 ---
 title: Variables available in Views
-category: concept
+parent: Core Concepts
 layout: default
 ---
 

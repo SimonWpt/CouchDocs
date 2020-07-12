@@ -1,6 +1,6 @@
 ---
 title: content_type
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -11,7 +11,7 @@ By default every web page is send back as '_text/html_'.
 
 As an example, the RSS feed requires it content type to be set as '_text/xml_' for the browsers to properly recognize the feed. The following snippet does the job -
 
-```
+```html
 <cms:content_type 'text/xml' />
 ```
 

@@ -1,6 +1,7 @@
 ---
-title: editable
-category: tag
+title: Editable
+parent: Tags Reference
+has_children: true 
 layout: default
 ---
 
@@ -62,7 +63,7 @@ The following are the different types of editable regions that can be created (_
 
 By default, the order in which the editable regions appear in the Admin panel matches the order in which they have been created. This order can be tweaked by setting the _order_ parameter. For example -
 
-```
+```html
 order='3'
 ```
 
@@ -74,7 +75,7 @@ The default order number given to all editable regions is '0'.
 
 Related editable regions can be grouped together by setting the _group_ parameter of each region to the name of an another editable region of type [**group**](../editable/group.html). For example -
 
-```
+```html
 group='paypal_group'
 ```
 
@@ -82,7 +83,7 @@ group='paypal_group'
 
 ### searchable
 
-```
+```html
 searchable='0'
 ```
 
@@ -90,7 +91,7 @@ Setting the _searchable_ parameter to '0' for an editable region will exclude it
 
 ### search_type
 
-```
+```html
 search_type='decimal'
 ```
 
@@ -106,7 +107,7 @@ The default *search\_type* of all editable regions is _text_. For editable regio
 
 ### hidden
 
-```
+```html
 hidden='1'
 ```
 
@@ -114,7 +115,7 @@ _hidden_ parameter can be set to '1' to supress the output of an editable region
 
 ### required
 
-```
+```html
 required='1'
 ```
 
@@ -128,7 +129,7 @@ Couch has several built-in validators that can be used to enforce that the user 
 
 #### min_len
 
-```
+```html
 validator='min_len=6'
 ```
 
@@ -136,7 +137,7 @@ In the example above the length of the input (i.e. the number of characters in i
 
 #### max_len
 
-```
+```html
 validator='max_len=20'
 ```
 
@@ -144,7 +145,7 @@ In the example above the length of the input (i.e. the number of characters in i
 
 #### exact_len
 
-```
+```html
 validator='exact_len=10'
 ```
 
@@ -152,7 +153,7 @@ In the example above the length of the input (i.e. the number of characters in i
 
 #### alpha
 
-```
+```html
 validator='alpha'
 ```
 
@@ -160,7 +161,7 @@ In the example above the only characters allowed in the input would be **a to z*
 
 #### alpha_num
 
-```
+```html
 validator='alpha_num'
 ```
 
@@ -168,79 +169,79 @@ In the example above the only characters allowed in the input would be **a to z*
 
 #### integer
 
-```
+```html
 validator='integer'
 ```
 
 In the example above only numbers **0 to 9** and the **negative sign** '**-**' are allowed. e.g.
 
-```
+```html
 -3, -2, -1, 0, 1, 2, 3
 ```
 
 #### non_negative_integer
 
-```
+```html
 validator='non_negative_integer'
 ```
 
 In the example above only numbers **0 to 9** are allowed. e.g.
 
-```
+```html
 0, 1, 2, 3
 ```
 
 #### non_zero_integer
 
-```
+```html
 validator='non_zero_integer'
 ```
 
 In the example above only numbers **1 to 9** are allowed. e.g.
 
-```
+```html
 1, 2, 3
 ```
 
 #### decimal
 
-```
+```html
 validator='decimal'
 ```
 
 In the example above only numeric values are allowed. e.g.
 
-```
+```html
 -3, -2.5, -2, -1, 0, 0.02, 1, 2, 3.45
 ```
 
 #### non_negative_decimal
 
-```
+```html
 validator='non_negative_decimal'
 ```
 
 In the example above only non-negative numeric values are allowed. e.g.
 
-```
+```html
 0, 0.02, 1, 2, 3.45
 ```
 
 #### non_zero_decimal
 
-```
+```html
 validator='non_zero_decimal'
 ```
 
 In the example above only numeric values larger than 0 are allowed. e.g.
 
-```
+```html
 0.02, 1, 2, 3.45
 ```
 
 #### email
 
-```
+```html
 validator='email'
 ```
 
@@ -248,7 +249,7 @@ In the example above only a valid email address is allowed.
 
 #### url
 
-```
+```html
 validator='url'
 ```
 
@@ -258,7 +259,7 @@ In the example above only a valid URL is allowed.
 
 This is used to ensure that the user has input identical contents into two ediatble regions (e.g. Password and Confirm Password).
 
-```
+```html
 validator='matches_field=my_password'
 ```
 
@@ -269,7 +270,7 @@ In the example above, Couch will allow input only if it matches that in another 
 This is a very powerful option and can actually mimic all the validators described above (and much more).<br/>
 It requires a little knowledge of Regular Expressions (as understood by PHP), though.
 
-```
+```html
 validator='regex=/(cat|dog)$/i'
 ```
 
@@ -289,7 +290,7 @@ When a validator mentioned above fails (this includes the _required_ parameter t
 
 You can display your own custom message instead by setting the *validator\_msg* parameter. For example, the following is a custom message that is displayed when a _required_ region is left empty -
 
-```
+```html
 validator_msg='required=What! You think you can get away with leaving this empty?'
 ```
 
@@ -307,7 +308,7 @@ validator_msg='required=Please enter something | min_len=Too short!'
 
 The use of '|' (pipe) character as the default separator between _validators_ and *validator\_msg* parameters, as well as the use of '=' (equals-to) before a value, is sometimes not possible if the same characters appear elsewhere within the expression. e.g. in the regex example -
 
-```
+```html
 validator='regex=/(cat|dog)$/i'
 ```
 
@@ -315,20 +316,20 @@ validator='regex=/(cat|dog)$/i'
 
 In such cases, the default separator and value separator can be set to any other character using the _separator_ and *val\_separator* parameters. For example -
 
-```
+```html
 separator='#'
 val_separator=':'
 ```
 
 With the _separator_ and the *val\_separator* having changed, the regex validator can now be combined with other validator thus -
 
-```
+```html
 validator='regex:/(cat|dog)$/i # min_len:14'
 ```
 
 The *validator\_msg* will now become -
 
-```
+```html
 validator_msg='required:Please enter something # min_len:Too short!'
 ```
 

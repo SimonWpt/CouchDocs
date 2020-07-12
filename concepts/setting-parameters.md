@@ -1,6 +1,6 @@
 ---
 title: Setting a Tag's Parameters
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -10,13 +10,13 @@ There are three ways a tag's parameter may be set -
 
 **1\. By using an explicit value** - e.g.
 
-```
+```html
 <cms:show "Hello World" />
 ```
 
 or
 
-```
+```html
 <cms:repeat count='4'>
     This line gets repeated
 </cms:repeat>
@@ -27,13 +27,13 @@ Please notice that **an explicit value is ALWAYS enclosed within quotes (either 
 
 **2\. By using a variable** - e.g.
 
-```
+```html
 <cms:show k_template_name />
 ```
 
 or
 
-```
+```html
 <cms:set my_count='4' />
 <cms:repeat count=my_count>
     This line gets repeated
@@ -48,7 +48,7 @@ Please notice that **any value that is NOT enclosed by quotes is considered by C
 We know that while rendering a template, every tag gets replaced by its output (which might be a blank).<br/>
 This feature can be utilized to set a tag's parameter by using the output of another tag.
 
-```
+```html
 <cms:set message="<cms:show 'Hello World' />" />
 <cms:show message />
 ```
@@ -77,14 +77,14 @@ Please notice that **the nested tag is ALWAYS enclosed within DOUBLE quotes**.
 
 There is no limit to how deeply tags may be thus nested. That is to say that a tag being used as a parameter of another tag can itself have another tag as its own parameter and so on. Thus -
 
-```
+```html
 <cms:set message="<cms:show "<cms:show 'hello' />" /> world" />
 ```
 
 Don't be confused by seeing a Couch tag being used as the parameter for another Couch tag.<br/>
 Begin from the innermost nested tag and try mentally replacing it with its output -
 
-```
+```html
 <cms:set message="<cms:show "<cms:show 'hello' />" /> world" />
 <cms:set message="<cms:show "hello" /> world" />
 <cms:set message="hello world" />
@@ -98,7 +98,7 @@ The example given above is rather extreme and futile but using the output of one
 
 As a more practical example consider the following very useful snippet -
 
-```
+```html
 <cms:if "<cms:exists "<cms:show k_page_name/>.inc" />" >
     <cms:embed "<cms:show k_page_name/>.inc" />
 </cms:if>
@@ -116,7 +116,7 @@ With this background, let us try replacing the tags with their respective output
 Always begin from the innermost tag, which here happens to be the [__*show*__](../../tags-reference/show.html) tag.<br/>
 We are already familiar with the [__*show*__](../../tags-reference/show.html) tag.
 
-```
+```html
 <cms:show k_page_name/>
 ```
 
@@ -125,7 +125,7 @@ The *k\_page\_name* variable is set by Couch everytime a page (see [**pages**](.
 
 Assuming that the current page is _about-us_, substituting [__*show*__](../../tags-reference/show.html) tag with its output will result in -
 
-```
+```html
 <cms:if "<cms:exists "about-us.inc" />" >
     <cms:embed "<cms:show k_page_name/>.inc" />
 </cms:if>
@@ -133,7 +133,7 @@ Assuming that the current page is _about-us_, substituting [__*show*__](../../ta
 
 Assume that file named 'about-us.inc' does exist. In this case the output of [__*exists*__](../../tags-reference/exists.html) tag will be '1'. Substituting exists with its output results in -
 
-```
+```html
 <cms:if "1" >
     <cms:embed "<cms:show k_page_name/>.inc" />
 </cms:if>
@@ -142,7 +142,7 @@ Assume that file named 'about-us.inc' does exist. In this case the output of [__
 Since the parameter being passed to _if_ is '1', it will go ahead and execute the contents within it and return the output.<br/>
 \- Resolve the contents of [__*if*__](../../tags-reference/if.html), using our substitution method -
 
-```
+```html
 <cms:if "1" >
     <cms:embed "about-us.inc" />
 </cms:if>
@@ -152,7 +152,7 @@ Suppose the sole content of _about-us.inc_ is -<br/>
 &lt;h1&gt;Hello I am About Us&lt;/h1&gt;,<br/>
 this will be the output of the [__*embed*__](../../tags-reference/embed.html) tag, so we end up being -
 
-```
+```html
 <cms:if "1" >
     <h1>Hello I am About Us</h1>
 </cms:if>

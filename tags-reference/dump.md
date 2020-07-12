@@ -1,6 +1,6 @@
 ---
 title: dump
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,7 +10,7 @@ The **dump** tag is used to output all variables (system or otherwise) that are 
 
 As an example, the following snippet is using the **pages** tag nested within the **folders** tag to create a list of all folders and a list of pages that are present within each folder -
 
-```
+```html
 <cms:folders masterpage='news.php' hierarchical='1'>
     <H3><cms:show k_folder_title /></H3>
     <cms:if k_folder_pagecount >
@@ -25,7 +25,7 @@ As an example, the following snippet is using the **pages** tag nested within th
 
 If we place three dump tags at the following locations -
 
-```
+```html
 <cms:dump />
 <cms:folders masterpage='news.php' hierarchical='1'>
     <H3><cms:show k_folder_title /></H3>

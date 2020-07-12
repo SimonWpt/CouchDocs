@@ -1,6 +1,6 @@
 ---
 title: html_encode
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -18,7 +18,7 @@ The translations performed are:
 
 As an example, the following snippet has been taken from [**Core Concepts - RSS Feeds**](../../concepts/rss-feeds.html), where we are are supplyig the feed with HTML encoded excerpt of our pages -
 
-```
+```html
 <cms:html_encode>
     <cms:excerptHTML><cms:show my_news_text /></cms:excerptHTML>
 </cms:html_encode>

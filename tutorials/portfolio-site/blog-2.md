@@ -1,7 +1,6 @@
 ---
 title: Diving deep - the Blog (Part 2)
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 
@@ -20,7 +19,7 @@ Couch has a tag named pages that is used to enumerate or list pages belonging to
 Let us take a little overview of how this tag works before putting it into real use.<br/>
 The syntax of pages tag is pretty simple.
 
-```
+```html
 <cms:pages masterpage='blog.php' >
 
 </cms:pages>

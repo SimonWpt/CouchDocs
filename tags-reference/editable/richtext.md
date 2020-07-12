@@ -1,7 +1,7 @@
 ---
 title: type = 'richtext'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ For this type, Couch creates an instance of a WYSIWYG richtext editor ([CKEditor
 
 An editable region of _richtext_ type can be defined this way -
 
-```
+```html
 <cms:editable
  name='prop_desc'
  label='Description'
@@ -39,7 +39,7 @@ The code above will result in -
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <cms:show prop_desc />
 ```
 
@@ -68,7 +68,7 @@ In addition to the parameters common to all the types of editable regions, _rich
 
 ### width
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     height='100'
@@ -84,7 +84,7 @@ If you have used other CMSes that use WYSIWYG editors, you might have noticed th
 
 In order to make the appearance of the content within the editor as similar as possible to what it would look like on the published page, the _css_ parameter can be set to a CSS stylesheet containing matching styles. Sometimes even setting it to the same stylesheet as that of the main site can do the trick. e.g.
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     css='styles/editor_styles.css'
@@ -95,7 +95,7 @@ If a fully qualified path (URL) is not provided, the path is assumed to be relat
 
 The full URL of the stylesheet can also be used e.g.
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     css='http://www.mysite.com/styles/editor_styles.css'
@@ -104,7 +104,7 @@ The full URL of the stylesheet can also be used e.g.
 
 If a URL is specified, the stylesheet need not necessarily be located within your website. It can be anywhere on the Internet. However, if it is situated within your website, the following is the most appropriate way of setting its full path -
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     css="<cms:show k_site_link />styles/editor_styles.css"
@@ -113,7 +113,7 @@ If a URL is specified, the stylesheet need not necessarily be located within you
 
 Multiple stylesheets may also be specified by separating each by a pipe '|' -
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     css="<cms:show k_site_link />styles/editor_styles.css | styles/my_styles.css"
@@ -128,7 +128,7 @@ Parameters *body\_id* and *body\_class* augment the functionality provided by th
 
 Suppose the contents of the WYSIWYG editor will eventually appear on the webpage within a **div** with an **id** of *prop\_desc*. Also assume that this **div** has been styled with CSS statements that refer to it by its **id** e.g.
 
-```
+```html
 #prop_desc {
     padding:25px;
     background:#fff url(bg-prop.jpg) no-repeat scroll 0 bottom;
@@ -138,7 +138,7 @@ Suppose the contents of the WYSIWYG editor will eventually appear on the webpage
 
 In this case, to style the contents within the editor with the CSS rules given above, set the _css_ parameter to a stylesheet that contains the statement given above and set the *body\_id* parameter to *prop\_desc*. This way, CSS will treat the WYSIWYG editor as having this **id** and all the contents within it will be rendered accordingly.
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     css="<cms:show k_site_link />styles/editor_styles.css"
@@ -148,7 +148,7 @@ In this case, to style the contents within the editor with the CSS rules given a
 
 Similarly, if the CSS rules are applicable to an element of a certain **class**, to make the editor take on those rules, set the *body\_class* parameter to that class. Unlike *body\_id*, *body\_class* can be set to multiple classes, each separated by a space. e.g. in the snippet below, the editor will have two classes applied - _class1_ and _class2_.
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     css="<cms:show k_site_link />styles/editor_styles.css"
@@ -170,7 +170,7 @@ The method that [CKEditor](http://ckeditor.com/) provides requires you to create
 
 As an example, suppose that the websites stylesheet has certain **classes** defined that set the background and border to specific colors
 
-```
+```html
 .error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
 .notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
 .success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
@@ -178,7 +178,7 @@ As an example, suppose that the websites stylesheet has certain **classes** defi
 
 To allow the user easily apply any of these styles to the content while editing, create a file named *custom\_styles.js* (can be named anything) and place the following code within it -
 
-```
+```html
 CKEDITOR.stylesSet.add( 'my_styles',
 [
     { name : 'Normal'    , element : 'p' },
@@ -192,7 +192,7 @@ Notice the highlighted part - *my\_styles*. It is a requirement of [CKEditor](ht
 
 Next we need to inform [CKEditor](http://ckeditor.com/) to use the elements defined in this file to create a drop-down list. Couch makes this part easy. Simply set the *custom\_styles* parameter of the **Editable** tag in the following manner -
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     custom_styles="my_styles=styles/custom_styles.js"
@@ -220,7 +220,7 @@ This parameter can take one of the following four values
 
 #### basic
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     toolbar='basic'
@@ -233,7 +233,7 @@ results in -
 
 #### medium
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     toolbar='medium'
@@ -248,7 +248,7 @@ results in -
 
 #### full
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     toolbar='full'
@@ -261,7 +261,7 @@ results in -
 
 #### custom
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     toolbar='custom'
@@ -328,7 +328,7 @@ You have the following buttons to choose from to display them in the toolbar -
 
 As a very simple (and unrealistic) example, here is a toolbar containing only two buttons (bold and italic) -
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     toolbar='custom'
@@ -340,7 +340,7 @@ As a very simple (and unrealistic) example, here is a toolbar containing only tw
 
 A more practical example - here is how you can mimic the _medium_ type of toolbar discussed above.
 
-```
+```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
     toolbar='custom'
@@ -377,20 +377,3 @@ Also note that you can force the toolbar to be break into a new row by specifyin
       type='richtext' />
     ```
 </p>
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

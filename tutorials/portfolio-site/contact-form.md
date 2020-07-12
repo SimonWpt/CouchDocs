@@ -1,7 +1,6 @@
 ---
 title: Contact Form
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 

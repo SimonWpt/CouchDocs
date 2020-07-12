@@ -1,6 +1,6 @@
 ---
 title: Archives
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -11,7 +11,7 @@ For some types of templates, like _blog_ and _news_, it is useful to archive the
 
 The following snippet will simply list all the monthly periods that contain alleast one published page -
 
-```
+```html
 <cms:archives masterpage='blog.php'>
     <cms:date k_archive_date format='F Y' /><br>
 </cms:archives>
@@ -24,7 +24,7 @@ The following snippet will simply list all the monthly periods that contain alle
 
 By default the archives tag will group together pages by month. You can set the _type_ parameter to either _yearly_, _monthly_ or _daily_ to specify the desired grouping. For example, the following snippet will create yearly archives of pages -
 
-```
+```html
 <cms:archives masterpage='blog.php' type='yearly'>
     <cms:date k_archive_date format='F Y' /><br>
 </cms:archives>
@@ -58,7 +58,7 @@ Starts by default from '1' but this can be modified by the _startcount_ paramete
 
 Using the variables that get set for each time period, the following snippet could be used to create a side-bar menu that lists the latest 6 available monthly archives along with the count of pages in each period. Each entry is also hyperlinked to it's _archive-view_ page that should list all the contained pages.
 
-```
+```html
 <ul>
 <cms:archives limit='6'>
     <li>
@@ -76,7 +76,7 @@ If you recall the [__*pages*__](../../tags-reference/pages.html) tag, pages belo
 If we set these two parameters to the start and the end of an archive time period, a list of pages that were published during that period can be created.<br/>
 We can use the *k\_archive\_date* and *k\_next\_archive\_date* variables set at each iteration of the archives tag to do so.
 
-```
+```html
 <ul>
 <cms:archives masterpage='property.php'>
     <li>

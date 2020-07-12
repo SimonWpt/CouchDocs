@@ -1,6 +1,6 @@
 ---
 title: hide
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 The hide tag is a very simple tag that can be used to prevent the output of code enclosed within it from being displayed.
 
-```
+```html
 <cms:hide>
    ...Everything here will get executed but the output will never appear on the webpage...
 </cms:hide>

@@ -1,6 +1,6 @@
 ---
 title: Migrating from development to deployment server
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 

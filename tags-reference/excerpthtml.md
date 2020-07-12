@@ -1,6 +1,6 @@
 ---
 title: excerptHTML
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -11,11 +11,11 @@ Unlike the **excerpt** tag,  excerptHTML preserves the HTML formatting of the tr
 
 Examples -
 
-```
+```html
 <cms:excerptHTML><cms:show content /></cms:excerptHTML>
 ```
 
-```
+```html
 <cms:excerptHTML count='130' ignore='img'>
     <cms:show content />
 </cms:excerptHTML>
@@ -38,7 +38,7 @@ The maximum number of words that the excerpt can contain. The default value is 5
 The HTML elements to weed out of the excerpt. For example, you might not want to have any images in the excerpt.<br/>
 If you wish to ignore multiple tags, separate the tagnames by using comma e.g.
 
-```
+```html
 ignore='img, table'
 ```
 
@@ -46,7 +46,7 @@ ignore='img, table'
 
 By default the produced excerpt is appended with '...' (three ellipses). You can change this by using this parameter.
 
-```
+```html
 <cms:excerptHTML trail="&nbsp;(<a href=\"<cms:show k_page_link />\">read more..</a>)"><cms:show blog_content /></cms:excerptHTML>
 ```
 

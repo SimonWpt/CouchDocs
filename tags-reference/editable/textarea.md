@@ -1,7 +1,7 @@
 ---
 title: type = 'textarea'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ For this type, Couch creates a multi-line textbox for data input.
 
 An editable region of _textarea_ type can be defined this way -
 
-```
+```html
 <cms:editable
   name='prop_desc'
   label='Description'
@@ -29,7 +29,7 @@ The code above will result in -
 
 The default type of an editable region is _textarea_. Hence if the code example given above were to be written without explicitly setting the _type_ parameter, the result would have been just the same. Thus -
 
-```
+```html
 <cms:editable
   name='prop_desc'
   label='Description'
@@ -51,7 +51,7 @@ will result in an identical textbox.
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <cms:show prop_desc />
 ```
 
@@ -69,7 +69,7 @@ In addition to the parameters common to all the types of editable regions, _text
 
 The dimensions of the textarea can be changed by setting the _width_ and _height_ parameters. For example, the following will make it 400px wide and 200px high -
 
-```
+```html
 <cms:editable name='prop_desc' label='Description'
     desc='Enter description of property here'
     width='400'
@@ -84,7 +84,7 @@ XSS (Cross Site Scripting) is a type of Web Application vulnerability which is c
 
 In some cases though, you'll wish to allow your user to input Javascript code, or even script containing Couch tags, into an editable region. This could be, for example, when you have created a textarea type editable region into which the user is supposed to enter his Google AdSense code. In such cases, to instruct Couch to leave the input alone and not to sanitize it, set the *no\_xss\_check* to '1'. As an example -
 
-```
+```html
 <cms:editable name='my_adsense' label="Adsense Code" desc="Enter your Adsense code here"
     height='100'
     no_xss_check='1'
@@ -93,20 +93,3 @@ In some cases though, you'll wish to allow your user to input Javascript code, o
 ```
 
 Without the *no\_xss\_check* explicitly set, Couch would disable all Javascript code contained within the AdSense code and thus make it useless.
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (text)](../../text.html)
-*   [editable (password)](../../password.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

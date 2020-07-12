@@ -1,7 +1,6 @@
 ---
 title: Diving deep - the Blog (Part 1)
-category: tutorial
-subCategory: portfolio-site
+parent: Sample Portfolio Site
 layout: default
 ---
 
@@ -62,13 +61,13 @@ Rename _blog.html_ to _blog.php_.<br/>
 Enclose the entire contents of the file with the boilerplate PHP code -<br/>
 Place
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 ```
 
 at the very top and
 
-```
+```html
 <?php COUCH::invoke(); ?>
 ```
 
@@ -131,7 +130,7 @@ In _blog.php_, find the place where the image is showed -
 
 and replace the src attribute of the image tag with the content of the editable region named *blog\_image* using the show tag -
 
-```
+```html
 <img class="thumb" src="<cms:show blog_image />" alt=""/>
 ```
 
@@ -300,7 +299,7 @@ With _blog.php_ open in your editor, find the place where title of the blog entr
 
 and replace it with
 
-```
+```html
 <cms:show k_page_title />
 ```
 
@@ -314,7 +313,7 @@ Replace 'single.html'
 
 with
 
-```
+```html
 <cms:show k_page_link />
 ```
 
@@ -343,7 +342,7 @@ This is because *k\_page\_date* shows date in the internal raw format of its sto
 To make it display in the desired format we'll have to use the Couch date tag that takes a format parameter which can be used to modify the display.<br/>
 Place the following in place of the show tag -
 
-```
+```html
 <cms:date k_page_date format='jS M, y'/>
 ```
 

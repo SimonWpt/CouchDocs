@@ -1,6 +1,6 @@
 ---
 title: show
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,13 +9,13 @@ layout: default
 The **Show** tag is used to display something on the page.<br/>
 It could be a literal string e.g.
 
-```
+```html
 <cms:show 'Hello World' />
 ```
 
 or a variable (both system variables as well as all the editable regions on the page) e.g.
 
-```
+```html
 <cms:show k_page_title />
 <cms:show my_intro />
 ```

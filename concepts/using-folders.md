@@ -1,6 +1,6 @@
 ---
 title: Folders
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -15,7 +15,7 @@ By judiciously creating an hierarchy of folders, almost any url structure can be
 
 As an example, suppose for a clonable template named _news.php_, we require the following folder hierarchy for arranging the cloned pages representing the news items -
 
-```
+```html
 News (news.php) (root folder)
     |---World News (sub-folder)
     |   |---North American News (sub-sub-folder)
@@ -33,7 +33,7 @@ News (news.php) (root folder)
 For creating folders in Couch we use the [__*folder*__](../../tags-reference/folder.html) tag. Hierarchy can be created by nesting one [__*folder*__](../../tags-reference/folder.html) tag (the child) within another (the parent).<br/>
 To create the folder structure mentined above, place the following snippet anywhere within the _news.php_ template, and visit _news.php_ in your browser while being logged-on as super-admin.
 
-```
+```html
 <cms:folder name="world" title="World News">
     <cms:folder name="north-america" title="North American News">
         <cms:folder name="united-states" title="United States News">
@@ -105,7 +105,7 @@ The [__*folders*__](../../tags-reference/folders.html) tag is used to get a list
 
 To illustrate the use of this tag we'll continue with the folder hierarchy created for _news.php_ above.
 
-```
+```html
 <cms:folders>
     <cms:show k_folder_title /> <br>
 </cms:folders>
@@ -113,7 +113,7 @@ To illustrate the use of this tag we'll continue with the folder hierarchy creat
 
 The above snippet, when placed within the template _news.php_, will produce this output -
 
-```
+```html
 Asian News
 China News
 Entertainment News
@@ -130,7 +130,7 @@ World News
 Since the [__*folders*__](../../tags-reference/folders.html) tag was provided with no information about which template's folders it should enumerate, it by default did so for the template it was called from, i.e. _news.php_.<br/>
 However it can be made to enumerate folders of any template by setting its _masterpage_ parameter to the name of that template. Thus the following will also result in the same output as shown above -
 
-```
+```html
 <cms:folders masterpage='news.php'>
     <cms:show k_folder_title /> <br>
 </cms:folders>
@@ -154,7 +154,7 @@ However it can be made to enumerate folders of any template by setting its _mast
 Notice how the folders have simply been listed in the ascending alphabetical order of their names. Their hierarchical positions have not been preserved.<br/>
 To list the folders in their hierarchical order, set the hierarchical parameter to 1\. Thus -
 
-```
+```html
 <cms:folders masterpage='news.php' hierarchical='1'>
     <cms:show k_folder_title /> (<cms:show k_level />) <br>
 </cms:folders>
@@ -162,7 +162,7 @@ To list the folders in their hierarchical order, set the hierarchical parameter 
 
 \- will yield -
 
-```
+```html
 Entertainment News [0]
 Music News [0]
 Sports News [0]
@@ -183,7 +183,7 @@ You can control what gets enumerated by the [__*folders*__](../../tags-reference
 To enumerate the hierarchy tree only upto a certain level, set the _depth_ parameter to the number of levels that should be traversed.<br/>
 Thus the following snippet will enumerate only one level of the hierarchy -
 
-```
+```html
 <cms:folders masterpage='news.php' hierarchical='1' depth='1'>
     <cms:show k_folder_title /> [<cms:show k_level />] <br>
 </cms:folders>
@@ -191,7 +191,7 @@ Thus the following snippet will enumerate only one level of the hierarchy -
 
 Outputs only the top level folders -
 
-```
+```html
 Entertainment News [0]
 Music News [0]
 Sports News [0]
@@ -202,13 +202,13 @@ World News [0]
 
 To enumerate only a section of the hierarchy tree, set the _root_ parameter to the name of the parent folder -
 
-```
+```html
 <cms:folders masterpage='news.php' root='world' hierarchical='1'>
     <cms:show k_folder_title /> [<cms:show k_level />] <br>
 </cms:folders>
 ```
 
-```
+```html
 World News [0]
 Asian News [1]
 China News [2]
@@ -221,13 +221,13 @@ Ohio News [3]
 
 To list only the subfolders of a folder, set the _childof_ parameter to the name of the parent folder -
 
-```
+```html
 <cms:folders masterpage='news.php' childof='world' hierarchical='1'>
     <cms:show k_folder_title /> [<cms:show k_level />] <br>
 </cms:folders>
 ```
 
-```
+```html
 Asian News [0]
 China News [1]
 Japan News [1]
@@ -239,7 +239,7 @@ Ohio News [2]
 
 To exclude certain folder from the enumeration, set the _exclude_ parameter to the folder's name. If multiple folders are to be excluded, separate the names by a comma -
 
-```
+```html
 <cms:folders masterpage='news.php' hierarchical='1' exclude='music, asia'>
     <cms:show k_folder_title /> [<cms:show k_level />] <br>
 </cms:folders>
@@ -247,7 +247,7 @@ To exclude certain folder from the enumeration, set the _exclude_ parameter to t
 
 The above snippet will exclude the 'music' folder and the 'asia' folder (along with its children) from the enumeration. The output -
 
-```
+```html
 Entertainment News [0]
 Sports News [0]
 World News [0]
@@ -262,7 +262,7 @@ Ohio News [3]
 A common requirement is to list folders in an ordered or unordered HTML list (a sidebar menu is a good example). Those of you who might have tried producing, via code, a &lt;UL&gt;&lt;LI&gt; list out of an hierarchical structure will agree that the process is notoriously complex.<br/>
 If the following is an unordered list that has to be produced, notice how the nested levels will need to be carefully tracked in order to properly close the tags.
 
-```
+```html
 <ul>
     <li>
         Asian News
@@ -291,7 +291,7 @@ If the following is an unordered list that has to be produced, notice how the ne
 Setting the *extended\_info* parameter to 1 will make the [__*folders*__](../../tags-reference/folders.html) tag provide extra information about every change in level as well as in current element. Our snippet simply has to respond to the reported changes.<br/>
 Thus the following snippet can be used to create an unordered HTML list out of a folder hierarchy -
 
-```
+```html
 <cms:folders masterpage='news.php' childof='world' hierarchical='1' extended_info='1'>
     <cms:if k_level_start ><UL></cms:if>
     <cms:if k_element_start ><LI>
@@ -306,7 +306,7 @@ With *extended\_info* set, the [__*folders*__](../../tags-reference/folders.html
 
 Incidently, if a simple list is all that is needed there is a much simpler option than the one above - the [__*listfolders*__](../../tags-reference/listfolders.html) tag -
 
-```
+```html
 <cms:listfolders masterpage='news.php' childof='world' hierarchical='1'/>
 ```
 
@@ -323,7 +323,7 @@ This often happens when designing an expandable sidemenu where by default only t
 The following snippet adds a css class named 'selected' to all the LI elements that are ancestors of the currently viewed folder (if in _folder-view_) or the folder of the current page (if in _page-view_).<br/>
 Using the appropriate CSS, this should be sufficient to highlight all ancestral folders of the current page or to expand only the immediate sub-tree of the folder while keeping collapsed the rest of the hierarchy.
 
-```
+```html
 <cms:if k_is_page || k_is_folder >
     <cms:if k_folder_name ><cms:set current_folder=k_folder_name /></cms:if>
     <cms:if k_page_foldername ><cms:set current_folder=k_page_foldername /></cms:if>
@@ -354,7 +354,7 @@ If it is, we simply set a class of 'selected' to the LI and SPAN elements being 
 
 To list only the ancestors of a folder in the hierarchy, [__*parentfolders*__](../../tags-reference/parentfolders.html) tag can be used. It lists all the parents of a folder in sequence.
 
-```
+```html
 <cms:parentfolders folder='china' >
     <a href="<cms:show k_folder_link/>"><cms:show k_folder_title/></a>&nbsp;>
 </cms:parentfolders>
@@ -362,7 +362,7 @@ To list only the ancestors of a folder in the hierarchy, [__*parentfolders*__](.
 
 The above snippet will output -
 
-```
+```html
 World News > Asian News > China News
 ```
 
@@ -374,7 +374,7 @@ Showing the folder hierarchy makes sense only when the template is in _folder vi
 
 The [__*breadcrumbs*__](../../tags-reference/breadcrumbs.html) tag can be used to quickly create a breadcrumb -
 
-```
+```html
 <cms:if k_is_page || k_is_folder >
     <cms:breadcrumbs separator='&nbsp;>&nbsp;' include_template='1'/>
 </cms:if>
@@ -382,7 +382,7 @@ The [__*breadcrumbs*__](../../tags-reference/breadcrumbs.html) tag can be used t
 
 The snippet given above will output the following for a page in 'China News' folder -
 
-```
+```html
 News > World News > Asian News > China News
 ```
 
@@ -390,7 +390,7 @@ The *include\_template* parameter adds the current template ('News' in this case
 
 The same output can be obtained by using the [__*parentfolders*__](../../tags-reference/parentfolders.html) tag mentioned above -
 
-```
+```html
 <cms:if k_is_page || k_is_folder >
     <a href="<cms:show k_template_link/>"><cms:show k_template_title/></a>&nbsp;>
     <cms:if k_folder_name ><cms:set my_folder=k_folder_name /></cms:if>

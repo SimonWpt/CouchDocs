@@ -1,6 +1,6 @@
 ---
 title: paginator
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ The **paginator** tag can be used to quickly create a 'Google' style paginator l
 
 The paginator tag can be used within the **pages**, **comments** and **search** tags. Example -
 
-```
+```html
 <cms:paginator />
 ```
 

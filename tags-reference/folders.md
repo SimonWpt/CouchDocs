@@ -1,6 +1,6 @@
 ---
 title: folders
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

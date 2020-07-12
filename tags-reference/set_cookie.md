@@ -1,6 +1,6 @@
 ---
 title: set_cookie
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,11 +8,11 @@ layout: default
 
 The **set\_cookie** tag can be used to set a cookie with a name and value. An expiration time can also be set for the cookie.
 
-```
+```html
 <cms:set_cookie 'my_test_cookie' 'hello world' />
 ```
 
-```
+```html
 <cms:set_cookie name='my_test_cookie' value='hello world' />
 ```
 
@@ -34,7 +34,7 @@ The value of the cookie. This value is stored on the clients computer.
 
 The time in seconds for the cookie to expire. If set to 0, or omitted, the cookie will expire at the end of the session (when the browser closes).
 
-```
+```html
 <cms:set_cookie 'my_test_cookie' value='hello world' expire='86400' />
 ```
 

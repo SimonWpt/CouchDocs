@@ -1,6 +1,6 @@
 ---
 title: Pretty URLS
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -10,25 +10,25 @@ Couch supports the use of Pretty URLS (aka search engine friendly - SEF URLs).<b
 This feature uses URL rewriting to transform the default Couch URLs containing querystrings into URLs that appear more friendly and relevant to the web pages.<br/>
 For Example, a URL like this -
 
-```
+```html
 http://www.mysite.com/blog.php?f=3
 ```
 
 where 3 is the id of a folder named 'electronics', will get converted to -
 
-```
+```html
 http://www.mysite.com/blog/electronics/
 ```
 
 and another URL -
 
-```
+```html
 http://www.mysite.com/blog.php?p=12
 ```
 
 where 12 is the id of a cloned page named 'mobile-phones' which is in 'electronics' folder, will get converted to -
 
-```
+```html
 http://www.mysite.com/blog/electronics/mobile-phones.html
 ```
 
@@ -49,7 +49,7 @@ Enabling Pretty URLS is a two step process -
 
 **1\.** Find and modify the following line in _config.php_ -
 
-```
+```html
 // 8.
 // Set the following to '1' if you wish to enable Pretty URLS.
 // After enabling it, use gen_htaccess.php to generate an .htaccess file and place it in the root folder of your site.
@@ -91,18 +91,18 @@ Please make sure that your server has the required *mod\_rewrite* module enabled
 This happens if the links are 'relative'. Please convert them to 'absolute' to rectify this problem.<br/>
 For example, a link such as the follows
 
-```
+```html
 <link href="css/lightbox.css" rel="stylesheet" />
 ```
 
 should be made either the following (notice the added leading slash)
 
-```
+```html
 <link href="/css/lightbox.css" rel="stylesheet" />
 ```
 
 or, better still, the following
 
-```
+```html
 <link href="<cms:show k_site_link />css/lightbox.css" rel="stylesheet" />
 ```

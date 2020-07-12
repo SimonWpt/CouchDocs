@@ -1,6 +1,6 @@
 ---
 title: number_format
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,13 +10,13 @@ The **number\_format** tag can be used to properly format numeric values.
 
 For example
 
-```
+```html
 <cms:number_format '1234567890' />
 ```
 
 The snippet above will output
 
-```
+```html
 1,234,567,890.00
 ```
 
@@ -35,13 +35,13 @@ The number to be formatted.
 
 By default two numeric characters are outputted after the decimal point. This can be changed by this parameter.
 
-```
+```html
 <cms:number_format '1234567890' decimal_precision='0' />
 ```
 
 will output
 
-```
+```html
 1,234,567,890
 ```
 
@@ -55,13 +55,13 @@ The default character used as the thousand separator is the comma. It can be cha
 
 The following snippet can be used to format a number in French notation
 
-```
+```html
 <cms:number_format '1234.56' decimal_character=',' thousands_separator=' ' />
 ```
 
 Output -
 
-```
+```html
 1 234,56
 ```
 

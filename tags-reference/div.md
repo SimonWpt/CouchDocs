@@ -1,6 +1,6 @@
 ---
 title: div
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **div** tag accepts two parameters and returns as its output the value obtained after dividing the first parameter by the second parameter.<br/>
 The parameters may be literal strings, variables or output of other tags.
 
-```
+```html
 <cms:div my_count '5' />
 ```
 

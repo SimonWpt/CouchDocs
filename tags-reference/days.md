@@ -1,6 +1,6 @@
 ---
 title: days
-category: tag
+parent: Tags Reference
 layout: default
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: DataBound Forms
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -44,13 +44,13 @@ Before we embark on our little tutorial, there is one little preparatory step th
 As not all sites deploying Couch will need the Databound forms feature, though Couch 1.4 ships with the module, it is not enabled by default.<br/>
 To enable this module, please edit the 'kfunctions.php' file found in 'couch/addons' folder and uncomment (or add if upgrading from an older version) the following line
 
-```
+```html
 require_once( K_COUCH_DIR.'addons/data-bound-form/data-bound-form.php' );
 ```
 
 The code in our tutorial will also utilize the *cms:set\_flash* tag to set flash messages signifying successful form submission. This will require the 'sessions' module to be enabled so uncomment the following line too (if not already so)
 
-```
+```html
 require_once( K_COUCH_DIR.'addons/cart/session.php' );
 ```
 
@@ -86,7 +86,7 @@ This is the form we'll be working on (kindly provided by [@cheesypoof](http://ww
 
 Following is a stripped-down code of the same form to show only relevant HTML markup. Link for downloading the styled form (both original and couchified) can be found at the end of this post.
 
-```
+```html
 <form method="post">
 
     <label>First Name</label>
@@ -140,7 +140,7 @@ Let us define those.
 
 Following is what should be sufficient to capture all data inputted through our form's fields -
 
-```
+```html
 <cms:template title='Application Form' clonable='1'>
     <cms:editable name='first_name' required='1' type='text' />
     <cms:editable name='last_name' required='1' type='text' />
@@ -169,7 +169,7 @@ It should be trivial to 'couchify' the plain HTML form we have in our template (
 
 Following is what we end up with -
 
-```
+```html
 <cms:set submit_success="<cms:get_flash 'submit_success' />" />
 <cms:if submit_success >
     <h4>Success: Your application has been submitted.</h4>
@@ -241,13 +241,13 @@ All these changes (three to be precise) need to be made only to the 'form' compo
 
 Before:
 
-```
+```html
 <cms:form method='post' anchor='0'>
 ```
 
 After:
 
-```
+```html
 <cms:form
     masterpage=k_template_name
     mode='create'
@@ -268,7 +268,7 @@ Please notice carefully the modification done to the existing input tags -
 
 Before:
 
-```
+```html
 <label>First Name</label>
 <cms:input name="first_name" type="text" />
 <br />
@@ -299,7 +299,7 @@ Before:
 
 After:
 
-```
+```html
 <label>First Name</label>
 <cms:input name="first_name" type="bound" />
 <br />
@@ -349,7 +349,7 @@ However, we haven't placed anything there. Let us do that in the final modificat
 
 Before:
 
-```
+```html
 <cms:if k_success >
 
     <cms:set_flash name='submit_success' value='1' />
@@ -360,7 +360,7 @@ Before:
 
 After:
 
-```
+```html
 <cms:if k_success >
 
     <cms:db_persist_form
@@ -389,7 +389,7 @@ Try editing any such page and you should see all the data that was submitted.
 
 This is how our form stands right now:
 
-```
+```html
 <cms:set submit_success="<cms:get_flash 'submit_success' />" />
 
 <cms:if submit_success >
@@ -548,7 +548,7 @@ An excerpt from it -
 Suppose we choose, 'What colour is a blue apple?'.<br/>
 To implement it in the form, we add the following field to it -
 
-```
+```html
 <label>What colour is a blue apple? (4 characters required)</label>
 <cms:input name="human" type="text" required='1' validator='regex=/^blue$/i' />
 ```
@@ -556,7 +556,7 @@ To implement it in the form, we add the following field to it -
 To explain the code - we are using a simple _cms:input_ of type 'text' with the 'required' parameter set to make it mandatory.<br/>
 The real deal is the 'validator' parameter where we are checking if the inputted response matches the correct answer -
 
-```
+```html
 validator='regex=/^blue$/i'
 ```
 
@@ -586,7 +586,7 @@ Just before we persist a successful form submission in the database by using '*c
 
 Before:
 
-```
+```html
 <cms:if k_success >
 
     <cms:db_persist_form
@@ -602,7 +602,7 @@ Before:
 
 After:
 
-```
+```html
 <cms:if k_success >
 
     <cms:check_spam email=frm_email />
@@ -626,7 +626,7 @@ In terms of functionality, this completes what we set out to do. So we can, if s
 
 The final code of our applications template:
 
-```
+```html
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template title='Application Form' clonable='1'>
     <cms:editable name='first_name' required='1' type='text' />
@@ -757,7 +757,7 @@ We'll begin by creating a snippet, say named 'my\_list.html', and saving it in t
 
 For a quick test, let us put the following in the snippet -
 
-```
+```html
 <cms:repeat '4'>
     <h3>Hello <cms:show k_template_title />!</h3>
 </cms:repeat>
@@ -767,7 +767,7 @@ As you can see, it is regular Couch code that we normally use in our templates a
 
 Now edit the kfunctions.php file present in 'couch/addons' folder and place the following bit of code within it
 
-```
+```html
 $FUNCS->register_admin_listview( 'application.php', 'my_list.html' );
 ```
 
@@ -836,7 +836,7 @@ The procedure is very similar to what we used for custom listing above.<br/>
 It begins by creating a snippet file in Couch's snippets folder and then registering it for the template in kfunctions.php.<br/>
 Assuming the snippet we use is named 'my\_edit.html', this is what needs to be placed in kfunctions.php -
 
-```
+```html
 $FUNCS->register_admin_pageview( 'application.php', 'my_edit.html', 1 ); // '1' for showing the 'advanced setting dropdown'
 ```
 

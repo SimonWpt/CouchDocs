@@ -1,6 +1,6 @@
 ---
 title: Repeatable Regions
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -25,13 +25,13 @@ Beginning with Couch v1.3, we can tackle the problem this way -
 
 **1\.** Define only a single editable region of type 'image' in the template the regular way.
 
-```
+```html
 <cms:editable type='image' name='my_image' label='Photo' />
 ```
 
 **2\.** Enclose the editable region defined above with a newly introduced tag - [**repeatable**](../../tags-reference/repeatable.html)
 
-```
+```html
 <cms:repeatable name='my_multiple_images' >
     <cms:editable type='image' name='my_image' label='Photo' />
 </cms:repeatable>
@@ -83,7 +83,7 @@ So far we have only repeated a single editable region of type 'image'. However, 
 
 For example, this is how we use 'image' and 'nicedit' together
 
-```
+```html
 <cms:repeatable name='my_multiple_images' >
     <cms:editable type='image' name='my_image' label='Photo' show_preview='1' preview_width='150' input_width='200' col_width='300' />
     <cms:editable type='nicedit' label='Description' name='my_desc' />
@@ -114,7 +114,7 @@ Since the repeatable editable regions now actually form a 'composite' entry (i.e
 
 The following snippet placed in the page\_view of our template will display the data contained within each 'cell' of each 'row' of our repeatable regions defined above -
 
-```
+```html
 <cms:show_repeatable 'my_multiple_images' >
     <b>Image: <img src="<cms:show my_image />" /> <br/>
     <b>Desc:</b> <cms:show my_desc />
@@ -127,7 +127,7 @@ It iterates through each row of regions in the set making available the values w
 
 Tag 'show\_repeatable' sets two variables of its own - 'k\_count' and 'k\_total\_records' as it iterates through the rows. It accepts a parameter named 'startcount' that can be set to specify the start value of 'k\_count' (default value being '1'). Following is the same snippet as above with the parameters and variables used.
 
-```
+```html
 <cms:show_repeatable 'my_multiple_images' startcount='0' >
     <cms:show k_count /> / <cms:show k_total_records /><br/>
     <b>Image: <img src="<cms:show my_image />" /> <br/>

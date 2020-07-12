@@ -1,6 +1,6 @@
 ---
 title: Shopping Cart (Part II)
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -94,7 +94,7 @@ There are 4 different ways to calculate cart level shipping charges. All of them
 This option can be set if you want to specify a shipping cost for **each order, no matter how many items it contains**.<br/>
 For example, if you charge $5 for each order (that is, if John Doe places an order for 5 books, whereas Jane Doe places an order for one book, both orders are charged $5 for shipping) set it to '5'.
 
-```
+```html
 $pp['shipping_flat_rate_per_order'] = '5';
 ```
 
@@ -103,7 +103,7 @@ $pp['shipping_flat_rate_per_order'] = '5';
 This option can be set if you want to specify a shipping cost for **each item, no matter how many are included in an order**.<br/>
 For example, if you charge $1 for each item in the order (that is, if a customer orders ten books, the shipping charge is $10) set it to '1'.
 
-```
+```html
 $pp['shipping_flat_rate_per_item'] = '1';
 ```
 
@@ -112,7 +112,7 @@ $pp['shipping_flat_rate_per_item'] = '1';
 This option can be set if you want to set up a sliding scale of shipping charges based on the **order's total cost**.<br/>
 For example, if you charge $6 for orders between $1 to $50, $3 for orders between $51 to $100, and free shipping for orders worth $101 and more, set it to
 
-```
+```html
 $pp['shipping_by_order_total'] = '[ 0=6 | 50=3 | 100=0 ]';
 ```
 
@@ -120,7 +120,7 @@ where the string above stands for '6 for more than 0, 3 for more than 50, 0 for 
 
 To set up the shipping charges as a **percentage of order's total cost** (as opposed to **fixed values** as we did above), add a '**%**' after the string e.g.
 
-```
+```html
 $pp['shipping_by_order_total'] = '[ 0=6 | 50=3 | 100=0 ]%';
 ```
 
@@ -131,7 +131,7 @@ which now makes it 6% of the cart's total for orders over $0, 3% of the cart's t
 This option can be set if you want to set up a sliding scale of shipping charges based on the **number of items in cart**.<br/>
 For example, if you charge $3 to deliver one to five books, $7 to ship six to 15 books, and $10 to ship more than 15 books, set it to
 
-```
+```html
 $pp['shipping_by_quantity_ordered'] = '[ 0=3 | 5=7 | 15=10 ]';
 ```
 
@@ -147,7 +147,7 @@ If you are using the editable region definitions contained in our sample templat
 This region allows you to set up for each product a sliding scale of shipping charges that is based on the number of the product ordered.<br/>
 For example, if you charge $3 to deliver one to five units, $7 to ship six to 15 units, and $10 to ship more than 15 units, set it to:
 
-```
+```html
 [ 0=3 | 5=7 | 15=10 ]
 ```
 
@@ -175,13 +175,13 @@ There are two different ways cart level discounts may be calculated. Both of the
 This option can be set if you want to set up a sliding scale of discounts based on the **order's total cost**.<br/>
 For example, if you offer a discount of $5 for orders over $50, and $15 for orders over $100, set it to
 
-```
+```html
 $pp['discount_by_order_total'] = '[ 50=5 | 100=15 ]';
 ```
 
 To set up discounts as a **percentage** of the order's total cost (as opposed to **fixed values** as we did above), add a '**%**' after the string e.g.
 
-```
+```html
 $pp['discount_by_order_total'] = '[ 50=5 | 100=15 ]%';
 ```
 
@@ -190,13 +190,13 @@ which now sets up a discount of 5% of the cart's total for orders over $50, and 
 To set up a **flat discount (fixed value or percentage)** off orders above a particular value, create only a single tier in the scale<br/>
 e.g. the following will provide a flat discount of $10 on any order above $100
 
-```
+```html
 $pp['discount_by_order_total'] = '[ 100=10 ]';
 ```
 
 while the following will provide a flat discount of 10% on any order above $100\.
 
-```
+```html
 $pp['discount_by_order_total'] = '[ 100=10 ]%';
 ```
 
@@ -205,7 +205,7 @@ $pp['discount_by_order_total'] = '[ 100=10 ]%';
 This option can be set if you want to set up a sliding scale of discounts based on the number of items in cart.<br/>
 For example, for "Buy any 5 products, get $10 off your order" kind of promotion, set it to
 
-```
+```html
 $pp['discount_by_quantity_ordered'] = '[ 4=10 ]';
 ```
 
@@ -225,7 +225,7 @@ If you are using the editable region definitions contained in our sample templat
 
 Using the editable region, individual products can now be set with a sliding scale for price-reductions (discounts). For example
 
-```
+```html
 [ 5=10 | 10=15 ]
 ```
 
@@ -233,7 +233,7 @@ where the scale above stands for 'reduce product's base-price by $10 if customer
 
 To setup price-reductions (discounts) as a **percentage** of the product's base price (instead of **fixed values** as in the example above), a '**%**' can be added to the scale e.g.
 
-```
+```html
 [ 5=10 | 10=15 ]%
 ```
 
@@ -258,13 +258,13 @@ Implementation of taxes calculation is much simpler than the shipping and discou
 The config file has two settings for taxes:<br/>
 **1\.** You can specify the tax percentage applied to the **cart's total value**. For example, the following sets a 10% tax
 
-```
+```html
 $pp['tax_percent'] = '10';
 ```
 
 **2\.** You can specify whether the tax percentage set above is applied **after shipping charges** are added to cart total **or before** doing so (i.e. whether or not shipping is taxed). The default is '0' which makes the shipping taxable. Set it to '1' to make it otherwise.
 
-```
+```html
 $pp['tax_excludes_shipping'] = '1';
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: concat
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -10,20 +10,20 @@ The **Concat** tag is a utility tag that can be used to concatenate several valu
 
 For example, suppose we have two variables 'first\_name' and 'last\_name'.
 
-```
+```html
 <cms:set first_name = 'John' />
 <cms:set last_name = 'Doe' />
 ```
 
 To set a variable, 'welcome\_message' to 'Hello John Doe! We welcome you!', using both the variables, we can do either this -
 
-```
+```html
 <cms:set welcome_message="Hello <cms:show first_name/> <cms:show last_name/>! We welcome you!" />
 ```
 
 or use **concat** as follows -
 
-```
+```html
 <cms:set welcome_message="<cms:concat 'Hello ' first_name ' ' last_name '! We welcome you!' />" />
 ```
 

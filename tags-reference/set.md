@@ -1,6 +1,6 @@
 ---
 title: set
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -11,13 +11,13 @@ The **Set** tag is used to put some value in a variable. The variable, if not al
 
 The following example will create a variable called 'greeting' and set its value to 'Hello'
 
-```
+```html
 <cms:set greeting='Hello' />
 ```
 
 The following will create another variable known as 'message' and set its value to 'Hello'
 
-```
+```html
 <cms:set message=greeting />
 ```
 
@@ -36,13 +36,13 @@ The following will set the value of 'message' to 'Hello World'.
 The first parameter, as illustrated above, is mandatory and is used to set a named variable to a certain value.<br/>
 The tag also uses an optional unnamed (i.e. only the value can be provided) second parameter that defines the **scope** within which the variable will be set.
 
-```
+```html
 <cms:set message='hello' scope='global' />
 ```
 
 The above is the same as
 
-```
+```html
 <cms:set message='hello' 'global' />
 ```
 

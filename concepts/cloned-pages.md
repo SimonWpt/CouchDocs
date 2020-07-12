@@ -1,6 +1,6 @@
 ---
 title: Cloned Pages
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -30,7 +30,7 @@ To create cloned pages out of a template, the template first needs to be marked 
 A template can be marked as being clonable by using the [__*template*__](../../tags-reference/template.html) tag somewhere within it and setting its _clonable_ parameter to '1'.<br/>
 Place the following snippet somewhere at the begining of the template (within the HEAD tag will do just fine) -
 
-```
+```html
 <cms:template clonable='1' > </cms:template>
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Views
-category: concept
+parent: Core Concepts
 layout: default
 ---
 
@@ -94,7 +94,7 @@ k\_is\_page = 1
 For clonable templates, you'll have to recognize which view the template is being executed in (by testing the variables given above) and then display the relevant data.<br/>
 It could be something like the following -
 
-```
+```html
 <cms:if k_is_page >
     <!-- Page view - display current page here -->
 <cms:else />
@@ -115,7 +115,7 @@ It could be something like the following -
 
 or
 
-```
+```html
 <cms:if k_is_list >
     <!-- List view - display list of pages here -->
 <cms:else />

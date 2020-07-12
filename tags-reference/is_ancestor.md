@@ -1,6 +1,6 @@
 ---
 title: is_ancestor
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **is\_ancestor** tag can be used to find whether or not a folder is the ancestor of another folder.<br/>
 Outputs '1' if true, else outputs '0'. This makes it possible to use this tag with the conditional **if** tag.
 
-```
+```html
 <cms:if "<cms:is_ancestor parent=folder1 child=folder2 />" >
     ..
 </cms:if>

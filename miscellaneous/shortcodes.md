@@ -1,6 +1,6 @@
 ---
 title: Shortcodes
-category: miscellaneous
+parent: Miscellaneous
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 
 Shortcodes are little pieces of text that look like these
 
-```
+```html
 [adsense]
 [youtube video="1aBSPn2P9bg" /]
 [mailto]johndoe@nowhere.com[/mailto]
@@ -45,13 +45,13 @@ So the first step in creating a shortcode is to (if not already present) create 
 This is where the real action lies.<br/>
 To explain this step, we'll create an ultra-simple shortcode named **\[hello\]** which when inserted into some content gets expanded to
 
-```
+```html
 <h1>Hello from a shortcode!</h1>
 ```
 
 Open up the _kfunctions.php_ file in your favorite editor and after the required **&lt;?php** add the following code
 
-```
+```html
 $FUNCS->register_shortcode( 'hello', 'hello_handler' );
 
 function hello_handler( $params, $content=null ){
@@ -61,13 +61,13 @@ function hello_handler( $params, $content=null ){
 
 The code above has two parts. First where we register our shortcode with Couch:
 
-```
+```html
 $FUNCS->register_shortcode( 'hello', 'hello_handler' );
 ```
 
 By using the code above we are letting Couch know that it will now have to keep a look out for a shortcode named _hello_ and that anywhere it encounters this shortcode, Couch should invoke a function named *hello\_handler*.
 
-```
+```html
 function hello_handler( $params, $content=null ){
     return '<h1>Hello from a shortcode!</h1>';
 }
@@ -87,13 +87,13 @@ Couch, unlike most other CMSes, can have any number of editable regions. Therefo
 Suppose a template has an editable region of richtext type named *my\_content*.<br/>
 This is how you'd probably be displaying the value contained within *my\_content* in your template:
 
-```
+```html
 <cms:show my_content />
 ```
 
 If the end user is supposed to be inserting shortcodes within this editable region, to effect the final step - that is to actually expand the shortcodes - modify the code above as follows:
 
-```
+```html
 <cms:do_shortcodes><cms:show my_content /></cms:do_shortcodes>
 ```
 
@@ -101,13 +101,13 @@ In the code above we are wrapping the **show** tag with the newly introduced **d
 
 And that's it. Now if the user places the following shortcode anywhere within the *my\_content* editable region:
 
-```
+```html
 [hello]
 ```
 
 it gets expanded to:
 
-```
+```html
 <h1>Hello from a shortcode!</h1>
 ```
 
@@ -115,7 +115,7 @@ it gets expanded to:
 
 The shortcode we created above was a self-enclosing one. We can also create shortcodes that consist of the opening/closing tag pair. Such tags then can be used to enclose contents e.g.
 
-```
+```html
 [hello]What's up?[/hello]
 ```
 
@@ -124,7 +124,7 @@ The handler function could then act on the passed content, modify it in any way 
 
 As examples of shortcodes that act on enclosed content, take at look at the following shortcodes that mimic BBcode:
 
-```
+```html
 $FUNCS->register_shortcode( 'b', 'bold_handler' );
 $FUNCS->register_shortcode( 'i', 'italic_handler' );
 $FUNCS->register_shortcode( 'u', 'underline_handler' );
@@ -150,37 +150,37 @@ function underline_handler( $params, $content=null ){
 
 If the end user was to input something like this:
 
-```
+```html
 Hello [b]World[/b]
 ```
 
 the output would be:
 
-```
+```html
 Hello <strong>World</strong>
 ```
 
 Input:
 
-```
+```html
 [i]Hello[/i] [b]World[/b]
 ```
 
 Output:
 
-```
+```html
 <em>Hello</em> <strong>World</strong>
 ```
 
 Input:
 
-```
+```html
 [u][i]hello[/i] [b]world[/b][/u]
 ```
 
 Output:
 
-```
+```html
 <span style="text-decoration:underline"><em>hello</em> <strong>world</strong></span>
 ```
 
@@ -192,7 +192,7 @@ The output of a shortcode can also be customized by using **parameters**.
 
 The parameters are entered like this:
 
-```
+```html
 [some_shortcode foo="hello" bar='world' baz=hi ]
 ```
 
@@ -214,7 +214,7 @@ Couch delivers all the parameters that are provided to a shortcode to the releva
 Instead of dealing directly with the raw array, a helper function provided by Couch - *$FUNCS-\>get\_named\_vars()* - should be used.<br/>
 An example of how the parameters should ideally be handled is as follows:
 
-```
+```html
 $FUNCS->register_shortcode( 'googlemap', 'googlemap_handler' );
 
 function googlemap_handler( $params, $content=null ){
@@ -238,7 +238,7 @@ The PHP _extract()_ function creates local variables for us with the same names 
 
 The shortcode described above can be used by the end user in any of the following ways:
 
-```
+```html
 [googlemap src="http://maps.google.com/?ll=23.250652,77.402072&spn=0.019912,0.038581&z=15"]
 [googlemap src="http://maps.google.com/?ll=23.250652,77.402072&spn=0.019912,0.038581&z=15" width='600']
 [googlemap src="http://maps.google.com/?ll=23.250652,77.402072&spn=0.019912,0.038581&z=15" width='600' height='480']
@@ -254,7 +254,7 @@ We end this section by providing some very useful (and real world) examples of s
 Following is a sample _kfunctions.php_ file, defining some useful shortcodes, which you can use directly within your projects:<br/>
 \[[**Download kfunctions.php**](http://www.couchcms.com/docs/code/kfunctions.zip)\]
 
-```
+```html
 <?php
 
    // 1.

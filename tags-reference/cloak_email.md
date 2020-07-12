@@ -1,6 +1,6 @@
 ---
 title: cloak_email
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,13 +9,13 @@ layout: default
 The **cloak\_email** tag can be used to hide email addresses from spambots (email harvesters).<br/>
 This tag creates a JavaScript encrypted mailto link that remains inaccessible to spambots.
 
-```
+```html
 <cms:cloak_email 'johndoe@gmail.com' />
 ```
 
 The code above will produce the following HTML but only if accessed using JavaScript -
 
-```
+```html
 <a href="mailto:johndoe@gmail.com">johndoe@gmail.com</a>
 ```
 
@@ -31,7 +31,7 @@ When accessed with JavaScript disabled, a message prompting the visitor to enabl
 
 The email address to cloak.
 
-```
+```html
 <cms:cloak_email email='johndoe@gmail.com' />
 ```
 
@@ -39,7 +39,7 @@ The email address to cloak.
 
 The visible text of the mailto link. If skipped, the _email_ parameter is used for the title too.
 
-```
+```html
 <cms:cloak_email email='johndoe@gmail.com' title='Contact Me!' />
 ```
 
@@ -48,7 +48,7 @@ The visible text of the mailto link. If skipped, the _email_ parameter is used f
 Message to display if this email is accessed with JavaScript disabled. If skipped, the default text shown is -<br/>
 '_(Please enable JavaScript to view this email address)_'
 
-```
+```html
 <cms:cloak_email email='johndoe@gmail.com' title='Contact Me!' msg='No JavaScript ?!!' />
 ```
 

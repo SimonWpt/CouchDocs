@@ -1,6 +1,6 @@
 ---
 title: paypal_processor
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -24,11 +24,11 @@ The processing of IPN by this tag is a background operation which makes it diffi
 The log file into which the steps are to be logged. If this parameter is skipped, a log file named 'log.txt' in your site's root is used (created if not already existing) for logging.<br/>
 You can specify a path with the file that is relative to the site's root.
 
-```
+```html
 <cms:paypal_processor debug='1' logfile='paypal.log' />
 ```
 
-```
+```html
 <cms:paypal_processor debug='1' logfile='couch/uploads/file/secure/paypal.log' />
 ```
 

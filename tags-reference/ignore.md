@@ -1,6 +1,6 @@
 ---
 title: ignore
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -11,7 +11,7 @@ This is somewhat akin to comenting out code in other languages to prevent execut
 
 For example -
 
-```
+```html
 <cms:show 'Hello ' />
 <cms:ignore>
     <cms:show 'world' />

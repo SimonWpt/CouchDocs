@@ -1,6 +1,6 @@
 ---
 title: page_exists
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 The **page\_exists** tag checks whether or not a cloned page, the name of which is given to it as a parameter, exists.<br/>
 It returns a '1' if the page exists else it returns a '0'.
 
-```
+```html
 <cms:page_exists 'contact-us' masterpage='index.php' />
 ```
 

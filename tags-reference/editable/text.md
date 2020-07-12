@@ -1,7 +1,7 @@
 ---
 title: type = 'text'
-category: tag
-parent: editable
+parent: Editable
+grand_parent: Tags Reference
 layout: default
 ---
 
@@ -12,7 +12,7 @@ For this type, Couch creates a single line textbox for data input.
 
 An editable region of _text_ type can be defined this way -
 
-```
+```html
 <cms:editable
  name='prop_title'
  label='Title'
@@ -36,7 +36,7 @@ The code above will result in -
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 
-```
+```html
 <cms:show prop_title />
 ```
 
@@ -52,7 +52,7 @@ In addition to the parameters common to all the types of editable regions, _text
 
 The width of the generated textbox can be changed by setting this parameter. For example, the following will make the textbox 200px wide -
 
-```
+```html
 <cms:editable name='prop_title' label='Title'
  desc='Enter title of property here'
  width='200'
@@ -63,7 +63,7 @@ The width of the generated textbox can be changed by setting this parameter. For
 
 The maximum number of characters that can be inputted by the user in this textbox can be constrained by setting this parameter. For example, the following code will prevent the user from entering more than 40 characters -
 
-```
+```html
 <cms:editable name='prop_title' label='Title'
  desc='Enter title of property here'
  maxlength='40'
@@ -82,20 +82,3 @@ The default *search\_type* is (as with all other types of editable regions) _tex
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _integer_ or _decimal_ (if the value can be fractional).
 
 <p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../../pages.html#custom_field).</p>
-
-## Related Tags
-
-*   [editable](../../../editable.html)
-*   [editable (password)](../../password.html)
-*   [editable (textarea)](../../textarea.html)
-*   [editable (richtext)](../../richtext.html)
-*   [editable (image)](../../image.html)
-*   [editable (thumbnail)](../../thumbnail.html)
-*   [editable (file)](../../file.html)
-*   [editable (radio)](../../radio.html)
-*   [editable (checkbox)](../../checkbox.html)
-*   [editable (dropdown)](../../dropdown.html)
-*   [editable (group)](../../group.html)
-*   [editable (message)](../../message.html)
-*   [editable (nicedit)](../../nicedit.html)
-*   [editable (relation)](../../relation.html)

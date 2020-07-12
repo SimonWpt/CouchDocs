@@ -1,6 +1,6 @@
 ---
 title: incr
-category: tag
+parent: Tags Reference
 layout: default
 ---
 
@@ -8,21 +8,21 @@ layout: default
 
 The **incr** tag accepts as its first parameter a variable and increases the value contained within the variable by the value contained within the second optional parameter. If the second parameter is not provided, a value of 1 is assumed.
 
-```
+```html
 <cms:set my_value='11' />
 <cms:show my_value />
 ```
 
 In the snippet above, value of variable my\_value is outputted as 11\.
 
-```
+```html
 <cms:incr my_value '2' />
 <cms:show my_value />
 ```
 
 The value of  variable my\_value now becomes 13\.
 
-```
+```html
 <cms:incr my_value />
 <cms:show my_value />
 ```
