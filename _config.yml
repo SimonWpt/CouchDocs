@@ -1,10 +1,21 @@
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-relative-links
+  - jekyll-seo-tag
 relative_links:
   enabled: true
   collections: true
-  
+# Enable or disable heading anchors
+heading_anchors: true
+
+# Aux links for the upper right navigation
+aux_links:
+  "CouchDocs on GitHub":
+    - "//github.com/SimonWpt/CouchDocs"
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
   # Footer content 
 # appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2020 of this site by Bertram Simon.
@@ -19,3 +30,11 @@ gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/SimonWpt/CouchDocs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
