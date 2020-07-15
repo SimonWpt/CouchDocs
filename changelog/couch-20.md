@@ -1,3 +1,9 @@
+---
+title: CouchCMS 2.0
+parent: Changelog
+layout: default
+---
+
 # Couch v2.0
 > **15 Jan 2017** *taken from https://www.couchcms.com/forum/viewtopic.php?f=5&t=10241*
 >  
