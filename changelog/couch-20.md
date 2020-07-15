@@ -116,7 +116,7 @@ Apart from the theming mechanism briefly discussed above, v2.0 has several more 
 Allow me to demonstrate this in a hands-on manner. Suppose you have a clonable Couch template named 'test.php' registered in your setup.  
 Following is what its list screen might look like in the admin-panel -
 
-![01.jpg](/assets/img/contents/couch-20/01.jpg)
+![01.jpg](../assets/img/contents/couch-20/01.jpg)
 
 Now please add the following code within its `<cms:template>` block -
 
@@ -131,7 +131,7 @@ Now please add the following code within its `<cms:template>` block -
 
 Visit the changed template as super-admin and come back to the admin-panel. You should see the following -
 
-![02.jpg](/assets/img/contents/couch-20/02.jpg)
+![02.jpg](../assets/img/contents/couch-20/02.jpg)
 
 I think you can guess what the `<cms:config_list_view>` we added above is doing.  
 To check it further, change the code to the following (we are swapping the position of the two `<cms:field>` tags) -
@@ -147,7 +147,7 @@ To check it further, change the code to the following (we are swapping the posit
 
 Coming back to the admin-panel after the mandatory visit to the template as super-admin, following is what the list screen should look like -
 
-![03.jpg](/assets/img/contents/couch-20/03.jpg)
+![03.jpg](../assets/img/contents/couch-20/03.jpg)
 
 So that should settle what the code we put above does - it defines the fields we want to show in the list screen and also their positions.  
 One point to remember here is that if we skipped all the `<cms:field>` tags from the `<cms:config_list_view>` block e.g. as follows -
@@ -206,7 +206,7 @@ For example, the code below will display `'Authors'`, instead of the default `'T
 </cms:config_list_view>
 ```
 
-![04.jpg](/assets/img/contents/couch-20/04.jpg)
+![04.jpg](../assets/img/contents/couch-20/04.jpg)
 
 Sticking with the second column, instead of a self-closing tag, if we were to define it as a tag-pair e.g. as follows -
 
@@ -231,7 +231,7 @@ Sticking with the second column, instead of a self-closing tag, if we were to de
 
 \- you'll see that the content enclosed within the tag pair is used as the content displayed in the cells
 
-![05.jpg](/assets/img/contents/couch-20/05.jpg)
+![05.jpg](../assets/img/contents/couch-20/05.jpg)
 
 In our example above, I rather sillily chose to repeat the page_title thrice, but the point I am trying to draw your attention to is that we had placed the code in the front-end template but it was *dynamically executed in the admin-panel's context*. This is powerful stuff as now we can use any Couch code, normally used on the front-end, to show the fields' content in the admin-panel.
 
@@ -372,7 +372,7 @@ A more practical example of <cms:html> tag's usage could be this -
 </cms:config_list_view>
 ```
 
-![06.jpg](/assets/img/contents/couch-20/06.jpg)
+![06.jpg](../assets/img/contents/couch-20/06.jpg)
 
 or this -
 
@@ -388,7 +388,7 @@ or this -
 </cms:config_list_view>
 ```
 
-![07.jpg](/assets/img/contents/couch-20/07.jpg)
+![07.jpg](../assets/img/contents/couch-20/07.jpg)
 
 Let us wrap up the customizing the list-screen topic with a related topic -
 
@@ -421,7 +421,7 @@ To make a normal clonable template sortable manually, we can add the `'k_up_down
 
 Just add the code above to any normal clonable template and it should become manually sortable
 
-![08.jpg](/assets/img/contents/couch-20/08.jpg)
+![08.jpg](../assets/img/contents/couch-20/08.jpg)
 
 Please note the following points in the code above -
 
@@ -488,7 +488,7 @@ If this parameter is set to `'1'`, a search box appears above the page listing -
 <cms:config_list_view  searchable='1' />
 ```
 
-![09.jpg](/assets/img/contents/couch-20/09.jpg)
+![09.jpg](../assets/img/contents/couch-20/09.jpg)
 
 It can be useful for templates that can potentially have a large number of pages.
 
@@ -526,7 +526,7 @@ Place the following within the `<cms:template>` block of any clonable template -
 
 Visit the template on the front-end as super-admin. Coming back to the admin-panel you should find that the `'Title'` field (the first displayed field, by default, in clonable templates) has disappeared! Worry not as we can find it now within the 'Advanced settings' dropdown -
 
-![10.jpg](/assets/img/contents/couch-20/10.jpg)
+![10.jpg](../assets/img/contents/couch-20/10.jpg)
 
 Notice also how it is now showing a different label and description.
 
@@ -547,7 +547,7 @@ In the code above we simply used the `'group'` parameter to move the `'Title'` f
 <cms:field 'k_page_title'  group='my_group'  />
 ```
 
-![11.jpg](/assets/img/contents/couch-20/11.jpg)
+![11.jpg](../assets/img/contents/couch-20/11.jpg)
 
 Admittedly, this is not something you'd normally like to do but the example above serves only to demonstrate what the various parameters of `<cms:field>` do.
 
@@ -577,7 +577,7 @@ Try this -
 </cms:field>
 ```
 
-![12.jpg](/assets/img/contents/couch-20/12.jpg)
+![12.jpg](../assets/img/contents/couch-20/12.jpg)
 
 Of course that is silly :) Now try this -
 
@@ -591,7 +591,7 @@ Of course that is silly :) Now try this -
 
 That should render the field as normal -
 
-![13.jpg](/assets/img/contents/couch-20/13.jpg)
+![13.jpg](../assets/img/contents/couch-20/13.jpg)
 
 Basically when we use the `<cms:field>` as a self-closing tag e.g. like this -
 
@@ -629,7 +629,7 @@ b. Please note that the enclosed content is dynamic and is actually executed in 
 </cms:field>
 ```
 
-![14.jpg](/assets/img/contents/couch-20/14.jpg)
+![14.jpg](../assets/img/contents/couch-20/14.jpg)
 
 c. an advanced use of this ability to put custom markup in fields would be to inject fields into the form that were never defined for the template.  
 Please take a look at the following (somewhat advanced) code
@@ -681,7 +681,7 @@ Please take a look at the following (somewhat advanced) code
 
 The code above will result in the following being shown on the main screen.
 
-![15.jpg](/assets/img/contents/couch-20/015.jpg)
+![15.jpg](../assets/img/contents/couch-20/015.jpg)
 
 Please notice that the new fields that you see on the screen are not defined anywhere as editable regions.  
 Changes made to them, however, will be mirrored by the actual publish_date field in the advanced settings dropdown (try it).
@@ -800,18 +800,18 @@ $FUNCS->register_admin_listview( 'test.php', 'my_list.html' );
 
 Visit the admin-panel and access the 'test.php' template (or whatever template specified above). Here is what should appear -
 
-![16.jpg](/assets/img/contents/couch-20/16.jpg)
+![16.jpg](../assets/img/contents/couch-20/16.jpg)
 
 This is where things differ a little from the previous versions.  
 Previously, a list custom screen used to cover the following region -
 
-![17.jpg](/assets/img/contents/couch-20/17.jpg)
+![17.jpg](../assets/img/contents/couch-20/17.jpg)
 
 Please notice how it was necessary before to include in your snippet code for the folders dropdown, the paginator and the actions at the bottom in addition to the code doing the actual listing.
 
 Now the area covered by the custom list view has been constrained to the following -
 
-![18.jpg](/assets/img/contents/couch-20/18.jpg)
+![18.jpg](../assets/img/contents/couch-20/18.jpg)
 
 So now your custom code needs to be concerned only with listing the pages in whatever manner is desired and not worry about the accessory functions.  
 This eases things considerably as now you can focus on only the task at hand.
@@ -863,7 +863,7 @@ Now go ahead and place the following in the 'my_list.html' snippet -
 
 You'll see that now the list screen renders *exactly* the same as the default listing.
 
-![19.jpg](/assets/img/contents/couch-20/19.jpg)
+![19.jpg](../assets/img/contents/couch-20/19.jpg)
 
 Hardly surprising as I have lifted the code above straight from 'couch/theme/_system/content_list_inner.html' snippet that is used by the theme layer to render the normal listing pages (check it).
 
@@ -1040,7 +1040,7 @@ Edit any of your front-end template (we are using test.php in our example) and p
 Visit the template as super-admin for the change to persist.  
 Coming back to the admin-panel, you should now see that your template is now placed in the `'Administration'` group along with the system modules.
 
-![20.jpg](/assets/img/contents/couch-20/20.jpg)
+![20.jpg](../assets/img/contents/couch-20/20.jpg)
 
 I think you can see what has happened. The code we added to the `<cms:template>` specified the `'parent'` group of the template as `'_modules_'` (i.e. `'Administration'`) and that is where the template ended up moving from its default `'_templates_'` (i.e. `'Templates'`) group.
 
@@ -1071,7 +1071,7 @@ $FUNCS->register_admin_menuitem( array('name'=>'_my_test_', 'title'=>'Test', 'is
 
 Come to the admin-panel and you should see a third group added to the sidebar.
 
-![21.jpg](/assets/img/contents/couch-20/21.jpg)
+![21.jpg](../assets/img/contents/couch-20/21.jpg)
 
 As I am sure you can make out, the `'title'` we set above is used for displaying the group in the sidebar while the `'weight'` decides where amongst all other groups it is situated (incidentally, the default weight of `'_templates_'` is 0 while that of `'_modules_'` is 10. So the `'1'` we set for our custom group makes it fall between the two).
 
@@ -1081,7 +1081,7 @@ We can now use the `'name'` we set for our new group (`'_my_test_'`), with any t
 <cms:template clonable='1' title='Test'  parent='_my_test_'>
 ```
 
-![22.jpg](/assets/img/contents/couch-20/22.jpg)
+![22.jpg](../assets/img/contents/couch-20/22.jpg)
 
 By default, a template's entry is shown with an icon of `'layers'` if it is a clonable template and with no icon at all if it is not.  
 You can specify which icon to use by setting it in the `<cms:template>` tag e.g. as follows -
@@ -1090,7 +1090,7 @@ You can specify which icon to use by setting it in the `<cms:template>` tag e.g.
 <cms:template clonable='1' title='Test' parent='_my_test_'  icon='audio-spectrum'>
 ```
 
-![23.jpg](/assets/img/contents/couch-20/23.jpg)
+![23.jpg](../assets/img/contents/couch-20/23.jpg)
 
 > **INFO:**  
 > So which icon names can we use? For now, any of those listed here -  [https://useiconic.com/open#icons](https://useiconic.com/open#icons)  
