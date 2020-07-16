@@ -11,10 +11,10 @@ Unlike the **excerptHTML** tag, the **excerpt** tag strips off all HTML tags (ex
 
 ## Parameters
 
-*   count
-*   allow
-*   trail
-*   truncate\_chars
+* count
+* allow
+* trail
+* truncate\_chars
 
 ### count
 
@@ -52,4 +52,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [excerptHTML](./excerpthtml.html)
+* [excerptHTML](./excerpthtml.html)

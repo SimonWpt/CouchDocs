@@ -335,10 +335,10 @@ Each nested-page has certain settings in its 'Advanced Settings' that may be use
 
 ![](../../assets/img/contents/nested-pages-26.png)
 
-*   Show in menu
-*   Menu Text
-*   Open in separate window
-*   Points to another page
+* Show in menu
+* Menu Text
+* Open in separate window
+* Points to another page
 
 The settings should be self-explanatory.
 

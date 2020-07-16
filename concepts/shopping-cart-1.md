@@ -6,18 +6,18 @@ layout: default
 
 # Shopping Cart (Part I)
 
-*   [Creating products](#creating-the-products)
-*   [Creating product variants (or Options)](#product-options-or-variants-)
-*   [Listing products](#listing-products)
-*   [The Cart](#core-actions-of-cart)
+* [Creating products](#creating-the-products)
+* [Creating product variants (or Options)](#product-options-or-variants-)
+* [Listing products](#listing-products)
+* [The Cart](#core-actions-of-cart)
     *   [Adding item to cart](#add-item-to-cart)
     *   [Listing cart items](#listing-cart-items)
     *   [Updating item quantity](#update-quantity-of-item-in-cart)
     *   [Removing item from cart](#remove-item-from-cart)
     *   [Displaying global cart values](#displaying-global-cart-values)
     *   [Checking out](#checkout)
-*   [AJAXifying the cart](#ajaxifying-the-cart)
-*   [List of all tags](#appendix)
+* [AJAXifying the cart](#ajaxifying-the-cart)
+* [List of all tags](#appendix)
 
 --------------------------------
 
@@ -292,13 +292,13 @@ Time now to put core actions of the shopping cart in effect.
 
 The shopping cart provided by CouchCart (as is true for any other shopping cart script) supports the following core actions:
 
-*   [Add item to cart](#add-item-to-cart)
-*   [List items in cart](#listing-cart-items)
-*   [Update quantity of item in cart](#update-quantity-of-item-in-cart)
-*   [Remove item from cart](#remove-item-from-cart)
-*   [Display global cart values](#displaying-global-cart-values)
-*   Empty cart
-*   [Checkout](#checkout)
+* [Add item to cart](#add-item-to-cart)
+* [List items in cart](#listing-cart-items)
+* [Update quantity of item in cart](#update-quantity-of-item-in-cart)
+* [Remove item from cart](#remove-item-from-cart)
+* [Display global cart values](#displaying-global-cart-values)
+* Empty cart
+* [Checkout](#checkout)
 
 Let us implement each of those in our site.
 
@@ -440,15 +440,15 @@ And following is the Couchified version:
 
 This is a list of core variables that __*pp\_cart\_items*__ sets to provide info about each item in the cart:
 
-*   line\_id
-*   id
-*   name
-*   title
-*   link
-*   price
-*   quantity
-*   line\_total
-*   requires\_shipping
+* line\_id
+* id
+* name
+* title
+* link
+* price
+* quantity
+* line\_total
+* requires\_shipping
 
 A couple of points in the code snippet shown above are worth noting.<br/>
 As you'll recall, our products can consist of variants (options) too. So, an item in the cart can possibly consist of several lines of description representing all the options selected by the buyer e.g.
@@ -919,37 +919,37 @@ We'll get all that done in [**part II of this topic**](../shopping-cart-2.html).
 
 A complete list all tags that come with CouchCart
 
-*   **pp\_product\_form**<br/>
+* **pp\_product\_form**<br/>
     Generates the form used to add a product to the cart
-*   **pp\_product\_options**<br/>
+* **pp\_product\_options**<br/>
     Iterates through all product options (e.g. Size, Color etc.)
-*   **pp\_option\_values**<br/>
+* **pp\_option\_values**<br/>
     Creates (or helps create) dropdowns or radio buttons of values of an option (e.g. Red, Green etc. for Color)
-*   **pp\_cart\_form**<br/>
+* **pp\_cart\_form**<br/>
     Generates the form used to allow updating items present in cart
-*   **pp\_cart\_items**<br/>
+* **pp\_cart\_items**<br/>
     Iterates through items present in the cart
-*   **pp\_selected\_options**<br/>
+* **pp\_selected\_options**<br/>
     Creates list of options selected for an item in cart
-*   **pp\_payment\_gateway**<br/>
+* **pp\_payment\_gateway**<br/>
     Dispatches cart data to PayPal
-*   **pp\_count\_items**
-*   **pp\_count\_unique\_items**
-*   **pp\_count\_shippable\_items**
-*   **pp\_sub\_total**
-*   **pp\_discount**
-*   **pp\_sub\_total\_discounted**
-*   **pp\_taxes**
-*   **pp\_shipping**
-*   **pp\_total**
-*   **pp\_custom\_var**
-*   **pp\_currency\_symbol**
-*   **pp\_refresh\_cart**
-*   **pp\_config**
-*   **pp\_add\_item\_link**
-*   **pp\_update\_item\_link**
-*   **pp\_remove\_item\_link**
-*   **pp\_empty\_cart\_link**
-*   **pp\_checkout\_link**
-*   **pp\_cart\_link**
-*   **pp\_empty\_cart**
+* **pp\_count\_items**
+* **pp\_count\_unique\_items**
+* **pp\_count\_shippable\_items**
+* **pp\_sub\_total**
+* **pp\_discount**
+* **pp\_sub\_total\_discounted**
+* **pp\_taxes**
+* **pp\_shipping**
+* **pp\_total**
+* **pp\_custom\_var**
+* **pp\_currency\_symbol**
+* **pp\_refresh\_cart**
+* **pp\_config**
+* **pp\_add\_item\_link**
+* **pp\_update\_item\_link**
+* **pp\_remove\_item\_link**
+* **pp\_empty\_cart\_link**
+* **pp\_checkout\_link**
+* **pp\_cart\_link**
+* **pp\_empty\_cart**

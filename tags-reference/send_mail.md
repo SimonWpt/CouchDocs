@@ -22,14 +22,14 @@ Each line should be separated with a LF (\\n). Lines should not be larger than 7
 
 ## Parameters
 
-*   from
-*   to
-*   cc
-*   bcc
-*   subject
-*   debug
-*   logfile
-*   html
+* from
+* to
+* cc
+* bcc
+* subject
+* debug
+* logfile
+* html
 
 ### from
 

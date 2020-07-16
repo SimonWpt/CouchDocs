@@ -22,8 +22,8 @@ If the method parameter is not specified, this tag will look into all the three 
 
 ## Parameters
 
-*   var
-*   method
+* var
+* method
 
 ### var
 

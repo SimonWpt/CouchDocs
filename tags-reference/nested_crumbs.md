@@ -35,10 +35,10 @@ where 'masterpage' points to the template behind the nested-pages tree.
 
 ## Parameters
 
-*   masterpage
-*   ignore\_show\_in\_menu
-*   prepend
-*   append
+* masterpage
+* ignore\_show\_in\_menu
+* prepend
+* append
 
 ### masterpage
 
@@ -65,17 +65,17 @@ When used as a self-closing tag, this tag sets no variables.
 
 When used as a tag-pair, the following variables are set for each crumb -
 
-*   k\_crumb\_id
-*   k\_crumb\_name
-*   k\_crumb\_text
-*   k\_crumb\_link
-*   k\_crumb\_is\_nested\_page
-*   k\_crumb\_is\_folder
-*   k\_crumb\_open\_external
-*   k\_crumb\_is\_last
+* k\_crumb\_id
+* k\_crumb\_name
+* k\_crumb\_text
+* k\_crumb\_link
+* k\_crumb\_is\_nested\_page
+* k\_crumb\_is\_folder
+* k\_crumb\_open\_external
+* k\_crumb\_is\_last
 
 ## Related Tags
 
-*   [menu](./menu.html)
-*   [breadcrumbs](./breadcrumbs.html)
-*   [nested\_pages](../nested_pages.html)
+* [menu](./menu.html)
+* [breadcrumbs](./breadcrumbs.html)
+* [nested\_pages](../nested_pages.html)

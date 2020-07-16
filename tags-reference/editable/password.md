@@ -34,8 +34,8 @@ The contents of this region can be accessed, as with all other editable regions,
 
 In addition to the parameters common to all the types of editable regions, _password_ accepts the following parameters
 
-*   width
-*   maxlength
+* width
+* maxlength
 
 ### width
 

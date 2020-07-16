@@ -11,14 +11,14 @@ Please see [**Documentation - Core concepts - Relationships**](../../../../conce
 
 ## Parameters
 
-*   name
-*   masterpage
-*   has
-*   reverse\_has
-*   folder
-*   include\_subfolders
-*   orderby
-*   order_dir
+* name
+* masterpage
+* has
+* reverse\_has
+* folder
+* include\_subfolders
+* orderby
+* order_dir
 
 ### name
 
@@ -85,9 +85,9 @@ The example above will list only pages belonging directly to 'classical' folder.
 
 The pages being listed can be sorted according to the following fields
 
-*   publish\_date
-*   page\_title
-*   page\_name
+* publish\_date
+* page\_title
+* page\_name
 
 If unspecified, 'publish\_date' is used as the default value.
 
@@ -96,7 +96,7 @@ If unspecified, 'publish\_date' is used as the default value.
 This parameter sets the sort direction of the listed pages.<br/>
 The acceptable values are
 
-*   desc
-*   asc
+* desc
+* asc
 
 If unspecified, 'desc' is used as the default.

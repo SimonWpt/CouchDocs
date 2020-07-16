@@ -17,9 +17,9 @@ Some item might require only a single image while another one might require 20 i
 The solution used up till now ([http&#58;//www.couchcms.com/forum/viewtopic.php?p=790\#p790](http://www.couchcms.com/forum/viewtopic.php?p=790#p790)) has been to work out the maximum number of images an item could possibly have and then define as many editable regions.<br/>
 This works but it is far from perfect -
 
-*   It clutters up the admin panel. If suppose we define twenty regions for the images - while editing, every single portfolio page will display all the twenty regions even if the page requires only one image.
-*   The code required to define multiple regions as well as to display back their data on the front-end of the site is convoluted.
-*   There is also the possibility that some page in the future might require even more images than the number of regions we have defined. By defining a fixed number of regions, we are placing a restriction on the maximum number of images a portfolio item can have.
+* It clutters up the admin panel. If suppose we define twenty regions for the images - while editing, every single portfolio page will display all the twenty regions even if the page requires only one image.
+* The code required to define multiple regions as well as to display back their data on the front-end of the site is convoluted.
+* There is also the possibility that some page in the future might require even more images than the number of regions we have defined. By defining a fixed number of regions, we are placing a restriction on the maximum number of images a portfolio item can have.
 
 Beginning with Couch v1.3, we can tackle the problem this way -
 

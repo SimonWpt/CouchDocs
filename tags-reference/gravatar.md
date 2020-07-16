@@ -14,10 +14,10 @@ Given an email address, the **gravatar** tag outputs an HTML &lt;img&gt; tag (or
 
 ## Parameters
 
-*   email
-*   size
-*   default
-*   link_only
+* email
+* size
+* default
+* link_only
 
 ### email
 

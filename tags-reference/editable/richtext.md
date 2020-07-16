@@ -55,14 +55,14 @@ The contents of this region can be accessed, as with all other editable regions,
 
 In addition to the parameters common to all the types of editable regions, _richtext_ accepts the following parameters
 
-*   height
-*   width
-*   css
-*   body\_id
-*   body\_class
-*   custom\_styles
-*   toolbar
-*   custom\_toolbar
+* height
+* width
+* css
+* body\_id
+* body\_class
+* custom\_styles
+* toolbar
+* custom\_toolbar
 
 ### height
 
@@ -213,10 +213,10 @@ This parameter can be used to determine which buttons (and hence which actions) 
 
 This parameter can take one of the following four values
 
-*   basic
-*   medium
-*   full
-*   custom
+* basic
+* medium
+* full
+* custom
 
 #### basic
 
@@ -276,51 +276,51 @@ As mentioned above, this parameter will only take effect when the _toolbar_ para
 
 You have the following buttons to choose from to display them in the toolbar -
 
-*   bold
-*   italic
-*   underline
-*   strike
-*   subscript
-*   superscript
-*   justifyleft
-*   justifycenter
-*   justifyright
-*   justifyblock
-*   numberedlist
-*   bulletedlist
-*   outdent
-*   indent
-*   blockquote
-*   undo
-*   redo
-*   removeformat
-*   cut
-*   copy
-*   paste
-*   pastetext
-*   pastefromword
-*   image
-*   flash
-*   table
-*   horizontalrule
-*   smiley
-*   specialchar
-*   pagebreak
-*   link
-*   unlink
-*   anchor
-*   styles
-*   format
-*   font
-*   fontsize
-*   textcolor
-*   bgcolor
-*   showblocks
-*   preview
-*   maximize
-*   source
-*   -
-*   \_
+* bold
+* italic
+* underline
+* strike
+* subscript
+* superscript
+* justifyleft
+* justifycenter
+* justifyright
+* justifyblock
+* numberedlist
+* bulletedlist
+* outdent
+* indent
+* blockquote
+* undo
+* redo
+* removeformat
+* cut
+* copy
+* paste
+* pastetext
+* pastefromword
+* image
+* flash
+* table
+* horizontalrule
+* smiley
+* specialchar
+* pagebreak
+* link
+* unlink
+* anchor
+* styles
+* format
+* font
+* fontsize
+* textcolor
+* bgcolor
+* showblocks
+* preview
+* maximize
+* source
+* -
+* \_
 
 <p class="notice">The last two buttons are hyphen and underscore. Both can be used to create a separator between buttons.</p>
 

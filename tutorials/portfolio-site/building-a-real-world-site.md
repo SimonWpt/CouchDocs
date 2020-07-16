@@ -13,11 +13,11 @@ It was originally created to be sold commercially at Themeforest. However the au
 
 We chose this template because it has almost all the sections that you'll come across while building a similar site -
 
-*   About Us
-*   Portfolio
-*   Blog
-*   Contact Us
-*   Home
+* About Us
+* Portfolio
+* Blog
+* Contact Us
+* Home
 
 It can be found at [_http&#58;//net.tutsplus.com/articles/news/free-website-template/_](http://net.tutsplus.com/articles/news/free-website-template/). You can choose to download it from the aforesaid link or get it from [here](http://www.couchcms.com/docs/code/Aurelius.zip) (our version has all unnecessary files removed).
 

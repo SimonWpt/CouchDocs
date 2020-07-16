@@ -19,7 +19,7 @@ Please see [**Core Concepts - RSS Feeds**](../../concepts/rss-feeds.html) for an
 
 ## Parameters
 
-*   value
+* value
 
 ### value
 

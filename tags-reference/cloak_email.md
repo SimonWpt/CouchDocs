@@ -23,9 +23,9 @@ When accessed with JavaScript disabled, a message prompting the visitor to enabl
 
 ## Parameters
 
-*   email
-*   title
-*   msg
+* email
+* title
+* msg
 
 ### email
 
@@ -58,4 +58,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [cloak\_url](../cloak_url.html)
+* [cloak\_url](../cloak_url.html)

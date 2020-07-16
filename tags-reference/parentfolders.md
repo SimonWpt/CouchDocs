@@ -20,8 +20,8 @@ Please see [**Core Concepts - Folders**](../../concepts/using-folders.html#paren
 
 ## Parameters
 
-*   folder
-*   masterpage
+* folder
+* masterpage
 
 ### folder
 
@@ -35,20 +35,20 @@ The template containing the folder above. If skipped, the template of the curren
 
 At each iteration, this tag sets variables that describe the parent folder being enumerated.
 
-*   k\_folder\_id
-*   k\_folder\_name
-*   k\_folder\_title
-*   k\_folder\_desc
-*   k\_folder\_link
-*   k\_folder\_pagecount
-*   k\_folder\_totalpagecount
-*   k\_level
+* k\_folder\_id
+* k\_folder\_name
+* k\_folder\_title
+* k\_folder\_desc
+* k\_folder\_link
+* k\_folder\_pagecount
+* k\_folder\_totalpagecount
+* k\_level
 
 ## Related Tags
 
-*   [folder](./folder.html)
-*   [folders](./folders.html)
-*   [listfolders](./listfolders.html)
-*   [dropdownfolders](./dropdownfolders.html)
-*   [is\_ancestor](../is_ancestor.html)
-*   [breadcrumbs](./breadcrumbs.html)
+* [folder](./folder.html)
+* [folders](./folders.html)
+* [listfolders](./listfolders.html)
+* [dropdownfolders](./dropdownfolders.html)
+* [is\_ancestor](../is_ancestor.html)
+* [breadcrumbs](./breadcrumbs.html)

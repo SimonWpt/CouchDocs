@@ -22,11 +22,11 @@ The **date** tag outputs a string according to the given _format_ parameter usin
 
 ## Parameters
 
-*   date
-*   format
-*   gmt
-*   locale
-*   charset
+* date
+* format
+* gmt
+* locale
+* charset
 
 ### date
 
@@ -215,4 +215,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [number\_format](../number_format.html)
+* [number\_format](../number_format.html)

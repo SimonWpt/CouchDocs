@@ -25,9 +25,9 @@ The snippets are outputting an excerpt of the value contained within the _conten
 
 ## Parameters
 
-*   count
-*   ignore
-*   trail
+* count
+* ignore
+* trail
 
 ### count
 
@@ -58,4 +58,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [excerpt](./excerpt.html)
+* [excerpt](./excerpt.html)

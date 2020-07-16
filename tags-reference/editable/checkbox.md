@@ -53,10 +53,10 @@ As you can see, the value consists of all the three selected options clubbed tog
 
 In addition to the parameters common to all the types of editable regions, _checkbox_ accepts the following parameters
 
-*   opt\_values
-*   opt\_selected
-*   separator
-*   val\_separator
+* opt\_values
+* opt\_selected
+* separator
+* val\_separator
 
 ### opt_values
 

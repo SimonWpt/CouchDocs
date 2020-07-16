@@ -12,7 +12,7 @@ Please see [**Core Concepts - Events Calendar**](../../concepts/events-calendar.
 
 ## Parameters
 
-*   pad\_with\_zeroes
+* pad\_with\_zeroes
 
 ### pad_with_zeroes
 
@@ -20,14 +20,14 @@ If set to '1' will pad all single digit days in variable *k\_day* with a leading
 
 ## Variables
 
-*   k\_date
-*   k\_day
-*   k\_month
-*   k\_year
-*   k\_day\_of\_week
-*   k\_position
-*   k\_count\_entries
-*   k\_timeline\_position
+* k\_date
+* k\_day
+* k\_month
+* k\_year
+* k\_day\_of\_week
+* k\_position
+* k\_count\_entries
+* k\_timeline\_position
 
 ### k_date
 
@@ -53,9 +53,9 @@ Number representing the week - ranges from 0 (Sun) to 6 (Sat)
 
 A calendar grid can contain days that belong to the month being shown as well as the previous and the next month. Depending on which month a day belongs to, its position is denoted by this parameter as one of these three values -
 
-*   previous\_month
-*   current\_month
-*   next\_month
+* previous\_month
+* current\_month
+* next\_month
 
 ### k_count_entries
 
@@ -65,12 +65,12 @@ The count of pages published on this day.
 
 Denotes the position of the day in timelime (relative to today). Can be one of these three values -
 
-*   past
-*   present
-*   future
+* past
+* present
+* future
 
 ## Related Tags
 
-*   [calendar](./calendar.html)
-*   [weeks](./weeks.html)
-*   [entries](./entries.html)
+* [calendar](./calendar.html)
+* [weeks](./weeks.html)
+* [entries](./entries.html)

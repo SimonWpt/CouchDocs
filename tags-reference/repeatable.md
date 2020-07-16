@@ -10,7 +10,7 @@ Please see [**Core Concepts - Repeatable Regions**](../../concepts/repeatable-re
 
 ## Parameters
 
-*   name
+* name
 
 ### name
 

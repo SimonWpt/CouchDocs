@@ -535,15 +535,15 @@ This webpage has some interesting sample questions that should give us an idea a
 
 An excerpt from it -
 
-*   What is the address of this website?
-*   What are the last 2 words in this question?
-*   What colour is a blue apple?
-*   What size is a 'big' dog?
-*   If a piece of string is 1 foot long, how long is it?
-*   What is the very last letter or symbol in this question?
-*   How many legs has a 3 legged spider?
-*   How many strings has a 9 string guitar?
-*   My dog is a spaniel, what breed is he?
+* What is the address of this website?
+* What are the last 2 words in this question?
+* What colour is a blue apple?
+* What size is a 'big' dog?
+* If a piece of string is 1 foot long, how long is it?
+* What is the very last letter or symbol in this question?
+* How many legs has a 3 legged spider?
+* How many strings has a 9 string guitar?
+* My dog is a spaniel, what breed is he?
 
 Suppose we choose, 'What colour is a blue apple?'.<br/>
 To implement it in the form, we add the following field to it -

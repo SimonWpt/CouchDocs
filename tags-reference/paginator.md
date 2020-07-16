@@ -20,11 +20,11 @@ Please see [**Core Concepts - Pagination**](../../concepts/pagination.html) for 
 
 ## Parameters
 
-*   simple
-*   position
-*   adjacents
-*   prev\_text
-*   next\_text
+* simple
+* position
+* adjacents
+* prev\_text
+* next\_text
 
 ### simple
 

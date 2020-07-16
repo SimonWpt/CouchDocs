@@ -20,8 +20,8 @@ Examples -
 
 ## Parameters
 
-*   msg
-*   processor
+* msg
+* processor
 
 ### msg
 
@@ -38,4 +38,4 @@ This tag sets no variables of its own.
 
 ## Related Tags
 
-*   [search](./search.html)
+* [search](./search.html)

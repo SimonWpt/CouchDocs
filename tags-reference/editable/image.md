@@ -48,14 +48,14 @@ The contents of this region can be accessed, as with all other editable regions,
 
 Apart from the parameters common to all types of editable regions, the regions of _image_ type can take the following parameters -
 
-*   width
-*   height
-*   enforce\_max
-*   crop
-*   quality
-*   show\_preview
-*   preview\_width
-*   preview\_height
+* width
+* height
+* enforce\_max
+* crop
+* quality
+* show\_preview
+* preview\_width
+* preview\_height
 
 ### width
 

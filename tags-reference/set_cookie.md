@@ -18,9 +18,9 @@ The **set\_cookie** tag can be used to set a cookie with a name and value. An ex
 
 ## Parameters
 
-*   name
-*   value
-*   expire
+* name
+* value
+* expire
 
 ### name
 
@@ -46,5 +46,5 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [get\_cookie](../get_cookie.html)
-*   [delete\_cookie](../delete_cookie.html)
+* [get\_cookie](../get_cookie.html)
+* [delete\_cookie](../delete_cookie.html)

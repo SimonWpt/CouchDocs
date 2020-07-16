@@ -10,7 +10,7 @@ Please see [**Core Concepts - Forms - Using Fieldset**](../../concepts/forms.htm
 
 ## Parameters
 
-*   label
+* label
 
 ### label
 
@@ -22,5 +22,5 @@ This tag does not set any variables.
 
 ## Related Tags
 
-*   [form](./form.html)
-*   [input](./input.html)
+* [form](./form.html)
+* [input](./input.html)

@@ -12,15 +12,15 @@ Please see [**Core Concepts - Folders**](../../concepts/using-folders.html) for 
 
 ## Parameters
 
-*   masterpage
-*   root
-*   childof
-*   hierarchical
-*   depth
-*   orderby
-*   order
-*   exclude
-*   extended\_info
+* masterpage
+* root
+* childof
+* hierarchical
+* depth
+* orderby
+* order
+* exclude
+* extended\_info
 
 ### masterpage
 
@@ -63,33 +63,33 @@ If this parameter is set, additional variables get set to report the changes in 
 
 The following variables are set to provide information about each folder that gets enumerated
 
-*   k\_folder\_id
-*   k\_folder\_name
-*   k\_folder\_title
-*   k\_folder\_desc
-*   k\_folder\_link
-*   k\_folder\_pagecount
-*   k\_folder\_totalpagecount
-*   k\_level
+* k\_folder\_id
+* k\_folder\_name
+* k\_folder\_title
+* k\_folder\_desc
+* k\_folder\_link
+* k\_folder\_pagecount
+* k\_folder\_totalpagecount
+* k\_level
 
 If the _hierarchical_ parameter is set to '1', the following variables also get set to indicate the current position in the hierarchy as this tag enumerates the folders -
 
-*   k\_level\_start
-*   k\_element\_start
-*   k\_element\_end
-*   k\_level\_end
+* k\_level\_start
+* k\_element\_start
+* k\_element\_end
+* k\_level\_end
 
 You can use these variables to easily create HTML ordered or unordered lists. Please see **Folders** in **Core Concepts**.
 
 ## Related Tags
 
-*   [folder](./folder.html)
-*   [listfolders](./listfolders.html)
-*   [dropdownfolders](./dropdownfolders.html)
-*   [parentfolders](./parentfolders.html)
-*   [is\_ancestor](../is_ancestor.html)
-*   [breadcrumbs](./breadcrumbs.html)
-*   [pages](./pages.html)
-*   [archives](./archives.html)
-*   [templates](./templates.html)
-*   [comments](./comments.html)
+* [folder](./folder.html)
+* [listfolders](./listfolders.html)
+* [dropdownfolders](./dropdownfolders.html)
+* [parentfolders](./parentfolders.html)
+* [is\_ancestor](../is_ancestor.html)
+* [breadcrumbs](./breadcrumbs.html)
+* [pages](./pages.html)
+* [archives](./archives.html)
+* [templates](./templates.html)
+* [comments](./comments.html)

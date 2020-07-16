@@ -18,4 +18,4 @@ Is a self-closing tag and sets no variables of its own.
 
 ## Related Tags
 
-*   [dump](./dump.html)
+* [dump](./dump.html)

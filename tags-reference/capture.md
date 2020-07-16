@@ -23,8 +23,8 @@ You'll find an interesting example of this tag's use in [**Sample Portfolio Site
 
 ## Parameters
 
-*   into
-*   scope
+* into
+* scope
 
 ### into
 

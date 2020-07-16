@@ -12,8 +12,8 @@ Please see [**Core Concepts - PayPal**](../../concepts/paypal.html) for an in-de
 
 ## Parameters
 
-*   debug
-*   logfile
+* debug
+* logfile
 
 ### debug
 
@@ -38,28 +38,28 @@ In the last snippet we are saving the log file in a subfolder of Couch which has
 
 PayPal provides values pertaining to the transaction being handled through the IPN. This tag makes available those values by setting variables for each. The following are the variables that give those values -
 
-*   pp\_item\_name
-*   pp\_item\_number
-*   pp\_quantity
-*   pp\_mc\_gross
-*   pp\_mc\_currency
-*   pp\_txn\_id
-*   pp\_receiver\_email
-*   pp\_payer\_email
-*   pp\_first\_name
-*   pp\_last\_name
-*   pp\_payer\_business\_name
+* pp\_item\_name
+* pp\_item\_number
+* pp\_quantity
+* pp\_mc\_gross
+* pp\_mc\_currency
+* pp\_txn\_id
+* pp\_receiver\_email
+* pp\_payer\_email
+* pp\_first\_name
+* pp\_last\_name
+* pp\_payer\_business\_name
 
 Once this tag verifies that the transaction is valid, it sets an additional variable to notify this -
 
-*   k\_paypal\_success
+* k\_paypal\_success
 
 Apart from this variable, all the variables of the page representing the item being sold, which are normally available in the page's [**page-view**](../../concepts/variables-in-views.html), are also made available.
 
 If the transaction is deemed invalid, the following variable is set to notify this -
 
-*   k\_paypal\_error
+* k\_paypal\_error
 
 ## Related Tags
 
-*   [paypal\_button](../paypal_button.html)
+* [paypal\_button](../paypal_button.html)

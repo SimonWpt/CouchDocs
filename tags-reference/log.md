@@ -18,8 +18,8 @@ The **log** tag can be used to save arbitrary text into a log file. This may be 
 
 ## Parameters
 
-*   msg
-*   file
+* msg
+* file
 
 ### msg
 

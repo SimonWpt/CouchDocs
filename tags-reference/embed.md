@@ -77,7 +77,7 @@ Clearly we can now store snippets or even complete templates as editable regions
 
 ## Parameters
 
-*   unnamed or code
+* unnamed or code
 
 If the first parameter is unnamed (i.e. only the value is passed) or it is anything other than 'code', it is considered to be a path to an embedded file. The path is always relative to the 'couch/snippets' folder. e.g.
 

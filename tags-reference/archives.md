@@ -10,14 +10,14 @@ Please see [**Core Concepts - Archives**](../../concepts/using-archives.html) fo
 
 ## Parameters
 
-*   masterpage
-*   order
-*   limit
-*   start\_on
-*   stop\_before
-*   show\_future\_entries
-*   type
-*   startcount
+* masterpage
+* order
+* limit
+* start\_on
+* stop\_before
+* show\_future\_entries
+* type
+* startcount
 
 ### masterpage
 
@@ -53,17 +53,17 @@ As this tag enumerates the archives, it sets a variable named *k\_count* to the 
 
 ## Variables
 
-*   k\_archive\_date
-*   k\_next\_archive\_date
-*   k\_archive\_link
-*   k\_archive\_count
-*   k\_count
+* k\_archive\_date
+* k\_next\_archive\_date
+* k\_archive\_link
+* k\_archive\_count
+* k\_count
 
 Please see [**Core Concepts - Archives**](../../concepts/using-archives.html) for details of these variables.
 
 ## Related Tags
 
-*   [pages](./pages.html)
-*   [folders](./folders.html)
-*   [templates](./templates.html)
-*   [comments](./comments.html)
+* [pages](./pages.html)
+* [folders](./folders.html)
+* [templates](./templates.html)
+* [comments](./comments.html)

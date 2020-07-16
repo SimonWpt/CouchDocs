@@ -10,8 +10,8 @@ Please see [**Core Concepts - Repeatable Regions**](../../concepts/repeatable-re
 
 ## Parameters
 
-*   var (default)
-*   startcount
+* var (default)
+* startcount
 
 ### var
 
@@ -33,8 +33,8 @@ One of the variables set by this tag is *k\_count*. The value of this variable i
 
 ## Variables
 
-*   k\_count
-*   k\_total\_records
+* k\_count
+* k\_total\_records
 
 ### k_count
 

@@ -218,20 +218,20 @@ Some points to note -
 
 ## Parameters
 
-*   masterpage
-*   depth
-*   orderby
-*   order
-*   exclude
-*   ignore\_show\_in\_menu
-*   root
-*   childof
-*   extended\_info
-*   include\_custom\_fields
-*   paginate
-*   limit
-*   offset
-*   startcount
+* masterpage
+* depth
+* orderby
+* order
+* exclude
+* ignore\_show\_in\_menu
+* root
+* childof
+* extended\_info
+* include\_custom\_fields
+* paginate
+* limit
+* offset
+* startcount
 
 ### masterpage
 
@@ -313,35 +313,35 @@ The k\_count, k\_record\_from, k\_current\_record and k\_record\_to variables (s
 
 The following variables are set to provide information about each nested-page that gets enumerated -
 
-*   k\_nestedpage\_id
-*   k\_nestedpage\_name
-*   k\_nestedpage\_title
-*   k\_nestedpage\_is\_active
-*   k\_nestedpage\_comments\_count
-*   k\_nestedpage\_parent\_id
-*   k\_nestedpage\_weight
-*   k\_show\_in\_menu
-*   k\_menu\_text:
-*   k\_menu\_link
-*   k\_menu\_title
-*   k\_is\_pointer
-*   k\_pointer\_link:
-*   k\_open\_external
-*   k\_masquerades
-*   k\_is\_active
-*   k\_is\_current
-*   k\_immediate\_children
-*   k\_total\_children
-*   k\_first\_child
-*   k\_last\_child
-*   k\_nestedpage\_link
+* k\_nestedpage\_id
+* k\_nestedpage\_name
+* k\_nestedpage\_title
+* k\_nestedpage\_is\_active
+* k\_nestedpage\_comments\_count
+* k\_nestedpage\_parent\_id
+* k\_nestedpage\_weight
+* k\_show\_in\_menu
+* k\_menu\_text:
+* k\_menu\_link
+* k\_menu\_title
+* k\_is\_pointer
+* k\_pointer\_link:
+* k\_open\_external
+* k\_masquerades
+* k\_is\_active
+* k\_is\_current
+* k\_immediate\_children
+* k\_total\_children
+* k\_first\_child
+* k\_last\_child
+* k\_nestedpage\_link
 
 If the 'extended\_info' parameter is set to '1', the following variables also get set to indicate the current position in the hierarchy as this tag enumerates the pages -
 
-*   k\_level\_start
-*   k\_element\_start
-*   k\_element\_end
-*   k\_level\_end
+* k\_level\_start
+* k\_element\_start
+* k\_element\_end
+* k\_level\_end
 
 If the 'include\_custom\_fields' parameter is set to '1', all the values within the editable regions of each page are made available as variables named after the regions.
 
@@ -349,5 +349,5 @@ If the 'paginate' parameter is set to '1', variables that help in creating the p
 
 ## Related Tags
 
-*   [pages](./pages.html)
-*   [folders](./folders.html)
+* [pages](./pages.html)
+* [folders](./folders.html)

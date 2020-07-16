@@ -10,13 +10,13 @@ Please see [**Core Concepts - Comments**](../../concepts/using-comments.html) fo
 
 ## Parameters
 
-*   masterpage
-*   page\_id
-*   page\_name
-*   limit
-*   paginate
-*   offset
-*   order
+* masterpage
+* page\_id
+* page\_name
+* limit
+* paginate
+* offset
+* order
 
 Normally _comments_ tag will fetch all the available approved comments.<br/>
 It can be constrained into fetching comments from only certain pages by setting the _masterpage_, *page\_id* and *page\_name* parameters.
@@ -117,25 +117,25 @@ Fetch all approved comments and order them in ascending order (oldest first) of 
 
 ## Variables
 
-*   k\_comment\_id
-*   k\_comment
-*   k\_comment\_author\_id
-*   k\_comment\_author
-*   k\_comment\_author\_email
-*   k\_comment\_author\_website
-*   k\_comment\_date
-*   k\_comment\_link
-*   k\_comment\_page\_id
-*   k\_comment\_page\_title
-*   k\_comment\_page\_name
-*   k\_comment\_template\_name
+* k\_comment\_id
+* k\_comment
+* k\_comment\_author\_id
+* k\_comment\_author
+* k\_comment\_author\_email
+* k\_comment\_author\_website
+* k\_comment\_date
+* k\_comment\_link
+* k\_comment\_page\_id
+* k\_comment\_page\_title
+* k\_comment\_page\_name
+* k\_comment\_template\_name
 
 In addition to these variables, the pagination related variables that describe the current status of the loop are also set. Please see [**paginator**](../paginator.html) for details.
 
 ## Related Tags
 
-*   [process\_comment](../process_comment.html)
-*   [pages](./pages.html)
-*   [folders](./folders.html)
-*   [archives](./archives.html)
-*   [templates](./templates.html)
+* [process\_comment](../process_comment.html)
+* [pages](./pages.html)
+* [folders](./folders.html)
+* [archives](./archives.html)
+* [templates](./templates.html)

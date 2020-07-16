@@ -16,16 +16,16 @@ The **listfolders** tag can be used to create a quick-n-dirty HTML unordered lis
 
 Supports the same parameter as the **folders** tag. In addition, takes one more parameter - *show\_count*.
 
-*   masterpage
-*   root
-*   childof
-*   hierarchical
-*   depth
-*   orderby
-*   order
-*   exclude
-*   extended\_info
-*   show\_count
+* masterpage
+* root
+* childof
+* hierarchical
+* depth
+* orderby
+* order
+* exclude
+* extended\_info
+* show\_count
 
 Please see the [**folders**](../folders.html#parameters) documentation for an expanation of these parameters.
 
@@ -35,9 +35,9 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [folder](./folder.html)
-*   [folders](./folders.html)
-*   [dropdownfolders](./dropdownfolders.html)
-*   [parentfolders](./parentfolders.html)
-*   [is\_ancestor](../is_ancestor.html)
-*   [breadcrumbs](./breadcrumbs.html)
+* [folder](./folder.html)
+* [folders](./folders.html)
+* [dropdownfolders](./dropdownfolders.html)
+* [parentfolders](./parentfolders.html)
+* [is\_ancestor](../is_ancestor.html)
+* [breadcrumbs](./breadcrumbs.html)

@@ -20,8 +20,8 @@ This tag takes care to prefix the provided querystring by a '?' if there are no 
 
 ## Parameters
 
-*   link
-*   querystring
+* link
+* querystring
 
 ### link
 

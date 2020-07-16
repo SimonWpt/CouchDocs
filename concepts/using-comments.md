@@ -194,19 +194,19 @@ At each iteration of the loop, this tag makes available the data associated with
 
 For each comment, the following variables (containing the data submitted by the user and the parent page) are made available by Couch -
 
-*   k\_comment\_id
-*   k\_comment (_the actual comment text_)
-*   k\_comment\_author\_id
-*   k\_comment\_author
-*   k\_comment\_author\_email
-*   k\_comment\_author\_website
-*   k\_comment\_date
-*   k\_comment\_link
-*   k\_comment\_anchor
-*   k\_comment\_page\_id
-*   k\_comment\_page\_title
-*   k\_comment\_page\_name
-*   k\_comment\_template\_name
+* k\_comment\_id
+* k\_comment (_the actual comment text_)
+* k\_comment\_author\_id
+* k\_comment\_author
+* k\_comment\_author\_email
+* k\_comment\_author\_website
+* k\_comment\_date
+* k\_comment\_link
+* k\_comment\_anchor
+* k\_comment\_page\_id
+* k\_comment\_page\_title
+* k\_comment\_page\_name
+* k\_comment\_template\_name
 
 In addition to these variables, the pagination related variables that describe the current status of the loop are also set. Please see [**pagination**](../pagination.html) for details.
 

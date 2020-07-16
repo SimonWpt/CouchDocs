@@ -20,8 +20,8 @@ In the last example above, the user is being redirected to a page named _test_ t
 
 ## Parameters
 
-*   url
-*   permanently
+* url
+* permanently
 
 ### url
 

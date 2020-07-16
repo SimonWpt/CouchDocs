@@ -10,9 +10,9 @@ Please see [**Core Concepts - PayPal**](../../concepts/paypal.html) for a detail
 
 ## Parameters
 
-*   image
-*   processor
-*   show\_shipping
+* image
+* processor
+* show\_shipping
 
 ### image
 
@@ -51,4 +51,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [paypal\_processor](../paypal_processor.html)
+* [paypal\_processor](../paypal_processor.html)

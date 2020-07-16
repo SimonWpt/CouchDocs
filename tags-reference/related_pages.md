@@ -15,7 +15,7 @@ Please see [**Documentation - Tags - Pages**](../pages.html#parameters) for a co
 
 Additionaly, the following parameter is also supported
 
-*   field (default)
+* field (default)
 
 ### field
 
@@ -29,4 +29,4 @@ Please see [**Documentation - Tags - Pages**](../pages.html#variables) for a com
 
 ## Related Tags
 
-*   [reverse\_related\_pages](../reverse_related_pages.html)
+* [reverse\_related\_pages](../reverse_related_pages.html)

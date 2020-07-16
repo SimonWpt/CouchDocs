@@ -25,8 +25,8 @@ As a possible solution to the two, seemingly, mutually exclusive requirements, p
 
 This addon recognizes the fact that there are two different ways editable regions need to be handled in on-page editing and so offers two distinct ways of doing so -
 
-*   **Inline editing:** The classic 'in place' editing. Simply click on the content itself and edit it right there. However, it works with text content only (specifically, 'text', 'textarea', 'richtext' and 'nicedit' types of editable regions).
-*   **Popup editing:** For non-textual regions or hidden text regions, this plugin outputs a link that can be placed nearby the contents. Clicking on the link brings up a popup window with only the relevant region(s) available for editing. This method will work for all editable regions - even the textual ones if you so desire.
+* **Inline editing:** The classic 'in place' editing. Simply click on the content itself and edit it right there. However, it works with text content only (specifically, 'text', 'textarea', 'richtext' and 'nicedit' types of editable regions).
+* **Popup editing:** For non-textual regions or hidden text regions, this plugin outputs a link that can be placed nearby the contents. Clicking on the link brings up a popup window with only the relevant region(s) available for editing. This method will work for all editable regions - even the textual ones if you so desire.
 
 Let us take a deeper look at how the two kinds of on-page editing work. But before we do that, we need to enable the addon first.<br/>
 It requires the usual procedure of making an entry in the '_couch/addons/kfunctions.php_' file.

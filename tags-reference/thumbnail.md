@@ -43,10 +43,10 @@ and this is how we create and output the above image's thumbnail
 
 ## Parameters
 
-*   src
-*   width
-*   height
-*   enforce\_max
+* src
+* width
+* height
+* enforce\_max
 
 ```html
 <img src="<cms:thumbnail my_image width='150' height='150' enforce_max='1' />" />

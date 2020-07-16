@@ -22,10 +22,10 @@ The snippet above will output
 
 ## Parameters
 
-*   number
-*   decimal\_precision
-*   decimal\_character
-*   thousands\_separator
+* number
+* decimal\_precision
+* decimal\_character
+* thousands\_separator
 
 ### number
 
@@ -71,4 +71,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [date](./date.html)
+* [date](./date.html)

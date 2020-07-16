@@ -154,17 +154,17 @@ Example -
 
 Apart from all the [usual variables pertaining to a page](../variables-in-views.html) made available by Couch, the following new variables are also made available for gallery pages -
 
-*   k\_file\_name
-*   k\_file\_ext
-*   k\_file\_size
+* k\_file\_name
+* k\_file\_ext
+* k\_file\_size
 
 As the names of the variables suggest, they show meta data about the uploaded image.
 
 For gallery pages, the [**cms:pages**](../../tags-reference/pages.html) tag also recognizes the following new values for the **orderby** parameter. These can be helpful in ordering the listing of images according to the meta data of the images.
 
-*   file\_name
-*   file\_ext
-*   file\_size
+* file\_name
+* file\_ext
+* file\_size
 
 ## EXIF data
 
@@ -183,47 +183,47 @@ define( 'K_EXTRACT_EXIF_DATA', 0 );
 
 Following is the complete list of variables that may become available (depending on their presence in the image) -
 
-*   exif\_aperture
-*   exif\_color
-*   exif\_componentconfig
-*   exif\_jpegquality
-*   exif\_exifcomment
-*   exif\_contrast
-*   exif\_copyright
-*   exif\_customrendered
-*   exif\_datetime
-*   exif\_datetimedigitized
-*   exif\_zoomratio
-*   exif\_distancerange
-*   exif\_height
-*   exif\_width
-*   exif\_exifversion
-*   exif\_exposurebias
-*   exif\_exposuremode
-*   exif\_exposure
-*   exif\_exposuretime
-*   exif\_fnumber
-*   exif\_flashused
-*   exif\_flashpixversion
-*   exif\_focallength
-*   exif\_focusdistance
-*   exif\_gaincontrol
-*   exif\_isoequiv
-*   exif\_make
-*   exif\_meteringmode
-*   exif\_model
-*   exif\_orientation
-*   exif\_jpegquality
-*   exif\_resolution
-*   exif\_resolutionunit
-*   exif\_saturation
-*   exif\_screencapturetype
-*   exif\_sharpness
-*   exif\_software
-*   exif\_whitebalance
-*   exif\_ycbcrpositioning
-*   exif\_xresolution
-*   exif\_yresolution
+* exif\_aperture
+* exif\_color
+* exif\_componentconfig
+* exif\_jpegquality
+* exif\_exifcomment
+* exif\_contrast
+* exif\_copyright
+* exif\_customrendered
+* exif\_datetime
+* exif\_datetimedigitized
+* exif\_zoomratio
+* exif\_distancerange
+* exif\_height
+* exif\_width
+* exif\_exifversion
+* exif\_exposurebias
+* exif\_exposuremode
+* exif\_exposure
+* exif\_exposuretime
+* exif\_fnumber
+* exif\_flashused
+* exif\_flashpixversion
+* exif\_focallength
+* exif\_focusdistance
+* exif\_gaincontrol
+* exif\_isoequiv
+* exif\_make
+* exif\_meteringmode
+* exif\_model
+* exif\_orientation
+* exif\_jpegquality
+* exif\_resolution
+* exif\_resolutionunit
+* exif\_saturation
+* exif\_screencapturetype
+* exif\_sharpness
+* exif\_software
+* exif\_whitebalance
+* exif\_ycbcrpositioning
+* exif\_xresolution
+* exif\_yresolution
 
 These variables, however, are not available for direct use.<br/>
 To get to them, you need to make use of a new tag named 'exif'. The usage is simply -

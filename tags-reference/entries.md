@@ -14,8 +14,8 @@ Please see [**Core Concepts - Events Calendar**](../../concepts/events-calendar.
 
 ## Parameters
 
-*   limit
-*   skip\_custom\_fields
+* limit
+* skip\_custom\_fields
 
 ### limit
 
@@ -32,6 +32,6 @@ As this tag iterates through the pages, at each iteration it sets all the variab
 
 ## Related Tags
 
-*   [calendar](./calendar.html)
-*   [weeks](./weeks.html)
-*   [days](./days.html)
+* [calendar](./calendar.html)
+* [weeks](./weeks.html)
+* [days](./days.html)

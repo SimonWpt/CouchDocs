@@ -38,9 +38,9 @@ do
 
 ## Parameters
 
-*   var
-*   as
-*   sep
+* var
+* as
+* sep
 
 ### var
 
@@ -80,7 +80,7 @@ If any other character is being used in the string, it can be specified this way
 
 ## Variables
 
-*   item
+* item
 
 ### item
 
@@ -90,5 +90,5 @@ The specified variable will be set instead.
 
 ## Related Tags
 
-*   [repeat](./repeat.html)
-*   [zebra](./zebra.html)
+* [repeat](./repeat.html)
+* [zebra](./zebra.html)

@@ -20,12 +20,12 @@ Couch makes it very easy for you to sell single digital products (ebooks, softwa
 
 To understand how Couch makes the process easy, let us first review how PayPal is normally integrated into a website selling several digital products.
 
-*   The process starts by placing a specially coded 'Buy Now' button for each item on the website. The code of each button has to be given data about the item associated with it i.e. the product's name, id, price etc.
-*   Clicking on a button takes the visitor to PayPal's website where, after adjusting the number of units he is buying, he makes the payment.
-*   PayPal immediately intimates the seller about the payment using IPN (Instant Payment Notification). IPN contains all the relevant data about the transaction, i.e. the item that was paid for, the number of units bought, the payment amount, the buyer's email etc.<br/>
+* The process starts by placing a specially coded 'Buy Now' button for each item on the website. The code of each button has to be given data about the item associated with it i.e. the product's name, id, price etc.
+* Clicking on a button takes the visitor to PayPal's website where, after adjusting the number of units he is buying, he makes the payment.
+* PayPal immediately intimates the seller about the payment using IPN (Instant Payment Notification). IPN contains all the relevant data about the transaction, i.e. the item that was paid for, the number of units bought, the payment amount, the buyer's email etc.<br/>
     To receive PayPal's IPN, the seller needs to place a specially coded script on his website that can decipher the incoming IPN and take necessary actions. The URL (address) of this script has to be provided beforehand to PayPal (normally this is placed in the button code mentioned in the first step above).
-*   Once the script receives the IPN, it is supposed to first of all verify that the IPN is arriving genuinely from PayPal and has not been spoofed by someone. Once this is verified, the script then goes on to validate the details of the transaction being reported - if the correct amount has been paid for the item sold, the amount has been deposited in the right account etc.
-*   Once everything checks out fine, it is now that the product is finally delivered to the buyer. This could be done by using the email.
+* Once the script receives the IPN, it is supposed to first of all verify that the IPN is arriving genuinely from PayPal and has not been spoofed by someone. Once this is verified, the script then goes on to validate the details of the transaction being reported - if the correct amount has been paid for the item sold, the amount has been deposited in the right account etc.
+* Once everything checks out fine, it is now that the product is finally delivered to the buyer. This could be done by using the email.
 
 ### HOW COUCH INTEGRATES WITH PAYPAL
 
@@ -192,17 +192,17 @@ Once we are sure that the IPN is being handled properly, we can now go ahead and
 
 Once [__*paypal\_processor*__](../../tags-reference/paypal_processor.html) verifies that the IPN is indeed from PayPal, it sets the following variables for use in your script -
 
-*   pp\_item\_name
-*   pp\_item\_number
-*   pp\_quantity
-*   pp\_mc\_gross
-*   pp\_mc\_currency
-*   pp\_txn\_id
-*   pp\_receiver\_email
-*   pp\_payer\_email
-*   pp\_first\_name
-*   pp\_last\_name
-*   pp\_payer\_business\_name
+* pp\_item\_name
+* pp\_item\_number
+* pp\_quantity
+* pp\_mc\_gross
+* pp\_mc\_currency
+* pp\_txn\_id
+* pp\_receiver\_email
+* pp\_payer\_email
+* pp\_first\_name
+* pp\_last\_name
+* pp\_payer\_business\_name
 
 <p class="notice">As should be obvious, these variables represent the values that PayPal provided through the IPN. We can use these values to take further actions.</p>
 

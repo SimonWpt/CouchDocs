@@ -24,21 +24,21 @@ This tag iterates through each of the fetched page and makes available all the d
 
 ## Parameters
 
-*   masterpage
-*   id
-*   page\_name
-*   limit
-*   paginate
-*   offset
-*   startcount
-*   folder
-*   include\_subfolders
-*   start\_on
-*   stop\_before
-*   show\_future\_entries
-*   orderby
-*   order
-*   custom\_field
+* masterpage
+* id
+* page\_name
+* limit
+* paginate
+* offset
+* startcount
+* folder
+* include\_subfolders
+* start\_on
+* stop\_before
+* show\_future\_entries
+* orderby
+* order
+* custom\_field
 
 ### masterpage
 
@@ -210,12 +210,12 @@ This example would fetch only those pages cloned from blog.php that have been pu
 
 The pages fetched can be sorted and ordered according to the following fields -
 
-*   publish\_date (_default_)
-*   page\_name
-*   page\_title
-*   modification\_date
-*   comments\_count
-*   random
+* publish\_date (_default_)
+* page\_name
+* page\_title
+* modification\_date
+* comments\_count
+* random
 
 Thus -
 
@@ -369,13 +369,13 @@ AND custom field price 'less than or equal to' 3000000 (i.e. price between 10000
 
 The following comparisions can be done with numeric fields -
 
-*   = (equal to)
-*   != (not equal to)
-*   <= (less than or equal to)
-*   &gt;= (greater than or equal to)
-*   &lt;&gt; (not equal to)
-*   &lt; (less than)
-*   &gt; (greater than)
+* = (equal to)
+* != (not equal to)
+* <= (less than or equal to)
+* &gt;= (greater than or equal to)
+* &lt;&gt; (not equal to)
+* &lt; (less than)
+* &gt; (greater than)
 
 ## Variables
 
@@ -386,7 +386,7 @@ See [**Pagination**](../../concepts/pagination.html).
 
 ## Related Tags
 
-*   [folders](./folders.html)
-*   [archives](./archives.html)
-*   [templates](./templates.html)
-*   [comments](./comments.html)
+* [folders](./folders.html)
+* [archives](./archives.html)
+* [templates](./templates.html)
+* [comments](./comments.html)

@@ -44,9 +44,9 @@ The contents of this region can be accessed, as with all other editable regions,
 
 In addition to the parameters common to all the types of editable regions, _text_ accepts the following parameters
 
-*   width
-*   maxlength
-*   search\_type
+* width
+* maxlength
+* search\_type
 
 ### width
 
@@ -74,9 +74,9 @@ The maximum number of characters that can be inputted by the user in this textbo
 
 Can be set to the following valid values -
 
-*   text
-*   integer
-*   decimal
+* text
+* integer
+* decimal
 
 The default *search\_type* is (as with all other types of editable regions) _text_.<br/>
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _integer_ or _decimal_ (if the value can be fractional).

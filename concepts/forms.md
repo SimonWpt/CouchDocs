@@ -60,8 +60,8 @@ We can test the *k\_success* and *k\_error* variables in our code to determine t
 
 It should be evident from the discussion above that for both the success as well as the error conditions, there are two ways to access the input fields -
 
-*   Individually via variables named after them.
-*   Through the *k\_success* and *k\_error* variables.
+* Individually via variables named after them.
+* Through the *k\_success* and *k\_error* variables.
 
 Before we demonstrate how to use both the ways, let us first place some validation constrains on the input fields.<br/>
 The most common validation that is required is making sure that a field has not been left empty. This can be done by setting the _required_ parameter to '1'.
@@ -181,10 +181,10 @@ The types of input tags that are currently supported by Couch and how they relat
 
 Porting these HTML tags to Couch tags requires only the addition of the 'cms:' prefix as we have seen in the snippets above. These tags are self-closing hence the end-slash is required - and so is the 'name' attribute.
 
-*   **text**
-*   **password**
-*   **submit**
-*   **hidden**
+* **text**
+* **password**
+* **submit**
+* **hidden**
 
 HTML version -
 

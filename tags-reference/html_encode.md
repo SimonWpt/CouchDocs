@@ -10,11 +10,11 @@ Certain characters have special significance in HTML, and should be represented 
 
 The translations performed are:
 
-*   '&' (ampersand) becomes '&amp;amp;'
-*   '"' (double quote) becomes '&amp;quot;'
-*   ''' (single quote) becomes '&amp;\#039;'
-*   '&lt;' (less than) becomes '&amp;lt;'
-*   '&gt;' (greater than) becomes '&amp;gt;'
+* '&' (ampersand) becomes '&amp;amp;'
+* '"' (double quote) becomes '&amp;quot;'
+* ''' (single quote) becomes '&amp;\#039;'
+* '&lt;' (less than) becomes '&amp;lt;'
+* '&gt;' (greater than) becomes '&amp;gt;'
 
 As an example, the following snippet has been taken from [**Core Concepts - RSS Feeds**](../../concepts/rss-feeds.html), where we are are supplyig the feed with HTML encoded excerpt of our pages -
 

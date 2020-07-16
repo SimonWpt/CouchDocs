@@ -16,7 +16,7 @@ The snippet above will retrieve the value set within the cookie named 'my\_test\
 
 ## Parameters
 
-*   name
+* name
 
 ### name
 
@@ -28,5 +28,5 @@ This is a self closing tag and sets no variables of its own.
 
 ## Related Tags
 
-*   [set\_cookie](../set_cookie.html)
-*   [delete\_cookie](../delete_cookie.html)
+* [set\_cookie](../set_cookie.html)
+* [delete\_cookie](../delete_cookie.html)

@@ -11,13 +11,13 @@ It is customary to place this tag somewhere at the beginning of a template. This
 
 ## Parameters
 
-*   title
-*   clonable
-*   access\_level
-*   executable
-*   commentable
-*   hidden
-*   order
+* title
+* clonable
+* access\_level
+* executable
+* commentable
+* hidden
+* order
 
 ### title
 
@@ -54,4 +54,4 @@ Does not set any variables of its own.
 
 ## Related Tags
 
-*   [templates](./templates.html)
+* [templates](./templates.html)

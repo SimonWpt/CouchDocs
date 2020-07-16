@@ -50,9 +50,9 @@ Here 'global' defines the scope of 'message' variable
 
 The valid values for this second parameter are -
 
-*   local
-*   parent
-*   global
+* local
+* parent
+* global
 
 ## Variables
 
@@ -60,7 +60,7 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [show](./show.html)
-*   [get](./get.html)
-*   [get\_custom\_field](../get_custom_field.html)
-*   [pages](./pages.html)
+* [show](./show.html)
+* [get](./get.html)
+* [get\_custom\_field](../get_custom_field.html)
+* [pages](./pages.html)

@@ -92,7 +92,7 @@ You'll never need to modify the code given above.
 
 ## Parameters
 
-*   unnamed
+* unnamed
 
 Takes one unnamed parameter (only the value is required).<br/>
 It is considered to be a path to a file or folder. The path is always relative to the 'couch/snippets' folder.<br/>
@@ -104,4 +104,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [page\_exists](../page_exists.html)
+* [page\_exists](../page_exists.html)

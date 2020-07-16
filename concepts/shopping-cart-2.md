@@ -6,20 +6,20 @@ layout: default
 
 # Shopping Cart (Part II)
 
-*   [Shipping Charges](#shipping-charges)
+* [Shipping Charges](#shipping-charges)
     *   [Cart level charges](#cart-level-charges)
         *   [Flat rate per order](#flat-rate-per-order)
         *   [Flat rate per item](#flat-rate-per-item)
         *   [Ship by order total](#ship-by-order-total)
         *   [Ship by quantity ordered](#ship-by-quantity-ordered)
     *   [Item level charges](#item-level-charges)
-*   [Discounts](#discounts)
+* [Discounts](#discounts)
     *   [Cart level discounts](#cart-level-discounts)
         *   [Discount by order total](#discount-by-order-total)
         *   [Discount by quantity ordered](#discount-by-quantity-ordered)
     *   [Item level discounts (Quantity based pricing)](#item-level-discounts)
-*   [Taxes](#taxes)
-*   [Promotional Coupons](#promotional-coupons)
+* [Taxes](#taxes)
+* [Promotional Coupons](#promotional-coupons)
     *   [Creating coupons](#creating-coupons)
     *   [Processing coupons](#processing-coupons)
 
@@ -84,10 +84,10 @@ Shipping charges can be calculated at two levels - **cart level** and individual
 
 There are 4 different ways to calculate cart level shipping charges. All of them can be set in '_addons/cart/config.php_' file.
 
-*   Flat rate per order
-*   Flat rate per item
-*   Ship by order total
-*   Ship by quantity ordered
+* Flat rate per order
+* Flat rate per item
+* Ship by order total
+* Ship by quantity ordered
 
 #### Flat rate per order
 
@@ -167,8 +167,8 @@ Like shipping, discounts can also be set at both **cart level** as well as at in
 
 There are two different ways cart level discounts may be calculated. Both of them can be set in '_addons/cart/config.php_' file.
 
-*   Discount by order total
-*   Discount by quantity ordered
+* Discount by order total
+* Discount by quantity ordered
 
 #### Discount by order total
 
@@ -368,9 +368,9 @@ It's a lean, yet quite extensible, little shopping cart that should come in hand
 
 What CouchCart is NOT (at least not as yet) is:
 
-*   An Order management system
-*   An Inventory management system
-*   A Customer management system
+* An Order management system
+* An Inventory management system
+* A Customer management system
 
 As the feature-set of CouchCMS expands, we can expect this to change.
 

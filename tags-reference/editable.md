@@ -13,20 +13,20 @@ Please see [**Core Concepts - Editable Regions**](../../concepts/editable-region
 
 The following are the parameters that are **common** to all the _types_ of editable regions. The parameters that are **specific** to individual _types_ are discussed along with that _type_ of editable region.
 
-*   name
-*   label
-*   desc
-*   type
-*   order
-*   group
-*   searchable
-*   search\_type
-*   hidden
-*   required
-*   validator
-*   validator\_msg
-*   separator
-*   val\_separator
+* name
+* label
+* desc
+* type
+* order
+* group
+* searchable
+* search\_type
+* hidden
+* required
+* validator
+* validator\_msg
+* separator
+* val\_separator
 
 ### name
 
@@ -44,20 +44,20 @@ This can be used to provide the user some more information about the editable re
 
 The following are the different types of editable regions that can be created (_click for full details_).
 
-*   [text](../editable/text.html)
-*   [password](../editable/password.html)
-*   [textarea](../editable/textarea.html)
-*   [richtext](../editable/richtext.html)
-*   [image](../editable/image.html)
-*   [thumbnail](../editable/thumbnail.html)
-*   [file](../editable/file.html)
-*   [radio](../editable/radio.html)
-*   [checkbox](../editable/checkbox.html)
-*   [dropdown](../editable/dropdown.html)
-*   [group](../editable/group.html)
-*   [message](../editable/message.html)
-*   [nicedit](../editable/nicedit.html)
-*   [relation](../editable/relation.html)
+* [text](../editable/text.html)
+* [password](../editable/password.html)
+* [textarea](../editable/textarea.html)
+* [richtext](../editable/richtext.html)
+* [image](../editable/image.html)
+* [thumbnail](../editable/thumbnail.html)
+* [file](../editable/file.html)
+* [radio](../editable/radio.html)
+* [checkbox](../editable/checkbox.html)
+* [dropdown](../editable/dropdown.html)
+* [group](../editable/group.html)
+* [message](../editable/message.html)
+* [nicedit](../editable/nicedit.html)
+* [relation](../editable/relation.html)
 
 ### order
 
@@ -97,9 +97,9 @@ search_type='decimal'
 
 *search\_type* parameter determines how the values contained within an editable region are _sorted_ and _compared_. Couch recognizes three different search\_types -
 
-*   text
-*   integer
-*   decimal
+* text
+* integer
+* decimal
 
 The default *search\_type* of all editable regions is _text_. For editable regions of type [**text**](../editable/text.html), [**radio**](../editable/radio.html) and [**dropdown**](../editable/dropdown.html), the *search\_type* can be changed to _integer_ or _decimal_ if the values contained within them would be numeric.
 
@@ -339,17 +339,17 @@ A variable by the name of the editable region becomes available in the context t
 
 ## Related Tags
 
-*   [editable (text)](../editable/text.html)
-*   [editable (password)](../editable/password.html)
-*   [editable (textarea)](../editable/textarea.html)
-*   [editable (richtext)](../editable/richtext.html)
-*   [editable (image)](../editable/image.html)
-*   [editable (thumbnail)](../editable/thumbnail.html)
-*   [editable (file)](../editable/file.html)
-*   [editable (radio)](../editable/radio.html)
-*   [editable (checkbox)](../editable/checkbox.html)
-*   [editable (dropdown)](../editable/dropdown.html)
-*   [editable (group)](../editable/group.html)
-*   [editable (message)](../editable/message.html)
-*   [editable (nicedit)](../editable/nicedit.html)
-*   [editable (relation)](../editable/relation.html)
+* [editable (text)](../editable/text.html)
+* [editable (password)](../editable/password.html)
+* [editable (textarea)](../editable/textarea.html)
+* [editable (richtext)](../editable/richtext.html)
+* [editable (image)](../editable/image.html)
+* [editable (thumbnail)](../editable/thumbnail.html)
+* [editable (file)](../editable/file.html)
+* [editable (radio)](../editable/radio.html)
+* [editable (checkbox)](../editable/checkbox.html)
+* [editable (dropdown)](../editable/dropdown.html)
+* [editable (group)](../editable/group.html)
+* [editable (message)](../editable/message.html)
+* [editable (nicedit)](../editable/nicedit.html)
+* [editable (relation)](../editable/relation.html)

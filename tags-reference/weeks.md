@@ -16,7 +16,7 @@ This tag takes no parameters.
 
 ## Variables
 
-*   k\_week\_num
+* k\_week\_num
 
 ### k_week_num
 
@@ -24,6 +24,6 @@ Is set to the number of the week being enumerated. Can range from 4 to 6\.
 
 ## Related Tags
 
-*   [calendar](./calendar.html)
-*   [days](./days.html)
-*   [entries](./entries.html)
+* [calendar](./calendar.html)
+* [days](./days.html)
+* [entries](./entries.html)

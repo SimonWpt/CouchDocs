@@ -19,9 +19,9 @@ Please see [**Core Concepts - Folders**](../../concepts/using-folders.html#paren
 
 ## Parameters
 
-*   masterpage
-*   parent
-*   child
+* masterpage
+* parent
+* child
 
 ### masterpage
 
@@ -41,9 +41,9 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [folder](./folder.html)
-*   [folders](./folders.html)
-*   [listfolders](./listfolders.html)
-*   [dropdownfolders](./dropdownfolders.html)
-*   [parentfolders](./parentfolders.html)
-*   [breadcrumbs](./breadcrumbs.html)
+* [folder](./folder.html)
+* [folders](./folders.html)
+* [listfolders](./listfolders.html)
+* [dropdownfolders](./dropdownfolders.html)
+* [parentfolders](./parentfolders.html)
+* [breadcrumbs](./breadcrumbs.html)

@@ -16,9 +16,9 @@ It is an alternative method to using the **pages** tag and is well suited for fe
 
 ## Parameters
 
-*   var
-*   masterpage
-*   page
+* var
+* masterpage
+* page
 
 ### var
 
@@ -43,7 +43,7 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [show](./show.html)
-*   [get](./get.html)
-*   [set](./set.html)
-*   [pages](./pages.html)
+* [show](./show.html)
+* [get](./get.html)
+* [set](./set.html)
+* [pages](./pages.html)

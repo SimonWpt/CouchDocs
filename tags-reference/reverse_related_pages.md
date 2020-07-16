@@ -15,8 +15,8 @@ Please see [**Documentation - Tags - Pages**](../pages.html#parameters) for a co
 
 Additionaly, the following parameters are also supported
 
-*   field (default)
-*   masterpage
+* field (default)
+* masterpage
 
 ### field
 
@@ -35,4 +35,4 @@ Please see [**Documentation - Tags - Pages**](../pages.html#variables) for a com
 
 ## Related Tags
 
-*   [related\_pages](../related_pages.html)
+* [related\_pages](../related_pages.html)

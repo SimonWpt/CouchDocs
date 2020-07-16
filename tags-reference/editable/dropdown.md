@@ -39,11 +39,11 @@ The option selected in this region can be accessed, as with all other editable r
 
 In addition to the parameters common to all the types of editable regions, _dropdown_ accepts the following parameters
 
-*   opt\_values
-*   opt\_selected
-*   separator
-*   val\_separator
-*   search\_type
+* opt\_values
+* opt\_selected
+* separator
+* val\_separator
+* search\_type
 
 ### opt_values
 
@@ -136,9 +136,9 @@ val_separator=':'
 
 Can be set to the following valid values -
 
-*   text
-*   integer
-*   decimal
+* text
+* integer
+* decimal
 
 The default *search\_type* is (as with all other types of editable regions) _text_.<br/>
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _numeric_ or _decimal_ (if the value can be fractional).

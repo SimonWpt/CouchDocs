@@ -23,20 +23,20 @@ For the sake of this example we make use of a template named _blog.php_ that has
 
 The following variables are available in ALL the cases, irrespective of the clonable status of the template and the current view -
 
-*   k\_page\_link
-*   k\_admin\_link
-*   k\_site\_link
-*   k\_admin\_path
-*   k\_site\_path
-*   k\_template\_title
-*   k\_template\_name
-*   k\_template\_id
-*   k\_template\_link
-*   k\_prettyurls
-*   k\_site\_charset
-*   k\_email\_from
-*   k\_email\_to
-*   k\_is\_commentable
+* k\_page\_link
+* k\_admin\_link
+* k\_site\_link
+* k\_admin\_path
+* k\_site\_path
+* k\_template\_title
+* k\_template\_name
+* k\_template\_id
+* k\_template\_link
+* k\_prettyurls
+* k\_site\_charset
+* k\_email\_from
+* k\_email\_to
+* k\_is\_commentable
 
 ### NON-CLONABLE TEMPLATE -
 
@@ -45,13 +45,13 @@ _http&#58;//www.mysite.com/blog.php_
 
 \- and the available variables are -
 
-*   k\_is\_list\_page
-*   k\_comments\_count
-*   k\_page\_date
-*   k\_page\_modification\_date
-*   **my\_blog\_text**
-*   **my\_blog\_image**
-*   **my\_blog\_author**
+* k\_is\_list\_page
+* k\_comments\_count
+* k\_page\_date
+* k\_page\_modification\_date
+* **my\_blog\_text**
+* **my\_blog\_image**
+* **my\_blog\_author**
 
 ### CLONABLE TEMPLATE -
 
@@ -64,65 +64,65 @@ In this view, variables giving information about the current page, the containin
 
 The folowing variables carry information about the page in question -
 
-*   k\_is\_page
-*   k\_page\_title
-*   k\_page\_name
-*   k\_page\_id
-*   k\_page\_date
-*   k\_page\_modification\_date
-*   k\_comments\_count
+* k\_is\_page
+* k\_page\_title
+* k\_page\_name
+* k\_page\_id
+* k\_page\_date
+* k\_page\_modification\_date
+* k\_comments\_count
 
 The following variables carry Information about the folder, if the page resides in one -
 
-*   k\_page\_folderid
-*   k\_page\_foldername
-*   k\_page\_foldertitle
-*   k\_page\_folderlink
-*   k\_page\_folderpagecount
-*   k\_page\_foldertotalpagecount
+* k\_page\_folderid
+* k\_page\_foldername
+* k\_page\_foldertitle
+* k\_page\_folderlink
+* k\_page\_folderpagecount
+* k\_page\_foldertotalpagecount
 
 Finally the contents of editable regions -
 
-*   **my\_blog\_text**
-*   **my\_blog\_image**
-*   **my\_blog\_author**
+* **my\_blog\_text**
+* **my\_blog\_image**
+* **my\_blog\_author**
 
 #### FOLDER VIEW
 
 e.g. *http&#58;//www.mysite.com/blog/some\_subfolder/*<br/>
 In this view, variables giving information about the folder mentioned in the URL are set.
 
-*   k\_is\_list
-*   k\_is\_folder
-*   k\_folder\_id
-*   k\_folder\_name
-*   k\_folder\_title
-*   k\_folder\_link
-*   k\_folder\_pagecount (_Number of pages in the folder_)
-*   k\_folder\_totalpagecount (_Total number of pages, including pages in subfolders_)
+* k\_is\_list
+* k\_is\_folder
+* k\_folder\_id
+* k\_folder\_name
+* k\_folder\_title
+* k\_folder\_link
+* k\_folder\_pagecount (_Number of pages in the folder_)
+* k\_folder\_totalpagecount (_Total number of pages, including pages in subfolders_)
 
 #### ARCHIVE VIEW
 
 e.g. _http&#58;//www.mysite.com/blog/2010/05/_<br/>
 In this view, variables giving information about the archive's time period (as given in the URL) are set.
 
-*   k\_is\_list
-*   k\_is\_archive
-*   k\_archive\_date
-*   k\_next\_archive\_date
-*   k\_archive\_link
-*   k\_day
-*   k\_month
-*   k\_year
+* k\_is\_list
+* k\_is\_archive
+* k\_archive\_date
+* k\_next\_archive\_date
+* k\_archive\_link
+* k\_day
+* k\_month
+* k\_year
 
 #### HOME VIEW
 
 e.g. _http&#58;//www.mysite.com/blog/_
 
-*   k\_is\_list
-*   k\_is\_home
-*   k\_folder\_pagecount (_Number of pages. Remember home view is also the root folder_)
-*   k\_folder\_totalpagecount (_Total number of cloned pages, including pages in subfolders_)
+* k\_is\_list
+* k\_is\_home
+* k\_folder\_pagecount (_Number of pages. Remember home view is also the root folder_)
+* k\_folder\_totalpagecount (_Total number of cloned pages, including pages in subfolders_)
 
 <p class="notice">**IMP.** Notice that for cloneable templates, the contents of the editable regions associated with a page are made available only in page view.</p>
 

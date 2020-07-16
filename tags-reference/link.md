@@ -42,12 +42,12 @@ The link tag can be used to dynamically generate appropriate links to the variou
 
 ## Parameters
 
-*   masterpage
-*   page
-*   folder
-*   year
-*   month
-*   day
+* masterpage
+* page
+* folder
+* year
+* month
+* day
 
 ## Variables
 

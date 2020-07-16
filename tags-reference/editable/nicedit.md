@@ -32,10 +32,10 @@ This enclosed text will appear as the default value of the editor
 
 In addition to the parameters common to all the types of editable regions, nicedit accepts the following parameters
 
-*   width
-*   height
-*   maxheight
-*   buttons
+* width
+* height
+* maxheight
+* buttons
 
 ### width
 
@@ -64,31 +64,31 @@ This parameter can be used to specify which buttons are displayed in the toolbar
 This parameter takes a comma seperated string containing the names of the buttons.<br/>
 Following are the values that can be used:
 
-*   bold
-*   italic
-*   underline
-*   left
-*   center
-*   right
-*   justify
-*   ol
-*   ul
-*   subscript
-*   superscript
-*   strikethrough
-*   removeformat
-*   indent
-*   outdent
-*   hr
-*   fontsize
-*   fontfamily
-*   fontformat
-*   link
-*   unlink
-*   forecolor
-*   bgcolor
-*   image
-*   source
+* bold
+* italic
+* underline
+* left
+* center
+* right
+* justify
+* ol
+* ul
+* subscript
+* superscript
+* strikethrough
+* removeformat
+* indent
+* outdent
+* hr
+* fontsize
+* fontfamily
+* fontformat
+* link
+* unlink
+* forecolor
+* bgcolor
+* image
+* source
 
 If the 'buttons' parameter is not specified, the following set of buttons is used as the default:<br/>
 bold, italic, underline, ol, ul, link, unlink, image, removeformat, source

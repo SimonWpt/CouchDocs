@@ -12,26 +12,26 @@ Please see [**Core Concepts - Nested Pages**](../../concepts/nested-pages-aka-me
 
 ## Parameters
 
-*   masterpage
-*   depth
-*   orderby
-*   order
-*   exclude
-*   ignore\_show\_in\_menu
-*   root
-*   childof
-*   extended\_info
+* masterpage
+* depth
+* orderby
+* order
+* exclude
+* ignore\_show\_in\_menu
+* root
+* childof
+* extended\_info
 
 
-*   menu\_class
-*   menu\_id
-*   first\_class
-*   last\_class,
-*   no\_selected
-*   selected\_class
-*   no\_active\_trail
-*   active\_trail\_class
-*   list\_type
+* menu\_class
+* menu\_id
+* first\_class
+* last\_class,
+* no\_selected
+* selected\_class
+* no\_active\_trail
+* active\_trail\_class
+* list\_type
 
 To illustrate the use of 'menu' tag, we'll use the same sample hierarchy of elements that we used in the '[folders](../../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.
 
@@ -344,5 +344,5 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-*   [nested\_pages](../nested_pages.html)
-*   [nested\_crumbs](../nested_crumbs.html)
+* [nested\_pages](../nested_pages.html)
+* [nested\_crumbs](../nested_crumbs.html)

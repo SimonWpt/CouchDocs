@@ -78,20 +78,20 @@ e.g. setting the type to 'richtext' -
 
 The followng are the different types of editable regions currently supported by Couch -
 
-*   [text](../../tags-reference/editable/text.html)
-*   [password](../../tags-reference/editable/password.html)
-*   [textarea](../../tags-reference/editable/textarea.html)
-*   [richtext](../../tags-reference/editable/richtext.html)
-*   [image](../../tags-reference/editable/image.html)
-*   [thumbnail](../../tags-reference/editable/thumbnail.html)
-*   [file](../../tags-reference/editable/file.html)
-*   [radio](../../tags-reference/editable/radio.html)
-*   [checkbox](../../tags-reference/editable/checkbox.html)
-*   [dropdown](../../tags-reference/editable/dropdown.html)
-*   [group](../../tags-reference/editable/group.html)
-*   [message](../../tags-reference/editable/message.html)
-*   [nicedit](../../tags-reference/editable/nicedit.html)
-*   [relation](../../tags-reference/editable/relation.html)
+* [text](../../tags-reference/editable/text.html)
+* [password](../../tags-reference/editable/password.html)
+* [textarea](../../tags-reference/editable/textarea.html)
+* [richtext](../../tags-reference/editable/richtext.html)
+* [image](../../tags-reference/editable/image.html)
+* [thumbnail](../../tags-reference/editable/thumbnail.html)
+* [file](../../tags-reference/editable/file.html)
+* [radio](../../tags-reference/editable/radio.html)
+* [checkbox](../../tags-reference/editable/checkbox.html)
+* [dropdown](../../tags-reference/editable/dropdown.html)
+* [group](../../tags-reference/editable/group.html)
+* [message](../../tags-reference/editable/message.html)
+* [nicedit](../../tags-reference/editable/nicedit.html)
+* [relation](../../tags-reference/editable/relation.html)
 
 You can define any number of editable regions in a template.
 

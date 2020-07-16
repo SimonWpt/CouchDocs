@@ -39,9 +39,9 @@ As noted above, this tag iterates through all the found pages setting up variabl
 
 For each page all the variables normally available in its _page-view_ will be available. Apart from these, the following variables are also made available -
 
-*   k\_search\_title
-*   k\_search\_content
-*   k\_search\_excerpt
+* k\_search\_title
+* k\_search\_content
+* k\_search\_excerpt
 
 *k\_search\_content* is the the entire content of the page that was searched while *k\_search\_excerpt* consists of very short snippets from various parts of the page where each searched word was found.<br/>
 You'll normally be displaying the *k\_search\_excerpt* as search results because it also has the additional feature of showing all the searched words in a highlighted state.<br/>

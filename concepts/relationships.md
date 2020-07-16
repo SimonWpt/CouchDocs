@@ -139,8 +139,8 @@ while showing an 'album' page, display all the artists associated with this albu
 
 Couch provides two different tags to do this enumeration for us -
 
-*   [**related\_pages**](../../tags-reference/related_pages.html)
-*   [**reverse\_related\_pages**](../../tags-reference/reverse_related_pages.html)
+* [**related\_pages**](../../tags-reference/related_pages.html)
+* [**reverse\_related\_pages**](../../tags-reference/reverse_related_pages.html)
 
 ### related_pages
 

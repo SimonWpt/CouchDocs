@@ -29,16 +29,16 @@ Please see [**Core Concepts - Google Maps**](../../concepts/google-maps.html) fo
 
 In addition to the parameters listed below, any arbitrary parameter given to this tag will be passed on unchanged to the DIV that holds the generated map.
 
-*   name
-*   id
-*   address
-*   longitude
-*   latitude
-*   zoom
-*   message
-*   width
-*   height
-*   style
+* name
+* id
+* address
+* longitude
+* latitude
+* zoom
+* message
+* width
+* height
+* style
 
 ### name
 

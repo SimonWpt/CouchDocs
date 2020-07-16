@@ -107,45 +107,45 @@ For example, if the current template is 'movies.php' and it is being accessed in
 
 To summarize, for **home-view** of template 'movies.php', this is the sequence of the file-names that are searched for -
 
-*   movies-home
-*   movies-list
-*   movies-default
-*   home
-*   list
-*   default
+* movies-home
+* movies-list
+* movies-default
+* home
+* list
+* default
 
 For **archive-view** of template 'movies.php', the sequence becomes -
 
-*   movies-archive
-*   movies-list
-*   movies-default
-*   archive
-*   list
-*   default
+* movies-archive
+* movies-list
+* movies-default
+* archive
+* list
+* default
 
 For **folder-view** let us assume that we have two folders 'asian' and 'chinese' where 'chinese' is a child-folder of 'asian'.<br/>
 While visting folder 'asian' of template 'movies.php', the sequence becomes -
 
-*   movies-folder\_ex-asian
-*   movies-folder-asian
-*   movies-folder
-*   movies-list
-*   movies-default
-*   folder
-*   list
-*   default
+* movies-folder\_ex-asian
+* movies-folder-asian
+* movies-folder
+* movies-list
+* movies-default
+* folder
+* list
+* default
 
 While visting folder 'chinese' of template 'movies.php', the sequence becomes -
 
-*   movies-folder\_ex-chinese
-*   movies-folder-chinese
-*   movies-folder-asian
-*   movies-folder
-*   movies-list
-*   movies-default
-*   folder
-*   list
-*   default
+* movies-folder\_ex-chinese
+* movies-folder-chinese
+* movies-folder-asian
+* movies-folder
+* movies-list
+* movies-default
+* folder
+* list
+* default
 
 Notice how for a child folder, all the parent folders are also taken into consideration. Thus a snippet meant for folder 'asian' e.g. 'movies-folder-asian.html' will also be valid for the child folder 'chinese' as seen above.
 
@@ -153,29 +153,29 @@ If, however, we wish to use a snippet exclusively for a particular parent folder
 
 For **page-view**, e.g. while visting a page named 'harpoon' of template 'movies.php', the sequence becomes -
 
-*   movies-page-harpoon
-*   movies-page
-*   movies-default
-*   page
-*   default
+* movies-page-harpoon
+* movies-page
+* movies-default
+* page
+* default
 
 [**Nested pages**](../../concepts/nested-pages-aka-menu-maker.html) behave more or less like folders.<br/>
 For example, if we have a nested-page named 'harpoon' that is nested below another pages named 'chinese', this is the sequece of search while visiting 'harpoon' -
 
-*   movies-page\_ex-harpoon
-*   movies-page-harpoon
-*   movies-page-chinese
-*   movies-page
-*   movies-default
-*   page
-*   default
+* movies-page\_ex-harpoon
+* movies-page-harpoon
+* movies-page-chinese
+* movies-page
+* movies-default
+* page
+* default
 
 Like folders, a snippet can be used exclusively with a nested-page without making it available for the child-pages by using the '\_ex' with 'page' (as in the 'movies-page\_ex-harpoon' above).
 
 Finally, while visiting a non-clonable template (for our example below let us assume it is named 'settings.php') the sequence of search is -
 
-*   settings-default
-*   default
+* settings-default
+* default
 
 ## CHUNKING
 
@@ -230,8 +230,8 @@ Notice how the template contains no HTML markup within it at all. All the work i
 Run this snippet and you'll find that the 'smart\_embed' tag outputs the 'default.html' snippets for each chunk area.<br/>
 Nothing spectacular so far - we know the tag searched for
 
-*   index-default.\*
-*   default.\*
+* index-default.\*
+* default.\*
 
 within the specified folders and output the one it found.
 
