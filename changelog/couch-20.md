@@ -283,7 +283,6 @@ Another could be right within the `<cms:config_list_view>` tag block where we de
 Please take a look at the following -
 
 **Code:**
-
 ```html
 <cms:config_list_view>
     <cms:field 'k_selector_checkbox' />
@@ -681,7 +680,7 @@ Please take a look at the following (somewhat advanced) code
 
 The code above will result in the following being shown on the main screen.
 
-![15.jpg](../assets/img/contents/couch-20/015.jpg)
+![15.jpg](../assets/img/contents/couch-20/15.jpg)
 
 Please notice that the new fields that you see on the screen are not defined anywhere as editable regions.  
 Changes made to them, however, will be mirrored by the actual publish_date field in the advanced settings dropdown (try it).
