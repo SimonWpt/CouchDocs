@@ -99,5 +99,5 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [form](../form.html)
-*   [fieldset](../fieldset.html)
+*   [form](./form.html)
+*   [fieldset](./fieldset.html)

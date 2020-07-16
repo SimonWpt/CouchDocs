@@ -90,5 +90,5 @@ The specified variable will be set instead.
 
 ## Related Tags
 
-*   [repeat](../repeat.html)
-*   [zebra](../zebra.html)
+*   [repeat](./repeat.html)
+*   [zebra](./zebra.html)

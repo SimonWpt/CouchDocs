@@ -64,4 +64,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [if](../if.html)
+*   [if](./if.html)

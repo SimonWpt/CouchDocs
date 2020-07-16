@@ -47,6 +47,6 @@ It is a numeric value ranging from 0 (Sunday) to 6 (Saturday). If skipped, the d
 
 ## Related Tags
 
-*   [weeks](../weeks.html)
-*   [days](../days.html)
-*   [entries](../entries.html)
+*   [weeks](./weeks.html)
+*   [days](./days.html)
+*   [entries](./entries.html)

@@ -349,5 +349,5 @@ If the 'paginate' parameter is set to '1', variables that help in creating the p
 
 ## Related Tags
 
-*   [pages](../pages.html)
-*   [folders](../folders.html)
+*   [pages](./pages.html)
+*   [folders](./folders.html)

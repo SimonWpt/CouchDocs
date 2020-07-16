@@ -54,4 +54,4 @@ Does not set any variables of its own.
 
 ## Related Tags
 
-*   [templates](../templates.html)
+*   [templates](./templates.html)

@@ -52,4 +52,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [excerptHTML](../excerpthtml.html)
+*   [excerptHTML](./excerpthtml.html)

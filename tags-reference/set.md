@@ -60,7 +60,7 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-*   [show](../show.html)
-*   [get](../get.html)
+*   [show](./show.html)
+*   [get](./get.html)
 *   [get\_custom\_field](../get_custom_field.html)
-*   [pages](../pages.html)
+*   [pages](./pages.html)

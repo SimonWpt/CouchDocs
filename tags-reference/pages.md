@@ -386,7 +386,7 @@ See [**Pagination**](../../concepts/pagination.html).
 
 ## Related Tags
 
-*   [folders](../folders.html)
-*   [archives](../archives.html)
-*   [templates](../templates.html)
-*   [comments](../comments.html)
+*   [folders](./folders.html)
+*   [archives](./archives.html)
+*   [templates](./templates.html)
+*   [comments](./comments.html)

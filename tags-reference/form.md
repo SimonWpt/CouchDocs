@@ -58,5 +58,5 @@ However, if any of the fields fail to validate, variables representing only thos
 
 ## Related Tags
 
-*   [input](../input.html)
-*   [fieldset](../fieldset.html)
+*   [input](./input.html)
+*   [fieldset](./fieldset.html)
