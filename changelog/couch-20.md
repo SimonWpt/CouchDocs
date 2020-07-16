@@ -471,7 +471,7 @@ This sets the number of pages shown on a single screen when pagination is requir
 Can be set to the (comma-separated) `'names'` of pages that are to be excluded from the listing.  
 One use of this feature could be to exclude the vexing `'default'` page that Couch automatically creates for all clonable templates.  
 Previously we had to resort to unpublish this default page and then rename it to something like 'PLEASE DO NOT DELETE' and hope that the warning is heeded. Now we can, after unpublishing the default page, rename it to something simpler like 'default-page' and then set the `'exclude'` parameter of  
-<cms:config_list_view> to skip this page from the listing e.g.
+`<cms:config_list_view>` to skip this page from the listing e.g.
 
 **Code:**
 
