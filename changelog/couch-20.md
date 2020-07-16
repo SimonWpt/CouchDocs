@@ -4,7 +4,8 @@ parent: Changelog
 layout: default
 ---
 
-# Couch v2.0
+# CouchCMS v2.0
+
 > **15 Jan 2017** *taken from https://www.couchcms.com/forum/viewtopic.php?f=5&t=10241*
 >  
 > This version of Couch has been promoted to become the release version 2.0 available from the main download page  [https://www.couchcms.com/products/](https://www.couchcms.com/products/) or [https://github.com/CouchCMS/CouchCMS/tree/v2.0](https://github.com/CouchCMS/CouchCMS/tree/v2.0)
