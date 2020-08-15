@@ -47,5 +47,5 @@ For more information visit [https://www.couchcms.com/forum/viewtopic.php?f=5&t=1
 
 ## Related Tags
 
-* [editable (text)](../editable/block.html)
-* [editable (text)](../editable/block_parent.html)
+* [block](./block.html)
+* [block_parent](./block_parent.html)
