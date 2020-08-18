@@ -1,5 +1,5 @@
 ---
-title: cms:call
+title: call
 parent: Tags Reference
 layout: default
 ---

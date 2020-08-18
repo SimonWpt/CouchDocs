@@ -1,5 +1,5 @@
 ---
-title: cms:func
+title: func
 parent: Tags Reference
 layout: default
 ---

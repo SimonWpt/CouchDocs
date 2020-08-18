@@ -1,5 +1,5 @@
 ---
-title: cms:extends
+title: extends
 parent: Tags Reference
 layout: default
 ---
