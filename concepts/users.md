@@ -19,7 +19,7 @@ A Super Admin can do everything that a user possibly can in Couch. Specifically,
 * Create/manage any number of lower level user accounts.
 * Access the website.
 
-Usually it is the designer/coder building the site that uses this _super-admin_ account. If you've gone through the creation of [**editable regions**](../editable-regions.html) and some other tags like the [__*folder*__](../../tags-reference/folder.html) tag, you'll recall that persisting the changes made to the template using these tags, requires visiting the web-page while logged in as this super-admin account.<br/>
+Usually it is the designer/coder building the site that uses this _super-admin_ account. If you've gone through the creation of [**editable regions**](../editable-regions.html) and some other tags like the [__*folder*__](../tags-reference/folder.html) tag, you'll recall that persisting the changes made to the template using these tags, requires visiting the web-page while logged in as this super-admin account.<br/>
 Hence this account is used by someone who makes structural changes to the web-site.
 
 #### 2. Administrator
@@ -92,7 +92,7 @@ As can be seen, the higher the number, the more powerful an account is deemed to
 
 ### Template level access
 
-All the pages cloned from a particular template can be configured to be accessible by only users of a certain level by simply setting the *access\_level* parameter of the [__*template*__](../../tags-reference/template.html) tag to the minimum level required. Thus -
+All the pages cloned from a particular template can be configured to be accessible by only users of a certain level by simply setting the *access\_level* parameter of the [__*template*__](../tags-reference/template.html) tag to the minimum level required. Thus -
 
 ```html
 <cms:template title='News' clonable='1' access_level='2'>
@@ -106,7 +106,7 @@ All the pages cloned from a particular template can be configured to be accessib
 
 Access to any individual page can be controlled by selecting the minimum access level required from the dropdown list visible while editing the page in Admin Panel -
 
-![](../../assets/img/contents/users.png)
+![](../assets/img/contents/users.png)
 
 <p class="notice">
     In both the cases mentioned above, if a page is accessed by a user who is not logged-in, the login box is displayed to him to input his credentials.<br/>
@@ -139,5 +139,5 @@ Note how we use the *k\_login\_link* and *k\_logout\_link* to diplay the links t
 
 ### Access control of discrete files
 
-Access control can be exercised upon discrete files placed on your server, e.g. image files and pdf files, by using the [__*cloak\_url*__](../../tags-reference/cloak_url.html) tag.<br/>
+Access control can be exercised upon discrete files placed on your server, e.g. image files and pdf files, by using the [__*cloak\_url*__](../tags-reference/cloak_url.html) tag.<br/>
 Please see [**Cloaked links - Allowing only registered users to a access links**](../cloaked-links.html#allowing-only-registered-users-to-access-links) section for a full discussion of this.

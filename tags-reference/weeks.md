@@ -8,7 +8,7 @@ layout: default
 
 The **weeks** tag works only within the **calendar** tag. It enumerates all the weeks within the month being handled by the **calendar** tag.
 
-Please see [**Core Concepts - Events Calendar**](../../concepts/events-calendar.html) for a working example of this tag.
+Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.html) for a working example of this tag.
 
 ## Parameters
 

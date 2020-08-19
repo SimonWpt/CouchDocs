@@ -39,7 +39,7 @@ The following example will make the relationship clear where we are displaying a
 
 Executing the code given above should result in the following -
 
-![](../../assets/img/contents/calendar-1.png)
+![](../assets/img/contents/calendar-1.png)
 
 As you can see, the generated calendar is an HTML table, where the weeks tag was used within the calendar tag to produce the rows of the table and the days tag was used within each row to produce seven cells each representing a day.
 
@@ -98,7 +98,7 @@ Let us start by adding a few headers
 
 The result of the changes -
 
-![](../../assets/img/contents/calendar-2.png)
+![](../assets/img/contents/calendar-2.png)
 
 Next we'll format the table cells to indicate whether the day represented by a cell lies in the past, present or future.<br/>
 The modified code of our calendar -
@@ -136,7 +136,7 @@ The modified code of our calendar -
 </cms:calendar>
 ```
 
-![](../../assets/img/contents/calendar-3.png)
+![](../assets/img/contents/calendar-3.png)
 
 Notice how for days that belong to previous and next months we set up a class named 'other\_month'. Also note how for the current day amongst the days of the month being shown, we mark the cell with a 'today' class.
 
@@ -197,7 +197,7 @@ The days tag also sets a variable named *k\_count\_entries* to indicate the numb
 
 Result of the changes -
 
-![](../../assets/img/contents/calendar-4.png)
+![](../assets/img/contents/calendar-4.png)
 
 The calendar above is well suited to be placed in a sidebar.<br/>
 Notice how we are displaying the dates that have cloned pages in a different color and how that cell is linked to an archive\_view (daily archive) of the template that can be used to display all pages belonging to a particular day in a list-view.
@@ -252,7 +252,7 @@ If we wish, we can display the names and links of pages right within the table c
 
 The changes will result in the following -
 
-![](../../assets/img/contents/calendar-5.png)
+![](../assets/img/contents/calendar-5.png)
 
 Notice how we used the class 'calendar\_big' with the table.<br/>
 Also notice how we used the entries tag to enumerate two of the cloned pages available within a day.<br/>

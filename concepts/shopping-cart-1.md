@@ -36,7 +36,7 @@ To demonstrate the use of these tags, we'll take a sample HTML template (kindly 
 Before commencing, you might want to take a look at what our finished site would look like - [**here is a demo of it**](http://www.couchcms.com/demo/simple/).<br/>
 Please keep in mind that the design has been kept intentionally simple to focus only on the specific functionality added by the cart component to CouchCMS. Coupled with the existing features of Couch (e.g. Categories, menus, Related Pages etc.) a much more full-featured site can easily be created.
 
-<p class="notice">CouchCart builds upon the existing features of Couch, as such a basic familiarity with Couch's core concepts is assumed for one to understand fully the discussion that follows. If you are new to Couch, please first take some time to explore how things work in Couch. Our [**step-by-step tutorial**](../../tutorials/portfolio-site.html) showing how to build a site from scratch using Couch is a good place to begin with.</p>
+<p class="notice">CouchCart builds upon the existing features of Couch, as such a basic familiarity with Couch's core concepts is assumed for one to understand fully the discussion that follows. If you are new to Couch, please first take some time to explore how things work in Couch. Our [**step-by-step tutorial**](../tutorials/portfolio-site.html) showing how to build a site from scratch using Couch is a good place to begin with.</p>
 
 Before we dive right into the thick of action, a couple of things need your special consideration:
 
@@ -89,7 +89,7 @@ There are two other editable regions that, while not being mandatory (i.e. you c
 
 In the couchified version of this site ([attached below in zip form](http://www.couchcms.com/docs/code/simple-couchified.zip)), you'll find the index.php containing definitions for a set of editable regions. You can use that as a starting point for defining your own. For now let us just copy/paste the entire _&lt;cms:template&gt;_ block containing the full set of definitions. This what the edit-panel for the products looks like once the regions have been defined:
 
-![](../../assets/img/contents/shopping-cart-1.png)
+![](../assets/img/contents/shopping-cart-1.png)
 
 As you can see, there are a few groups of editable regions that we've not talked about yet. We'll come to those when we discuss 'Shipping' and 'Discounts' later but for now it is only the 'Variants' section that needs some explanation as we begin entering data for the products listed on the site.
 
@@ -98,21 +98,21 @@ As you can see, there are a few groups of editable regions that we've not talked
 Take a look at the products listed on the [demo site](http://www.couchcms.com/demo/simple/).<br/>
 There are only three of them but each is available in several variants or options e.g. The 'Paper Clips' come in three different sizes - Large, Medium and Small.
 
-![](../../assets/img/contents/shopping-cart-2.png)
+![](../assets/img/contents/shopping-cart-2.png)
 
 The terminology might not be exact but in CouchCart we call the 'Color', 'Size' etc. the '**options**' and the values within each option (e.g. the 'Large', 'Medium' and 'Small' within the 'Size' option) simply '**option-values**'.
 
 Notice that the options are displayed in **three** different ways - either as a set or **radio-buttons** (as seen above) or as a **dropdown** of option-values or as a **text-box** (as shown in the following image).
 
-![](../../assets/img/contents/shopping-cart-3.png)
+![](../assets/img/contents/shopping-cart-3.png)
 
 Also notice that some of the option-values have a different price than the base price shown for the product:
 
-![](../../assets/img/contents/shopping-cart-4.png)
+![](../assets/img/contents/shopping-cart-4.png)
 
 You'll remember we discussed an editable region named '*pp\_options*' above. The 'Variants' section of the edit-panel shows this very region and, as discussed, this will be used to define the variants supported by the product being edited.
 
-![](../../assets/img/contents/shopping-cart-5.png)
+![](../assets/img/contents/shopping-cart-5.png)
 
 The variants are defined using a special syntax.<br/>
 For example, to define an option named 'Color' having three option-values named 'Red', 'Black' and 'Green', the following text needs to be inputted:
@@ -140,7 +140,7 @@ In the example above, choosing the 'Black' option-value will automatically add 3
 
 By default, CouchCart will render the option-values of these variants on the front-end as dropdowns.
 
-![](../../assets/img/contents/shopping-cart-6.png)
+![](../assets/img/contents/shopping-cart-6.png)
 
 To display them as radio-buttons, simply add an **asterisk ('\*')** at the end of the string e.g. the following modification will make the option-values of 'Size' get displayed as a set of radio-buttons.
 
@@ -151,7 +151,7 @@ Size[Large | Medium | Small]*
 
 Each radio-button, by default, will be shown on a separate line.
 
-![](../../assets/img/contents/shopping-cart-7.png)
+![](../assets/img/contents/shopping-cart-7.png)
 
 To make all the radio-buttons appear on the same line, simply **use two '\*'** e.g.
 
@@ -160,7 +160,7 @@ Color[Red | Black=+3 | Green=-2]
 Size[Large | Medium | Small]**
 ```
 
-![](../../assets/img/contents/shopping-cart-8.png)
+![](../assets/img/contents/shopping-cart-8.png)
 
 An option that is shown as a text-box (e.g. for allowing buyers to specify the text printed on mugs or T-Shirts) is a little different, from the other two we've seen, in that it does not consist of a pre-defined set of option-values. Any text that is entered into it by the buyer becomes an option-value in itself.<br/>
 The syntax used to define a text-box is also slightly different. So, for example, if the name of the option is 'Your Message', the following text can be used to define it:
@@ -169,7 +169,7 @@ The syntax used to define a text-box is also slightly different. So, for example
 Your Message[*TEXT*]
 ```
 
-![](../../assets/img/contents/shopping-cart-9.png)
+![](../assets/img/contents/shopping-cart-9.png)
 
 Please note that instead of a series of option-values that we used in the other variant types, we use only a single one which is always named **'\*TEXT\*'**.<br/>
 Of course, if for specifying a custom text the buyer has to pay a higher (or even a lower) price, the difference can be specified just as we did with the other variants. The following. for example. will add 5 to the base-price of the product:
@@ -180,7 +180,7 @@ Your Message[*TEXT*=5]
 
 That's it. Not too difficult, is it? To make it even easier for the end-users (your clients who'll most likely be the ones entering this data), I've added the syntax examples as a note (using editable region of type 'message') before the '*pp\_options*' field
 
-![](../../assets/img/contents/shopping-cart-10.png)
+![](../assets/img/contents/shopping-cart-10.png)
 
 The users can now simply copy/paste and then edit the examples to suit their needs.
 
@@ -225,11 +225,11 @@ Used alone it will simply list off the names of the product's options (e.g. 'Col
 
 This is the portion of the original HTML showing the options:
 
-![](../../assets/img/contents/shopping-cart-11.png)
+![](../assets/img/contents/shopping-cart-11.png)
 
 This is what the modified template looks like:
 
-![](../../assets/img/contents/shopping-cart-12.png)
+![](../assets/img/contents/shopping-cart-12.png)
 
 <p class="success">Incidentally, this has been our first encounter with tags provide by CouchCart. If at this point you get an error saying 'Unknown tag', you have missed enabling the CouchCart component (as discussed somewhere above). Please do so before continuing.</p>
 
@@ -453,7 +453,7 @@ This is a list of core variables that __*pp\_cart\_items*__ sets to provide info
 A couple of points in the code snippet shown above are worth noting.<br/>
 As you'll recall, our products can consist of variants (options) too. So, an item in the cart can possibly consist of several lines of description representing all the options selected by the buyer e.g.
 
-![](../../assets/img/contents/shopping-cart-13.png)
+![](../assets/img/contents/shopping-cart-13.png)
 
 To make it easy for us to display this information, CouchCart has a tag named __*pp\_selected\_options*__.<br/>
 Like its counterpart tag __*pp\_product\_options*__ that we discussed before, the __*pp\_selected\_options*__ tag can also be used in **two** ways -
@@ -483,7 +483,7 @@ Basically, any editable region defined for the products that begins with a '**pp
 
 If you take a look at the editable regions we defined for our products (in template 'index.php' of the finished version), you'll see a thumbnail region defined with the name of '*pp\_product\_thumb*'.
 
-![](../../assets/img/contents/shopping-cart-14.png)
+![](../assets/img/contents/shopping-cart-14.png)
 
 The '*pp\_*' prefixed to its name will make its value available as a variable named '**product\_thumb**'. This is how we are using it in the snippet shown:
 
@@ -651,7 +651,7 @@ to
 <td class="col-total">$<cms:number_format "<cms:pp_total />" /></td>
 ```
 
-Notice that we have nested the __*pp\_total*__ tag within the __*number\_format*__ tag to be able to format the value in whatever format we desire (please see [__*number\_format*__](../../tags-reference/number_format.html) for details).
+Notice that we have nested the __*pp\_total*__ tag within the __*number\_format*__ tag to be able to format the value in whatever format we desire (please see [__*number\_format*__](../tags-reference/number_format.html) for details).
 
 Same thing needs to be done with the other price components of the cart, namely, _Subtotal_, _Discount_, _Shipping_ and _Taxes_.
 
@@ -695,7 +695,7 @@ Since it is better to display the 'Discount', 'Shipping' and 'Taxes' rows only w
 
 Finally, the top navigation bar portion of cart.php (and also index.php) shows the number of items currently in cart along with the cart's total value -
 
-![](../../assets/img/contents/shopping-cart-15.png)
+![](../assets/img/contents/shopping-cart-15.png)
 
 ```html
 <a href="cart.html" class="nav cart"><span class="quantity">3</span> item(s) - $<span class="price">250.00</span></a>

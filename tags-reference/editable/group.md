@@ -32,7 +32,7 @@ As an example, suppose a template has the following editable regions -
 
 This is how they look like in the admin panel -
 
-![](../../../../assets/img/contents/editable-group-1.gif)
+![](../../assets/img/contents/editable-group-1.gif)
 
 Of the four regions, three are closely related (*prop\_image*, *prop\_image\_thumb* and *prop\_document*) since they need the user to upload something from his machine to the server.
 
@@ -67,7 +67,7 @@ Next link the three aforementioned editable regions to this group by setting the
 
 And here is the result -
 
-![](../../../../assets/img/contents/editable-group-2.gif)
+![](../../assets/img/contents/editable-group-2.gif)
 
 As you can see, the three regions have been grouped together in a panel.
 

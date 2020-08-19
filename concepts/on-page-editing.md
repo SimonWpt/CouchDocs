@@ -43,18 +43,18 @@ With the addon enabled, we can now use the tags provided by it to implement on-p
 
 To demonstrate how onpage editing works in Couch, I've gone ahead and completely Couchified (adding onpage editing as well) the popular single-page HTML5 template - [Miniport](http://html5up.net/miniport/).
 
-![](../../assets/img/contents/on-page-editing-1.png)
+![](../assets/img/contents/on-page-editing-1.png)
 
 You can [**download the ported version**](http://www.couchcms.com/docs/code/miniport.zip) and take it for a spin to see for yourself how everything works.
 
 For this particular tutorial, I'll take you step-by-step through the process of adding onpage editing to only the first section of the template.<br/>
 Following is the section we'll be working with.
 
-![](../../assets/img/contents/on-page-editing-2.png)
+![](../assets/img/contents/on-page-editing-2.png)
 
 Following is the HTML markup behind the section (with the four possible editable portions within it highlighted)
 
-![](../../assets/img/contents/on-page-editing-3.png)
+![](../assets/img/contents/on-page-editing-3.png)
 
 One point I'd like to emphasize here is that **implementing onpage editing requires no changes, whatsoever, to the way you normally implement a site using Couch**. That is to say, you create your templates, define the editable-regions etc. exactly the way you'd normally do and once the site is ready we can bolt on the onpage editing component to the functioning site.
 
@@ -62,7 +62,7 @@ Taking the example of the section we are working with, if you take a look at the
 
 The modified HTML markup with Couch's editable regions added in now looks like this -
 
-![](../../assets/img/contents/on-page-editing-4.png)
+![](../assets/img/contents/on-page-editing-4.png)
 
 So far we have proceeded exactly how we would have with any normal Couch managed template.<br/>
 In fact, if there were no onpage editing to be added, this would have finished our work on the section with nothing more to do.<br/>
@@ -78,11 +78,11 @@ Adding onpage editing to a template is a two-step procedure -
 
 This was the original markup of our template -
 
-![](../../assets/img/contents/on-page-editing-5.png)
+![](../assets/img/contents/on-page-editing-5.png)
 
 which becomes the following after adding the mentioned tag -
 
-![](../../assets/img/contents/on-page-editing-6.png)
+![](../assets/img/contents/on-page-editing-6.png)
 
 This step takes care of loading all the JS/CSS libraries required by the tags we'll add in the second step below.
 
@@ -91,7 +91,7 @@ Here we'll add the tags that 'inject' onpage editing to existing editable region
 
 Take a look again at the four existing editable regions in the section we are working on -
 
-![](../../assets/img/contents/on-page-editing-7.png)
+![](../assets/img/contents/on-page-editing-7.png)
 
 If you remember from our earlier discussion, onpage editing can take two forms -<br/>
 **a.** Inline editing for text elements<br/>
@@ -122,7 +122,7 @@ We'll add a **popup\_edit** tag near it specifying the name of the editable regi
 
 Saving the template and visiting it as admin will show the following change
 
-![](../../assets/img/contents/on-page-editing-8.png)
+![](../assets/img/contents/on-page-editing-8.png)
 
 Notice the 'Edit' link where we placed the **popup\_edit** tag.
 
@@ -133,7 +133,7 @@ Notice the 'Edit' link where we placed the **popup\_edit** tag.
 
 Clicking on the link will bring up the promised popup.
 
-![](../../assets/img/contents/on-page-editing-9.png)
+![](../assets/img/contents/on-page-editing-9.png)
 
 You'll recognize that the editable region shown is the same as you see in the backend admin-panel.<br/>
 A new image can be selected exactly the way we do in the admin-panel - the 'Browse server' button will bring up the image-explorer with all its related paraphernalia.
@@ -153,7 +153,7 @@ can be appended with a **popup\_edit** tag
 <cms:popup_edit 'intro_button' link_text='Edit button' />
 ```
 
-![](../../assets/img/contents/on-page-editing-10.png)
+![](../assets/img/contents/on-page-editing-10.png)
 
 In both the cases above, we've specified only one editable region as parameter to the **popup\_edit** tag. If the use-case requires, we can also specify multiple editable regions by separating the names with a '|' (pipe) character. For example, the following definition -
 
@@ -163,7 +163,7 @@ In both the cases above, we've specified only one editable region as parameter t
 
 would show all the three specified regions in the popup
 
-![](../../assets/img/contents/on-page-editing-11.png)
+![](../assets/img/contents/on-page-editing-11.png)
 
 In case you didn't notice, the popup has no problems displaying the textual regions. In fact, it can handle all types of Couch editable regions - it is just that the text types can be handled in a more elegant manner using inline (as opposed to popup) editing. We'll see that next.
 
@@ -191,11 +191,11 @@ Add an **inline\_edit** tag to it as follows
 
 Visiting the template should show the following
 
-![](../../assets/img/contents/on-page-editing-12.png)
+![](../assets/img/contents/on-page-editing-12.png)
 
 Clicking anywhere within the text will display the editing toolbar
 
-![](../../assets/img/contents/on-page-editing-13.png)
+![](../assets/img/contents/on-page-editing-13.png)
 
 Changing the heading now only requires editing it directly and clicking the 'save' icon.
 
@@ -229,7 +229,7 @@ As you can see, we chose to add a parent DIV element and then add the **inline\_
 
 The result -
 
-![](../../assets/img/contents/on-page-editing-14.png)
+![](../assets/img/contents/on-page-editing-14.png)
 
 ## Wrapping up...
 
@@ -407,15 +407,15 @@ Name of the editable region into which the inline contents will be saved. Only a
 #### toolbar
 
 The default set of buttons shown in the toolbar can be modified by setting this parameter.<br/>
-Please see the 'toolbar' parameter of [Editable region type: richtext](../../tags-reference/editable/richtext.html) for details as the two work exactly the same.
+Please see the 'toolbar' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html) for details as the two work exactly the same.
 
 #### custom_toolbar
 
-Please see the 'custom\_toolbar' parameter of [Editable region type: richtext](../../tags-reference/editable/richtext.html).
+Please see the 'custom\_toolbar' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html).
 
 #### custom_styles
 
-Please see the 'custom\_styles' parameter of [Editable region type: richtext](../../tags-reference/editable/richtext.html).
+Please see the 'custom\_styles' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html).
 
 ### 4. no_edit
 

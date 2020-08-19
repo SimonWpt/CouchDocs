@@ -6,7 +6,7 @@ layout: default
 
 # Listing Pages
 
-Couch has a powerful tag named [__*pages*__](../../tags-reference/pages.html) that can be used to list all pages belonging to a template.<br/>
+Couch has a powerful tag named [__*pages*__](../tags-reference/pages.html) that can be used to list all pages belonging to a template.<br/>
 For example -
 
 ```html
@@ -21,8 +21,8 @@ The _masterpage_ parameter stands for the template's name. If this parameter is 
 
 This tag iterates through each of the fetched page and makes available all the data associated with the page as variables. The variables are exactly the same as those made available had the page been accessed discretly via its URL (i.e. in its page-view).
 
-[__*Pages*__](../../tags-reference/pages.html) tag supports a number of parameters that can be used to fine tune the actual pages that get fetched.<br/>
-Please see the [**parameters**](../../tags-reference/pages.html#parameters) section for a comprehensive list.
+[__*Pages*__](../tags-reference/pages.html) tag supports a number of parameters that can be used to fine tune the actual pages that get fetched.<br/>
+Please see the [**parameters**](../tags-reference/pages.html#parameters) section for a comprehensive list.
 
 ### LISTING PAGES IN THE LIST-VIEWS (HOME-VIEW, FOLDER-VIEW AND ARCHIVE-VIEW)
 
@@ -44,7 +44,7 @@ It is ultimately upto you whether or not you choose to list pages in the expecte
 
 ### Handling home-view
 
-The *k\_is\_home* variable can be used to recognize this view and then the [__*pages*__](../../tags-reference/pages.html) tag can be used to list all pages cloned from the template being accessed.
+The *k\_is\_home* variable can be used to recognize this view and then the [__*pages*__](../tags-reference/pages.html) tag can be used to list all pages cloned from the template being accessed.
 
 ```html
 <cms:if k_is_home >
@@ -56,7 +56,7 @@ The *k\_is\_home* variable can be used to recognize this view and then the [__*p
 
 ### Handling folder-view
 
-The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\_name* variable made available by Couch in this view can then be used as a parameter of the [__*pages*__](../../tags-reference/pages.html) tag to list pages belonging to that folder -
+The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\_name* variable made available by Couch in this view can then be used as a parameter of the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging to that folder -
 
 ```html
 <cms:if k_is_folder >
@@ -68,7 +68,7 @@ The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\
 
 ### Handling archive-view
 
-The *k\_is\_archive* can be used to recognize this view. In this view, Couch makes available the *k\_archive\_date* and *k\_next\_archive\_date* variables that denote the boundries of the archive's period. These two variables can then be used as parameters of the [__*pages*__](../../tags-reference/pages.html) tag to list pages belonging to that time period -
+The *k\_is\_archive* can be used to recognize this view. In this view, Couch makes available the *k\_archive\_date* and *k\_next\_archive\_date* variables that denote the boundries of the archive's period. These two variables can then be used as parameters of the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging to that time period -
 
 ```html
 <cms:if k_is_archive >

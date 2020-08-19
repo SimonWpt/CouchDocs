@@ -34,7 +34,7 @@ An editable region of type _image_ can be defined this way -
 
 The code will result in -
 
-![](../../../../assets/img/contents/editable-image-1.gif)
+![](../../assets/img/contents/editable-image-1.gif)
 
 Clicking the 'Browse Server' button will bring up a window which can be used to browse previously uploaded images on the server or upload a new image from the local machine.
 
@@ -102,15 +102,15 @@ If both height and width are specified, enforcing the limit of one dimension mig
 
 | Uploaded Image (300 x 200) | Saved Image (150 x 100) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-2.jpg) | ![](../../../../assets/img/contents/editable-image-3.jpg) | The width was constrained to 150px while also decreasing the height proportionately. |
+| ![](../../assets/img/contents/editable-image-2.jpg) | ![](../../assets/img/contents/editable-image-3.jpg) | The width was constrained to 150px while also decreasing the height proportionately. |
 
 | Uploaded Image (200 x 300) | Saved Image (150 x 225) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-4.jpg) | ![](../../../../assets/img/contents/editable-image-5.jpg) | The width was constrained to 150px while also decreasing the height proportionately. |
+| ![](../../assets/img/contents/editable-image-4.jpg) | ![](../../assets/img/contents/editable-image-5.jpg) | The width was constrained to 150px while also decreasing the height proportionately. |
 
 | Uploaded Image (100 x 75) | Saved Image (100 x 75) | Remarks |
 | :------------------------ | :--------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-6.jpg) | ![](../../../../assets/img/contents/editable-image-7.jpg) | The width was already smaller than the required 150px, hence no changes made to the image. |
+| ![](../../assets/img/contents/editable-image-6.jpg) | ![](../../assets/img/contents/editable-image-7.jpg) | The width was already smaller than the required 150px, hence no changes made to the image. |
 
 #### Specifying both dimensions
 
@@ -123,15 +123,15 @@ If both height and width are specified, enforcing the limit of one dimension mig
 
 | Uploaded Image (300 x 200) | Saved Image (150 x 100) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-8.jpg) | ![](../../../../assets/img/contents/editable-image-9.jpg) | The width was constrained to 150px while also decreasing the height proportionately. The resulting height of 100px was smaller than the required 150px hence no further changes were made. |
+| ![](../../assets/img/contents/editable-image-8.jpg) | ![](../../assets/img/contents/editable-image-9.jpg) | The width was constrained to 150px while also decreasing the height proportionately. The resulting height of 100px was smaller than the required 150px hence no further changes were made. |
 
 | Uploaded Image (200 x 300) | Saved Image (100 x 150) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-10.jpg) | ![](../../../../assets/img/contents/editable-image-11.jpg) | The width was constrained to 150px while also decreasing the height proportionately. The resulting height of 225px was larger than the required 150px hence the image was proportionately scaled further till the height became 150px. In doing so the width became smaller than 150px. |
+| ![](../../assets/img/contents/editable-image-10.jpg) | ![](../../assets/img/contents/editable-image-11.jpg) | The width was constrained to 150px while also decreasing the height proportionately. The resulting height of 225px was larger than the required 150px hence the image was proportionately scaled further till the height became 150px. In doing so the width became smaller than 150px. |
 
 | Uploaded Image (100 x 75) | Saved Image (100 x 75) | Remarks |
 | :------------------------ | :--------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-12.jpg) | ![](../../../../assets/img/contents/editable-image-13.jpg) | The width as well as the height were already smaller than the required 150px, hence no changes made to the image. |
+| ![](../../assets/img/contents/editable-image-12.jpg) | ![](../../assets/img/contents/editable-image-13.jpg) | The width as well as the height were already smaller than the required 150px, hence no changes made to the image. |
 
 #### SIDENOTE:
 
@@ -149,7 +149,7 @@ In such cases, since height and width are no longer enforcing maximum dimensions
 
 | Uploaded Image (200 x 300) | Saved Image (150 x 150) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-14.jpg) | ![](../../../../assets/img/contents/editable-image-15.jpg) | The image was simply resized to a width of 150px and a height of 150px. No attempt was made to mantain proportion and the resulting image is visibily squashed. |
+| ![](../../assets/img/contents/editable-image-14.jpg) | ![](../../assets/img/contents/editable-image-15.jpg) | The image was simply resized to a width of 150px and a height of 150px. No attempt was made to mantain proportion and the resulting image is visibily squashed. |
 
 ### crop
 
@@ -176,15 +176,15 @@ If both width and height are specified, very often while matching one dimension 
 
 | Uploaded Image (300 x 200) | Saved Image (150 x 100) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-16.jpg) | ![](../../../../assets/img/contents/editable-image-17.jpg) | The required width (150px) is smaller than the actual (300px), hence the width was reduced to 150px while also decreasing the height proportionately. The result is the same as with *enforce\_max* on one dimension. |
+| ![](../../assets/img/contents/editable-image-16.jpg) | ![](../../assets/img/contents/editable-image-17.jpg) | The required width (150px) is smaller than the actual (300px), hence the width was reduced to 150px while also decreasing the height proportionately. The result is the same as with *enforce\_max* on one dimension. |
 
 | Uploaded Image (200 x 300) | Saved Image (150 x 225) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-18.jpg) | ![](../../../../assets/img/contents/editable-image-19.jpg) | The required width (150px) is smaller than the actual (200px), hence the width was reduced to 150px while also decreasing the height proportionately. The result is the same as with *enforce\_max* on one dimension. |
+| ![](../../assets/img/contents/editable-image-18.jpg) | ![](../../assets/img/contents/editable-image-19.jpg) | The required width (150px) is smaller than the actual (200px), hence the width was reduced to 150px while also decreasing the height proportionately. The result is the same as with *enforce\_max* on one dimension. |
 
 | Uploaded Image (100 x 75) | Saved Image (150 x 112) | Remarks |
 | :------------------------ | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-20.jpg) | ![](../../../../assets/img/contents/editable-image-21.jpg) | The required width (150px) is larger than the actual (100px), hence the width was increased to 150px while also increasing the height proportionately. Note how the result differs from *enforce\_max* on one dimension. |
+| ![](../../assets/img/contents/editable-image-20.jpg) | ![](../../assets/img/contents/editable-image-21.jpg) | The required width (150px) is larger than the actual (100px), hence the width was increased to 150px while also increasing the height proportionately. Note how the result differs from *enforce\_max* on one dimension. |
 
 #### Specifying both dimensions
 
@@ -198,15 +198,15 @@ If both width and height are specified, very often while matching one dimension 
 
 | Uploaded Image (300 x 200) | Saved Image (150 x 150) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-22.jpg) | ![](../../../../assets/img/contents/editable-image-23.jpg) | The image is proportionately scaled till one of the two dimension is _equal_ to the required value and the other is either _equal or larger_ than the required value. In case the other dimension is larger, the surplus area is cropped off. |
+| ![](../../assets/img/contents/editable-image-22.jpg) | ![](../../assets/img/contents/editable-image-23.jpg) | The image is proportionately scaled till one of the two dimension is _equal_ to the required value and the other is either _equal or larger_ than the required value. In case the other dimension is larger, the surplus area is cropped off. |
 
 | Uploaded Image (200 x 300) | Saved Image (150 x 150) | Remarks |
 | :------------------------- | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-24.jpg) | ![](../../../../assets/img/contents/editable-image-25.jpg) | -same as above- |
+| ![](../../assets/img/contents/editable-image-24.jpg) | ![](../../assets/img/contents/editable-image-25.jpg) | -same as above- |
 
 | Uploaded Image (100 x 75) | Saved Image (150 x 150) | Remarks |
 | :------------------------ | :---------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-image-26.jpg) | ![](../../../../assets/img/contents/editable-image-27.jpg) | -same as above- |
+| ![](../../assets/img/contents/editable-image-26.jpg) | ![](../../assets/img/contents/editable-image-27.jpg) | -same as above- |
 
 ### quality
 
@@ -229,11 +229,11 @@ You can set _quality_ from 0 (worst quality, smaller file) to 100 (best quality,
 
 Setting *show\_preview* to '1' makes Couch display a preview of the selected image above the upload control.
 
-![](../../../../assets/img/contents/editable-image-28.jpg)
+![](../../assets/img/contents/editable-image-28.jpg)
 
 If *show\_preview* is not set at all or is set to '0', upon selecting an image a link is added below the upload control for previewing the selected image.
 
-![](../../../../assets/img/contents/editable-image-29.jpg)
+![](../../assets/img/contents/editable-image-29.jpg)
 
 ### preview_width
 
@@ -248,6 +248,6 @@ As illustrated above, setting *show\_preview* to '1' causes a preview of the sel
     type='image' />
 ```
 
-![](../../../../assets/img/contents/editable-image-30.jpg)
+![](../../assets/img/contents/editable-image-30.jpg)
 
 <p class="success">It is always a good idea to set at least one of the two dimensions while using *show\_preview*.</p>

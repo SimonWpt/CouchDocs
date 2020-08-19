@@ -6,7 +6,7 @@ layout: default
 
 # form
 
-Please see [**Core Concepts - Forms**](../../concepts/forms.html) for an in-depth discussion about this tag.
+Please see [**Core Concepts - Forms**](../concepts/forms.html) for an in-depth discussion about this tag.
 
 ## Parameters
 

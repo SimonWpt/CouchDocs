@@ -37,7 +37,7 @@ The same form created by using Couch tags would look like -
 
 Note how with just a little modification, an existing HTML form was transformed into a Couch managed form.
 
-The [__*form*__](../../tags-reference/form.html) and [__*input*__](../../tags-reference/input.html) tags were converted to their Couch equivalents by simply adding 'cms:' prefix.<br/>
+The [__*form*__](../tags-reference/form.html) and [__*input*__](../tags-reference/input.html) tags were converted to their Couch equivalents by simply adding 'cms:' prefix.<br/>
 Couch expects its single tags to be properly self-closed hence the two input tags were fitted with the closing slashes.<br/>
 The _name_ parameter is mandatory for an input tag in Couch hence the submit type was given a name.<br/>
 Finally, since now Couch will be handling all the validation chores, the _action_ attribute is removed.
@@ -68,7 +68,7 @@ The most common validation that is required is making sure that a field has not 
 
 <p class="notice">
     For a _required_ field further several kinds of validations can be enforced.<br/>
-    The input tags use the same validators that are used by the [**editable regions**](../editable-regions.html). Please see the [**validators**](../../tags-reference/editable.html#validator) section of [__*editable*__](../../tags-reference/editable.html) tag for a list of all the validators that can be used.
+    The input tags use the same validators that are used by the [**editable regions**](../editable-regions.html). Please see the [**validators**](../tags-reference/editable.html#validator) section of [__*editable*__](../tags-reference/editable.html) tag for a list of all the validators that can be used.
 </p>
 
 For our example we'll make both the fields required and futher ensure that a valid email is always inputted in the email field by setting the _email_ validator. Modify the input fields as follows -
@@ -167,15 +167,15 @@ Usually you'll wish to do something more substantial - like emailing the values 
 </cms:form>
 ```
 
-Notice how we are using the *k\_success* variable to email the submitted data via [__*send\_mail*__](../../tags-reference/send_mail.html) tag.
+Notice how we are using the *k\_success* variable to email the submitted data via [__*send\_mail*__](../tags-reference/send_mail.html) tag.
 
 ### INPUT TYPES
 
-As seen in the snippets above, Couch employs its own variations of the [__*form*__](../../tags-reference/form.html) tag and the [__*input*__](../../tags-reference/input.html) tags to create and validate forms.<br/>
+As seen in the snippets above, Couch employs its own variations of the [__*form*__](../tags-reference/form.html) tag and the [__*input*__](../tags-reference/input.html) tags to create and validate forms.<br/>
 Most (but not all) of the input types of Couch have one to one correlation with their HTML counterparts.<br/>
 The types of input tags that are currently supported by Couch and how they relate with the HTML equivalents are given below.
 
-<p class="notice">For a full list of all the parameters accepted by the [__*input*__](../../tags-reference/input.html) tag, please see its [**parameters**](../../tags-reference/input.html#parameters) section.</p>
+<p class="notice">For a full list of all the parameters accepted by the [__*input*__](../tags-reference/input.html) tag, please see its [**parameters**](../tags-reference/input.html#parameters) section.</p>
 
 **The following four input types are almost identical to the HTML types.**
 
@@ -346,7 +346,7 @@ e.g.
 
 will show -
 
-![](../../assets/img/contents/forms-1.png)
+![](../assets/img/contents/forms-1.png)
 
 while
 
@@ -356,7 +356,7 @@ while
 
 will show
 
-![](../../assets/img/contents/forms-2.png)
+![](../assets/img/contents/forms-2.png)
 
 If you do not wish the three elements to be separated by &lt;BR&gt;s, use this -
 
@@ -381,7 +381,7 @@ The _width_ parameter can be used to set the width of the text box.
 
 As demonstrated so far, an easy way to create a working form in Couch is to start with an existing HTML coded form and convert the existing form and input tags to their Couch equivalents. This way you can add validation to any of your existing forms.
 
-However, if are required to code a form from scratch, you can use the [__*fieldset*__](../../tags-reference/fieldset.html) tag of Couch to give you a helping hand. Couch's version of this tag is the exact equivalent of its HTML counterpart and serves the same purpose of grouping together related form elements. Additionaly it also outputs &lt;DL&gt;, &lt;DT&gt; and &lt;DD&gt; tags to wrap correctly the child input tags. This way you can quickly get a semantically correct form quite easily.
+However, if are required to code a form from scratch, you can use the [__*fieldset*__](../tags-reference/fieldset.html) tag of Couch to give you a helping hand. Couch's version of this tag is the exact equivalent of its HTML counterpart and serves the same purpose of grouping together related form elements. Additionaly it also outputs &lt;DL&gt;, &lt;DT&gt; and &lt;DD&gt; tags to wrap correctly the child input tags. This way you can quickly get a semantically correct form quite easily.
 
 The following Couch snippet -
 
@@ -406,7 +406,7 @@ The following Couch snippet -
 </fieldset>
 ```
 
-<p class="notice">For input tags that are wrapped within [__*fieldset*__](../../tags-reference/fieldset.html) tags, you can set the _label_ and _desc_ parameters to properly label the fields.</p>
+<p class="notice">For input tags that are wrapped within [__*fieldset*__](../tags-reference/fieldset.html) tags, you can set the _label_ and _desc_ parameters to properly label the fields.</p>
 
 ### EXAMPLE OF A FULL FORM
 
@@ -504,6 +504,6 @@ Following is an example of a real-world form
 
 The code above results in the following form -
 
-![](../../assets/img/contents/forms-3.png)
+![](../assets/img/contents/forms-3.png)
 
 The form displayed above uses form .css for display \[[Download it](http://www.couchcms.com/docs/code/form.css)\].

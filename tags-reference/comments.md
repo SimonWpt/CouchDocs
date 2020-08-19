@@ -6,7 +6,7 @@ layout: default
 
 # comments
 
-Please see [**Core Concepts - Comments**](../../concepts/using-comments.html) for a full discussion of the Comments tag.
+Please see [**Core Concepts - Comments**](../concepts/using-comments.html) for a full discussion of the Comments tag.
 
 ## Parameters
 

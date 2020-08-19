@@ -23,11 +23,11 @@ An editable region of _dropdown_ type can be defined this way -
 
 The code above will result in -
 
-![](../../../../assets/img/contents/editable-dropdown-1.gif)
+![](../../assets/img/contents/editable-dropdown-1.gif)
 
 After clicking it appears as-
 
-![](../../../../assets/img/contents/editable-dropdown-2.gif)
+![](../../assets/img/contents/editable-dropdown-2.gif)
 
 The option selected in this region can be accessed, as with all other editable regions, by using the variable named after it -
 
@@ -143,4 +143,4 @@ Can be set to the following valid values -
 The default *search\_type* is (as with all other types of editable regions) _text_.<br/>
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _numeric_ or _decimal_ (if the value can be fractional).
 
-<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../../pages.html#custom_field).</p>
+<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../pages.html#custom_field).</p>

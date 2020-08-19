@@ -142,7 +142,7 @@ where the string above stands for '3 for more than 0, 7 for more than 5, 10 for 
 To enable specifying shipping charges on individual products, **an editable region named '*pp\_shipping\_scale*' needs to be defined** in the product template.<br/>
 If you are using the editable region definitions contained in our sample template, this region is already defined and you can enter the shipping scale for each product in the following panel:
 
-![](../../assets/img/contents/shopping-cart-16.png)
+![](../assets/img/contents/shopping-cart-16.png)
 
 This region allows you to set up for each product a sliding scale of shipping charges that is based on the number of the product ordered.<br/>
 For example, if you charge $3 to deliver one to five units, $7 to ship six to 15 units, and $10 to ship more than 15 units, set it to:
@@ -155,7 +155,7 @@ where the string above stands for '3 for more than 0, 7 for more than 5, 10 for 
 
 <p class="notice">The shipping charges will be **calculated for only** those items that have their '*pp\_requires\_shipping*' editable region set to 'Yes'.</p>
 
-![](../../assets/img/contents/shopping-cart-17.png)
+![](../assets/img/contents/shopping-cart-17.png)
 
 <p class="notice">All the 5 calculation methods discussed above are **cumulative**. That is, if you choose to set more than one, the values returned by each of them will be **added together** to arrive at a single shipping charge for the cart.</p>
 
@@ -221,7 +221,7 @@ This property can be used to implement **Quantity based pricing** (also known as
 This method **requires defining an editable region named '*pp\_discount\_scale*'** in the products template.<br/>
 If you are using the editable region definitions contained in our sample template, this region is already defined and you can enter the discount scale for each product in the following panel:
 
-![](../../assets/img/contents/shopping-cart-18.png)
+![](../assets/img/contents/shopping-cart-18.png)
 
 Using the editable region, individual products can now be set with a sliding scale for price-reductions (discounts). For example
 
@@ -280,7 +280,7 @@ The finished version of our sample site contains a template named '_coupons.php'
 
 Let us create one. This is what the edit-panel for a coupon looks like.
 
-![](../../assets/img/contents/shopping-cart-19.png)
+![](../assets/img/contents/shopping-cart-19.png)
 
 A short description of what the fields stand for is in order.
 
@@ -323,7 +323,7 @@ We'll now modify it to show a form where the buyer can input the coupon code, if
 
 The _checkout.php_ template found in the finished version of our sample site shows how this can be done.
 
-![](../../assets/img/contents/shopping-cart-20.png)
+![](../assets/img/contents/shopping-cart-20.png)
 
 The cart summary is a simple modification of the code we used to display the cart in _cart.php_ and _cart-modal.php_ (this one does not allow editing of values). As for the input box for coupon code, we've used Couch's _**form**_ tag to handle its submission.<br/>
 You can simply copy the entire form code (every thing between the _&lt;!-- START COUPON FORM --&gt;_ to _&lt;!-- END COUPON FORM --&gt;_) and paste it in your own templates to allow buyers to enter their coupons.

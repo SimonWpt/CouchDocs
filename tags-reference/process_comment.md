@@ -9,7 +9,7 @@ layout: default
 The **process\_comment** tag is meant to be used at the successful submission of a comments form.<br/>
 It simply tries to insert the submitted comment into the database. If it is successful in inserting the comment, the tag sets the *k\_process\_comment\_success* variable otherwise it sets the *k\_process\_comment\_error* variable in the context of its parent tag.
 
-Please see [**Core Concepts - Comments**](../../concepts/using-comments.html) for an example of this tag's usage.
+Please see [**Core Concepts - Comments**](../concepts/using-comments.html) for an example of this tag's usage.
 
 ## Parameters
 

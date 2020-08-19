@@ -8,7 +8,7 @@ layout: default
 
 The **menu** tag is used to quickly generate the HTML markup representing the nested-pages of a site in the form of a dropdown menu.
 
-Please see [**Core Concepts - Nested Pages**](../../concepts/nested-pages-aka-menu-maker.html) for details about nested-pages.
+Please see [**Core Concepts - Nested Pages**](../concepts/nested-pages-aka-menu-maker.html) for details about nested-pages.
 
 ## Parameters
 
@@ -33,7 +33,7 @@ Please see [**Core Concepts - Nested Pages**](../../concepts/nested-pages-aka-me
 * active\_trail\_class
 * list\_type
 
-To illustrate the use of 'menu' tag, we'll use the same sample hierarchy of elements that we used in the '[folders](../../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.
+To illustrate the use of 'menu' tag, we'll use the same sample hierarchy of elements that we used in the '[folders](../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.
 
 ```html
 menu.php

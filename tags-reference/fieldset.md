@@ -6,7 +6,7 @@ layout: default
 
 # fieldset
 
-Please see [**Core Concepts - Forms - Using Fieldset**](../../concepts/forms.html#using-fieldset) for a complete discussion of this tag.
+Please see [**Core Concepts - Forms - Using Fieldset**](../concepts/forms.html#using-fieldset) for a complete discussion of this tag.
 
 ## Parameters
 

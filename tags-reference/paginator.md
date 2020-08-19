@@ -8,7 +8,7 @@ layout: default
 
 The **paginator** tag can be used to quickly create a 'Google' style paginator like the following -
 
-![](../../assets/img/contents/paginator.png)
+![](../assets/img/contents/paginator.png)
 
 The paginator tag can be used within the **pages**, **comments** and **search** tags. Example -
 
@@ -16,7 +16,7 @@ The paginator tag can be used within the **pages**, **comments** and **search** 
 <cms:paginator />
 ```
 
-Please see [**Core Concepts - Pagination**](../../concepts/pagination.html) for a detailed usage example.
+Please see [**Core Concepts - Pagination**](../concepts/pagination.html) for a detailed usage example.
 
 ## Parameters
 

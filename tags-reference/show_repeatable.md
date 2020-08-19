@@ -6,7 +6,7 @@ layout: default
 
 # show_repeatable
 
-Please see [**Core Concepts - Repeatable Regions**](../../concepts/repeatable-regions.html#displaying-the-values) for an in-depth discussion about this tag.
+Please see [**Core Concepts - Repeatable Regions**](../concepts/repeatable-regions.html#displaying-the-values) for an in-depth discussion about this tag.
 
 ## Parameters
 

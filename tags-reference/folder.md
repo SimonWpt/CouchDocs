@@ -8,7 +8,7 @@ layout: default
 
 The **folder** tag is used to create virtual folders for a template. The **folder** tags support nesting within each other thus allowing the creation of an hierarchy of virtual folders.
 
-Please see [**Core Concepts - Folders**](../../concepts/using-folders.html) for a detailed explanation of this tag.
+Please see [**Core Concepts - Folders**](../concepts/using-folders.html) for a detailed explanation of this tag.
 
 ## Parameters
 

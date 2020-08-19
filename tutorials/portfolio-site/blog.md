@@ -8,7 +8,7 @@ layout: default
 
 Before beginning this section, please allow us to clarify the distinction between two terms you'll come across very often in Couch - _page_ and _template_.
 
-[<img alt="" src="../../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/blog.zip)
+[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/blog.zip)
 
 The way we use both the terms, a page of a web site is what we access using a distinct address or URL. A template, on the other hand, is a physical php file (containing regular HTML and some Couch tags) that is used to generate a page.
 
@@ -29,7 +29,7 @@ Rename _blog.html_ to *blog\_list.html* and then rename _single.html_ to _blog.h
 Access _http&#58;//www.mytestsite.com/blog.html_.<br/>
 Note the various components that we'll have to build -
 
-![](../../../../assets/img/contents/portfolio-site-20.png)
+![](../../assets/img/contents/portfolio-site-20.png)
 
 **a.** The blog entry itself, comprising of its title, content, categories, date and number of comments.<br/>
 **b.** A list of comments and a form to submit comment.<br/>
@@ -76,11 +76,11 @@ at the very end.
 Access _http&#58;//www.mytestsite.com/blog.php_ while logged on as the super-admin.<br/>
 Visit the admin section to find _blog.php_ added to the list of templates managed by Couch.
 
-![](../../../../assets/img/contents/portfolio-site-21.png)
+![](../../assets/img/contents/portfolio-site-21.png)
 
 Clicking on _blog.php_ in the sidebar will reveal the template has no editable regions defined so far.
 
-![](../../../../assets/img/contents/portfolio-site-22.png)
+![](../../assets/img/contents/portfolio-site-22.png)
 
 ### Creating the editable regions
 
@@ -94,18 +94,18 @@ This tag can also be used to enclose structural Couch tags like editable, folder
 
 In _blog.php_ add a template tag pair at the top of the document -
 
-![](../../../../assets/img/contents/portfolio-site-23.png)
+![](../../assets/img/contents/portfolio-site-23.png)
 
 Next we'll place the editable tags defining the two editable regions we identified above within this template tag -
 
-![](../../../../assets/img/contents/portfolio-site-24.png)
+![](../../assets/img/contents/portfolio-site-24.png)
 
 Notice how we are instructing the image tag to crop the uploaded image to fit a dimension of 610x150\.
 
 Refresh _blog.php_ in your browser (needless to say now that you must be logged in as the super-admin) and then visit the admin panel.<br/>
 Clicking the blog section should reveal that Couch has created the two editable regions for us -
 
-![](../../../../assets/img/contents/portfolio-site-25.png)
+![](../../assets/img/contents/portfolio-site-25.png)
 
 Try placing some content in the richtext editor and saving the page.<br/>
 Access _http&#58;//www.mytestsite.com/blog.php._<br/>
@@ -114,11 +114,11 @@ The reason is that, unlike about.php where we defined the editable regions by pl
 
 In _blog.php_, find the place where the blog entry's content is showed -
 
-![](../../../../assets/img/contents/portfolio-site-26.png)
+![](../../assets/img/contents/portfolio-site-26.png)
 
 and replace the text shown as content by a show tag -
 
-![](../../../../assets/img/contents/portfolio-site-27.png)
+![](../../assets/img/contents/portfolio-site-27.png)
 
 Notice the<br/>
 *&lt;cms:show blog\_content /&gt;*
@@ -126,7 +126,7 @@ Notice the<br/>
 Upload an image into the image type editable region.<br/>
 In _blog.php_, find the place where the image is showed -
 
-![](../../../../assets/img/contents/portfolio-site-28.png)
+![](../../assets/img/contents/portfolio-site-28.png)
 
 and replace the src attribute of the image tag with the content of the editable region named *blog\_image* using the show tag -
 
@@ -134,11 +134,11 @@ and replace the src attribute of the image tag with the content of the editable 
 <img class="thumb" src="<cms:show blog_image />" alt=""/>
 ```
 
-![](../../../../assets/img/contents/portfolio-site-29.png)
+![](../../assets/img/contents/portfolio-site-29.png)
 
 Access _http&#58;//www.mytestsite.com/blog.php_ again. Your edited contents should appear on the page now.
 
-![](../../../../assets/img/contents/portfolio-site-30.png)
+![](../../assets/img/contents/portfolio-site-30.png)
 
 ### Cloning the template
 
@@ -147,7 +147,7 @@ The _blog_ section, however, will require several such pages - one for each new 
 We can use the _blog.php_ template to create more than one page by declaring it as clonable.<br/>
 The way to do so is setting the _clonable_ parameter within the template tag -
 
-![](../../../../assets/img/contents/portfolio-site-31.png)
+![](../../assets/img/contents/portfolio-site-31.png)
 
 Access _http&#58;//www.mytestsite.com/blog.php_ as super-admin to refresh it and make your changes take effect.<br/>
 Visit the admin section - _http&#58;//www.mytestsite.com/couch/_<br/>
@@ -157,12 +157,12 @@ Clicking on any of these pages will show the editable regions.
 
 For now notice that in the list of pages cloned from _blog.php_ in the right panel, Couch is showing one cloned page that it has created automatically -
 
-![](../../../../assets/img/contents/portfolio-site-32.png)
+![](../../assets/img/contents/portfolio-site-32.png)
 
 It has named this page '_Default page for blog.php \* PLEASE CHANGE THIS TITLE \*_'.<br/>
 Click on this new page -
 
-![](../../../../assets/img/contents/portfolio-site-33.png)
+![](../../assets/img/contents/portfolio-site-33.png)
 
 Notice how the two editable regions that we had defined for blog.php are present in the panel that opens up.<br/>
 Also notice that the two regions have the same data that we had entered into _blog.php_ when it was not clonable. Whenever a template is declared as being clonable, Couch creates a default page as the first cloned page of the template by moving all the editable data that was previously allocated to the non-clonable template.
@@ -175,23 +175,23 @@ Every cloned page will always have the _Name_ and _Title_ fields associated with
 
 Change the _title_ to something friendlier and leave the name blank -
 
-![](../../../../assets/img/contents/portfolio-site-34.png)
+![](../../assets/img/contents/portfolio-site-34.png)
 
 Press the save button at the bottom.
 
-![](../../../../assets/img/contents/portfolio-site-35.png)
+![](../../assets/img/contents/portfolio-site-35.png)
 
 Couch will save the changes and refresh the page. Notice how a name was generated by Couch using the _title_ field.
 
-![](../../../../assets/img/contents/portfolio-site-36.png)
+![](../../assets/img/contents/portfolio-site-36.png)
 
 Click the view button to see this page in browser -
 
-![](../../../../assets/img/contents/portfolio-site-37.png)
+![](../../assets/img/contents/portfolio-site-37.png)
 
 Notice the address of the page in the address bar -
 
-![](../../../../assets/img/contents/portfolio-site-38.png)
+![](../../assets/img/contents/portfolio-site-38.png)
 
 It has an additional '_?p-2_' after the _blog.php_<br/>
 _http&#58;//www.mytestsite.com/blog.php?p=2_<br/>
@@ -203,15 +203,15 @@ Every cloned page has the additional '_?p=x_' after the non-clonable URL where '
 Let us create a second cloned page to illustrate the point further.<br/>
 Click on the button that has been added on the top that says 'Add New' -
 
-![](../../../../assets/img/contents/portfolio-site-39.png)
+![](../../assets/img/contents/portfolio-site-39.png)
 
 Save the page after filling in the fields.
 
-![](../../../../assets/img/contents/portfolio-site-40.png)
+![](../../assets/img/contents/portfolio-site-40.png)
 
 Press view and the second page should show up -
 
-![](../../../../assets/img/contents/portfolio-site-41.png)
+![](../../assets/img/contents/portfolio-site-41.png)
 
 Once again notice the address of this page -<br/>
 _http&#58;//www.mytestsite.com/blog.php?p=3_
@@ -220,15 +220,15 @@ Clearly, the '_?p=2_' and '_?p=3_' after the _blog.php_ signal to Couch to gener
 So what happens if we access_blog.php_ without any '_?p=n_' appended? Let us try.<br/>
 Access _http&#58;//www.mytestsite.com/blog.php_ and the following page should appear -
 
-![](../../../../assets/img/contents/portfolio-site-42.png)
+![](../../assets/img/contents/portfolio-site-42.png)
 
 As you can see, a page has been generated using _blog.php_ as the template. However, since no cloned page was specified, the two editable regions come up empty.<br/>
 So if no page's data is associated with the address _http&#58;//www.mytestsite.com/blog.php_, is this address useless for clonable templates?<br/>
 Not at all. We can use it to show a listing of all the pages cloned from the template or display information about this section or do whatever you wish.<br/>
 Couch, on its part, will signal to you whether or not a cloned page's data is available. This it does by setting up certain variables that you can test and take action accordingly.
 
-URLs of clonable templates that have the '_?p=n_' appended are considered by Couch to be the '_page-views_' (i.e. displaying cloned pages) while the URLs without this information are considered as being the '_list-views_' \[see [Views](../../../../concepts/views.html) in documentation\].<br/>
-In page-view, you'll find set a variable named *k\_is\_page* while in list-view a variable named *k\_is\_list* will be found set (see [Variables available in Views](../../../../concepts/variables-in-views.html)).
+URLs of clonable templates that have the '_?p=n_' appended are considered by Couch to be the '_page-views_' (i.e. displaying cloned pages) while the URLs without this information are considered as being the '_list-views_' \[see [Views](../../concepts/views.html) in documentation\].<br/>
+In page-view, you'll find set a variable named *k\_is\_page* while in list-view a variable named *k\_is\_list* will be found set (see [Variables available in Views](../../concepts/variables-in-views.html)).
 
 ### Using the conditionals
 
@@ -237,11 +237,11 @@ We can use Couch's conditional tags (if and else) to test the presence of the tw
 Enclose the HTML part of the _blog.php_ with Couch's if tags the following way -<br/>
 Place the opening if tag *&lt;cms:if k\_is\_page &gt;* before the HTML part -
 
-![](../../../../assets/img/contents/portfolio-site-43.png)
+![](../../assets/img/contents/portfolio-site-43.png)
 
 and place the closing if tag &lt;/cms:if&gt; after the HTML
 
-![](../../../../assets/img/contents/portfolio-site-44.png)
+![](../../assets/img/contents/portfolio-site-44.png)
 
 What we are doing is checking if variable *k\_is\_page* is set (i.e. a cloned page is being viewed). If it is, we output the full template. Test it by accessing both the cloned pages.<br/>
 But what happens if *k\_is\_page* is not set (as when in the list-view)?<br/>
@@ -249,12 +249,12 @@ Check it by accessing _http&#58;//www.mytestsite.com/blog.php_ and you'll face a
 Let us handle the list-view now.<br/>
 Add an else tag before the ending if tag.
 
-![](../../../../assets/img/contents/portfolio-site-45.png)
+![](../../assets/img/contents/portfolio-site-45.png)
 
 Anything placed after the else tag will be output when *k\_is\_page* is not set - i.e. when _blog.php_ is accessed without being associated with a cloned page.<br/>
 As a quick and dirty test, place an arbitrary message in this block -
 
-![](../../../../assets/img/contents/portfolio-site-46.png)
+![](../../assets/img/contents/portfolio-site-46.png)
 
 Access _http&#58;//www.mytestsite.com/blog.php_ and you'll see '_Hi! You are seeing the list-view_' greeting you.<br/>
 Of course, you'll want to do something more useful than this in this view.<br/>
@@ -268,14 +268,14 @@ Couch has a very powerful feature that allows us to keep chunks of HTML code (al
 
 We'll use the embed tag to display *blog\_list.html* in the list-view.<br/>
 Move *blog\_list.html* into the snippets folder found within the couch folder (this is not mandatory, but files kept in this folder are kept safe from being accessed directly by the _.htaccess_ file present within the folder and hence is desirable).<br/>
-See [embed](../../../../tags-reference/embed.html) tag for snippets folder customization instructions.<br/>
+See [embed](../../tags-reference/embed.html) tag for snippets folder customization instructions.<br/>
 Now replace the silly message we were displaying in list-view with the following embed tag -
 
-![](../../../../assets/img/contents/portfolio-site-47.png)
+![](../../assets/img/contents/portfolio-site-47.png)
 
 Access _http&#58;//www.mytestsite.com/blog.php_ once again and you should see the contents of *blog\_list.html* being displayed.
 
-![](../../../../assets/img/contents/portfolio-site-48.png)
+![](../../assets/img/contents/portfolio-site-48.png)
 
 In a way, *blog\_list.html* has become a part of the _blog.php_ template only that it is displayed in list-view.
 
@@ -285,17 +285,17 @@ Before we set out to dynamically display a list of our cloned pages in the list-
 With what we have done so far, for each page we are only displaying the *blog\_content* and the *blog\_image*.<br/>
 The blog entry's title, the categories, date and number of comments need to be handled too.
 
-![](../../../../assets/img/contents/portfolio-site-49.png)
+![](../../assets/img/contents/portfolio-site-49.png)
 
 In the step where we decided on the number of editable regions to create, we had discussed that these items are present in other ways within a page and do not need the creation of editable regions to capture them.<br/>
-Take a look at the '[Variables available in Views](../../../../concepts/variables-in-views.html)' in the documentation for a list of variables that become available in the various views.
+Take a look at the '[Variables available in Views](../../concepts/variables-in-views.html)' in the documentation for a list of variables that become available in the various views.
 
 <p class="success">**TIP:** You can use *&lt;cms:dump\_all /&gt;* or _&lt;cms:dump /&gt;_ to get a quick list of all the variables that are available for use at any particular place.</p>
 
 Variables *k\_page\_title*, *k\_page\_date* and *k\_comments\_count* present in the page-view are what we require.<br/>
 With _blog.php_ open in your editor, find the place where title of the blog entry is displayed
 
-![](../../../../assets/img/contents/portfolio-site-50.png)
+![](../../assets/img/contents/portfolio-site-50.png)
 
 and replace it with
 
@@ -303,13 +303,13 @@ and replace it with
 <cms:show k_page_title />
 ```
 
-![](../../../../assets/img/contents/portfolio-site-51.png)
+![](../../assets/img/contents/portfolio-site-51.png)
 
 The titles are currently linked to 'single.html'. Let us change this to link them back to the current page.<br/>
 We'll use the variable *k\_page\_link*, which is always available to give the link of the current page.<br/>
 Replace 'single.html'
 
-![](../../../../assets/img/contents/portfolio-site-52.png)
+![](../../assets/img/contents/portfolio-site-52.png)
 
 with
 
@@ -317,25 +317,25 @@ with
 <cms:show k_page_link />
 ```
 
-![](../../../../assets/img/contents/portfolio-site-53.png)
+![](../../assets/img/contents/portfolio-site-53.png)
 
 Access the cloned pages to see their title being shown instead of the ipsum lorem stuff having the right link.
 
-![](../../../../assets/img/contents/portfolio-site-54.png)
+![](../../assets/img/contents/portfolio-site-54.png)
 
-![](../../../../assets/img/contents/portfolio-site-55.png)
+![](../../assets/img/contents/portfolio-site-55.png)
 
 Moving on to fix the date, first find the date in the template
 
-![](../../../../assets/img/contents/portfolio-site-56.png)
+![](../../assets/img/contents/portfolio-site-56.png)
 
 and replace it with
 
-![](../../../../assets/img/contents/portfolio-site-57.png)
+![](../../assets/img/contents/portfolio-site-57.png)
 
 Accessing any cloned page to see the change
 
-![](../../../../assets/img/contents/portfolio-site-58.png)
+![](../../assets/img/contents/portfolio-site-58.png)
 
 The date that appears, although recognizable, hardly matches the '_31st Sep, 09_' format originally in place.<br/>
 This is because *k\_page\_date* shows date in the internal raw format of its storage (yyyy-mm-dd hh:mm:ss).<br/>
@@ -348,15 +348,15 @@ Place the following in place of the show tag -
 
 This results in the following display -
 
-![](../../../../assets/img/contents/portfolio-site-59.png)
+![](../../assets/img/contents/portfolio-site-59.png)
 
 The comments count can be similarly fixed by finding and replacing the count
 
-![](../../../../assets/img/contents/portfolio-site-60.png)
+![](../../assets/img/contents/portfolio-site-60.png)
 
 with *k\_comments\_count* variable
 
-![](../../../../assets/img/contents/portfolio-site-61.png)
+![](../../assets/img/contents/portfolio-site-61.png)
 
 Of course for now all blog entries will show a count of 0 because they have no comments yet.
 
@@ -378,69 +378,69 @@ _Philosophy_, _History_, _Jobs_, _Staff_ and _Clients_
 
 Place the following tags within the template tag already placed at the beginning of_blog.php_ -
 
-![](../../../../assets/img/contents/portfolio-site-62.png)
+![](../../assets/img/contents/portfolio-site-62.png)
 
 Refresh _blog.php_ in your browser by visiting it while still being logged-on as the super-admin.<br/>
 Visit the _blog_ section in Couch admin and you should find a drop-down list being added to it -
 
-![](../../../../assets/img/contents/portfolio-site-63.png)
+![](../../assets/img/contents/portfolio-site-63.png)
 
-![](../../../../assets/img/contents/portfolio-site-64.png)
+![](../../assets/img/contents/portfolio-site-64.png)
 
 Let us now add the first blog entry to a folder.<br/>
 Click on '_My first blog entry_' to edit it.<br/>
 Click on the '_Advanced Settings_' found at the top right -
 
-![](../../../../assets/img/contents/portfolio-site-65.png)
+![](../../assets/img/contents/portfolio-site-65.png)
 
 It will expand to reveal several advanced settings. A list of the virtual folders defined for the template is one of them.
 
-![](../../../../assets/img/contents/portfolio-site-66.png)
+![](../../assets/img/contents/portfolio-site-66.png)
 
 Select one, let us say '_clients_', and save.
 
 Now to display this folder in the blog entry -<br/>
-As you know, Couch provides information about the page being accessed by setting up variables. *k\_page\_foldertitle* is the variable that contains the title of the folder a cloned page resides in (remains blank if the page does not reside in any folder) \[see [Variables available in Views](../../../../concepts/variables-in-views.html)\].
+As you know, Couch provides information about the page being accessed by setting up variables. *k\_page\_foldertitle* is the variable that contains the title of the folder a cloned page resides in (remains blank if the page does not reside in any folder) \[see [Variables available in Views](../../concepts/variables-in-views.html)\].
 
 <p class="success">Once again, when in any doubt about which variables are available for use, place _&lt;cms:dump /&gt;_ or *&lt;cms:dump\_all /&gt;* temporarily within the template. On accessing a page, these tags will spill out all the variables (along with their values) that are available.</p>
 
 Find the place where the template displays the name of the categories -
 
-![](../../../../assets/img/contents/portfolio-site-67.png)
+![](../../assets/img/contents/portfolio-site-67.png)
 
 Replace it with -
 
-![](../../../../assets/img/contents/portfolio-site-68.png)
+![](../../assets/img/contents/portfolio-site-68.png)
 
 Notice how we have eliminated the second category because we can only have one.
 
 Visit '_My first blog entry_' to see the change being reflected on the web page -
 
-![](../../../../assets/img/contents/portfolio-site-69.png)
+![](../../assets/img/contents/portfolio-site-69.png)
 
 Now visit '_My second blog entry_' -
 
-![](../../../../assets/img/contents/portfolio-site-70.png)
+![](../../assets/img/contents/portfolio-site-70.png)
 
 Nothing is displayed for the folder as this page was not placed in any folder but the blank looks awkward.<br/>
 We'd like to display '_Uncategorised_' for such pages that do not reside in any folder.
 
 To do so, instead of directly using the *k\_page\_foldertitle*, we'll use a variable of our own to display the folder title.
 
-<p class="notice">You might recall from the documentation that apart from the variables set up by Couch (the system variables that are all prefixed by a 'k\_'), we can define our own variables. \[see [Variables](../../../../concepts/variables.html)\]</p>
+<p class="notice">You might recall from the documentation that apart from the variables set up by Couch (the system variables that are all prefixed by a 'k\_'), we can define our own variables. \[see [Variables](../../concepts/variables.html)\]</p>
 
 If *k\_page\_foldertitle* is not blank, we'll set our variable to the folder title but if *k\_page\_foldertitle* is blank, we'll set it to '_Uncategorised_'. This is how it can be done -
 
-![](../../../../assets/img/contents/portfolio-site-71.png)
+![](../../assets/img/contents/portfolio-site-71.png)
 
 Notice how we are now using *my\_category*, instead of *k\_page\_foldertitle*, to display the folder title,
 
 Visiting '_My second blog entry_' now will show -
 
-![](../../../../assets/img/contents/portfolio-site-72.png)
+![](../../assets/img/contents/portfolio-site-72.png)
 
 That about wraps up the page-view part of _blog.php_ (one that displays a single blog entry).<br/>
 A few minor points still remain unattended but we'll get back to them after we configure the other parts.<br/>
 Let us now move on to the list-view of _blog.php_ - where we display a paginated list of all cloned pages i.e. blog entries.
 
-[Diving deep - the Blog (Part 2)](../../blog-2.html)
+[Diving deep - the Blog (Part 2)](../blog-2.html)

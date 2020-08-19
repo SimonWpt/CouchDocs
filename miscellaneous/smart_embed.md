@@ -6,7 +6,7 @@ layout: default
 
 # Smart embed - an alternative method of structuring sites
 
-If you have been using Couch for anytime now, you are no doubt familiar with the various [**views**](../../concepts/views.html) encountered while dealing with clonable pages.
+If you have been using Couch for anytime now, you are no doubt familiar with the various [**views**](../concepts/views.html) encountered while dealing with clonable pages.
 
 A typical (skeletal) code handling the views in a template could go something like this
 
@@ -39,7 +39,7 @@ or
 </cms:if>
 ```
 
-In the above approach, a prudent way of coding up the various views is to create separate snippets for each of them and then [**embedding**](../../tags-reference/embed.html) at the appropriate place.
+In the above approach, a prudent way of coding up the various views is to create separate snippets for each of them and then [**embedding**](../tags-reference/embed.html) at the appropriate place.
 
 So, for example, if we had snippets named 'page\_view.html', 'folder\_view.html' etc. for the respective views, the snippet given above would now become
 
@@ -159,7 +159,7 @@ For **page-view**, e.g. while visting a page named 'harpoon' of template 'movies
 * page
 * default
 
-[**Nested pages**](../../concepts/nested-pages-aka-menu-maker.html) behave more or less like folders.<br/>
+[**Nested pages**](../concepts/nested-pages-aka-menu-maker.html) behave more or less like folders.<br/>
 For example, if we have a nested-page named 'harpoon' that is nested below another pages named 'chinese', this is the sequece of search while visiting 'harpoon' -
 
 * movies-page\_ex-harpoon
@@ -272,7 +272,7 @@ Access index.php in page-view and the above snippet will be displayed. Access in
 
 ### Using smart_embed tag with embed tag
 
-In certain situations, we can also combine the 'smart\_embed' with the regular [**embed**](../../tags-reference/embed.html) tag.<br/>
+In certain situations, we can also combine the 'smart\_embed' with the regular [**embed**](../tags-reference/embed.html) tag.<br/>
 Let us suppose the 'header' chunk of about.php template is different from the common 'header/default.html' it shared with the other templates.<br/>
 However, it differs in only a very minor way - say, it only adds a few HTML tags loading some additional JavaScript files.<br/>
 We know that we can place a snippet named 'about-default.html' within the 'header' folder and this snippet will be automatically picked up for about.php.<br/>

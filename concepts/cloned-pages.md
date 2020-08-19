@@ -7,7 +7,7 @@ layout: default
 # Cloned Pages
 
 Some templates represent one single page of a website, e.g. _about-us.php_ and _contact-us.php_.<br/>
-To make these pages updatable by the users, it is sufficient to mark out the updatable HTML areas in the templates using the [__*editable*__](../../tags-reference/editable.html) tags and Couch will make them editable.
+To make these pages updatable by the users, it is sufficient to mark out the updatable HTML areas in the templates using the [__*editable*__](../tags-reference/editable.html) tags and Couch will make them editable.
 
 Some other templates, e.g. _blog.php_ or _property.php_, cannot possibly represent one single page.<br/>
 A website will have several blog pages, each page representing a single blog entry. Similarly, there will be several property pages where each page would stand for a single property.
@@ -27,7 +27,7 @@ Couch's answer is to 'clone' the new page out of the original _blog.php_ templat
 
 To create cloned pages out of a template, the template first needs to be marked as being _clonable_.
 
-A template can be marked as being clonable by using the [__*template*__](../../tags-reference/template.html) tag somewhere within it and setting its _clonable_ parameter to '1'.<br/>
+A template can be marked as being clonable by using the [__*template*__](../tags-reference/template.html) tag somewhere within it and setting its _clonable_ parameter to '1'.<br/>
 Place the following snippet somewhere at the begining of the template (within the HEAD tag will do just fine) -
 
 ```html

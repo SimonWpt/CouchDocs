@@ -6,7 +6,7 @@ layout: default
 
 # Contact Form
 
-[<img alt="" src="../../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/contact.zip)
+[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/contact.zip)
 
 The _contact.html_ that comes with Aurelius provides a contact form as well as some contact details.
 
@@ -15,9 +15,9 @@ Take the usual steps to do so -<br/>
 Change the extension of _contact.html_ to make it _contact.php_<br/>
 Add the two lines of boilerplate PHP code to enclose the contents of this file and use the template tag to change the display-name of the template.
 
-![](../../../../assets/img/contents/portfolio-site-148.png)
+![](../../assets/img/contents/portfolio-site-148.png)
 
-![](../../../../assets/img/contents/portfolio-site-149.png)
+![](../../assets/img/contents/portfolio-site-149.png)
 
 Access _http&#58;//www.mytestsite.com/contact.php_ while logged on as the super-admin.<br/>
 This will hook up Couch to the template.
@@ -26,20 +26,20 @@ This will hook up Couch to the template.
 
 As can be seen, there are three distinct parts to this template - An introductory paragraph at the top, the contact form and a sidebar containing several contact details.
 
-![](../../../../assets/img/contents/portfolio-site-150.png)
+![](../../assets/img/contents/portfolio-site-150.png)
 
 Of these three, the contact form will be handled by the Couch form and input tags. The introductory top paragraph can be easily made into an editable region. The sidebar too can be turned into an editable region - we only need to decide how granular the division needs to be. We can, if needed, create an editable region each for the _Address_, _Email_ and _Social Profiles_ sections or create one single region for the entire sidebar.<br/>
 For the purpose of this tutorial, we'll create one editable region that will span both the _Address_ as well as the _Email_ section and will sub-divide the _Social Profiles_ section into one editable region for each social site.
 
 Let us define the editable regions for the introductory paragraph and the address and email in the sidebar by directly enclosing these parts by Couch editable tags -
 
-![](../../../../assets/img/contents/portfolio-site-151.png)
+![](../../assets/img/contents/portfolio-site-151.png)
 
-![](../../../../assets/img/contents/portfolio-site-152.png)
+![](../../assets/img/contents/portfolio-site-152.png)
 
 Refreshing _http&#58;//www.mytestsite.com/contact.php_ by revisiting it as super-admin will yield the following results for the changes made so far -
 
-![](../../../../assets/img/contents/portfolio-site-153.png)
+![](../../assets/img/contents/portfolio-site-153.png)
 
 Editing any of these regions and saving the changes will cause the modifications to appear on the page immediately.
 
@@ -48,21 +48,21 @@ The reason for this is that, as you'll soon see, we'll be outputting these socia
 
 Make the following changes to the template tag at the top -
 
-![](../../../../assets/img/contents/portfolio-site-154.png)
+![](../../assets/img/contents/portfolio-site-154.png)
 
 Note how we have grouped the five text type editable regions by creating an editable region of type group and linking the other regions to it.<br/>
 Refresh _http&#58;//www.mytestsite.com/contact.php_ and then visit the admin section. The following regions should appear -
 
-![](../../../../assets/img/contents/portfolio-site-155.png)
+![](../../assets/img/contents/portfolio-site-155.png)
 
 Since we have defined these editable regions in the template tag, for their contents to appear on the web page we need to use the variables representing them at the required places.<br/>
 The original HTML code for the profiles section is -
 
-![](../../../../assets/img/contents/portfolio-site-156.png)
+![](../../assets/img/contents/portfolio-site-156.png)
 
 The same after using the variables set for the editable regions -
 
-![](../../../../assets/img/contents/portfolio-site-157.png)
+![](../../assets/img/contents/portfolio-site-157.png)
 
 Edit the ids in the admin section and the changes should get reflected in the generated page.<br/>
 So far there has been nothing that we have not already done.<br/>
@@ -70,7 +70,7 @@ For the sake of illustrating an important and useful technique, let us now throw
 What we wish is that a social icon should appear on the web page only if the user has placed any content within the editable region associated with the icon. If the user chooses to leave the textbox of an id blank, the icon for that should not appear.
 We can deploy simple conditional tags to handle this -
 
-![](../../../../assets/img/contents/portfolio-site-158.png)
+![](../../assets/img/contents/portfolio-site-158.png)
 
 We enclose each LI element representing an icon within Couch conditional if tag that tests for the result of Couch not\_empty tag. The not\_empty tag returns 1 only if the variable it is testing has any value within it. This way an icon is output only if the associated variable is not empty.
 
@@ -87,11 +87,11 @@ We enclose each LI element representing an icon within Couch conditional if tag 
 
 Place values only in two of the five social links regions and icons for only those two should appear on the web page -
 
-![](../../../../assets/img/contents/portfolio-site-159.png)
+![](../../assets/img/contents/portfolio-site-159.png)
 
 Now remove values from all the five social links regions and see the output -
 
-![](../../../../assets/img/contents/portfolio-site-160.png)
+![](../../assets/img/contents/portfolio-site-160.png)
 
 As you can see that no icons appear in the output, however, the heading 'Social Profiles' still does.<br/>
 What we wish to accomplish is that this heading should appear only if at least one social link is output.
@@ -104,7 +104,7 @@ Couch has a tag named capture that can be used to enclose any arbitrary section 
 
 Enclose the _profiles_ section we are working on within the capture tag like this -
 
-![](../../../../assets/img/contents/portfolio-site-161.png)
+![](../../assets/img/contents/portfolio-site-161.png)
 
 Notice that we are instructing the capture tag to buffer all output of its enclosed content into a variable named *profiles\_output*. Also note that at the end we are showing this *profiles\_output* variable.<br/>
 Try removing this show statement and the entire profiles block will disappear.
@@ -115,7 +115,7 @@ What we'll do is, within the block enclosed by the capture tag, everyplace where
 If even one social link variable is present, the *has\_profile* variable will be set to 1 else this variable will simply not be present.<br/>
 Finally, we'll check for this variable as the condition to output the contents buffered within *profiles\_output*.
 
-![](../../../../assets/img/contents/portfolio-site-162.png)
+![](../../assets/img/contents/portfolio-site-162.png)
 
 The 'global' used in each set statement instructs the set tag to set the variable at a global scope i.e. someplace where the variable is accessible throughout the page. The default scope of set is 'local' in which case a variable is set within the parent tag within which the set statement is used (if the parent tag supports scope, that is - see Scope of variables).
 
@@ -138,25 +138,25 @@ The _contact.php_ we have been working on already has a web form. Let us see how
 Let us begin by converting the HTML form tag to its Couch counterpart.<br/>
 The original opening HTML form tag was -
 
-![](../../../../assets/img/contents/portfolio-site-163.png)
+![](../../assets/img/contents/portfolio-site-163.png)
 
 Replace the tag with its Couch equivalent -
 
-![](../../../../assets/img/contents/portfolio-site-164.png)
+![](../../assets/img/contents/portfolio-site-164.png)
 
 Notice how the modification required only adding the 'cms:' prefix to the form tag. Also that the action attribute, pointing to the PHP script that processed the submitted form, is no longer needed and hence is set to blank.<br/>
 Don't forget to modify the closing tag too -
 
-![](../../../../assets/img/contents/portfolio-site-165.png)
+![](../../assets/img/contents/portfolio-site-165.png)
 
 Next convert the input elements of the form to their Couch equivalents.
 The original code -
 
-![](../../../../assets/img/contents/portfolio-site-166.png)
+![](../../assets/img/contents/portfolio-site-166.png)
 
 After replacing with Couch tags -
 
-![](../../../../assets/img/contents/portfolio-site-167.png)
+![](../../assets/img/contents/portfolio-site-167.png)
 
 Note how all the HTML input tags simply needed the 'cms:' prefix to convert them to their Couch equivalents.<br/>
 The textarea tag required a little more work. It had to be replaced by its Couch input tag that had a type of 'textarea'.
@@ -168,26 +168,26 @@ JavaScript is, of course, a client-side technology and cannot be relied upon for
 Server-side validation is an absolute must for validating forms. The Couch tags we used provide this server-side validation. To see this in action we'll first have to remove the existing JavaScript validation.<br/>
 To do so, scroll up the _contact.php_ template and you'll find the following script tags -
 
-![](../../../../assets/img/contents/portfolio-site-168.png)
+![](../../assets/img/contents/portfolio-site-168.png)
 
 Remove these lines and this will remove the JavaScript code that was being used for validation.<br/>
 One more step is required. The JavaScript code upon validation failure made visible the following HTML blocks -
 
-![](../../../../assets/img/contents/portfolio-site-169.png)
+![](../../assets/img/contents/portfolio-site-169.png)
 
 These HTML paragraphs have a class of 'error' that has been declared in the styles.css stylesheet used by _contact.php_ to have a 'display: none' style.
 
-![](../../../../assets/img/contents/portfolio-site-170.png)
+![](../../assets/img/contents/portfolio-site-170.png)
 
 This makes these paragraphs normally invisible and are made visible only by the JavaScript code upon validation failure.
 
 We need to make these error-reporting paragraphs visible by default so add the following inline code to each of them -
 
-![](../../../../assets/img/contents/portfolio-site-171.png)
+![](../../assets/img/contents/portfolio-site-171.png)
 
 The inline style will override the existing styles and all the error-reporting paragraphs will now become permanently visible, regardless of any validation -
 
-![](../../../../assets/img/contents/portfolio-site-172.png)
+![](../../assets/img/contents/portfolio-site-172.png)
 
 Don't worry though. We'll now make Couch display these messages upon validation failures.
 
@@ -199,7 +199,7 @@ There are several other kinds of validations available (e.g. *min\_len*, *max\_l
 We'll use the _validator='email'_ with the input meant for email address.<br/>
 The modified code with the validation constrains in place -
 
-![](../../../../assets/img/contents/portfolio-site-173.png)
+![](../../assets/img/contents/portfolio-site-173.png)
 
 Once the validation constrains are imposed, Couch validates the submitted values accordingly at each form submission.<br/>
 If any of the constrains are violated, the form tag sets up a variable named *k\_error* to indicate this.<br/>
@@ -210,7 +210,7 @@ On the flip side of it, if all the inputs pass the validation constrains success
 
 For the form we are configuring, we'll use the 'k\_error\_tagname' variables to detect validation failures and then conditionally output the error reporting paragraphs we made visible above -
 
-![](../../../../assets/img/contents/portfolio-site-174.png)
+![](../../assets/img/contents/portfolio-site-174.png)
 
 Try using the form by leaving some inputs empty and placing malformed email address. The error messages should display correctly.
 
@@ -218,11 +218,11 @@ Now to handle the success condition.<br/>
 We'll make use of the *k\_success* variable to detect this condition and take appropriate action.<br/>
 The form already has a message for successful condition -
 
-![](../../../../assets/img/contents/portfolio-site-175.png)
+![](../../assets/img/contents/portfolio-site-175.png)
 
 We'll display it conditionally only when *k\_success* variable is found set -
 
-![](../../../../assets/img/contents/portfolio-site-176.png)
+![](../../assets/img/contents/portfolio-site-176.png)
 
 Please also notice the _style="display:block"_ inline style that is needed to override the default display:none set in the stylesheet, as noted previously.
 
@@ -233,14 +233,14 @@ Test out the form by filling in all the values and the success message should ge
 On successful submission of form, you usually will want to do something more than just display the success message.<br/>
 In the case of this form, we'd wish to send an email to the site owner, informing him about the contact request and providing him the submitted data.
 
-![](../../../../assets/img/contents/portfolio-site-177.png)
+![](../../assets/img/contents/portfolio-site-177.png)
 
 We'll use the Couch email tag to send an email to the site owner. Anything enclosed within the email tags will form the body of the email to be sent. Notice how we are using the *k\_success* variable (contains submitted values of all the inputs) to inform him of the submitted values.
 
 The *k\_email\_from* and the *k\_email\_to* contain these values set in _config.php_ -
 
-![](../../../../assets/img/contents/portfolio-site-178.png)
+![](../../assets/img/contents/portfolio-site-178.png)
 
 This wraps up the contact form section. The last template that now remains to be configured is the _index.html_ - the home page.
 
-[That is next.](../../home-page.html)
+[That is next.](../home-page.html)

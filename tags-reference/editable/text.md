@@ -22,7 +22,7 @@ An editable region of _text_ type can be defined this way -
 
 The code above will result in -
 
-![](../../../../assets/img/contents/editable-text.gif)
+![](../../assets/img/contents/editable-text.gif)
 
 <p class="notice">
     Any text enclosed between the opening and the closing tags will appear as the default text within the textbox. If you do not wish to have any default text, simply make the **Editable** tag self-closing e.g.<br/>
@@ -81,4 +81,4 @@ Can be set to the following valid values -
 The default *search\_type* is (as with all other types of editable regions) _text_.<br/>
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _integer_ or _decimal_ (if the value can be fractional).
 
-<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../../pages.html#custom_field).</p>
+<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../pages.html#custom_field).</p>

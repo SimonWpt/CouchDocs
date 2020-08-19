@@ -53,7 +53,7 @@ This feature can be utilized to set a tag's parameter by using the output of ano
 <cms:show message />
 ```
 
-In the snippet above, message will be set to 'Hello World' which was the output of the nested [__*show*__](../../tags-reference/show.html) tag.<br/>
+In the snippet above, message will be set to 'Hello World' which was the output of the nested [__*show*__](../tags-reference/show.html) tag.<br/>
 Please notice that **the nested tag is ALWAYS enclosed within DOUBLE quotes**.
 
 <p class="notice">
@@ -70,7 +70,7 @@ Please notice that **the nested tag is ALWAYS enclosed within DOUBLE quotes**.
     ```
 <cms:show var=Hello />
     ```
-    Couch would have used the value of an non-existent variable _Hello_ as parameter for [__*show*__](../../tags-reference/show.html), which would then have printed nothing.
+    Couch would have used the value of an non-existent variable _Hello_ as parameter for [__*show*__](../tags-reference/show.html), which would then have printed nothing.
 </p>
 
 ### NESTING PARAMETERS
@@ -105,16 +105,16 @@ As a more practical example consider the following very useful snippet -
 ```
 
 Don't worry, we'll replace the tags by their outputs and everything will start making perfect sense.<br/>
-The above snippet uses three new tags - [__*if*__](../../tags-reference/if.html), [__*exists*__](../../tags-reference/exists.html) and [__*embed*__](../../tags-reference/embed.html).<br/>
+The above snippet uses three new tags - [__*if*__](../tags-reference/if.html), [__*exists*__](../tags-reference/exists.html) and [__*embed*__](../tags-reference/embed.html).<br/>
 You can find more about them in the documentation but for now a brief word about these tags will do.
 
-If the parameter passed to [__*if*__](../../tags-reference/if.html) tag is '1', it outputs anything contained between its start\_tag and end\_tag else it does not.<br/>
-[__*exists*__](../../tags-reference/exists.html) expects the parameter passed to it to be a file's (or folder's) name. It tests if the given file/folder is actually present and if it is, it outputs '1', else it outputs '0'.<br/>
-Finally, the [__*embed*__](../../tags-reference/embed.html) tag expects the parameter passed to it to be a file's name. It then simply reads the file and returns back its contents as its own output.
+If the parameter passed to [__*if*__](../tags-reference/if.html) tag is '1', it outputs anything contained between its start\_tag and end\_tag else it does not.<br/>
+[__*exists*__](../tags-reference/exists.html) expects the parameter passed to it to be a file's (or folder's) name. It tests if the given file/folder is actually present and if it is, it outputs '1', else it outputs '0'.<br/>
+Finally, the [__*embed*__](../tags-reference/embed.html) tag expects the parameter passed to it to be a file's name. It then simply reads the file and returns back its contents as its own output.
 
 With this background, let us try replacing the tags with their respective outputs.<br/>
-Always begin from the innermost tag, which here happens to be the [__*show*__](../../tags-reference/show.html) tag.<br/>
-We are already familiar with the [__*show*__](../../tags-reference/show.html) tag.
+Always begin from the innermost tag, which here happens to be the [__*show*__](../tags-reference/show.html) tag.<br/>
+We are already familiar with the [__*show*__](../tags-reference/show.html) tag.
 
 ```html
 <cms:show k_page_name/>
@@ -123,7 +123,7 @@ We are already familiar with the [__*show*__](../../tags-reference/show.html) ta
 \- the parameter being passed to it has no quotes around it so it must be a variable.<br/>
 The *k\_page\_name* variable is set by Couch everytime a page (see [**pages**](../cloned-pages.html)) is executed to hold the page's name. Thus if the page being currently executed is _about-us_, the value of *k\_page\_name* will be *about\_us* while if the page being executed is _contact-us_, *k\_page\_name* will be set to _contact-us_.
 
-Assuming that the current page is _about-us_, substituting [__*show*__](../../tags-reference/show.html) tag with its output will result in -
+Assuming that the current page is _about-us_, substituting [__*show*__](../tags-reference/show.html) tag with its output will result in -
 
 ```html
 <cms:if "<cms:exists "about-us.inc" />" >
@@ -131,7 +131,7 @@ Assuming that the current page is _about-us_, substituting [__*show*__](../../ta
 </cms:if>
 ```
 
-Assume that file named 'about-us.inc' does exist. In this case the output of [__*exists*__](../../tags-reference/exists.html) tag will be '1'. Substituting exists with its output results in -
+Assume that file named 'about-us.inc' does exist. In this case the output of [__*exists*__](../tags-reference/exists.html) tag will be '1'. Substituting exists with its output results in -
 
 ```html
 <cms:if "1" >
@@ -140,7 +140,7 @@ Assume that file named 'about-us.inc' does exist. In this case the output of [__
 ```
 
 Since the parameter being passed to _if_ is '1', it will go ahead and execute the contents within it and return the output.<br/>
-\- Resolve the contents of [__*if*__](../../tags-reference/if.html), using our substitution method -
+\- Resolve the contents of [__*if*__](../tags-reference/if.html), using our substitution method -
 
 ```html
 <cms:if "1" >
@@ -150,7 +150,7 @@ Since the parameter being passed to _if_ is '1', it will go ahead and execute th
 
 Suppose the sole content of _about-us.inc_ is -<br/>
 &lt;h1&gt;Hello I am About Us&lt;/h1&gt;,<br/>
-this will be the output of the [__*embed*__](../../tags-reference/embed.html) tag, so we end up being -
+this will be the output of the [__*embed*__](../tags-reference/embed.html) tag, so we end up being -
 
 ```html
 <cms:if "1" >

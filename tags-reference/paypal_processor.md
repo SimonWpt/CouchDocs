@@ -8,7 +8,7 @@ layout: default
 
 The **paypal\_processor** tag can be used to process PayPal IPN.
 
-Please see [**Core Concepts - PayPal**](../../concepts/paypal.html) for an in-depth discussion of this tag.
+Please see [**Core Concepts - PayPal**](../concepts/paypal.html) for an in-depth discussion of this tag.
 
 ## Parameters
 
@@ -54,7 +54,7 @@ Once this tag verifies that the transaction is valid, it sets an additional vari
 
 * k\_paypal\_success
 
-Apart from this variable, all the variables of the page representing the item being sold, which are normally available in the page's [**page-view**](../../concepts/variables-in-views.html), are also made available.
+Apart from this variable, all the variables of the page representing the item being sold, which are normally available in the page's [**page-view**](../concepts/variables-in-views.html), are also made available.
 
 If the transaction is deemed invalid, the following variable is set to notify this -
 

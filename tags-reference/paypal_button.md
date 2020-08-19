@@ -6,7 +6,7 @@ layout: default
 
 # paypal_button
 
-Please see [**Core Concepts - PayPal**](../../concepts/paypal.html) for a detailed discussion about this tag and its usage.
+Please see [**Core Concepts - PayPal**](../concepts/paypal.html) for a detailed discussion about this tag and its usage.
 
 ## Parameters
 
@@ -35,7 +35,7 @@ To use these images, set the _image_ parameter to a number ranging from 0 to 8\.
 
 The numbers represent the folllowing images -
 
-![](../../assets/img/contents/paypal_button.png)
+![](../assets/img/contents/paypal_button.png)
 
 ### processor
 

@@ -7,7 +7,7 @@ layout: default
 
 # type = 'relation'
 
-Please see [**Documentation - Core concepts - Relationships**](../../../../concepts/relationships.html) for a detailed explanation of this type of region.
+Please see [**Documentation - Core concepts - Relationships**](../../concepts/relationships.html) for a detailed explanation of this type of region.
 
 ## Parameters
 

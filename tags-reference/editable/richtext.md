@@ -25,7 +25,7 @@ An editable region of _richtext_ type can be defined this way -
 
 The code above will result in -
 
-![](../../../../assets/img/contents/editable-richtext-1.jpg)
+![](../../assets/img/contents/editable-richtext-1.jpg)
 
 <p class="notice">
     Any text enclosed between the opening and the closing tags will appear as the default text within the editor. If you do not wish to have any default text, simply make the **Editable** tag self-closing e.g.<br/>
@@ -160,7 +160,7 @@ Similarly, if the CSS rules are applicable to an element of a certain **class**,
 
 The toolbar above the editor contains a drop-down list that allows the user to apply some very generic formats to his content -
 
-![](../../../../assets/img/contents/editable-richtext-2.gif)
+![](../../assets/img/contents/editable-richtext-2.gif)
 
 [CKEditor](http://ckeditor.com/) provides a method to display **your** custom styles in a similar drop-down list.
 
@@ -203,7 +203,7 @@ Next we need to inform [CKEditor](http://ckeditor.com/) to use the elements defi
 
 The resulting drop-down list -
 
-![](../../../../assets/img/contents/editable-richtext-3.gif)
+![](../../assets/img/contents/editable-richtext-3.gif)
 
 <p class="success">Everytime you modify the JavaScript file, you might need to clear your browser's cache to make the editor pickup the changed file.</p>
 
@@ -229,7 +229,7 @@ This parameter can take one of the following four values
 
 results in -
 
-![](../../../../assets/img/contents/editable-richtext-4.gif)
+![](../../assets/img/contents/editable-richtext-4.gif)
 
 #### medium
 
@@ -242,7 +242,7 @@ results in -
 
 results in -
 
-![](../../../../assets/img/contents/editable-richtext-5.gif)
+![](../../assets/img/contents/editable-richtext-5.gif)
 
 <p class="notice">_Medium_ is the default value and hence if _toolbar_ parameter is omitted, this is what is used.</p>
 
@@ -257,7 +257,7 @@ results in -
 
 results in -
 
-![](../../../../assets/img/contents/editable-richtext-6.gif)
+![](../../assets/img/contents/editable-richtext-6.gif)
 
 #### custom
 
@@ -336,7 +336,7 @@ As a very simple (and unrealistic) example, here is a toolbar containing only tw
     type='richtext'/>
 ```
 
-![](../../../../assets/img/contents/editable-richtext-7.gif)
+![](../../assets/img/contents/editable-richtext-7.gif)
 
 A more practical example - here is how you can mimic the _medium_ type of toolbar discussed above.
 
@@ -357,7 +357,7 @@ A more practical example - here is how you can mimic the _medium_ type of toolba
     type='richtext' />
 ```
 
-![](../../../../assets/img/contents/editable-richtext-8.gif)
+![](../../assets/img/contents/editable-richtext-8.gif)
 
 **Points to note in the example above -**
 
@@ -367,7 +367,7 @@ Visually both might appear to be the same but when the toolbar needs to be broke
 Also note that you can force the toolbar to be break into a new row by specifying '|' twice (i.e. no buttons between two pipes - see how the group begining with the **cut** button has been forced into a new row).
 
 <p class="success">
-    **TIP** - if you find yourself reusing a custom toolbar at many places, instead of repeating the quite large chunk of code everywhere, use the [**Embed**](../../../embed.html) tag. Cut and paste the _value_ of the *custom\_toolbar* parameter (everything between the quotes) and save it in a file named, say, *my\_toolbar.inc*. Instruct the [**Embed**](../../../embed.html) tag to use this file.<br/>
+    **TIP** - if you find yourself reusing a custom toolbar at many places, instead of repeating the quite large chunk of code everywhere, use the [**Embed**](../../embed.html) tag. Cut and paste the _value_ of the *custom\_toolbar* parameter (everything between the quotes) and save it in a file named, say, *my\_toolbar.inc*. Instruct the [**Embed**](../../embed.html) tag to use this file.<br/>
     <br/>
     ```
 <cms:editable name='desc' label='Description'

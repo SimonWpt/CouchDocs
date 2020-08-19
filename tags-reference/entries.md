@@ -10,7 +10,7 @@ The **entries** tag is a special tag that works only within the **calendar** tag
 
 This tag enumerates all the pages published on the day being enumerated by the **days** tag. The pages will belong to the template specified by the _masterpage_ parameter of the calendar tag.
 
-Please see [**Core Concepts - Events Calendar**](../../concepts/events-calendar.html) for a working example of this tag in action.
+Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.html) for a working example of this tag in action.
 
 ## Parameters
 
@@ -28,7 +28,7 @@ If you simply require to display the names and links of the pages, the values co
 
 ## Variables
 
-As this tag iterates through the pages, at each iteration it sets all the variables that one normally finds set when that page is accessed in a _page-view_ (see [**Variables available in Views**](../../concepts/variables-in-views.html)).
+As this tag iterates through the pages, at each iteration it sets all the variables that one normally finds set when that page is accessed in a _page-view_ (see [**Variables available in Views**](../concepts/variables-in-views.html)).
 
 ## Related Tags
 

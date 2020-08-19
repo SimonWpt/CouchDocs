@@ -18,7 +18,7 @@ Pages of the two sections are related to each other in a way that a manufacturer
 
 Any relationship, necessarily, will involve two parties (actually the templates representing them). Taking the second example mentioned above, 'artists' and 'albums' are the two parties that are involved in the relationship (we'll assume the name of their respective templates to be 'artists.php' and 'albums.php').
 
-To define a relationship between the two templates, we use a new type of editable region introduced by Couch v1.3 - [**relation**](../../tags-reference/editable/relation.html).<br/>
+To define a relationship between the two templates, we use a new type of editable region introduced by Couch v1.3 - [**relation**](../tags-reference/editable/relation.html).<br/>
 Place the following code snippet in the 'artists.php' template.
 
 ```html
@@ -27,18 +27,18 @@ Place the following code snippet in the 'artists.php' template.
 
 Make the mandatory visit to the template as super-admin. Coming back to the admin-panel and editing any of artist.php's cloned pages will show us something like this -
 
-![](../../assets/img/contents/relationships-1.png)
+![](../assets/img/contents/relationships-1.png)
 
 As can be seen, Couch shows us a list of all the cloned pages of 'albums.php'.<br/>
 We can choose all the albums from this list that are related to the artist being edited.
 
 <p class="success">
-    By default, all the pages of the related template are show in the list. We can exert some control over which pages get listed (and how) by using the following parameters of the 'editable' tag of type [**relation**](../../tags-reference/editable/relation.html) -<br/>
+    By default, all the pages of the related template are show in the list. We can exert some control over which pages get listed (and how) by using the following parameters of the 'editable' tag of type [**relation**](../tags-reference/editable/relation.html) -<br/>
     <br/>
-    [**folder**](../../tags-reference/editable/relation.html#parameters)<br/>
-    [**include\_subfolders**](../../tags-reference/editable/relation.html#parameters)<br/>
-    [**orderby**](../../tags-reference/editable/relation.html#parameters)<br/>
-    [**order_dir**](../../tags-reference/editable/relation.html#parameters)
+    [**folder**](../tags-reference/editable/relation.html#parameters)<br/>
+    [**include\_subfolders**](../tags-reference/editable/relation.html#parameters)<br/>
+    [**orderby**](../tags-reference/editable/relation.html#parameters)<br/>
+    [**order_dir**](../tags-reference/editable/relation.html#parameters)
 </p>
 
 Important points to note in the code above -
@@ -82,7 +82,7 @@ The **reverse\_has** parameter simply specifies that a page of the template rela
 
 Returning back to the edit-panel we find that we still have a multi-select list but this list of 'albums' only shows the albums that are not associated with any other artist.
 
-![](../../assets/img/contents/relationships-2.png)
+![](../assets/img/contents/relationships-2.png)
 
 If we were to select any albums to associate them with the artist being edited and then move on to edit another artist, the albums we associated with the previous artist will not be available with this artist.
 
@@ -100,7 +100,7 @@ The **has** parameter specifies that the 'primary' template (the one this code i
 
 This is what the edit-panel shows now.
 
-![](../../assets/img/contents/relationships-3.png)
+![](../assets/img/contents/relationships-3.png)
 
 As can be seen, instead of a list with checkboxes allowing multiple choices, we now have a drop-down list that allows a single choice only.
 
@@ -129,7 +129,7 @@ This is how we define this type of relation -
 
 The resulting edit-panel shows a drop-down (allowing a single selection) of only those albums that are not yet associated with any other artist.
 
-![](../../assets/img/contents/relationships-4.png)
+![](../assets/img/contents/relationships-4.png)
 
 ## Displaying the related pages
 
@@ -139,8 +139,8 @@ while showing an 'album' page, display all the artists associated with this albu
 
 Couch provides two different tags to do this enumeration for us -
 
-* [**related\_pages**](../../tags-reference/related_pages.html)
-* [**reverse\_related\_pages**](../../tags-reference/reverse_related_pages.html)
+* [**related\_pages**](../tags-reference/related_pages.html)
+* [**reverse\_related\_pages**](../tags-reference/reverse_related_pages.html)
 
 ### related_pages
 
@@ -205,4 +205,4 @@ For example, the following code will get all related albums of John Lennon -
 </cms:pages>
 ```
 
-The 'related\_pages' and 'reverse\_related\_pages' tags are almost identical to the [**pages**](../../tags-reference/pages.html) tag we know so well. Just like the [**pages**](../../tags-reference/pages.html) tag, these two tags also make available all the variables associated with the (related) page being iterated. They also support almost [all the parameters](../../tags-reference/pages.html#parameters) that the [**pages**](../../tags-reference/pages.html) tag supports.
+The 'related\_pages' and 'reverse\_related\_pages' tags are almost identical to the [**pages**](../tags-reference/pages.html) tag we know so well. Just like the [**pages**](../tags-reference/pages.html) tag, these two tags also make available all the variables associated with the (related) page being iterated. They also support almost [all the parameters](../tags-reference/pages.html#parameters) that the [**pages**](../tags-reference/pages.html) tag supports.

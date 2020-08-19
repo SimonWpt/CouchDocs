@@ -6,7 +6,7 @@ layout: default
 
 # archives
 
-Please see [**Core Concepts - Archives**](../../concepts/using-archives.html) for an in-depth discussion of this tag.
+Please see [**Core Concepts - Archives**](../concepts/using-archives.html) for an in-depth discussion of this tag.
 
 ## Parameters
 
@@ -59,7 +59,7 @@ As this tag enumerates the archives, it sets a variable named *k\_count* to the 
 * k\_archive\_count
 * k\_count
 
-Please see [**Core Concepts - Archives**](../../concepts/using-archives.html) for details of these variables.
+Please see [**Core Concepts - Archives**](../concepts/using-archives.html) for details of these variables.
 
 ## Related Tags
 

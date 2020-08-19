@@ -8,7 +8,7 @@ layout: default
 
 Don't get put off by that programming term. Variable is simply a place that can hold different values at different times.
 
-You can use the Couch tag named [__*set*__](../../tags-reference/set.html) to place values within variables. For example the following snippet -
+You can use the Couch tag named [__*set*__](../tags-reference/set.html) to place values within variables. For example the following snippet -
 
 ```html
 <cms:set my_message='Hello World' />
@@ -23,7 +23,7 @@ For example, in the following snippet -
 <cms:show 'Hello' />
 ```
 
-\- we are passing 'Hello' as the parameter for [__*show*__](../../tags-reference/show.html) to display. If instead we do the following -
+\- we are passing 'Hello' as the parameter for [__*show*__](../tags-reference/show.html) to display. If instead we do the following -
 
 ```html
 <cms:show my_message />
@@ -39,7 +39,7 @@ The value can be changed anytime, thus -
 <cms:show my_message />
 ```
 
-\- [__*show*__](../../tags-reference/show.html) will now display 'Salut!'.
+\- [__*show*__](../tags-reference/show.html) will now display 'Salut!'.
 
 In the examples above, we set the variable ourselves manually.<br/>
 However, the variables that we'll be dealing with more often are those that we'll find automatically set for us. e.g. -
@@ -57,7 +57,7 @@ However, the variables that we'll be dealing with more often are those that we'l
     See: [Variables available in Views](../variables-in-views.html)<br/><br/>
 2.  A Paired tag usually sets certain variables that pertain to the task the tag does. These variables remain available only within the start-tag and the end-tag.<br/>
     <br/>
-    For example - we have already seen how the [__*repeat*__](../../tags-reference/repeat.html) tag simply repeats the contents enclosed within it the number of times specified by the _count_ parameter. At each iteration, the [__*repeat*__](../../tags-reference/repeat.html) tag sets a variable named *k\_count* that is set to the count of the current iteration.<br/>
+    For example - we have already seen how the [__*repeat*__](../tags-reference/repeat.html) tag simply repeats the contents enclosed within it the number of times specified by the _count_ parameter. At each iteration, the [__*repeat*__](../tags-reference/repeat.html) tag sets a variable named *k\_count* that is set to the count of the current iteration.<br/>
     <br/>
     ```
     <cms:repeat count='4'>

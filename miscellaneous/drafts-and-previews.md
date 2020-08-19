@@ -17,27 +17,27 @@ Each of the situation listed above can now easily be handled by creating the dra
 
 A draft of any published page can be created by accessing the 'Advanced settings' of the page and then clicking the 'Create Draft' button that now shows up there.
 
-![](../../assets/img/contents/drafts-1.png)
+![](../assets/img/contents/drafts-1.png)
 
 A draft is actually a separate page in itself that has its data copied over from the original page.
 
-![](../../assets/img/contents/drafts-2.png)
+![](../assets/img/contents/drafts-2.png)
 
 All the drafts are stored in a separate new section called drafts that shows up only if there are any available drafts in the system.
 
-![](../../assets/img/contents/drafts-3.png)
+![](../assets/img/contents/drafts-3.png)
 
 The drafts are internally linked to their original pages and can also be accessed from the following link that shows up alongside the original pages that have any drafts available.
 
-![](../../assets/img/contents/drafts-4.png)
+![](../assets/img/contents/drafts-4.png)
 
 The user can safely work on a draft page without disturbing the original page at all. He can save the draft just as he would save any of the regular pages. He can also preview the changes he makes to the draft.
 
-![](../../assets/img/contents/drafts-5.png)
+![](../assets/img/contents/drafts-5.png)
 
 Once he is satisfied with his changes, he can either choose to update the original page (this will move the data from the draft into the original page and then delete the draft itself)
 
-![](../../assets/img/contents/drafts-6.png)
+![](../assets/img/contents/drafts-6.png)
 
 or discard the draft.
 

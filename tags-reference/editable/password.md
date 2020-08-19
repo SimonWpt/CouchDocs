@@ -7,7 +7,7 @@ layout: default
 
 # type = 'password'
 
-Editable region of _password_ type is very similar to the [_text_](../../text.html) type. As with [_text_](../../text.html) type, for this type too Couch creates a single line textbox for data input. The only difference between the two is that anything being typed into an editable region of type _password_ will appear as '\*' (asterisks). This makes it suitable for entering passwords.
+Editable region of _password_ type is very similar to the [_text_](../text.html) type. As with [_text_](../text.html) type, for this type too Couch creates a single line textbox for data input. The only difference between the two is that anything being typed into an editable region of type _password_ will appear as '\*' (asterisks). This makes it suitable for entering passwords.
 
 An editable region of _password_ type can be defined this way -
 
@@ -22,7 +22,7 @@ An editable region of _password_ type can be defined this way -
 
 The code above will result in the following (with some password typed in) -
 
-![](../../../../assets/img/contents/editable-password.gif)
+![](../../assets/img/contents/editable-password.gif)
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 

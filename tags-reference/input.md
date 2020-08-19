@@ -6,7 +6,7 @@ layout: default
 
 # input
 
-Please see [**Core Concepts - Form**](../../concepts/forms.html) for an in-depth discussion about this tag.
+Please see [**Core Concepts - Form**](../concepts/forms.html) for an in-depth discussion about this tag.
 
 ## Parameters
 
@@ -46,7 +46,7 @@ Type of the input. Valid values are -
 * dropdown
 * captcha
 
-Please see [**Core Concepts - Form**](../../concepts/forms.html) for details about these types.
+Please see [**Core Concepts - Form**](../concepts/forms.html) for details about these types.
 
 ### id
 
@@ -91,7 +91,7 @@ Inline CSS styling.
 
 ### reload_text
 
-The _format_ and *reload\_text* parameters pertain exclusively to input of _captcha_ type. Please see [**Core Concepts - Form**](../../concepts/forms.html) where the _captcha_ type of input, along with its parameters, is described in detail.
+The _format_ and *reload\_text* parameters pertain exclusively to input of _captcha_ type. Please see [**Core Concepts - Form**](../concepts/forms.html) where the _captcha_ type of input, along with its parameters, is described in detail.
 
 ## Variables
 

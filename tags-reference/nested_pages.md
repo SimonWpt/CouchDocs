@@ -6,13 +6,13 @@ layout: default
 
 # nested_pages
 
-The **nested\_pages** tag is used to list [nested-pages](../../concepts/nested-pages-aka-menu-maker.html).
+The **nested\_pages** tag is used to list [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
 
-Since the primary purpose of nested-pages (as explained in the [Core Concepts](../../concepts/nested-pages-aka-menu-maker.html)) is to create a hierarchy of pages that can be represented as the site's menu, you'll find that usually the '[menu](../menu.html)' tag will suffice for the purpose of creating a menu.<br/>
+Since the primary purpose of nested-pages (as explained in the [Core Concepts](../concepts/nested-pages-aka-menu-maker.html)) is to create a hierarchy of pages that can be represented as the site's menu, you'll find that usually the '[menu](../menu.html)' tag will suffice for the purpose of creating a menu.<br/>
 However, sometimes you'll need more control over the generated menu than what the '[menu](../menu.html)' tag offers.<br/>
 For such cases, the 'nested\_pages' tag can be used as it is a lower level tag (in fact, the '[menu](../menu.html)' tag uses the 'nested\_pages' internally).
 
-To illustrate the use of 'nested\_pages', we'll use the same sample hierarchy of elements that we used in the '[folders](../../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.<br/>
+To illustrate the use of 'nested\_pages', we'll use the same sample hierarchy of elements that we used in the '[folders](../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.<br/>
 We'll assume that a template named 'index.php' has been used to create the nested-pages.
 
 ```html
@@ -291,7 +291,7 @@ If the 'include\_custom\_fields' is set to '1', all the values within the editab
 To list the nested-pages in conventional manner (i.e. the way the 'pages' tag lists the regular cloned pages), set this parameter to '1'.<br/>
 One the 'paginate' parameter is set -<br/>
 **a.** 'extended\_info' is automatically turned off so information about the changes in hierarchy levels in no longer available.<br/>
-**b.** All the variables that help in creating the pagination buttons become available (see [Pagination](../../concepts/pagination.html))<br/>
+**b.** All the variables that help in creating the pagination buttons become available (see [Pagination](../concepts/pagination.html))<br/>
 **c.** The 'limit', 'offset' and 'startcount' parameters described below become effective.
 
 ### limit
@@ -307,7 +307,7 @@ it can be used to skip any number of pages before beginning the listing.
 ### startcount
 
 This parameter takes effect only when the 'paginate' parameter is set to '1'.<br/>
-The k\_count, k\_record\_from, k\_current\_record and k\_record\_to variables (see [Pagination](../../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
+The k\_count, k\_record\_from, k\_current\_record and k\_record\_to variables (see [Pagination](../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
 
 ## Variables
 
@@ -345,7 +345,7 @@ If the 'extended\_info' parameter is set to '1', the following variables also ge
 
 If the 'include\_custom\_fields' parameter is set to '1', all the values within the editable regions of each page are made available as variables named after the regions.
 
-If the 'paginate' parameter is set to '1', variables that help in creating the pagination buttons become available (see [Pagination](../../concepts/pagination.html))
+If the 'paginate' parameter is set to '1', variables that help in creating the pagination buttons become available (see [Pagination](../concepts/pagination.html))
 
 ## Related Tags
 

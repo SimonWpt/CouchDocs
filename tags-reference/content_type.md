@@ -15,7 +15,7 @@ As an example, the RSS feed requires it content type to be set as '_text/xml_' f
 <cms:content_type 'text/xml' />
 ```
 
-Please see [**Core Concepts - RSS Feeds**](../../concepts/rss-feeds.html) for an example of the usage of this tag.
+Please see [**Core Concepts - RSS Feeds**](../concepts/rss-feeds.html) for an example of the usage of this tag.
 
 ## Parameters
 

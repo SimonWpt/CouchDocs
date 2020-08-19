@@ -126,6 +126,6 @@ e.g. _http&#58;//www.mysite.com/blog/_
 
 <p class="notice">**IMP.** Notice that for cloneable templates, the contents of the editable regions associated with a page are made available only in page view.</p>
 
-<p class="success">**TIP:** You can use the Couch tags - [__*dump*__](../../tags-reference/dump.html) and [__*dump\_all*__](../../tags-reference/dump_all.html) to see for youself all the variables with their current values.</p>
+<p class="success">**TIP:** You can use the Couch tags - [__*dump*__](../tags-reference/dump.html) and [__*dump\_all*__](../tags-reference/dump_all.html) to see for youself all the variables with their current values.</p>
 
 Next is [**Listing Pages**](../listing-pages.html)

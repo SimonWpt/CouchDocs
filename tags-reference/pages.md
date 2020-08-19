@@ -18,7 +18,7 @@ layout: default
 \- the snippet given above will fetch all pages cloned out of _blog.php_ template.<br/>
 The _masterpage_ parameter stands for the template's name. If this parameter is omitted, the name of the current template (i.e. the template this snippet is placed in) will be used.
 
-This tag iterates through each of the fetched page and makes available all the data associated with the page as variables. The variables are exactly the same as those made available had the page been accessed discretly via its URL (i.e. in its [_page-view_](../../concepts/variables-in-views.html)).
+This tag iterates through each of the fetched page and makes available all the data associated with the page as variables. The variables are exactly the same as those made available had the page been accessed discretly via its URL (i.e. in its [_page-view_](../concepts/variables-in-views.html)).
 
 **Pages** tag supports a number of parameters that can be used to fine tune the actual pages that get fetched.
 
@@ -110,7 +110,7 @@ This example would fetch five pages cloned from blog.php. (Since no 'orderby' an
 <cms:pages masterpage='blog.php' limit='5' paginate='1'></cms:pages>
 ```
 
-This example would fetch ALL pages cloned from blog.php but show only 5 at one time. To move to the next 5 or the previous 5 pages, pagination code has to be used (see [**Pagination**](../../concepts/pagination.html)).
+This example would fetch ALL pages cloned from blog.php but show only 5 at one time. To move to the next 5 or the previous 5 pages, pagination code has to be used (see [**Pagination**](../concepts/pagination.html)).
 
 ### offset
 
@@ -126,7 +126,7 @@ This example would fetch pages cloned from blog.php after skipping the first two
 <cms:pages masterpage='blog.php' startcount='0'></cms:pages>
 ```
 
-The *k\_count*, *k\_record\_from*, *k\_current\_record* and *k\_record\_to* variables (see [**Pagination**](../../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
+The *k\_count*, *k\_record\_from*, *k\_current\_record* and *k\_record\_to* variables (see [**Pagination**](../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
 
 ### folder
 
@@ -152,7 +152,7 @@ By default Couch will only fetch pages that lie DIRECTLY within the given folder
 To include the pages that are within the subfolders of the given folder(s), set the *include\_subfolders* parameter as well.<br/>
 See below.
 
-In the _folder-view_ (see [**Views**](../../concepts/views.html)), the *k\_folder\_name* variable is set to the name of the current folder. It can be used to list the right pages -
+In the _folder-view_ (see [**Views**](../concepts/views.html)), the *k\_folder\_name* variable is set to the name of the current folder. It can be used to list the right pages -
 
 ```html
 <cms:pages folder=k_folder_name include_subfolders='1'></cms:pages>
@@ -192,7 +192,7 @@ The parameters *start\_on* and *stop\_before* can be combined to fetch pages pub
 
 This example would fetch all pages cloned from blog.php that have been published on or after the first of February, 2010 but before the first of March, 2010\. (i.e. only during the month of February of 2010)
 
-In the _archive-view_ (see [**Views**](../../concepts/views.html)), the *k\_archive\_date* and the *k\_next\_archive\_date* are set to the first day of the archive and the first day of the next archive (month). These can be used to easily fetch pages that belong to only that archive period -
+In the _archive-view_ (see [**Views**](../concepts/views.html)), the *k\_archive\_date* and the *k\_next\_archive\_date* are set to the first day of the archive and the first day of the next archive (month). These can be used to easily fetch pages that belong to only that archive period -
 
 ```html
 <cms:pages start_on=k_archive_date stop_before=k_next_archive_date ></cms:pages>
@@ -379,10 +379,10 @@ The following comparisions can be done with numeric fields -
 
 ## Variables
 
-As this tag iterates through all the fetched pages, at each iteration it sets all the variables that one normally finds set when that page is accessed in a _page-view_ (see [**Variables available in Views**](../../concepts/variables-in-views.html)).<br/>
+As this tag iterates through all the fetched pages, at each iteration it sets all the variables that one normally finds set when that page is accessed in a _page-view_ (see [**Variables available in Views**](../concepts/variables-in-views.html)).<br/>
 Apart from this, several variables are also set that indicate the current status of the loop.<br/>
 These variables can be used to show the fetched pages in a paginated manner.<br/>
-See [**Pagination**](../../concepts/pagination.html).
+See [**Pagination**](../concepts/pagination.html).
 
 ## Related Tags
 

@@ -37,11 +37,11 @@ To create a thumbnail automatically for any image that gets selected into it, we
 
 The code above will result in something like this below the parent _image_ type editable region -
 
-![](../../../../assets/img/contents/editable-thumbnail-1.jpg)
+![](../../assets/img/contents/editable-thumbnail-1.jpg)
 
 Once the user selects an image into the main image region (and saves the page), the thumbnail gets created automatically -
 
-![](../../../../assets/img/contents/editable-thumbnail-2.jpg)
+![](../../assets/img/contents/editable-thumbnail-2.jpg)
 
 Anytime the user changes the main image (and saves the changes), the thumbnail automatically reflects the changes.
 
@@ -84,7 +84,7 @@ Specifying a single dimension only will create a thumbnail with that dimension o
 
 | Parent Image (200 x 300) | Thumbnail (100 x 150) | Remarks |
 | :----------------------- | :-------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-thumbnail-3.jpg) | ![](../../../../assets/img/contents/editable-thumbnail-4.jpg) | The width was made 100px and the height was proportionately scaled to 150px so that the original proportion between the dimensions is retained. |
+| ![](../../assets/img/contents/editable-thumbnail-3.jpg) | ![](../../assets/img/contents/editable-thumbnail-4.jpg) | The width was made 100px and the height was proportionately scaled to 150px so that the original proportion between the dimensions is retained. |
 
 Specifying both the dimensions will create a thumbnail with each dimension of the specified values. The original proportion between the dimensions is preserved and hence this could lead to cropping off of any dimension that overshoots the specified value in the attempt to retain proportion. e.g.
 
@@ -99,15 +99,15 @@ Specifying both the dimensions will create a thumbnail with each dimension of th
 
 | Parent Image (200 x 300) | Thumbnail (100 x 80) | Remarks |
 | :----------------------- | :------------------- | :------ |
-| ![](../../../../assets/img/contents/editable-thumbnail-5.jpg) | ![](../../../../assets/img/contents/editable-thumbnail-6.jpg) | The width was made 100px and the height was proportionately scaled resulting in a dimension of 150px. Since a height of only 80px was asked for, the surplus 70px were cropped off (35px equally from both sides with the two images aligned in the center). |
+| ![](../../assets/img/contents/editable-thumbnail-5.jpg) | ![](../../assets/img/contents/editable-thumbnail-6.jpg) | The width was made 100px and the height was proportionately scaled resulting in a dimension of 150px. Since a height of only 80px was asked for, the surplus 70px were cropped off (35px equally from both sides with the two images aligned in the center). |
 
 As is obvious from the second example above, if both the dimensions are specified and the thumbnail's ratio does not match that of the parent image, the cropping that inevitably occurs can sometimes lead to unacceptable results. In the thumbnail above the most important part of the image has been cropped off. This can be rectified by asking Couch to recreate the thumbnail but this time aligning it to the top of the parent image instead of the default center.
 
-![](../../../../assets/img/contents/editable-thumbnail-7.jpg)
+![](../../assets/img/contents/editable-thumbnail-7.jpg)
 
 The following is the resulting thumbnail -
 
-![](../../../../assets/img/contents/editable-thumbnail-8.jpg)
+![](../../assets/img/contents/editable-thumbnail-8.jpg)
 
 ### enforce_max
 
@@ -138,7 +138,7 @@ You can set _quality_ from 0 (worst quality, smaller file) to 100 (best quality,
 
 Setting show\_preview to '1' makes Couch display a preview of the created thumbnail (as visible in the examples above). Omitting this parameter or explicitly setting it to '0' will make Couch display only a link to the thumbnail instead of the preview image.
 
-![](../../../../assets/img/contents/editable-thumbnail-9.gif)
+![](../../assets/img/contents/editable-thumbnail-9.gif)
 
 ### preview_width
 

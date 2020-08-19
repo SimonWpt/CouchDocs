@@ -9,7 +9,7 @@ layout: default
 Tag **thumbnail** can be used as an alternative to editable region of type [**thumbnail**](../editable/thumbnail.html).<br/>
 Unlike the editable region, this method is a simple tag and does not create anything to edit within the admin-panel and thus might (in certain situations) prove to be more flexible and dynamic than the former.
 
-The immediate reason for the introduction of this tag is to use it with [**repeatable regions**](../../concepts/repeatable-regions.html) as its editable region counterpart does not support being repeated.
+The immediate reason for the introduction of this tag is to use it with [**repeatable regions**](../concepts/repeatable-regions.html) as its editable region counterpart does not support being repeated.
 
 ### Usage
 

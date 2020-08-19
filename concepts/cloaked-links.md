@@ -12,13 +12,13 @@ In such cases, you'd additionaly also wish to make this access temporary i.e. th
 
 A similar requirement is as follows - You have a eBay affiliate website which lists several eBay products. A visitor upon clicking a product link is redirected to the eBay site. However, you do not wish the links displayed on your website to reveal to anyone, prima-fascie, that they'll lead to eBay.
 
-You can use Couch's [__*cloak\_url*__](../../tags-reference/cloak_url.html) tag to do all the above very easily.
+You can use Couch's [__*cloak\_url*__](../tags-reference/cloak_url.html) tag to do all the above very easily.
 
 <p class="notice">This feature was added to augment the [**PayPal button**](../paypal.html) functionality by providing secure and controlled access to the downloadable digital products being sold. However it can be used with any other links that have similar needs.</p>
 
 ### CLOAKING LINKS TO WEBPAGES
 
-To get a gist of [__*cloak\_url*__](../../tags-reference/cloak_url.html), suppose following is a link in your template -
+To get a gist of [__*cloak\_url*__](../tags-reference/cloak_url.html), suppose following is a link in your template -
 
 ```html
 <a href="http://www.google.com" >Visit Site</a>
@@ -38,10 +38,10 @@ In the snippet above we set the _redirect_ parameter to '1' because the link bei
 
 ### CLOAKING LINKS OF FILES
 
-Let us now see how to make [__*cloak\_url*__](../../tags-reference/cloak_url.html) work with physical files.
+Let us now see how to make [__*cloak\_url*__](../tags-reference/cloak_url.html) work with physical files.
 
 <p class="notice">
-    **IMP.** - While the use of [__*cloak\_url*__](../../tags-reference/cloak_url.html) with files will hide their real locations by obfuscating the links, you'll also want to ensure that the files are not directly accessible to anyone who happens to know their real locations (e.g. by intelligent guesswork)- one way of doing this would be by using the .htaccess file.<br/>
+    **IMP.** - While the use of [__*cloak\_url*__](../tags-reference/cloak_url.html) with files will hide their real locations by obfuscating the links, you'll also want to ensure that the files are not directly accessible to anyone who happens to know their real locations (e.g. by intelligent guesswork)- one way of doing this would be by using the .htaccess file.<br/>
     Create a file named .htaccess, put the following lines into it and place it within the folder that will house the protected files.<br/>
     <br/>
     ```
@@ -72,7 +72,7 @@ Placing the following snippet in your template -
 ### FORCING DOWNLOAD
 
 If the file cloaked above was a zip file, the browser would have displayed the familiar dialog-box prompting for the download location.<br/>
-This is because [__*cloak\_url*__](../../tags-reference/cloak_url.html) tries to figure out the mime type of the linked file and accordingly asks the browser to either display the file directly or prompt for download.
+This is because [__*cloak\_url*__](../tags-reference/cloak_url.html) tries to figure out the mime type of the linked file and accordingly asks the browser to either display the file directly or prompt for download.
 
 If you'd rather have the download box shown for all types of files, set the *force\_download* parameter to '1'.<br/>
 Thus the following link will always force the user to download the image file -

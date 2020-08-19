@@ -8,7 +8,7 @@ layout: default
 
 The **days** tag works only within the **weeks** tag and enumerates all the seven days of each week.
 
-Please see [**Core Concepts - Events Calendar**](../../concepts/events-calendar.html) for a working example of this tag.
+Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.html) for a working example of this tag.
 
 ## Parameters
 

@@ -34,7 +34,7 @@ An editable region of _file_ type can be defined this way -
 
 The code above will result in -
 
-![](../../../../assets/img/contents/editable-file.gif)
+![](../../assets/img/contents/editable-file.gif)
 
 Clicking the 'Browse Server' button will bring up a window which can be used to browse previously uploaded files on the server or upload a new file from the local machine.
 

@@ -6,7 +6,7 @@ layout: default
 
 # Pagination
 
-[__*Pages*__](../../tags-reference/pages.html), [__*search*__](../../tags-reference/search.html) and [__*comments*__](../../tags-reference/comments.html) tags can fetch many more items than that set by the _limit_ parameter.<br/>
+[__*Pages*__](../tags-reference/pages.html), [__*search*__](../tags-reference/search.html) and [__*comments*__](../tags-reference/comments.html) tags can fetch many more items than that set by the _limit_ parameter.<br/>
 In such cases, it is normal to display the items in a paginated manner i.e. split across several pages with navigational buttons provided to access the pages.<br/>
 These tags, apart from the variables set to describe the current item being iterated through, set several variables that provide information about the current status of the tag's loop. Many of these variables can be used to display the fetched items in a paginated fashion.
 
@@ -18,7 +18,7 @@ To explain these variables, we'll use the following snippet -
 </cms:pages>
 ```
 
-<p class="notice">Although we are using the example of a [__*pages*__](../../tags-reference/pages.html) tag to explain pagination, please keep in mind that the following discussion holds equally good for the [__*search*__](../../tags-reference/search.html) and [__*comments*__](../../tags-reference/comments.html) tags as well.</p>
+<p class="notice">Although we are using the example of a [__*pages*__](../tags-reference/pages.html) tag to explain pagination, please keep in mind that the following discussion holds equally good for the [__*search*__](../tags-reference/search.html) and [__*comments*__](../tags-reference/comments.html) tags as well.</p>
 
 Suppose a total of 23 records have been fetched by the given snippet.<br/>
 Since the limit has been set to 10, splitting up the total in chunks of 10 records will result in requiring 3 pages to display all the records.
@@ -115,7 +115,7 @@ Link to the previous page (if any)
 </cms:pages>
 ```
 
-Instead of manually coding the 'next' and 'prev' buttons for navigating through the pages, the [__*paginator*__](../../tags-reference/paginator.html) tag can be used instead -
+Instead of manually coding the 'next' and 'prev' buttons for navigating through the pages, the [__*paginator*__](../tags-reference/paginator.html) tag can be used instead -
 
 ```html
 <cms:pages masterpage='blog.php' limit='10' paginate='1'>
@@ -133,7 +133,7 @@ Instead of manually coding the 'next' and 'prev' buttons for navigating through 
 </cms:pages>
 ```
 
-If the [__*paginator*__](../../tags-reference/paginator.html) tag is used to generate the navigation buttons, the following CSS code may be used to properly style the buttons -
+If the [__*paginator*__](../tags-reference/paginator.html) tag is used to generate the navigation buttons, the following CSS code may be used to properly style the buttons -
 
 ```html
 /*
@@ -183,6 +183,6 @@ div.pagination span.page_disabled {
 * span.elipsis {zoom:100%}
 ```
 
-The following is a sample output of the [__*paginator*__](../../tags-reference/paginator.html) tag
+The following is a sample output of the [__*paginator*__](../tags-reference/paginator.html) tag
 
-![](../../assets/img/contents/pagination.png)
+![](../assets/img/contents/pagination.png)

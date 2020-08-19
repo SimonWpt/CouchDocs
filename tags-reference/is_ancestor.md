@@ -15,7 +15,7 @@ Outputs '1' if true, else outputs '0'. This makes it possible to use this tag wi
 </cms:if>
 ```
 
-Please see [**Core Concepts - Folders**](../../concepts/using-folders.html#parents-and-children) for more info.
+Please see [**Core Concepts - Folders**](../concepts/using-folders.html#parents-and-children) for more info.
 
 ## Parameters
 

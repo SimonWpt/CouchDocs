@@ -26,7 +26,7 @@ will output either '1' or '0' depending on whether the file 'contact.inc' is pre
     will look for 'contact.inc' file within a folder named 'common' that resides within the 'couch/snippets' folder. Whereas<br/>
     <br/>
     ```
-<cms:exists "../../common/contact.inc" />
+<cms:exists "../common/contact.inc" />
     ```
     will move up through the folder hierarchy (the first '../' will move into the 'couch' folder while the next '../'  will move into the website folder within which 'couch' folder resides) and search for the file within a folder named 'common' residing in the main website folder.
 </p>

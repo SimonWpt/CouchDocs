@@ -17,7 +17,7 @@ We handle the second kind of pages by using a separate template for each of such
 
 Very often we find that the two kind of pages mentioned have an hierarchical relation with each other e.g. the following could be the site-map of a typical website -
 
-![](../../assets/img/contents/nested-pages-1.png)
+![](../assets/img/contents/nested-pages-1.png)
 
 The hierarchical relation between the pages usually manifests itself in these ways -<br/>
 **1\.** In the menu - where the hierarchical structure is represented by having menus that in turn have submenus.<br/>
@@ -70,38 +70,38 @@ The key is that we additionally also declare this clonable template as supportin
 <cms:template clonable='1' nested_pages='1'> ... </cms:template>
 ```
 
-![](../../assets/img/contents/nested-pages-2.png)
+![](../assets/img/contents/nested-pages-2.png)
 
 That is it. Define all required editable regions and follow it all up with the mandatory visit to the template while logged-in as super-admin to add the template in Couch.<br/>
 Returning back to the admin-panel we'll find that, as happens with regular templates, Couch creates a default cloned page for the template.
 
-![](../../assets/img/contents/nested-pages-3.png)
+![](../assets/img/contents/nested-pages-3.png)
 
 We can rename the default page to create our first nested-page.
 
-![](../../assets/img/contents/nested-pages-4.png)
+![](../assets/img/contents/nested-pages-4.png)
 
 So far everything is exactly the same as happens with the regular cloned pages.<br/>
 Create another cloned page and edit it to find the first difference.
 
-![](../../assets/img/contents/nested-pages-5.png)
+![](../assets/img/contents/nested-pages-5.png)
 
 Nested-pages get an additional system field - a dropdown that lists all the existing pages of the same template.<br/>
 We can choose to place the page being created/edited below another page. We have only one existing page so far so that is the only entry available to choose.
 
-![](../../assets/img/contents/nested-pages-6.png)
+![](../assets/img/contents/nested-pages-6.png)
 
 Place the new second page below the first one we created and save.<br/>
 Create a third page in a similar fashion and also place it below the first page. So now the first page becomes the parent of the next two pages.
 
 The admin page that lists cloned nested-pages looks a little different than what we are used to seeing.
 
-![](../../assets/img/contents/nested-pages-7.png)
+![](../assets/img/contents/nested-pages-7.png)
 
 You'll find that Couch indicates the hierarchical relation between the pages by using indentation.<br/>
 Also notice that the two sibling pages at the same level have these little arrows added. You can use them to easily change their display order below their parent.
 
-![](../../assets/img/contents/nested-pages-8.png)
+![](../assets/img/contents/nested-pages-8.png)
 
 Also there is no dropdown showing the folders (as nested-pages do not support and actually ignore any folders defined for the template).
 
@@ -115,11 +115,11 @@ Let us now put the nested-pages feature into action by using it to implement the
 
 Please take a look at the proposed site-map again.
 
-![](../../assets/img/contents/nested-pages-9.png)
+![](../assets/img/contents/nested-pages-9.png)
 
 As we already mentioned, the blog and portfolio sections can be implemented using the regular cloned pages.
 
-![](../../assets/img/contents/nested-pages-10.png)
+![](../assets/img/contents/nested-pages-10.png)
 
 Get them done first using clonable templates e.g. blog.php and portfolio.php.
 
@@ -128,7 +128,7 @@ Get them done first using clonable templates e.g. blog.php and portfolio.php.
 With those sections done we can move on to the isolated standalone pages.<br/>
 It is these pages that we'll implement using the nested-pages feature.
 
-![](../../assets/img/contents/nested-pages-11.png)
+![](../assets/img/contents/nested-pages-11.png)
 
 This is the plan -<br/>
 We'll declare our index.php as clonable (and as supporting nested-page) and then create all the standalone pages as cloned pages of index.php.<br/>
@@ -160,7 +160,7 @@ This is all staple stuff we use with cloned pages. I am repeating it here to bri
 
 Moving on, we now define the editable regions for index.php. Since all the cloned pages will share these editable regions, we'll create one that can be generically used in all the stand-alone pages. We'll create only a single region of type richtext and name it 'content'.
 
-![](../../assets/img/contents/nested-pages-12.png)
+![](../assets/img/contents/nested-pages-12.png)
 
 <p class="success">Most of the standalone pages are usually similar and can share the same template and editable regions but what happens when one of them happens to differ from the rest (e.g. contact-us page will usually have a different markup than the others)?. Please read on. We'll illustrate how to handle that a little further down.</p>
 
@@ -169,7 +169,7 @@ With the preparations done, make the mandatory visit to index.php as super-admin
 Rest should be easy. Simply create a cloned page for each of the standalone pages. Use the 'Parents' dropdown list to set the appropriate parents and use the up/down arrows to set the order of their appearance.<br/>
 Once we are through, this is how our tree should look like -
 
-![](../../assets/img/contents/nested-pages-13.png)
+![](../assets/img/contents/nested-pages-13.png)
 
 Fine, but if we are supposed to use this tree structure to create the site's menu - where are the 'blog', 'portfolio' and the 'home' items?<br/>
 This brings us to a feature of nested-pages that is not shared by the regular pages.
@@ -183,30 +183,30 @@ When one visits a nested-page that is acting as a pointer, instead of seeing the
 Try this out - we already have a discrete 'portfolio' section. Let us suppose its URL is _http&#58;//www.yoursite.com/portfolio/_ (assuming the template is 'portfolio.php' and prettyURLs are turned on).<br/>
 To assimilate this section into the hierarchical tree of nested-pages that we have created so far, create a new cloned page of 'index.php' and name it 'portfolio'. Set the 'what-we-do' page as its parent to end up having this structure -
 
-![](../../assets/img/contents/nested-pages-14.png)
+![](../assets/img/contents/nested-pages-14.png)
 
 The new page is now part of the hierarchy and can be accessed as _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_.<br/>
 Now for the fun part - edit this nested 'portfolio' page. Click on the 'Advanced settings'. You'll see that nested-pages have some new options in their advanced settings.
 
-![](../../assets/img/contents/nested-pages-15.png)
+![](../assets/img/contents/nested-pages-15.png)
 
 We'll discuss them in detail when we create the menu - what we are interested in for now is the 'Points to another page' option.
 
-![](../../assets/img/contents/nested-pages-16.png)
+![](../assets/img/contents/nested-pages-16.png)
 
 Click on this to set the check box. Close the "Advanced settings' dropdown. You'll see that the main body of the edit page now no longer shows the editable regions defined for the template. Instead this is what gets shown -
 
 Before:
 
-![](../../assets/img/contents/nested-pages-17.png)
+![](../assets/img/contents/nested-pages-17.png)
 
 After:
 
-![](../../assets/img/contents/nested-pages-18.png)
+![](../assets/img/contents/nested-pages-18.png)
 
 Paste the URL of the actual portfolio section into the textbox
 
-![](../../assets/img/contents/nested-pages-19.png)
+![](../assets/img/contents/nested-pages-19.png)
 
 <p class="error">**IMP:** always get the URL of any section being pointed to by visiting it and copying its URL from the address bar of the browser.</p>
 
@@ -227,7 +227,7 @@ A slight modification to the previous example should make the concept of masquer
 
 Edit the nested 'portfolio' page we used above. This time, instead of the previously chosen 'Redirects' method, choose 'Masquerades'.
 
-![](../../assets/img/contents/nested-pages-20.png)
+![](../assets/img/contents/nested-pages-20.png)
 
 Remember that the canonical URL of this nested-page is _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_ and we are making it point to a separate portfolio section with the canonical URL of _http&#58;//www.yoursite.com/portfolio/_ (with prettyURLs enabled).
 
@@ -255,13 +255,13 @@ With the 'pointer page' concept understood, it should be easy to see how a menu 
 Create a similar pointer-page for the 'blog' section and another one for the 'home' section.<br/>
 Remember that the 'home' section' is actually a 'view' (as opposed to being a 'page'). That is perfectly okay. Just paste in the home page's URL _http&#58;//www.yoursite.com/_ in the 'points to' textbox. Uncheck the 'Mark as selected for all pages below this link' (this is important - we'll explain why a little later. For now just be sure to uncheck it).
 
-![](../../assets/img/contents/nested-pages-21.png)
+![](../assets/img/contents/nested-pages-21.png)
 
 Visit and page and it will dutifully redirect to the site's home page.
 
 The site structure we now have looks like this -
 
-![](../../assets/img/contents/nested-pages-22.png)
+![](../assets/img/contents/nested-pages-22.png)
 
 Notice how the pointer pages have a 'hand' icon indicating that they are pointers. Also that you can access the pointed sections directly from the links that appear alongside.
 
@@ -272,17 +272,17 @@ In the tree structure that we have now, all the standalone pages share the same 
 Such pages can be implemented using the same method that was used with the 'portfolio' and 'blog' sections above.<br/>
 Implement the 'contact-us' page as a section in itself by using a separate non-clonable template, say named 'contact-us.php' -
 
-![](../../assets/img/contents/nested-pages-23.png)
+![](../assets/img/contents/nested-pages-23.png)
 
 Edit the nested-page named 'contact-us' (_http&#58;//www.yoursite.com/about-us/contact-us/_) that we have in our tree and make it a pointer page masquerading as the 'contact-us.php' we implemented above -
 
-![](../../assets/img/contents/nested-pages-24.png)
+![](../assets/img/contents/nested-pages-24.png)
 
 Visit _http&#58;//www.yoursite.com/about-us/contact-us/_ and the contents of the original _http&#58;//www.yoursite.com/contact-us/_ should appear.
 
 Our hierarchical tree structure is now complete.
 
-![](../../assets/img/contents/nested-pages-25.png)
+![](../assets/img/contents/nested-pages-25.png)
 
 What remains now is to make Couch automatically generate a menu for the site that reflects this hierarchy.
 
@@ -290,7 +290,7 @@ What remains now is to make Couch automatically generate a menu for the site tha
 
 Typically, menu and breadcrumbs are the two elements on a web page that reflect the hierarchical structure of the website.<br/>
 The tree we created above using nested-pages contains all the information that is needed to create such menus and breadcrumbs.<br/>
-To help us with this task, Couch now has three new tags - '[nested\_pages](../../tags-reference/nested_pages.html)', '[menu](../../tags-reference/menu.html)' and '[nested\_crumbs](../../tags-reference/nested_crumbs.html)' that can iterate through our tree and output the desired markup.<br/>
+To help us with this task, Couch now has three new tags - '[nested\_pages](../tags-reference/nested_pages.html)', '[menu](../tags-reference/menu.html)' and '[nested\_crumbs](../tags-reference/nested_crumbs.html)' that can iterate through our tree and output the desired markup.<br/>
 'nested\_pages' is a rather low-level (but very powerful) tag that can be used to iterate through the hierarchy of nested-pages and output just about any kind of markup. The 'menu' and 'nested\_crumbs' are actually just thin veneers around the 'nested\_pages' tag but can be used to very quickly generate the typical markup associated with menus and breadcrumbs respectively.
 
 More often than not, you'll find the 'menu' and 'nested\_crumbs' tags more than sufficient for working with typical menus and breadcrumbs of a website and will rarely need to resort to using 'nested\_pages' tag directly.<br/>
@@ -333,7 +333,7 @@ Each of the nested-page we had in the tree is represented by a menu-item using t
 
 Each nested-page has certain settings in its 'Advanced Settings' that may be used to control its appearance in the menu markup generated by the 'menu' tag.
 
-![](../../assets/img/contents/nested-pages-26.png)
+![](../assets/img/contents/nested-pages-26.png)
 
 * Show in menu
 * Menu Text
@@ -406,7 +406,7 @@ Finally, embed the menu snippet within each of our templates by placing the foll
 
 Visit the site and this is the menu that should appear -
 
-![](../../assets/img/contents/nested-pages-27.png)
+![](../assets/img/contents/nested-pages-27.png)
 
 Play around with this menu and you'll notice that not only does it automatically highlight the page being visited but also all the parent pages above the current page (if there are any). For example, in the image above, the page being visited is 'Testimonials'. As can be seen, both the parent pages of it are also highlighted.<br/>
 By default, the 'menu' tag applies the classname 'current' to the current menu-item. It also applies the classname 'active' to all the parent menu-items leading to (and including) the current menu-item. We can use this behavior to set appropriate CSS styles for highlighting the selected items.
@@ -469,11 +469,11 @@ Please see the tag's documentation for a full list of the parameters and their u
 
 Another element on a typical web page that reflects the hierarchy of pages is the breadcrumb where the parent pages of the page being visited show up as crumbs.
 
-The Couch tag that can be used to easily create breadcrumbs is the '[nested\_crumbs](../../tags-reference/nested_crumbs.html)' tag.
+The Couch tag that can be used to easily create breadcrumbs is the '[nested\_crumbs](../tags-reference/nested_crumbs.html)' tag.
 
 <p class="notice">
-    There already is an existing tag named '[breadcrumbs](../../tags-reference/breadcrumbs.html)' which is used with the folder hierarchy associated with normal cloned pages.<br/>
-    '[nested\_crumbs](../../tags-reference/nested_crumbs.html)' on the other hand works with nested-pages only.
+    There already is an existing tag named '[breadcrumbs](../tags-reference/breadcrumbs.html)' which is used with the folder hierarchy associated with normal cloned pages.<br/>
+    '[nested\_crumbs](../tags-reference/nested_crumbs.html)' on the other hand works with nested-pages only.
 </p>
 
 #### Usage
@@ -494,4 +494,4 @@ where 'masterpage' points to the template behind the nested-pages tree.
 </cms:nested_crumbs>
 ```
 
-Please see the '[nested\_crumbs](../../tags-reference/nested_crumbs.html)' tag's documentation for a full list of the parameters and their use.
+Please see the '[nested\_crumbs](../tags-reference/nested_crumbs.html)' tag's documentation for a full list of the parameters and their use.

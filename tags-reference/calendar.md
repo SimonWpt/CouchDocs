@@ -9,7 +9,7 @@ layout: default
 The **calendar** tag can be used to create a monthly calendar. It can be associated with a template to make it display cloned pages of the template as entries of the calendar.
 
 The calendar tag works together with the **weeks**, **days** and **entries** tags to fulfill its functionality.<br/>
-Please see [**Core Concepts - Events Calendar**](../../concepts/events-calendar.html) for a working example of this tag.
+Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.html) for a working example of this tag.
 
 ## Parameters
 

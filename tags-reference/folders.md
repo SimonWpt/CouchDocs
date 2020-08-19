@@ -8,7 +8,7 @@ layout: default
 
 The **folders** tag can be used to enumerate the virtual folders that have been defined for a template.
 
-Please see [**Core Concepts - Folders**](../../concepts/using-folders.html) for an in-depth discussion of this tag.
+Please see [**Core Concepts - Folders**](../concepts/using-folders.html) for an in-depth discussion of this tag.
 
 ## Parameters
 

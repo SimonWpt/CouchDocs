@@ -8,7 +8,7 @@ layout: default
 
 The **cloak\_url** tag, as the name suggests, can be used to cloak links so that it does not become apparent from just looking at the links as to where they actually lead to.
 
-Please see [**Core Concepts - Cloaked Links**](../../concepts/cloaked-links.html) for a detailed discussion of this tag.
+Please see [**Core Concepts - Cloaked Links**](../concepts/cloaked-links.html) for a detailed discussion of this tag.
 
 ## Parameters
 

@@ -12,7 +12,7 @@ The **breadcrumbs** tag outputs the hierarchy of folders leading upto the folder
 <cms:breadcrumbs />
 ```
 
-Please see [**Core Concepts - Folders**](../../concepts/using-folders.html) for a discussion on this tag's usage.
+Please see [**Core Concepts - Folders**](../concepts/using-folders.html) for a discussion on this tag's usage.
 
 ## Parameters
 

@@ -7,7 +7,7 @@ layout: default
 
 # editable
 
-Please see [**Core Concepts - Editable Regions**](../../concepts/editable-regions.html) for an introduction to the Editable tag.
+Please see [**Core Concepts - Editable Regions**](../concepts/editable-regions.html) for an introduction to the Editable tag.
 
 ## Parameters
 

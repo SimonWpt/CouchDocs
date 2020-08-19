@@ -16,7 +16,7 @@ The **parentfolders** tag enumerates all the ancestor folders of a given folder.
 
 The snippet above will iterate through all the ancestor folders of the folder named 'china', starting from the topmost ancestor.
 
-Please see [**Core Concepts - Folders**](../../concepts/using-folders.html#parents-and-children) for more info.
+Please see [**Core Concepts - Folders**](../concepts/using-folders.html#parents-and-children) for more info.
 
 ## Parameters
 

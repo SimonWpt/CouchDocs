@@ -6,7 +6,7 @@ layout: default
 
 # search
 
-Please see [**Core Concepts - Search**](../../concepts/using-search.html) for an in-depth discussion of this tag.
+Please see [**Core Concepts - Search**](../concepts/using-search.html) for an in-depth discussion of this tag.
 
 ## Parameters
 
@@ -42,7 +42,7 @@ This example would search pages of all templates except news.php.
 
 ### limit
 
-_Limit_ parameter can be set to display only a limited number of pages that were found. The rest of the pages can be displayed in a paginated manner (See [**Pagination**](../../concepts/pagination.html)).
+_Limit_ parameter can be set to display only a limited number of pages that were found. The rest of the pages can be displayed in a paginated manner (See [**Pagination**](../concepts/pagination.html)).
 
 ## Variables
 
@@ -53,7 +53,7 @@ For each page found, all the variables normally available in its _page-view_ wil
 * k\_search\_excerpt
 * k\_search\_query
 
-Please see [**Core Concepts - Search**](../../concepts/using-search.html) for details.
+Please see [**Core Concepts - Search**](../concepts/using-search.html) for details.
 
 ## Related Tags
 

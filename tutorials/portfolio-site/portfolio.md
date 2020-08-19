@@ -6,7 +6,7 @@ layout: default
 
 # Portfolio
 
-[<img alt="" src="../../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/portfolio.zip)
+[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/portfolio.zip)
 
 Having already built the _blog_ section, building the _portfolio_ section will see us only repeating what we have already done. As such, we'll go into the details of only those steps that are new for this section.
 
@@ -38,7 +38,7 @@ Visit your admin section and _porfolio.php_ should now appear added to the list 
 
 Let us take a look at one portfolio entry to decide which editable regions will be required to capture all its data.
 
-![](../../../../assets/img/contents/portfolio-site-122.png)
+![](../../assets/img/contents/portfolio-site-122.png)
 
 The following regions can be identified -<br/>
 **1\.** The portfolio item's website<br/>
@@ -72,14 +72,14 @@ The final list of the editable regions required and their types -<br/>
 
 As we did in the _blog_ section, define all these editable regions within a template tag as follows -
 
-![](../../../../assets/img/contents/portfolio-site-123.png)
+![](../../assets/img/contents/portfolio-site-123.png)
 
 Notice that we have also declared the template as clonable.
 
 Refresh _http&#58;//www.mytestsite.com/portfolio.php_ by visiting it again logged in as super-admin.<br/>
 Visit the admin section to find the first default page created for you. Clicking on it should reveal that Couch has created the following editable regions as instructed -
 
-![](../../../../assets/img/contents/portfolio-site-124.png)
+![](../../assets/img/contents/portfolio-site-124.png)
 
 Edit the default page to create the first portfolio item.<br/>
 Once you have entered and saved all data, click on 'view' to see the page.<br/>
@@ -91,15 +91,15 @@ Of course, none of the data we entered in the editable regions of this page shou
 Let us do so now.<br/>
 The original HTML code -
 
-![](../../../../assets/img/contents/portfolio-site-125.png)
+![](../../assets/img/contents/portfolio-site-125.png)
 
 After replacing with Couch variables -
 
-![](../../../../assets/img/contents/portfolio-site-126.png)
+![](../../assets/img/contents/portfolio-site-126.png)
 
 Revisit the cloned page and it should now display the contents placed in its editable regions -
 
-![](../../../../assets/img/contents/portfolio-site-127.png)
+![](../../assets/img/contents/portfolio-site-127.png)
 
 That completes the page-view part of portfolio.<br/>
 Let us move on to the list-view.
@@ -112,15 +112,15 @@ Move *portfolio\_list.html* to the snippets folder and it is ready to be embedde
 Just the way we handled list-view in _blog.php_, add conditional Couch tags to check for page-view and list-view and display the relevant content.<br/>
 Display the existing content of _portfolio.php_ if variable *k\_is\_page* is set (i.e. we are handling page-view) -
 
-![](../../../../assets/img/contents/portfolio-site-128.png)
+![](../../assets/img/contents/portfolio-site-128.png)
 
 else display the embedded *portfolio\_list.html* (this has to be the list-view) -
 
-![](../../../../assets/img/contents/portfolio-site-129.png)
+![](../../assets/img/contents/portfolio-site-129.png)
 
 Access _http&#58;//www.mytestsite.com/portfolio.php_ (it is the list-view because no page information is appended to the template name) and the contents of *portfolio\_list.html* should appear -
 
-![](../../../../assets/img/contents/portfolio-site-130.png)
+![](../../assets/img/contents/portfolio-site-130.png)
 
 This, of course, is the static HTML contained within the embedded snippet and does not reflect the portfolio items (cloned pages) currently existing. To make this listing dynamic, we'll need to add some Couch tags to *portfolio\_list.html*.<br/>
 Open *portfolio\_list.html* in your text editor for some modifications.
@@ -129,15 +129,15 @@ If we take a look at the static listing shown above, it can be seen that Aureliu
 Categories, as we have seen in _blog.php_, can be simulated in Couch by the virtual folders.<br/>
 Let us create three folders for _portfolio.php_. For the sake of simplicity, we'll name them _First Category_, _Second Category_ and _Third Category_. We already know how to create the folders. The following is the finished code -
 
-![](../../../../assets/img/contents/portfolio-site-131.png)
+![](../../assets/img/contents/portfolio-site-131.png)
 
 Refresh portfolio.php by revisiting _http&#58;//www.mytestsite.com/portfolio.php_ logged on as super-admin. Visit admin to find the three categories visible in the drop-down list -
 
-![](../../../../assets/img/contents/portfolio-site-132.png)
+![](../../assets/img/contents/portfolio-site-132.png)
 
 Create some more dummy portfolio items and distribute them amongst the three folders -
 
-![](../../../../assets/img/contents/portfolio-site-133.png)
+![](../../assets/img/contents/portfolio-site-133.png)
 
 Time now to actually display the portfolio items grouped according to the categories.<br/>
 We are already familiar with the Couch tags named folders and pages, which we used to enumerate the folders and cloned pages of blog.php template respectively in the previous tutorial.<br/>
@@ -149,18 +149,18 @@ We'll tackle the categories first.
 
 If you take a look at *portfolio\_list.html*, you'll find the following block of code being repeated, with very minor modifications, thrice. This is a category block displaying all pages belonging to that category.
 
-![](../../../../assets/img/contents/portfolio-site-134.png)
+![](../../assets/img/contents/portfolio-site-134.png)
 
 Following the pattern we set for using any enumerator tag in Couch, we'll delete two of the three blocks from *portfolio\_list.html* to be left with only one block.<br/>
 Then we enclose this remaining solitary block within the enumerator folders tag.<br/>
 This will cause the block to be output as many times as there are folders in this template.<br/>
 Finally, we make use of the variables set by the folders tag that describe each folder -
 
-![](../../../../assets/img/contents/portfolio-site-135.png)
+![](../../assets/img/contents/portfolio-site-135.png)
 
 Accessing _http&#58;//www.mytestsite.com/portfolio.php_ now should reveal that the three categories we created for portfolio.php are being enumerated correctly.
 
-![](../../../../assets/img/contents/portfolio-site-136.png)
+![](../../assets/img/contents/portfolio-site-136.png)
 
 The pages being listed within each category are still static. Let us change that.
 
@@ -168,7 +168,7 @@ The pages being listed within each category are still static. Let us change that
 
 Within the category block we were working upon above, the following marked portion is displaying the four static pages entries.
 
-![](../../../../assets/img/contents/portfolio-site-137.png)
+![](../../assets/img/contents/portfolio-site-137.png)
 
 We, of course, know by now that the Couch tag used to enumerate cloned pages is the pages tag. But before we set about putting it into action by deleting all but one of the four static pages entry and enclosing it by pages tag, please take a closer look at the four pages entries.<br/>
 They are identical except for their class attributes. The first entry has a class named alpha, the second has an empty equivalent class while the third has a class of omega. The entries following these have the class-names repeated in the same order. This is essential to proper 'wrap-around' the pages after every third item.<br/>
@@ -179,7 +179,7 @@ The zebra tag is meant to be used within any enumerator tag and will sequentiall
 
 Take the usual steps of deploying the pages tag and use the zebra tag with the three class-names as parameters ('alpha', '' and 'delta')
 
-![](../../../../assets/img/contents/portfolio-site-138.png)
+![](../../assets/img/contents/portfolio-site-138.png)
 
 This should result in the folders tag outputting three category blocks and, within each of those blocks, the pages tag outputting the cloned pages. Thus we are using the pages tag nested within the folders tag.<br/>
 The problem is that the pages tag in each of the category block is displaying all the cloned pages available and not just the pages that belong to the category in question.<br/>
@@ -187,17 +187,17 @@ We know from the blog section that the pages tag supports a parameter named fold
 The problem we have can be easily resolved by setting this folder parameter to the name of the folder being iterated. One of the variables that the folders tag sets for each folder, as it iterates through them, is the *k\_folder\_name* variable.<br/>
 By using this variable to set the folder parameter of pages tag that was mentioned above, we can dynamically link together the folders and pages tags -
 
-![](../../../../assets/img/contents/portfolio-site-139.png)
+![](../../assets/img/contents/portfolio-site-139.png)
 
 This should result in -
 
-![](../../../../assets/img/contents/portfolio-site-140.png)
+![](../../assets/img/contents/portfolio-site-140.png)
 
 As can be seen, each of the categories now shows only the pages belonging to it.
 
 We are now almost done with configuring the list-view. The only thing that remains is handling the description and a short blurb about each category -
 
-![](../../../../assets/img/contents/portfolio-site-141.png)
+![](../../assets/img/contents/portfolio-site-141.png)
 
 Ideally we'd want to provide the user with a richtext editor for entering the description of each folder and a single line text field for its blurb. However, Couch (currently) has no provision for adding any custom information to folders.<br/>
 To get around this limitation, we'll use a method that should prove useful in several other scenarios too and hence is worth taking a look.
@@ -209,7 +209,7 @@ This technique does entail the maintenance of a separate set of pages that need 
 So let us now create a new file named *portfolio\_desc.php*. Place the mandatory Couch boilerplate code at the start and end of this file and then define the two editable regions to hold the description and blurb of the folders.<br/>
 The finished code should be something like this -
 
-![](../../../../assets/img/contents/portfolio-site-142.png)
+![](../../assets/img/contents/portfolio-site-142.png)
 
 <p class="notice">
     Everything should look familiar in the code above except for the highlighted parameter that needs a little explanation.<br/>
@@ -231,20 +231,20 @@ The finished code should be something like this -
 
 Access *http&#58;//www.mytestsite.com/portfolio\_desc.php* while being logged-in as the super-admin. You'll get a blank page because the template contains no HTML. However, the purpose of this visit was to execute the Couch tags contained within the template. To verify that, visit the admin section and you should find that Couch has created the default cloned page for this template and has also created the two editable regions.
 
-![](../../../../assets/img/contents/portfolio-site-143.png)
+![](../../assets/img/contents/portfolio-site-143.png)
 
 Rename the default page to one of the folders of _portfolio.php_ and create two new pages with the same names as that of the remaining two folders. Be careful - the names, not the titles, of the pages need to match that of the folders. The names of the folders, for this tutorial, were *cat\_1*, *cat\_2* and *cat\_3*. We'll give the same names to the cloned pages of *portfolio\_desc.php*.
 
-![](../../../../assets/img/contents/portfolio-site-144.png)
+![](../../assets/img/contents/portfolio-site-144.png)
 
 We can now move on to display the contents of these pages while listing the categories.<br/>
 This is the original code that is displaying the static information about each category -
 
-![](../../../../assets/img/contents/portfolio-site-145.png)
+![](../../assets/img/contents/portfolio-site-145.png)
 
 We'll make the following modifications -
 
-![](../../../../assets/img/contents/portfolio-site-146.png)
+![](../../assets/img/contents/portfolio-site-146.png)
 
 Notice how we have used the pages tag to enclose the section highlighted previously.<br/>
 The pages tag, as usual, is used to fetch the cloned pages.<br/>
@@ -253,8 +253,8 @@ Since there can be only one page for the given name, the contents enclosed by th
 
 Accessing _http&#58;//www.mytestsite.com/portfolio.php_ will now show the category description and blurb as entered into *portfolio\_desc.php* pages -
 
-![](../../../../assets/img/contents/portfolio-site-147.png)
+![](../../assets/img/contents/portfolio-site-147.png)
 
 That wraps up the portfolio section.
 
-[Next we set up the Contact Us section.](../../contact-form.html)
+[Next we set up the Contact Us section.](../contact-form.html)

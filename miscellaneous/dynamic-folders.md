@@ -30,12 +30,12 @@ For example -
 
 Once the dynamic folders feature is activated for a template, Couch will add a new button to the template's admin panel
 
-![](../../assets/img/contents/dynamic-folders-1.png)
+![](../assets/img/contents/dynamic-folders-1.png)
 
 The client can now manage the folders from the screen that shows up upon clicking the button shown above.<br/>
 Apart from the regular attributes of a folder, the dynamic folders support two additional attributes - a description of the folder and an image associated with it.
 
-![](../../assets/img/contents/dynamic-folders-2.png)
+![](../assets/img/contents/dynamic-folders-2.png)
 
 These two values associated with a folder are now accessible within your template through the following variables -<br/>
 **k\_folder\_desc** and **k\_folder\_image** within _folder-view_.<br/>

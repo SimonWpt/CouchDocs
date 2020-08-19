@@ -6,7 +6,7 @@ layout: default
 
 # reverse_related_pages
 
-Please see [**Documentation - Core concepts - Relationships**](../../concepts/relationships.html#displaying-the-related-pages) for a detailed explanation of this type of region.
+Please see [**Documentation - Core concepts - Relationships**](../concepts/relationships.html#displaying-the-related-pages) for a detailed explanation of this type of region.
 
 ## Parameters
 

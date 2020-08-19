@@ -30,7 +30,7 @@ This parameter needs to be set to '1' in order to declare a template clonable i.
 
 ### access_level
 
-This parameter can be set to restrict the access to the template and all its cloned pages to users of certain access level. For details, please see 'Template level access' in [Users and Access Control](../../concepts/users.html).
+This parameter can be set to restrict the access to the template and all its cloned pages to users of certain access level. For details, please see 'Template level access' in [Users and Access Control](../concepts/users.html).
 
 ### executable
 
@@ -38,7 +38,7 @@ If this parameter is set to '0', non-super-admin users will be unable to access 
 
 ### commentable
 
-To allow users to comment on pages of this template, this parameter has to be set to '1'. See [**Comments**](../../concepts/using-comments.html).
+To allow users to comment on pages of this template, this parameter has to be set to '1'. See [**Comments**](../concepts/using-comments.html).
 
 ### hidden
 

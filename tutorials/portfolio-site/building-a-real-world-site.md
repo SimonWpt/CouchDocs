@@ -8,7 +8,7 @@ layout: default
 
 To demonstrate the power and ease of Couch, we'll build a complete real world site from scratch using it.
 
-The template we have chosen to do so is Aurelius.[<img alt="" src="../../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/Aurelius.zip)<br/>
+The template we have chosen to do so is Aurelius.[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/Aurelius.zip)<br/>
 It was originally created to be sold commercially at Themeforest. However the author later on changed his mind and very graciously released it as a free template.
 
 We chose this template because it has almost all the sections that you'll come across while building a similar site -
@@ -38,7 +38,7 @@ If you are using the files downloaded from _http&#58;//net.tutsplus.com/_, remov
 
 The resulting folder structure should look like this -
 
-![](../../../../assets/img/contents/portfolio-site-1.gif)
+![](../../assets/img/contents/portfolio-site-1.gif)
 
 Confirm that all the pages of this template are now accessible through the browser.<br/>
 With the website in place, we can now move on to install Couch within it.
@@ -47,19 +47,19 @@ With the website in place, we can now move on to install Couch within it.
 
 Download and unzip _couch.zip_. You'll get a folder named _couch_ containing the following files -
 
-![](../../../../assets/img/contents/portfolio-site-2.gif)
+![](../../assets/img/contents/portfolio-site-2.gif)
 
 Rename the file named _config.example.php_ to _config.php_.<br/>
 Open it in your text editor and find the following lines -
 
-![](../../../../assets/img/contents/portfolio-site-3.png)
+![](../../assets/img/contents/portfolio-site-3.png)
 
 Change the values to match those of your MySQL database.
 
 Upload the entire _couch_ folder, along with the modified _config.php_, to your web server, which already contains the Aurelius files.<br/>
 The resulting site structure should now look like this with the _couch_ folder appearing as a subfolder of your existing site -
 
-![](../../../../assets/img/contents/portfolio-site-4.png)
+![](../../assets/img/contents/portfolio-site-4.png)
 
 <p class="notice">
     The uploaded _couch_ folder is your site's admin section.<br/>
@@ -73,13 +73,13 @@ Access the admin section through your browser - _http&#58;//www.mytestsite.com/c
 
 Couch will sense that installation is required and will display the following form for you to fill -
 
-![](../../../../assets/img/contents/portfolio-site-5.jpg)
+![](../../assets/img/contents/portfolio-site-5.jpg)
 
 <p class="notice">If, however, at this point you get an '500 Internal Server Error', please try deleting the .htaccess file present in the 'couch' installation folder. Certain hosts, notably GoDaddy, have problems with the directive contained in this file.</p>
 
 Enter your desired name, password and email address. Press install and in a little while you should be prompted with the following screen -
 
-![](../../../../assets/img/contents/portfolio-site-6.jpg)
+![](../../assets/img/contents/portfolio-site-6.jpg)
 
 Couch created an account with super-admin privilege using the information provided by you in the last step and is now prompting you to login using the same.
 
@@ -91,17 +91,17 @@ Couch created an account with super-admin privilege using the information provid
 
 Login using the super-admin account you created and brace yourself for facing the most 'barren' admin section you'll ever come across -
 
-![](../../../../assets/img/contents/portfolio-site-7.jpg)
+![](../../assets/img/contents/portfolio-site-7.jpg)
 
 This almost bare admin panel is an important feature of Couch.<br/>
 We realize that the person most often logged into it is going to be the client that you'll be building the website for and, more often than not, he is not going to be as computer savvy as you are.<br/>
 Instead of overwhelming such a client with an admin panel that resembles the cockpit of an airliner, we wished to confront him with just as much information as is absolutely essential.<br/>
 As we move along with building the site, the admin panel will start displaying more information. This is the admin panel of our finished site -
 
-![](../../../../assets/img/contents/portfolio-site-8.png)
+![](../../assets/img/contents/portfolio-site-8.png)
 
 It is important to note that the admin panels of no two sites built with Couch are going to be identical. As the designer of a website, it is you who'll choose how much data gets exposed to the client within the admin section.
 
 With Couch installed we can now begin porting the Aurelius files to it.
 
-Next: [Starting up simple - The About Us page](../../about-us.html).
+Next: [Starting up simple - The About Us page](../about-us.html).

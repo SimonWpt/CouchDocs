@@ -15,7 +15,7 @@ Since the templates used by Couch are regular HTML files, any of your existing s
 
 ### INSTALLING COUCH
 
-Please see the following tutorial, where we use Couch to build a full fledged site, for a step-by-step illustrated guide on how to install Couch - [Building a real-world site](../../tutorials/portfolio-site/building-a-real-world-site.html).
+Please see the following tutorial, where we use Couch to build a full fledged site, for a step-by-step illustrated guide on how to install Couch - [Building a real-world site](../tutorials/portfolio-site/building-a-real-world-site.html).
 
 ### HOOKING UP COUCH INTO THE TEMPLATES
 

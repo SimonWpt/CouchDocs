@@ -25,7 +25,7 @@ An editable region of _textarea_ type can be defined this way -
 
 The code above will result in -
 
-![](../../../../assets/img/contents/editable-textarea.gif)
+![](../../assets/img/contents/editable-textarea.gif)
 
 The default type of an editable region is _textarea_. Hence if the code example given above were to be written without explicitly setting the _type_ parameter, the result would have been just the same. Thus -
 

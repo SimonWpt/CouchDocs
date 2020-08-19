@@ -99,19 +99,19 @@ This is the step where everything is now very different.<br/>
 The first thing that you'll notice is that there is no 'add new' button in the admin-panel of this template (this is the 'gallery' parameter in action).<br/>
 Instead you have an 'Upload' button
 
-![](../../assets/img/contents/photo-gallery-1.gif)
+![](../assets/img/contents/photo-gallery-1.gif)
 
 <p class="notice">Also notice the 'Default page' that Couch creates for all cloned templates. For a gallery, this default page is really not needed and you should 'unpublish' it. It gets shown to only the super-admin. The site-owner will never see it.</p>
 
 Clicking on this 'Upload' button will bring up the following window
 
-![](../../assets/img/contents/photo-gallery-2.gif)
+![](../assets/img/contents/photo-gallery-2.gif)
 
 This is the new mass uploader that ships with Couch.<br/>
 Click on the 'Add images' button at the bottom of it and select multiple images from your local machine (you can also drag-n-drop if your browser supports the facility).<br/>
 Once all the images are queued up, click 'Start upload'
 
-![](../../assets/img/contents/photo-gallery-3.gif)
+![](../assets/img/contents/photo-gallery-3.gif)
 
 You'll see Couch uploading and processing the images one after another.
 
@@ -125,13 +125,13 @@ You'll see Couch uploading and processing the images one after another.
 
 Once all the images are successfully uploaded, the admin-panel you were on will refresh and there you have it -
 
-![](../../assets/img/contents/photo-gallery-4.gif)
+![](../assets/img/contents/photo-gallery-4.gif)
 
 Couch has not only uploaded en-masse all the images to the server but has also automatically created a cloned page each for every successfully uploaded image.
 
 Click on any thumbnail and you'll reach the familiar 'Edit' panel common to all templates.
 
-![](../../assets/img/contents/photo-gallery-5.gif)
+![](../assets/img/contents/photo-gallery-5.gif)
 
 You'll notice that Couch has used the uploaded image's name as the page's title and name fields. If that does not suit you, you can always edit them.
 
@@ -160,7 +160,7 @@ Apart from all the [usual variables pertaining to a page](../variables-in-views.
 
 As the names of the variables suggest, they show meta data about the uploaded image.
 
-For gallery pages, the [**cms:pages**](../../tags-reference/pages.html) tag also recognizes the following new values for the **orderby** parameter. These can be helpful in ordering the listing of images according to the meta data of the images.
+For gallery pages, the [**cms:pages**](../tags-reference/pages.html) tag also recognizes the following new values for the **orderby** parameter. These can be helpful in ordering the listing of images according to the meta data of the images.
 
 * file\_name
 * file\_ext
@@ -264,9 +264,9 @@ To jump-start your development, here is a complete sample gallery template that 
 [**Download the template here**](http://www.couchcms.com/docs/code/gallery.zip).<br/>
 [**Download the Slimbox version here**](http://www.couchcms.com/docs/code/gallery_using_slimbox.zip) (this is another version of the same template using JavaScript (Slimbox) to display the images).
 
-![](../../assets/img/contents/photo-gallery-6.jpg)
+![](../assets/img/contents/photo-gallery-6.jpg)
 
-![](../../assets/img/contents/photo-gallery-7.jpg)
+![](../assets/img/contents/photo-gallery-7.jpg)
 
 ## Summary
 

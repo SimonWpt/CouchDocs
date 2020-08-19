@@ -23,7 +23,7 @@ An editable region of _radio_ type can be defined this way -
 
 The code above will result in -
 
-![](../../../../assets/img/contents/editable-radio-1.gif)
+![](../../assets/img/contents/editable-radio-1.gif)
 
 The option selected in this region can be accessed, as with all other editable regions, by using the variable named after it -
 
@@ -83,7 +83,7 @@ opt_values='Residential=0 | Commercial=1 | | Rental=2'
     In the code above, actually four options have been specified - the third option (between _Commercial_ and _Rental_) is empty.<br/>
     This results in -<br/>
     <br/>
-    ![](../../../../assets/img/contents/editable-radio-2.gif)
+    ![](../../assets/img/contents/editable-radio-2.gif)
 </p>
 
 ### opt_selected
@@ -144,4 +144,4 @@ Can be set to the following valid values -
 The default *search\_type* is (as with all other types of editable regions) _text_.<br/>
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _numeric_ or _decimal_ (if the value can be fractional).
 
-<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../../pages.html#custom_field).</p>
+<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../../pages.html#custom_field).</p>

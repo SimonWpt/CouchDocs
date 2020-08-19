@@ -6,7 +6,7 @@ layout: default
 
 # nested_crumbs
 
-The **nested\_crumbs** tag can be used to easily create breadcrumbs out of [nested-pages](../../concepts/nested-pages-aka-menu-maker.html).
+The **nested\_crumbs** tag can be used to easily create breadcrumbs out of [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
 
 <p class="notice">
     There is another tag named '[breadcrumbs](../breadcrumbs.html)', which is used with the folder hierarchy associated with normal cloned pages.<br/>

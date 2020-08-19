@@ -23,7 +23,7 @@ The **google\_map** tag can be used to easily create a Google map on a web page.
 />
 ```
 
-Please see [**Core Concepts - Google Maps**](../../concepts/google-maps.html) for a discussion on this tag.
+Please see [**Core Concepts - Google Maps**](../concepts/google-maps.html) for a discussion on this tag.
 
 ## Parameters
 
