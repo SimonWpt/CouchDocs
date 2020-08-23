@@ -10,7 +10,7 @@ To use Couch you must at least have a working knowledge of HTML and CSS and know
 
 ### Server Requirements
 
-* PHP 5.0.0 or greater
+* PHP 5.3.0 or greater
 * MySQL 4.1.2 or greater
 * Apache (or compatible Web Servers like LiteSpeed etc.)
 
