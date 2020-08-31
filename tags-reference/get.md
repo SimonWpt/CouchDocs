@@ -69,5 +69,5 @@ This tag is self-closing and does not set any variables of its own.
 
 * [show](./show.html)
 * [set](./set.html)
-* [get\_custom\_field](../get_custom_field.html)
+* [get\_custom\_field](./get_custom_field.html)
 * [pages](./pages.html)

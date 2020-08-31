@@ -50,5 +50,5 @@ At each iteration, this tag sets variables that describe the parent folder being
 * [folders](./folders.html)
 * [listfolders](./listfolders.html)
 * [dropdownfolders](./dropdownfolders.html)
-* [is\_ancestor](../is_ancestor.html)
+* [is\_ancestor](./is_ancestor.html)
 * [breadcrumbs](./breadcrumbs.html)

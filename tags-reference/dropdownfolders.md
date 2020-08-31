@@ -39,5 +39,5 @@ This tag is self-closing and does not set any variables of its own.
 * [folders](./folders.html)
 * [listfolders](./listfolders.html)
 * [parentfolders](./parentfolders.html)
-* [is\_ancestor](../is_ancestor.html)
+* [is\_ancestor](./is_ancestor.html)
 * [breadcrumbs](./breadcrumbs.html)

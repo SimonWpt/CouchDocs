@@ -35,4 +35,4 @@ Please see [**Documentation - Tags - Pages**](../pages.html#variables) for a com
 
 ## Related Tags
 
-* [related\_pages](../related_pages.html)
+* [related\_pages](./related_pages.html)

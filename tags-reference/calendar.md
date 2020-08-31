@@ -17,7 +17,7 @@ Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.htm
 * date
 * week\_starts
 
-Apart from these parameters, this tag also accepts all the arguments of the [**pages**](../pages.html) tag. This can be used to further refine the types of pages that are shown as entries of the calendar.
+Apart from these parameters, this tag also accepts all the arguments of the [**pages**](./pages.html) tag. This can be used to further refine the types of pages that are shown as entries of the calendar.
 
 ### masterpage
 

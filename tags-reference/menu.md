@@ -344,5 +344,5 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [nested\_pages](../nested_pages.html)
-* [nested\_crumbs](../nested_crumbs.html)
+* [nested\_pages](./nested_pages.html)
+* [nested\_crumbs](./nested_crumbs.html)

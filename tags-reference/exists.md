@@ -104,4 +104,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-* [page\_exists](../page_exists.html)
+* [page\_exists](./page_exists.html)

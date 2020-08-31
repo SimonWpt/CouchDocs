@@ -78,4 +78,4 @@ When used as a tag-pair, the following variables are set for each crumb -
 
 * [menu](./menu.html)
 * [breadcrumbs](./breadcrumbs.html)
-* [nested\_pages](../nested_pages.html)
+* [nested\_pages](./nested_pages.html)

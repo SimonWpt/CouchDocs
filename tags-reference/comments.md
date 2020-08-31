@@ -134,7 +134,7 @@ In addition to these variables, the pagination related variables that describe t
 
 ## Related Tags
 
-* [process\_comment](../process_comment.html)
+* [process\_comment](./process_comment.html)
 * [pages](./pages.html)
 * [folders](./folders.html)
 * [archives](./archives.html)
