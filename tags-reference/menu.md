@@ -53,7 +53,7 @@ menu.php
 ### masterpage
 
 This parameter is used to specify the template behind the nested-pages tree used to create the menu.<br/>
-If left empty, the template of the currently executing page is assumed (which is unlikely to be correct as you'll usually want to display the menu on all sections (templates) of your site - typically by using '[embed](../embed.html)' tag).
+If left empty, the template of the currently executing page is assumed (which is unlikely to be correct as you'll usually want to display the menu on all sections (templates) of your site - typically by using '[embed](./embed.html)' tag).
 
 ```html
 <cms:menu masterpage='menu.php'/>

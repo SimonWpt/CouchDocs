@@ -152,7 +152,7 @@ Example -
 
 ## New variables
 
-Apart from all the [usual variables pertaining to a page](../variables-in-views.html) made available by Couch, the following new variables are also made available for gallery pages -
+Apart from all the [usual variables pertaining to a page](./variables-in-views.html) made available by Couch, the following new variables are also made available for gallery pages -
 
 * k\_file\_name
 * k\_file\_ext

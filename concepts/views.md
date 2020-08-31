@@ -8,7 +8,7 @@ layout: default
 <br/>
 ### THE LIST VIEW AND THE PAGE VIEW
 
-As discussed in the [**Cloned Pages**](../cloned-pages.html) section, a clonable template acquires a 'split personality'.<br/>
+As discussed in the [**Cloned Pages**](./cloned-pages.html) section, a clonable template acquires a 'split personality'.<br/>
 To recap -<br/>
 Suppose we have a template named _blog.php_.
 
@@ -33,7 +33,7 @@ The **list view **is expected to act like a listing page (e.g. list all the page
 
 <p class="notice">
     When we say 'is expected to', that is exactly what we mean.<br/>
-    Couch simply sets certain variables to make it known to your script which view it is executing in. It is you who decides what to display in that view. It could be some specific page, several listings of other templates or just about anything you wish (see [**Listing Pages**](../listing-pages.html)).
+    Couch simply sets certain variables to make it known to your script which view it is executing in. It is you who decides what to display in that view. It could be some specific page, several listings of other templates or just about anything you wish (see [**Listing Pages**](./listing-pages.html)).
 </p>
 
 Couch further supports two special URLs that are meant to list pages belonging to a partcular folder or to a particular time period.<br/>
@@ -125,4 +125,4 @@ or
 
 Please also see:
 
-[**Variables available in Views**](../variables-in-views.html) for a comprehensive list of variables that become available during the different views and [**Listing Pages**](../listing-pages.html) for how to list pages in concordance to the views.
+[**Variables available in Views**](./variables-in-views.html) for a comprehensive list of variables that become available during the different views and [**Listing Pages**](./listing-pages.html) for how to list pages in concordance to the views.

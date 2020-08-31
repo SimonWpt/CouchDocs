@@ -11,7 +11,7 @@ A typical website usually consists of two kind of pages -
 1.  Pages that can be grouped together under a common section e.g. all the pages belonging to the blog section or portfolio section.
 2.  Standalone single pages that are distinct enough to form a section of their own e.g. About-us, Contact-us or Privacy-policy etc.
 
-In Couch we handle the first kind of pages mentioned above by cloning them out of a single template e.g. all the pages of the blog section will actually use only a single physical template 'blog.php' (see: [Cloned Pages](../cloned-pages.html)).
+In Couch we handle the first kind of pages mentioned above by cloning them out of a single template e.g. all the pages of the blog section will actually use only a single physical template 'blog.php' (see: [Cloned Pages](./cloned-pages.html)).
 
 We handle the second kind of pages by using a separate template for each of such pages e.g. About-us section might use 'about-us.php' while Contact-us uses 'contact.php'.
 
@@ -40,7 +40,7 @@ Couch version 1.2 introduces 'Nested Pages' feature to provide such a way.
 
 A nested-page, internally, is just a variation of the regular cloned-page in Couch that you are already familiar with.
 
-<p class="error">If not, please first take a look at the '[Cloned Pages](../cloned-pages.html)' documentation. Much of the current discussion will not make much sense unless you are familiar with the regular cloned pages in Couch.</p>
+<p class="error">If not, please first take a look at the '[Cloned Pages](./cloned-pages.html)' documentation. Much of the current discussion will not make much sense unless you are familiar with the regular cloned pages in Couch.</p>
 
 It is almost identical to the regular cloned page except for the following characteristics -
 
@@ -123,7 +123,7 @@ As we already mentioned, the blog and portfolio sections can be implemented usin
 
 Get them done first using clonable templates e.g. blog.php and portfolio.php.
 
-<p class="notice">We assume you already know how to create regular cloned pages. [Please see the documentation](../cloned-pages.html) if you need a refresher.</p>
+<p class="notice">We assume you already know how to create regular cloned pages. [Please see the documentation](./cloned-pages.html) if you need a refresher.</p>
 
 With those sections done we can move on to the isolated standalone pages.<br/>
 It is these pages that we'll implement using the nested-pages feature.
@@ -143,7 +143,7 @@ Same applies for the 'testimonials' in _http&#58;//www.yoursite.com/about-us/wha
 However which page do you think will get loaded for this URL? -<br/>
 _http&#58;//www.yoursite.com/_
 
-If you are familiar with the regular cloned pages, you'll recognize that this is the 'list-view' \[see [cloned-pages](../cloned-pages.html) and [views](../views.html)\].<br/>
+If you are familiar with the regular cloned pages, you'll recognize that this is the 'list-view' \[see [cloned-pages](./cloned-pages.html) and [views](./views.html)\].<br/>
 Since no page is indicated, none gets loaded. Only the empty template will show up (i.e. the HTML will appear but the editable regions will be empty).<br/>
 We also know that in 'list-view', we usually list all the cloned pages of the template (we can choose to do any other thing we want to - point is we'll have to handle the view ourselves).<br/>
 As with any other clonable template, we'll add the following logic to the index.php template -

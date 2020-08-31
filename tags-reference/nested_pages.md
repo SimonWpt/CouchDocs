@@ -8,9 +8,9 @@ layout: default
 
 The **nested\_pages** tag is used to list [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
 
-Since the primary purpose of nested-pages (as explained in the [Core Concepts](../concepts/nested-pages-aka-menu-maker.html)) is to create a hierarchy of pages that can be represented as the site's menu, you'll find that usually the '[menu](../menu.html)' tag will suffice for the purpose of creating a menu.<br/>
-However, sometimes you'll need more control over the generated menu than what the '[menu](../menu.html)' tag offers.<br/>
-For such cases, the 'nested\_pages' tag can be used as it is a lower level tag (in fact, the '[menu](../menu.html)' tag uses the 'nested\_pages' internally).
+Since the primary purpose of nested-pages (as explained in the [Core Concepts](../concepts/nested-pages-aka-menu-maker.html)) is to create a hierarchy of pages that can be represented as the site's menu, you'll find that usually the '[menu](./menu.html)' tag will suffice for the purpose of creating a menu.<br/>
+However, sometimes you'll need more control over the generated menu than what the '[menu](./menu.html)' tag offers.<br/>
+For such cases, the 'nested\_pages' tag can be used as it is a lower level tag (in fact, the '[menu](./menu.html)' tag uses the 'nested\_pages' internally).
 
 To illustrate the use of 'nested\_pages', we'll use the same sample hierarchy of elements that we used in the '[folders](../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.<br/>
 We'll assume that a template named 'index.php' has been used to create the nested-pages.
@@ -97,7 +97,7 @@ Let us use is to create one.
 
 ### Creating menu using 'nested_pages' tag
 
-A menu is normally created using nested &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; elements. To make the task of doing so easy, the 'nested\_pages' tag, like the '[folders](../folders.html)' tag, supports the 'extended\_info' parameter. Setting the 'extended\_info' parameter to '1' makes the 'nested\_pages' tag provide additional information that can be used to output the closing and opening &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; tags without any pain.
+A menu is normally created using nested &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; elements. To make the task of doing so easy, the 'nested\_pages' tag, like the '[folders](./folders.html)' tag, supports the 'extended\_info' parameter. Setting the 'extended\_info' parameter to '1' makes the 'nested\_pages' tag provide additional information that can be used to output the closing and opening &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; tags without any pain.
 
 ```html
 <cms:nested_pages masterpage='index.php' extended_info='1' >
@@ -158,7 +158,7 @@ Following is a complete example that makes use of the variables mentioned before
 </cms:nested_pages>
 ```
 
-The example shown above is equivalent to the following using '[menu](../menu.html)' tag -
+The example shown above is equivalent to the following using '[menu](./menu.html)' tag -
 
 ```html
 <cms:menu masterpage='index.php' menu_class='my-menu-class-1 my-menu-class-2' menu_id='my-menu-id' first_class='first' last_class='last' active_trail_class='active' selected_class='current' />
@@ -166,9 +166,9 @@ The example shown above is equivalent to the following using '[menu](../menu.htm
 
 ### Creating a paginated listing using 'nested_pages' tag
 
-Apart from being used to create a menu, the 'nested\_pages' tag may also be used to create a conventional listing of pages, complete with pagination etc., the way it is usually done using the '[pages](../pages.html)' tag with normal (i.e. non nestable) pages.
+Apart from being used to create a menu, the 'nested\_pages' tag may also be used to create a conventional listing of pages, complete with pagination etc., the way it is usually done using the '[pages](./pages.html)' tag with normal (i.e. non nestable) pages.
 
-If you are familiar with the '[pages](../pages.html)' tag, the following snippet will seem familiar -
+If you are familiar with the '[pages](./pages.html)' tag, the following snippet will seem familiar -
 
 ```html
 <cms:nested_pages masterpage='index.php' extended_info='1' paginate='1' limit='5' >

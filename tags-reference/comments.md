@@ -130,7 +130,7 @@ Fetch all approved comments and order them in ascending order (oldest first) of 
 * k\_comment\_page\_name
 * k\_comment\_template\_name
 
-In addition to these variables, the pagination related variables that describe the current status of the loop are also set. Please see [**paginator**](../paginator.html) for details.
+In addition to these variables, the pagination related variables that describe the current status of the loop are also set. Please see [**paginator**](./paginator.html) for details.
 
 ## Related Tags
 

@@ -7,7 +7,7 @@ layout: default
 # Folders
 
 Couch allows you to create 'virtual folders' to place your cloned pages in.<br/>
-The primary purpose of this feature is to have super SEO friendly urls for your pages and the true power of this feature can be tapped only if you have enabled [**pretty-urls**](../pretty-urls.html).
+The primary purpose of this feature is to have super SEO friendly urls for your pages and the true power of this feature can be tapped only if you have enabled [**pretty-urls**](./pretty-urls.html).
 
 Cloned pages in Couch, just like real pages on a hard-disk, can be placed in only one folder at a time.<br/>
 The folders themselves, just like real folders, can be nested within another folder which in turn might itself be within another folder.<br/>
@@ -146,7 +146,7 @@ However it can be made to enumerate folders of any template by setting its _mast
 </cms:folders>
     ```
     In the snippet given above, each folder will be hyper-linked to its _folder-view_ where you can display a list of all the pages that reside in this folder.<br/>
-    See: [**Listing Pages**](../listing-pages.html).<br/>
+    See: [**Listing Pages**](./listing-pages.html).<br/>
     <br/>
     For a complete list of all the variables that get set by this tag please see the [reference](../tags-reference/folders.html#parameters) or use Couch tags [__*dump*__](../tags-reference/dump.html) or [__*dump\_all*__](../tags-reference/dump_all.html) within the [__*folders*__](../tags-reference/folders.html) tag.
 </p>

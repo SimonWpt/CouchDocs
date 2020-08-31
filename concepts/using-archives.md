@@ -109,6 +109,6 @@ _http&#58;//www.yoursite.com/blog/2010/_
 While for a daily period, the link would be -<br/>
 _http&#58;//www.yoursite.com/blog/2010/07/31/_
 
-By pointing your browser to these urls, you'll be accessing your _blog.php_ template in _archive-view_ (see: [**Views**](../views.html)).<br/>
-In this view, apart from other variables that you normally find set, Couch sets the *k\_archive\_date* and *k\_next\_archive\_date* variables (see: [**Variables available in Views**](../variables-in-views.html)).<br/>
-It shouldn't be difficult to set up the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging the archive period by using these variables (see: [**Listing Pages**](../listing-pages.html)).
+By pointing your browser to these urls, you'll be accessing your _blog.php_ template in _archive-view_ (see: [**Views**](./views.html)).<br/>
+In this view, apart from other variables that you normally find set, Couch sets the *k\_archive\_date* and *k\_next\_archive\_date* variables (see: [**Variables available in Views**](./variables-in-views.html)).<br/>
+It shouldn't be difficult to set up the [__*pages*__](./tags-reference/pages.html) tag to list pages belonging the archive period by using these variables (see: [**Listing Pages**](./listing-pages.html)).

@@ -58,11 +58,11 @@ Set this to '1' to make this field mandatory.
 
 ### validator
 
-The **input** tag shares this parameter with the **editable** tag. Please see the [**validators**](../editable.html#validator) section of [__*editable*__](../editable.html) tag for a list of all the validators that can be used.
+The **input** tag shares this parameter with the **editable** tag. Please see the [**validators**](../editable.html#validator) section of [__*editable*__](./editable.html) tag for a list of all the validators that can be used.
 
 ### validator_msg
 
-The **input** tag shares this parameter with the **editable** tag. Please see the [**validators**](../editable.html#validator) section of [__*editable*__](../editable.html) tag for a description of this parameter.
+The **input** tag shares this parameter with the **editable** tag. Please see the [**validators**](../editable.html#validator) section of [__*editable*__](./editable.html) tag for a description of this parameter.
 
 ### separator
 

@@ -121,13 +121,13 @@ So if you use the following snippet anywhere within your template -
 
 the current contents of the editable region will be output by show.
 
-\[See: [Variables available in Views](../variables-in-views.html)\]
+\[See: [Variables available in Views](./variables-in-views.html)\]
 
 **3\. As variables set by the [_pages_](../tags-reference/pages.html) tag -**
 
 The [__*pages*__](../tags-reference/pages.html) tag is used to list (all or specific) pages cloned from a template. The tag, as it fetches the pages, makes vailable all the variables pertaining to the pages - these include the variables that represent the editables regions defined for the pages.
 
-See also [**Listing Pages**](../listing-pages.html)
+See also [**Listing Pages**](./listing-pages.html)
 
 **4\. By using the [*get\_custom\_field*](../tags-reference/get_custom_field.html) tag -**
 

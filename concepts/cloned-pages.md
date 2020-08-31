@@ -116,14 +116,14 @@ useless?
 
 Not at all. By default Couch displays nothing here but it is totally upto you as to what you wish to show on this page.<br/>
 This page is ideal for displaying a list of all pages that have been cloned out of this template.<br/>
-You might want to display the contents of a particular page here or maybe a list of the latest pages cloned from a different template altogether (see [**listing pages**](../listing-pages.html)).
+You might want to display the contents of a particular page here or maybe a list of the latest pages cloned from a different template altogether (see [**listing pages**](./listing-pages.html)).
 
 <p class="notice">In fact, Couch recognizing the fact that a clonable template can be viewed in two different contexts - as a cloned page and as simply itself where possibly a listing of its cloned pages will be displayed, calls the first scenario a 'Page View' and the second a 'List View'.</p>
 
-Couch indicates to your template which 'view' it is executing in by setting certain variables (see [**Views**](../views.html)).<br/>
-Your template can test these variables and display whatever you wish accordingly (see [**Variables available in Views**](../variables-in-views.html)).
+Couch indicates to your template which 'view' it is executing in by setting certain variables (see [**Views**](./views.html)).<br/>
+Your template can test these variables and display whatever you wish accordingly (see [**Variables available in Views**](./variables-in-views.html)).
 
 <p class="error">
-    **V.IMP** - If you have turned on the [**pretty-urls**](../pretty-urls.html) feature, every time you declare a template to be clonable, make sure to recreate your .htaccess file else the cloned pages will NOT be accessible.<br/>
+    **V.IMP** - If you have turned on the [**pretty-urls**](./pretty-urls.html) feature, every time you declare a template to be clonable, make sure to recreate your .htaccess file else the cloned pages will NOT be accessible.<br/>
     As a temporary measure, you can turn off pretty-urls in _config.php_ till you are done with the testing.
 </p>

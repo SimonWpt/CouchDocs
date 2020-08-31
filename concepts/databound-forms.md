@@ -16,9 +16,9 @@ So, for example, to create, modify or delete a cloned-page one had to be logged-
 This arrangement works well and is very secure, however, there are situations where it becomes necessary to allow the Create/Update/Delete operations to happen beyond these usual constrains. That is to say, allow ordinary users (non-admins) to do so and that too from the front-end.<br/>
 A few examples -
 
-1.  Allow visitors to submit contents like articles or job postings etc.
-2.  Allow visitors to submit their reviews and ratings.
-3.  Allow a group of registered users to create/manage their own pages.
+1. Allow visitors to submit contents like articles or job postings etc.
+2. Allow visitors to submit their reviews and ratings.
+3. Allow a group of registered users to create/manage their own pages.
 
 In all the examples above, notice that the submitted content needs to get persisted in the database as ordinary cloned-pages of Couch and this needs to be done by non-admin users without ever accessing the admin-panel.
 
@@ -32,10 +32,8 @@ As we'll see later, Couch also provides you all necessary security tools to safe
 
 Instead of dryly documenting the new tags, I'll walk you through a real-world example.
 
-<p class="error">
-    **Caveat:** the discussion that follows assumes that you're already conversant with Couch's [**form**](../forms.html) and [**editable-regions**](../editable-regions.html) concepts.<br/>
-    If you are new to Couch, please take some time to first study those as all the new functions discussed here build upon them.
-</p>
+> **Caveat:** the discussion that follows assumes that you're already conversant with Couch's [**form**](./forms.html) and [**editable-regions**](./editable-regions.html) concepts.<br/>
+> If you are new to Couch, please take some time to first study those as all the new functions discussed here build upon them.
 
 Please remember that there can literally be n-number of situations where we could put this new functionality to use.<br/>
 What I'd be demonstrating is (intentionally) a very simple scenario but it should be sufficient to get you going on your own.
@@ -54,7 +52,7 @@ The code in our tutorial will also utilize the *cms:set\_flash* tag to set flash
 require_once( K_COUCH_DIR.'addons/cart/session.php' );
 ```
 
-<p class="notice">**NOTE:** Beginning with 1.4, new installations will find a file named 'kfunctions.example.php' in the addon folder. This is to prevent future upgrades from overwriting your changes. Please rename this file to 'kfunctions.php' and uncomment the mentioned line from it.</p>
+> **NOTE:** Beginning with 1.4, new installations will find a file named 'kfunctions.example.php' in the addon folder. This is to prevent future upgrades from overwriting your changes. Please rename this file to 'kfunctions.php' and uncomment the mentioned line from it.
 
 With the required modules enabled, we can finally begin.
 
@@ -65,13 +63,13 @@ The submitted info should then get persisted in a database wherefrom he could ac
 Couch's DataBound Form would be a perfect fit to pull this off easily.<br/>
 There are clearly two elements in the requirements -
 
-1.  The front-end form used to submit data.
-2.  The back-end database that holds the submitted form data.
+1. The front-end form used to submit data.
+2. The back-end database that holds the submitted form data.
 
 If, for a moment, we ignore the requirement of persisting the submitted front-end data, we can see that Couch can already be used to implement each of these two parts independently.
 
-1.  The [__*cms:form*__](../tags-reference/form.html) and [__*cms:input*__](../tags-reference/input.html) tags to implement the front-end form.
-2.  A clonable template with [__*cms:editable*__](../tags-reference/editable.html) tags to hold data.
+1. The [__*cms:form*__](../tags-reference/form.html) and [__*cms:input*__](../tags-reference/input.html) tags to implement the front-end form.
+2. A clonable template with [__*cms:editable*__](../tags-reference/editable.html) tags to hold data.
 
 The obvious problem would be that there is no connection between the two.<br/>
 I mean, though the form can be used to submit data and the editable regions can be used to save data, there is no direct way of saving the form's data into the editable regions.
@@ -79,7 +77,7 @@ I mean, though the form can be used to submit data and the editable regions can 
 This is where the new 'databound form' feature comes in.<br/>
 You see, this simply connects an existing front-end form with existing back-end editable regions (in other words - 'binds' a Couch form with Couch database i.e. editable regions. This, incidentally, also explains why we chose to call this feaure 'DataBound Forms').
 
-So, when working with databound forms, we always start off with two concepts that are already well known to us - [**form**](../forms.html) and [**editable regions**](../editable-regions.html).<br/>
+So, when working with databound forms, we always start off with two concepts that are already well known to us - [**form**](./forms.html) and [**editable regions**](./editable-regions.html).<br/>
 This is the form we'll be working on (kindly provided by [@cheesypoof](http://www.couchcms.com/forum/memberlist.php?mode=viewprofile&u=11919)) -
 
 ![](../assets/img/contents/databound-forms-1.png)
@@ -156,7 +154,7 @@ Following is what should be sufficient to capture all data inputted through our 
 
 Notice that we have defined editable regions that are equivalent to the input fields in the form.
 
-<p class="success">The type of last editable region (securefile) would seem unfamiliar. This is a new editable region that debuts with v1.4 and is meant exclusively to be used for uploading files securely from the front-end.</p>
+> The type of last editable region (securefile) would seem unfamiliar. This is a new editable region that debuts with v1.4 and is meant exclusively to be used for uploading files securely from the front-end.
 
 Also notice that we've also added all data constrains (e.g. the field being required, validator, search\_type etc.) to the editable regions. This part is exactly how we use other templates in Couch and can be tested independently of the front-end form - i.e. after visiting the template as super-admin for the changes to be picked up, we can create cloned pages from the admin-panel, add data to the editable regions we defined and save.<br/>
 This is the right time to manually test everything e.g. validations etc. work as expected.
@@ -165,7 +163,7 @@ With the 'data' component completed, time to move to the 'form' component.
 
 ### 2. The 'form' part of DataBound forms
 
-It should be trivial to 'couchify' the plain HTML form we have in our template (as explained [here](../forms.html)).
+It should be trivial to 'couchify' the plain HTML form we have in our template (as explained [here](./forms.html)).
 
 Following is what we end up with -
 
@@ -519,8 +517,8 @@ Since the form is Couch managed, the default security offered by the CMS against
 
 As discussed elsewhere on our forum (Fighting Spam - [http&#58;//www.couchcms.com/forum/viewtopic.php?f=8&t=7047](http://www.couchcms.com/forum/viewtopic.php?f=8&t=7047)), Captcha has long lost its efficacy in stopping spam. We have to look at other measures now. As discussed in the mentioned thread, there are two main sources of spam to contend with -
 
-1.  Spambots
-2.  Human
+1. Spambots
+2. Human
 
 We'll have put in appropriate measures to thwart each of them.
 
@@ -562,11 +560,9 @@ validator='regex=/^blue$/i'
 
 Make sure to change the highlited portion to match whatever is the answer to the question you put. Your visitors will also appreciate if you provided a hint about the length of the right answer.
 
-<p class="notice">
-    This step, incidentally, also shows that we can use 'bound' and normal cms:inputs together in the same form (the 'human' input we used above, unlike others, is not a bound field).<br/>
-    Submitted values or error messages from both types will be made available by the form in identical fashion (i.e. as variables prefixed by 'frm\_' and 'k\_error\_' to input names).<br/>
-    The only difference between the two lies in the fact that values of normal inputs, unlike those of bound inputs, will not be saved into the database.
-</p>
+> This step, incidentally, also shows that we can use 'bound' and normal cms:inputs together in the same form (the 'human' input we used above, unlike others, is not a bound field).<br/>
+> Submitted values or error messages from both types will be made available by the form in identical fashion (i.e. as variables prefixed by 'frm\_' and 'k\_error\_' to input names).<br/>
+> The only difference between the two lies in the fact that values of normal inputs, unlike those of bound inputs, will not be saved into the database.
 
 This one step alone should cut down the spam spewed by bots appreciably.<br/>
 Spam submitted by real humans is a different prospect altogether.
@@ -785,16 +781,14 @@ So now we have the full arsenal of our familiar Couch tags at our disposal to co
 Create a table, create a stacked display, show images, use custom CSS, JS ... whatever.<br/>
 Everything that can be used on the front-end can now be used in identical fashion on the backend.
 
-<p class="error">
-    **Caveat:** one little thing to keep in mind is that, unlike the front-end where our code controls the output of the entire page i.e. from &lt;HTML&gt; to &lt;/HTML&gt;, the snippet we use in the admin panel is constrained within an existing DIV -<br/>
+> **Caveat:** one little thing to keep in mind is that, unlike the front-end where our code controls the output of the entire page i.e. from &lt;HTML&gt; to &lt;/HTML&gt;, the snippet we use in the admin panel is constrained within an existing DIV -<br/>
     <br/>
     ```
 <div id="admin-wrapper-body">
     <!-- our snippet gets output here -->
 </div>
     ```
-    If your snippet uses its own CSS, this piece of information will likely be necessary to be taken into account.
-</p>
+> If your snippet uses its own CSS, this piece of information will likely be necessary to be taken into account.
 
 It is important to realize here that the default page listing shown by Couch, apart from listing pages, does several things. e.g. it handles folders display, pagination, bulk-selection of pages for deletion etc.<br/>
 Once we specify our snippet to be used for the display, it is an 'all or nothing' proposition.<br/>
@@ -861,14 +855,14 @@ Here is what our rendered edit screen looks like
 
 Not very different from the default screen provide by Couch but now since the output is completely controlled by us there is a lot we can accomplish that cannot be done otherwise. For example -
 
-1.  Define the markup used to show the form.
-2.  Place the inputs in any sequence.
-3.  Style the inputs in any manner using CSS.
-4.  Show only some inputs or show/hide them depending on custom logic using JS.
+1. Define the markup used to show the form.
+2. Place the inputs in any sequence.
+3. Style the inputs in any manner using CSS.
+4. Show only some inputs or show/hide them depending on custom logic using JS.
 
 and much more.
 
-<p class="success">You can study this code to see the use of Databound forms for editing existing pages.</p>
+> You can study this code to see the use of Databound forms for editing existing pages.
 
 So that brings us to the end of our little tutorial.
 
