@@ -244,7 +244,7 @@ The shortcode described above can be used by the end user in any of the followin
 [googlemap src="http://maps.google.com/?ll=23.250652,77.402072&spn=0.019912,0.038581&z=15" width='600' height='480']
 ```
 
-<p class="success">If you are wondering where that URL given as _src_ came from, you can get it from http&#58;//maps.google.com/ by navigating to the desired geographical location and then clicking the 'link' button available at the top.</p>
+<p class="success">If you are wondering where that URL given as _src_ came from, you can get it from <http://maps.google.com/> by navigating to the desired geographical location and then clicking the 'link' button available at the top.</p>
 
 That wraps up all that is there for you to know about shortcodes in Couch.<br/>
 We end this section by providing some very useful (and real world) examples of shortcodes that you can use as guides for your own shortcodes or use them as-is in your projects.

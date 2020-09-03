@@ -19,7 +19,7 @@ We chose this template because it has almost all the sections that you'll come a
 * Contact Us
 * Home
 
-It can be found at [_http&#58;//net.tutsplus.com/articles/news/free-website-template/_](http://net.tutsplus.com/articles/news/free-website-template/). You can choose to download it from the aforesaid link or get it from [here](http://www.couchcms.com/docs/code/Aurelius.zip) (our version has all unnecessary files removed).
+It can be found at [_<https://net.tutsplus.com/articles/news/free-website-template/>_](http://net.tutsplus.com/articles/news/free-website-template/). You can choose to download it from the aforesaid link or get it from [here](http://www.couchcms.com/docs/code/Aurelius.zip) (our version has all unnecessary files removed).
 
 ### Installing Aurelius
 
@@ -34,7 +34,7 @@ Unzip and upload all the files of Aurelius to your web server.
     For this tutorial, we'll assume that your web server is hosted locally and hence will simply say 'edit this file and save it' instead of 'edit this file locally and FTP it back to your server'.
 </p>
 
-If you are using the files downloaded from _http&#58;//net.tutsplus.com/_, remove the _Documentation_ and _psd_ folders as well as the _config.php_, *send\_email.php* and *full\_width.html* files as these will no longer be needed by us (this won't be necessary if you downloaded the template from our site).
+If you are using the files downloaded from _<https://net.tutsplus.com/>_, remove the _Documentation_ and _psd_ folders as well as the _config.php_, *send\_email.php* and *full\_width.html* files as these will no longer be needed by us (this won't be necessary if you downloaded the template from our site).
 
 The resulting folder structure should look like this -
 
@@ -67,9 +67,9 @@ The resulting site structure should now look like this with the _couch_ folder a
     For this tutorial we'll assume you have chosen to go with the default name.
 </p>
 
-Access the admin section through your browser - _http&#58;//www.mytestsite.com/couch/_
+Access the admin section through your browser - _<https://www.mytestsite.com/couch/>_
 
-<p class="success">For the rest of this tutorial we'll assume the site's address to be _http&#58;//www.mytestsite.com/_. Replace it with your site's address for all examples.</p>
+<p class="success">For the rest of this tutorial we'll assume the site's address to be _<https://www.mytestsite.com/>_. Replace it with your site's address for all examples.</p>
 
 Couch will sense that installation is required and will display the following form for you to fill -
 

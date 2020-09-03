@@ -31,7 +31,7 @@ at the very top and
 
 at the very end.
 
-Access _http&#58;//www.mytestsite.com/portfolio.php_ while logged on as the super-admin to attach Couch to this template.<br/>
+Access _<https://www.mytestsite.com/portfolio.php>_ while logged on as the super-admin to attach Couch to this template.<br/>
 Visit your admin section and _porfolio.php_ should now appear added to the list of templates manages by Couch.
 
 ### Defining editable regions
@@ -76,7 +76,7 @@ As we did in the _blog_ section, define all these editable regions within a temp
 
 Notice that we have also declared the template as clonable.
 
-Refresh _http&#58;//www.mytestsite.com/portfolio.php_ by visiting it again logged in as super-admin.<br/>
+Refresh _<https://www.mytestsite.com/portfolio.php>_ by visiting it again logged in as super-admin.<br/>
 Visit the admin section to find the first default page created for you. Clicking on it should reveal that Couch has created the following editable regions as instructed -
 
 ![](../../assets/img/contents/portfolio-site-124.png)
@@ -84,7 +84,7 @@ Visit the admin section to find the first default page created for you. Clicking
 Edit the default page to create the first portfolio item.<br/>
 Once you have entered and saved all data, click on 'view' to see the page.<br/>
 The page-view of _portfolio.php_ should load with the URL of the cloned page being similar to -<br/>
-_http&#58;//www.mytestsite.com/portfolio.php?p=7_<br/>
+_<https://www.mytestsite.com/portfolio.php?p=7>_<br/>
 where the number after '?p=' will be the unique id of this portfolio item.
 
 Of course, none of the data we entered in the editable regions of this page should be visible because we have not used the variables representing the editable regions in the template yet.<br/>
@@ -118,7 +118,7 @@ else display the embedded *portfolio\_list.html* (this has to be the list-view) 
 
 ![](../../assets/img/contents/portfolio-site-129.png)
 
-Access _http&#58;//www.mytestsite.com/portfolio.php_ (it is the list-view because no page information is appended to the template name) and the contents of *portfolio\_list.html* should appear -
+Access _<https://www.mytestsite.com/portfolio.php>_ (it is the list-view because no page information is appended to the template name) and the contents of *portfolio\_list.html* should appear -
 
 ![](../../assets/img/contents/portfolio-site-130.png)
 
@@ -131,7 +131,7 @@ Let us create three folders for _portfolio.php_. For the sake of simplicity, we'
 
 ![](../../assets/img/contents/portfolio-site-131.png)
 
-Refresh portfolio.php by revisiting _http&#58;//www.mytestsite.com/portfolio.php_ logged on as super-admin. Visit admin to find the three categories visible in the drop-down list -
+Refresh portfolio.php by revisiting _<https://www.mytestsite.com/portfolio.php>_ logged on as super-admin. Visit admin to find the three categories visible in the drop-down list -
 
 ![](../../assets/img/contents/portfolio-site-132.png)
 
@@ -158,7 +158,7 @@ Finally, we make use of the variables set by the folders tag that describe each 
 
 ![](../../assets/img/contents/portfolio-site-135.png)
 
-Accessing _http&#58;//www.mytestsite.com/portfolio.php_ now should reveal that the three categories we created for portfolio.php are being enumerated correctly.
+Accessing _<https://www.mytestsite.com/portfolio.php>_ now should reveal that the three categories we created for portfolio.php are being enumerated correctly.
 
 ![](../../assets/img/contents/portfolio-site-136.png)
 
@@ -226,10 +226,10 @@ The finished code should be something like this -
     The pages cloned out of it are not meant to be accessed directly in a browser through a URL. As such, it also does not contain any HTML code whatsoever.<br/>
     <br/>
     By declaring this template as non-executable (executable='0'), we are signaling to Couch that this template is not meant to be accessed directly via a URL.<br/>
-    When you are logged-in as the super-admin and access *http&#58;//www.mytestsite.com/portfolio\_desc.php*, Couch loads up this template as a normal template (because without doing this the changes you made will not take effect). However, try accessing the same URL without being logged-in as the super-admin and you'll receive a 'HTTP 404 Page not found' error.
+    When you are logged-in as the super-admin and access *<http://www.mytestsite.com/portfolio\_desc.php>*, Couch loads up this template as a normal template (because without doing this the changes you made will not take effect). However, try accessing the same URL without being logged-in as the super-admin and you'll receive a 'HTTP 404 Page not found' error.
 </p>
 
-Access *http&#58;//www.mytestsite.com/portfolio\_desc.php* while being logged-in as the super-admin. You'll get a blank page because the template contains no HTML. However, the purpose of this visit was to execute the Couch tags contained within the template. To verify that, visit the admin section and you should find that Couch has created the default cloned page for this template and has also created the two editable regions.
+Access *<http://www.mytestsite.com/portfolio\_desc.php>* while being logged-in as the super-admin. You'll get a blank page because the template contains no HTML. However, the purpose of this visit was to execute the Couch tags contained within the template. To verify that, visit the admin section and you should find that Couch has created the default cloned page for this template and has also created the two editable regions.
 
 ![](../../assets/img/contents/portfolio-site-143.png)
 
@@ -251,7 +251,7 @@ The pages tag, as usual, is used to fetch the cloned pages.<br/>
 This time we have set the masterpage to *portfolio\_desc.php* so only pages cloned from this template will be fetched. Most importantly, we have also set the *page\_name* parameter to the variable *k\_folder\_name*. This variable, as we know, is set by the folders tag to the name of the folder being currently enumerated. Using this as the *page\_name* parameter causes the pages tag to fetch only the page that has the same name as the current folder.<br/>
 Since there can be only one page for the given name, the contents enclosed by the pages tag are output only once. Once we get the right page, we use the variables representing the two editable regions the usual way.
 
-Accessing _http&#58;//www.mytestsite.com/portfolio.php_ will now show the category description and blurb as entered into *portfolio\_desc.php* pages -
+Accessing _<https://www.mytestsite.com/portfolio.php>_ will now show the category description and blurb as entered into *portfolio\_desc.php* pages -
 
 ![](../../assets/img/contents/portfolio-site-147.png)
 

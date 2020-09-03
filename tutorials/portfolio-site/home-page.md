@@ -21,7 +21,7 @@ Add the two lines of boilerplate PHP code to enclose the contents of this file a
 
 ![](../../assets/img/contents/portfolio-site-180.png)
 
-Access _http&#58;//www.mytestsite.com/_ while logged on as the super-admin.<br/>
+Access _<https://www.mytestsite.com/>_ while logged on as the super-admin.<br/>
 This will hook up Couch to the template.<br/>
 Visit the admin panel. An new entry 'Home Page' should appear in the list of templates.
 
@@ -56,7 +56,7 @@ If defining the editable regions in-line seems too cluttered to you, you can def
 Please note in the code above that the labels of several regions are the same however, as is mandatory, their names are different.<br/>
 Also note that we have grouped together the editable regions belonging to each box by creating group type editable regions for each box and linking them to the regions.
 
-Refresh the home page by visiting _http&#58;//www.mytestsite.com/_ logged-in as the super-admin.<br/>
+Refresh the home page by visiting _<https://www.mytestsite.com/>_ logged-in as the super-admin.<br/>
 Visit the admin panel and you should find the following -
 
 ![](../../assets/img/contents/portfolio-site-185.png)
@@ -85,7 +85,7 @@ Finally, use the variables set by the enumerator tag belonging to each fetched o
 
 ![](../../assets/img/contents/portfolio-site-189.png)
 
-Visit _http&#58;//www.mytestsite.com/_ to see the results of your work -
+Visit _<https://www.mytestsite.com/>_ to see the results of your work -
 
 ![](../../assets/img/contents/portfolio-site-190.png)
 

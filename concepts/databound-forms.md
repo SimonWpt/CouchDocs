@@ -515,7 +515,7 @@ The onus of securing up the form lies squarely on our shoulders.
 
 Since the form is Couch managed, the default security offered by the CMS against serious attacks like XSS, CSRF, SQL injection etc. covers the form as well. Nothing needs to be done on this front. Preventing spam submissions will require some work though.
 
-As discussed elsewhere on our forum (Fighting Spam - [http&#58;//www.couchcms.com/forum/viewtopic.php?f=8&t=7047](http://www.couchcms.com/forum/viewtopic.php?f=8&t=7047)), Captcha has long lost its efficacy in stopping spam. We have to look at other measures now. As discussed in the mentioned thread, there are two main sources of spam to contend with -
+As discussed elsewhere on our forum (Fighting Spam - [http://www.couchcms.com/forum/viewtopic.php?f=8&t=7047](http://www.couchcms.com/forum/viewtopic.php?f=8&t=7047)), Captcha has long lost its efficacy in stopping spam. We have to look at other measures now. As discussed in the mentioned thread, there are two main sources of spam to contend with -
 
 1. Spambots
 2. Human
@@ -529,7 +529,7 @@ Fortunately, foiling most spambots is not very difficult. Just throw in a little
 I personally have found the following method extremely effective.<br/>
 Decide upon a question simple enough for a human to answer but difficult for a bot to do so even by googling (yes, bots use google).<br/>
 This webpage has some interesting sample questions that should give us an idea about the kind of questions that are effective.<br/>
-[http&#58;//www.reverbstudios.ie/2649/anti-spam-questions-your-spam-bot-cant-answer/](http://www.reverbstudios.ie/2649/anti-spam-questions-your-spam-bot-cant-answer/)
+[http://www.reverbstudios.ie/2649/anti-spam-questions-your-spam-bot-cant-answer/](http://www.reverbstudios.ie/2649/anti-spam-questions-your-spam-bot-cant-answer/)
 
 An excerpt from it -
 
@@ -571,7 +571,7 @@ Spam submitted by real humans is a different prospect altogether.
 
 Our form was intended to be used by humans, right?. So really there is little we can 'directly' do to stop someone who decides to use the form for submitting what amounts to spam for us.<br/>
 Indirectly, however, there are services like akismet etc. that can be used to examine the submission and report if it could be considered as spam or not.<br/>
-One such service is provided by [http&#58;//www.stopforumspam.com/](http://http://www.stopforumspam.com/). This site mantains a list of known spammers as identified by the emails, usernames and IP addresses they tend to use while spamming around the Internet.<br/>
+One such service is provided by [http://www.stopforumspam.com/](http://http://www.stopforumspam.com/). This site mantains a list of known spammers as identified by the emails, usernames and IP addresses they tend to use while spamming around the Internet.<br/>
 The way it works is that upon receiving a form submission, we send the submitted email and username (if any - our form does not have this but others like registeration forms etc. will have one) to stopforumspam.com. The IP address gets send automatically.<br/>
 The service responds back with whether or not the email, username and IP address appears in its list of known spammers.
 

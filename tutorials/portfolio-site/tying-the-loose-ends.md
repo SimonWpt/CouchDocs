@@ -79,7 +79,7 @@ Add the mandatory PHP code to it to attach Couch to it -
 
 ![](../../assets/img/contents/portfolio-site-196.png)
 
-Access _http&#58;//www.mytestsite.com/globals.php_ as super-admin and then visit the admin section.<br/>
+Access _<https://www.mytestsite.com/globals.php>_ as super-admin and then visit the admin section.<br/>
 Our new template should now be available.
 
 ![](../../assets/img/contents/portfolio-site-197.png)
@@ -92,7 +92,7 @@ The finished code should look like this -
 
 ![](../../assets/img/contents/portfolio-site-198.png)
 
-Refresh _http&#58;//www.mytestsite.com/globals.php_ still logged-in as the super-admin to make Couch pick up the changes.<br/>
+Refresh _<https://www.mytestsite.com/globals.php>_ still logged-in as the super-admin to make Couch pick up the changes.<br/>
 Visiting the admin panel should reveal the following editable regions -
 
 ![](../../assets/img/contents/portfolio-site-199.png)

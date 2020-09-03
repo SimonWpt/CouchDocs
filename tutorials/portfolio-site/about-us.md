@@ -11,11 +11,11 @@ Of all the five sections that Aurelius has (i.e. _About-Us_, _Portfolio_, _Blog_
 We'll tackle the cloned pages in the next chapter. For now let us begin with a simpler section that doesn't require cloning. The _About Us_ page will serve our purpose.<br/>
 Before proceeding further, make sure that you are logged into Couch using the super-admin account that got created during installation.
 
-Access _about.html_ in your browser by visiting _http&#58;//www.mytestsite.com/about.html_<br/>
+Access _about.html_ in your browser by visiting _<https://www.mytestsite.com/about.html>_<br/>
 The _About Us_ page should appear.
 
 Change the extension of the template from _.html_ to _.php_ so that _about.html_ now becomes _about.php_. Access _about.php_ in your browser -<br/>
-_http&#58;//www.mytestsite.com/about.php_<br/>
+_<https://www.mytestsite.com/about.php>_<br/>
 The same _About Us_ page should appear as did when the file's extension was _html_.<br/>
 This change of extension from _.html_ to _.php_ is necessary before Couch can be retrofitted into a template.
 

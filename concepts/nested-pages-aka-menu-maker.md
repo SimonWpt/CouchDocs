@@ -348,7 +348,7 @@ We now have the requisite HTML structure for our menu.<br/>
 What remains now is putting in some CSS styling and we are done.
 
 We could code up all the CSS required to shape up a good-looking dropdown menu ourselves or use any of the several very good off-the-shelf scripts that do the job for us.<br/>
-For our example, we'll make use of a jQuery plugin - [Superfish](http://users.tpg.com.au/j_birch/plugins/superfish/) (http&#58;//users.tpg.com.au/j\_birch/plugins/superfish/).
+For our example, we'll make use of a jQuery plugin - [Superfish](http://users.tpg.com.au/j_birch/plugins/superfish/) (http://users.tpg.com.au/j\_birch/plugins/superfish/).
 
 Superfish is a set of CSS and JavaScript files that need to be included within our templates.<br/>
 You can choose to either download the files from Superfish's site or [use the slightly modified version that we used for this example](http://www.couchcms.com/docs/code/superfish.zip) - \[[Download superfish.zip](http://www.couchcms.com/docs/code/superfish.zip)\].<br/>

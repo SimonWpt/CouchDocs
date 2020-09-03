@@ -19,7 +19,7 @@ Add the two lines of boilerplate PHP code to enclose the contents of this file a
 
 ![](../../assets/img/contents/portfolio-site-149.png)
 
-Access _http&#58;//www.mytestsite.com/contact.php_ while logged on as the super-admin.<br/>
+Access _<https://www.mytestsite.com/contact.php>_ while logged on as the super-admin.<br/>
 This will hook up Couch to the template.
 
 ### Defining editable regions
@@ -37,7 +37,7 @@ Let us define the editable regions for the introductory paragraph and the addres
 
 ![](../../assets/img/contents/portfolio-site-152.png)
 
-Refreshing _http&#58;//www.mytestsite.com/contact.php_ by revisiting it as super-admin will yield the following results for the changes made so far -
+Refreshing _<https://www.mytestsite.com/contact.php>_ by revisiting it as super-admin will yield the following results for the changes made so far -
 
 ![](../../assets/img/contents/portfolio-site-153.png)
 
@@ -51,7 +51,7 @@ Make the following changes to the template tag at the top -
 ![](../../assets/img/contents/portfolio-site-154.png)
 
 Note how we have grouped the five text type editable regions by creating an editable region of type group and linking the other regions to it.<br/>
-Refresh _http&#58;//www.mytestsite.com/contact.php_ and then visit the admin section. The following regions should appear -
+Refresh _<https://www.mytestsite.com/contact.php>_ and then visit the admin section. The following regions should appear -
 
 ![](../../assets/img/contents/portfolio-site-155.png)
 
@@ -161,7 +161,7 @@ After replacing with Couch tags -
 Note how all the HTML input tags simply needed the 'cms:' prefix to convert them to their Couch equivalents.<br/>
 The textarea tag required a little more work. It had to be replaced by its Couch input tag that had a type of 'textarea'.
 
-Access _http&#58;//www.mytestsite.com/contact.php_ and the form should appear, as well as work, exactly the same as it did with the original HTML tags.<br/>
+Access _<https://www.mytestsite.com/contact.php>_ and the form should appear, as well as work, exactly the same as it did with the original HTML tags.<br/>
 Uptil now we've used the Couch tags to simply generate the form. The real power of these tags, however, lies in processing the submitted form.<br/>
 The form, as it was originally built, makes use of JavaScript to validate the inputs and display the errors (try submitting the form with empty fields to see it in action).<br/>
 JavaScript is, of course, a client-side technology and cannot be relied upon for validating forms because it is only trivial to turn off JavaScript in a browser.<br/>

@@ -8,7 +8,7 @@ layout: default
 <br/>
 ### LISTING CLONED PAGES - The list-view
 
-As already discussed, _http&#58;//www.mytestsite.com/blog.php_ is the view where we list all the existing blog entries.<br/>
+As already discussed, _<https://www.mytestsite.com/blog.php>_ is the view where we list all the existing blog entries.<br/>
 Access it through your browser and you'll see that currently it is showing some hard coded HTML.<br/>
 We are going to change that now to make it display pages cloned from _blog.php_ template in descending order of their publication date.
 
@@ -35,7 +35,7 @@ As a quick and dirty test, place the following code
 
 ![](../../assets/img/contents/portfolio-site-73.png)
 
-anywhere within *blog\_list.html* (I chose just after the BODY tag) and access _http&#58;//www.mytestsite.com/blog.php_.
+anywhere within *blog\_list.html* (I chose just after the BODY tag) and access _<https://www.mytestsite.com/blog.php>_.
 
 You'll see that the heading '_Hi, I am a page!_' appears twice.
 
@@ -58,20 +58,20 @@ As you can see we can access all variables belonging to each cloned pages just t
 With this ability to list cloned pages and access their data, we can now make changes to the *blog\_list.html* snippet to display the cloned pages instead of its hard coded content.
 
 The *blog\_list.html* is hard coded to display three blog posts.<br/>
-Delete two posts so that we are left with only one. Visit _http&#58;//www.mytestsite.com/blog.php_ to ensure that it displays only one blog post.
+Delete two posts so that we are left with only one. Visit _<https://www.mytestsite.com/blog.php>_ to ensure that it displays only one blog post.
 
 We have already seen that the pages tag repeats the contents enclosed by it as many times as there are pages for it to display. We are going to enclose the remaining one post with the pages tag hence we need the HTML for only one blog post.<br/>
 Enclose the solitary blog post by the pages tag this way -
 
 ![](../../assets/img/contents/portfolio-site-77.png)
 
-Visit _http&#58;//www.mytestsite.com/blog.php_ again and see that now it has repeated the static blog post twice, once for each cloned page of _blog.php_. The two posts are of course identical. We'll now set them to display variables from the cloned pages fetched by the pages tag instead of the hard coded HTML.
+Visit _<https://www.mytestsite.com/blog.php>_ again and see that now it has repeated the static blog post twice, once for each cloned page of _blog.php_. The two posts are of course identical. We'll now set them to display variables from the cloned pages fetched by the pages tag instead of the hard coded HTML.
 
 We have already been through this step of finding relevant regions within the HTML code and replacing them with the page's variables while configuring the page-view. The finished code should look like this -
 
 ![](../../assets/img/contents/portfolio-site-78.png)
 
-Visit _http&#58;//www.mytestsite.com/blog.php_ to see the two cloned pages listed on it -
+Visit _<https://www.mytestsite.com/blog.php>_ to see the two cloned pages listed on it -
 
 ![](../../assets/img/contents/portfolio-site-79.png)
 
@@ -210,7 +210,7 @@ This will result in a list of all the five folders we defined for _blog.php_ tem
 #### Listing pages within a folder
 
 Each folder in the list produced by the folders tag above is also linked to a URL similar to<br/>
-_http&#58;//www.mytestsite.com/blog.php?f=5_<br/>
+_<https://www.mytestsite.com/blog.php?f=5>_<br/>
 Notice how the name of the template is followed by '_?f=n_' (where n is a number denoting a particular folder).<br/>
 This URL is meant for listing pages that belong to the specified folder only. Such view is a sub-category of the list-view and is known as the folder-view \[see [Views](../../concepts/views.html)\].
 
@@ -236,7 +236,7 @@ As it happens, during folder-view, a variable named *k\_folder\_name* gets set b
 Refresh _blog.php_ and click on the '_Clients_' folder in the sidebar list.<br/>
 Only two pages, each belonging to '_Clients_' folder will be displayed.<br/>
 Click on the '_Philosophy_' folder and you should now see only the two pages belonging to '_Philosophy_' being listed.<br/>
-Remove the '_?f=n_' part from the URL and access _http&#58;//www.mytestsite.com/blog.php_ directly.<br/>
+Remove the '_?f=n_' part from the URL and access _<https://www.mytestsite.com/blog.php>_ directly.<br/>
 It will display all folders, regardless of their containing folders, as before.<br/>
 This works as before because this view not being the folder-view, the *k\_folder\_name* variable comes up empty and hence the '_folder_' parameter of the pages tag is ignored.
 
@@ -267,7 +267,7 @@ We have already discussed the use of date tag to format dates.
 
 Visit _blog.php_ and you'll see the archives being displayed in the sidebar.<br/>
 Click on one archive item and it should lead you to a URL like -<br/>
-_http&#58;//www.mytestsite.com/blog.php?d=201010_
+_<https://www.mytestsite.com/blog.php?d=201010>_
 
 The '_?d=201010_' after the _blog.php_ signals to Couch that an archive-view is being accessed. Couch makes available all information pertaining to the archive period specified in the URL by setting various variables \[see [Variables available in Views](../../concepts/variables-in-views.html)\].<br/>
 It is up to the template being accessed to handle the archive period anyway it chooses to.<br/>
@@ -405,19 +405,19 @@ That completes the last feature of the blog section.
 
 Let us tie up some loose ends before wrapping up the blog section.
 
-Below every blog post in page-view, there is a button that says '_Back to Blog_'. We need to make it link to our list view - _http&#58;//www.mytestsite.com/blog.php_.<br/>
+Below every blog post in page-view, there is a button that says '_Back to Blog_'. We need to make it link to our list view - _<https://www.mytestsite.com/blog.php>_.<br/>
 We could hard-code the link ourselves but in Couch it is never a good idea to do so with any link.<br/>
 The reason is that, latter on when all the templates have been configured, usually you'll want to turn on the prettyURLs feature. With this feature enabled, all default links of Couch will change to become more SEO friendly.
 
 Thus, for example,<br/>
-_http&#58;//www.mytestsite.com/blog.php_ will become<br/>
-_http&#58;//www.mytestsite.com/blog/_<br/>
+_<https://www.mytestsite.com/blog.php>_ will become<br/>
+_<https://www.mytestsite.com/blog/>_<br/>
 <br/>
-_http&#58;//www.mytestsite.com/blog.php?p=2_ will become<br/>
-_http&#58;//www.mytestsite.com/blog/my-first-blog-entry.html_<br/>
+_<https://www.mytestsite.com/blog.php?p=2>_ will become<br/>
+_<https://www.mytestsite.com/blog/my-first-blog-entry.html>_<br/>
 <br/>
-_http&#58;//www.mytestsite.com/blog.php?f=5_ will become<br/>
-_http&#58;//www.mytestsite.com/blog/clients/_<br/>
+_<https://www.mytestsite.com/blog.php?f=5>_ will become<br/>
+_<https://www.mytestsite.com/blog/clients/>_<br/>
 etc.
 
 The right way to code any link in Couch is to use the link tag.<br/>

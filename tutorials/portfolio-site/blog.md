@@ -12,7 +12,7 @@ Before beginning this section, please allow us to clarify the distinction betwee
 
 The way we use both the terms, a page of a web site is what we access using a distinct address or URL. A template, on the other hand, is a physical php file (containing regular HTML and some Couch tags) that is used to generate a page.
 
-Thus, taking the example of the _about us_ page that we built in the previous section, page is what gets displayed in the browser when we access the URL _http&#58;//www.mytestsite.com/about.php_. The template in this case is the _about.php_ file, which is used to generate the page.<br/>
+Thus, taking the example of the _about us_ page that we built in the previous section, page is what gets displayed in the browser when we access the URL _<https://www.mytestsite.com/about.php>_. The template in this case is the _about.php_ file, which is used to generate the page.<br/>
 Since in this case, the template is associated with only one page, the distinction might seem superfluous. However a template can be used to create any number of pages, which is when it becomes necessary to make a distinction between the two.<br/>
 The blog section of any web site, for example, comprises of several blog entries. Each blog entry is usually a page in itself (i.e. has a distinct URL).<br/>
 To build such a blog section using Couch, we can use a single php file as a template and then use it to generate as many pages as desired. In Couch terminology, this is known as '**cloning**' the template.
@@ -26,7 +26,7 @@ The _single.html_ represents a discrete blog entry while the _blog.html_ merely 
 Since _single.html_ is the actual blog entry, we'll use it as the template to define the editable regions required for capturing the data for each blog entry and for displaying each entry.
 
 Rename _blog.html_ to *blog\_list.html* and then rename _single.html_ to _blog.html_.<br/>
-Access _http&#58;//www.mytestsite.com/blog.html_.<br/>
+Access _<https://www.mytestsite.com/blog.html>_.<br/>
 Note the various components that we'll have to build -
 
 ![](../../assets/img/contents/portfolio-site-20.png)
@@ -73,7 +73,7 @@ at the very top and
 
 at the very end.
 
-Access _http&#58;//www.mytestsite.com/blog.php_ while logged on as the super-admin.<br/>
+Access _<https://www.mytestsite.com/blog.php>_ while logged on as the super-admin.<br/>
 Visit the admin section to find _blog.php_ added to the list of templates managed by Couch.
 
 ![](../../assets/img/contents/portfolio-site-21.png)
@@ -108,7 +108,7 @@ Clicking the blog section should reveal that Couch has created the two editable 
 ![](../../assets/img/contents/portfolio-site-25.png)
 
 Try placing some content in the richtext editor and saving the page.<br/>
-Access _http&#58;//www.mytestsite.com/blog.php._<br/>
+Access _<https://www.mytestsite.com/blog.php.>_<br/>
 Nothing will seem to change. The content you added in the editor will not appear on the page.<br/>
 The reason is that, unlike about.php where we defined the editable regions by placing the editable tags right where we wanted the edited content to appear, placing the editable tags within the template tag will only create the editable regions. To display the edited content we'll need to use the show tag with the name of the editable region as parameter.
 
@@ -136,7 +136,7 @@ and replace the src attribute of the image tag with the content of the editable 
 
 ![](../../assets/img/contents/portfolio-site-29.png)
 
-Access _http&#58;//www.mytestsite.com/blog.php_ again. Your edited contents should appear on the page now.
+Access _<https://www.mytestsite.com/blog.php>_ again. Your edited contents should appear on the page now.
 
 ![](../../assets/img/contents/portfolio-site-30.png)
 
@@ -149,8 +149,8 @@ The way to do so is setting the _clonable_ parameter within the template tag -
 
 ![](../../assets/img/contents/portfolio-site-31.png)
 
-Access _http&#58;//www.mytestsite.com/blog.php_ as super-admin to refresh it and make your changes take effect.<br/>
-Visit the admin section - _http&#58;//www.mytestsite.com/couch/_<br/>
+Access _<https://www.mytestsite.com/blog.php>_ as super-admin to refresh it and make your changes take effect.<br/>
+Visit the admin section - _<https://www.mytestsite.com/couch/>_<br/>
 Click on _Blog_ in the list of templates in the sidebar.<br/>
 Whereas previously clicking on the blog entry immediately showed the editable regions ready for editing in the right panel, once you declared it to be clonable the right panel will now show you a list of all the pages cloned from this template.<br/>
 Clicking on any of these pages will show the editable regions.
@@ -194,9 +194,9 @@ Notice the address of the page in the address bar -
 ![](../../assets/img/contents/portfolio-site-38.png)
 
 It has an additional '_?p-2_' after the _blog.php_<br/>
-_http&#58;//www.mytestsite.com/blog.php?p=2_<br/>
+_<https://www.mytestsite.com/blog.php?p=2>_<br/>
 Compare it with how uptil now (that is uptil _blog.php_ was not declared clonable), we accessed _blog.php_ using the following address -<br/>
-_http&#58;//www.mytestsite.com/blog.php_
+_<https://www.mytestsite.com/blog.php>_
 
 Every cloned page has the additional '_?p=x_' after the non-clonable URL where 'x' is a unique number that denotes the cloned page that is being displayed.
 
@@ -214,16 +214,16 @@ Press view and the second page should show up -
 ![](../../assets/img/contents/portfolio-site-41.png)
 
 Once again notice the address of this page -<br/>
-_http&#58;//www.mytestsite.com/blog.php?p=3_
+_<https://www.mytestsite.com/blog.php?p=3>_
 
 Clearly, the '_?p=2_' and '_?p=3_' after the _blog.php_ signal to Couch to generate a page using _blog.php_ as template and filling in the editable regions with data associated with the page specified with the number given.<br/>
 So what happens if we access_blog.php_ without any '_?p=n_' appended? Let us try.<br/>
-Access _http&#58;//www.mytestsite.com/blog.php_ and the following page should appear -
+Access _<https://www.mytestsite.com/blog.php>_ and the following page should appear -
 
 ![](../../assets/img/contents/portfolio-site-42.png)
 
 As you can see, a page has been generated using _blog.php_ as the template. However, since no cloned page was specified, the two editable regions come up empty.<br/>
-So if no page's data is associated with the address _http&#58;//www.mytestsite.com/blog.php_, is this address useless for clonable templates?<br/>
+So if no page's data is associated with the address _<https://www.mytestsite.com/blog.php>_, is this address useless for clonable templates?<br/>
 Not at all. We can use it to show a listing of all the pages cloned from the template or display information about this section or do whatever you wish.<br/>
 Couch, on its part, will signal to you whether or not a cloned page's data is available. This it does by setting up certain variables that you can test and take action accordingly.
 
@@ -245,7 +245,7 @@ and place the closing if tag &lt;/cms:if&gt; after the HTML
 
 What we are doing is checking if variable *k\_is\_page* is set (i.e. a cloned page is being viewed). If it is, we output the full template. Test it by accessing both the cloned pages.<br/>
 But what happens if *k\_is\_page* is not set (as when in the list-view)?<br/>
-Check it by accessing _http&#58;//www.mytestsite.com/blog.php_ and you'll face a blank page. Not surprising because we were displaying the template only in page-view.<br/>
+Check it by accessing _<https://www.mytestsite.com/blog.php>_ and you'll face a blank page. Not surprising because we were displaying the template only in page-view.<br/>
 Let us handle the list-view now.<br/>
 Add an else tag before the ending if tag.
 
@@ -256,7 +256,7 @@ As a quick and dirty test, place an arbitrary message in this block -
 
 ![](../../assets/img/contents/portfolio-site-46.png)
 
-Access _http&#58;//www.mytestsite.com/blog.php_ and you'll see '_Hi! You are seeing the list-view_' greeting you.<br/>
+Access _<https://www.mytestsite.com/blog.php>_ and you'll see '_Hi! You are seeing the list-view_' greeting you.<br/>
 Of course, you'll want to do something more useful than this in this view.<br/>
 Listing out all the pages that have been cloned from _blog.php_ here is not a bad idea.<br/>
 Remember the *blog\_list.html* (the original _blog.html_ showing a list of blog entries that we had renamed to *blog\_list.html*)?<br/>
@@ -273,7 +273,7 @@ Now replace the silly message we were displaying in list-view with the following
 
 ![](../../assets/img/contents/portfolio-site-47.png)
 
-Access _http&#58;//www.mytestsite.com/blog.php_ once again and you should see the contents of *blog\_list.html* being displayed.
+Access _<https://www.mytestsite.com/blog.php>_ once again and you should see the contents of *blog\_list.html* being displayed.
 
 ![](../../assets/img/contents/portfolio-site-48.png)
 

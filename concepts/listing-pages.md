@@ -29,13 +29,13 @@ Please see the [**parameters**](../tags-reference/pages.html#parameters) section
 As shown in the previous chapter, for clonable templates, Couch considers certain URLS as those meant for listing pages cloned out of the template being accessed.
 
 For example:<br/>
-_http&#58;//www.mysite.com/blog/_<br/>
+_<https://www.mysite.com/blog/>_<br/>
 \- is considered to be a **home-view** and a list to all the pages cloned out of _blog.php_ should be displayed in this view.
 
-_http&#58;//www.mysite.com/blog/hobbies/_<br/>
+_<https://www.mysite.com/blog/hobbies/>_<br/>
 \- is considered to be a **folder-view** and a list of all the pages cloned out of _blog.php_ that belong to 'hobbies' sub-folder should be displayed in this view.
 
-_http&#58;//www.mysite.com/blog/2010/05/_<br/>
+_<https://www.mysite.com/blog/2010/05/>_<br/>
 \- is considered to be an **archive-view** and a list of all the pages cloned out of _blog.php_ that have been published during the month of May in 2010 should be displayed in this view.
 
 When a template is accessed using the URLs mentioned above, Couch recognizes the view and sets certain variables that can be used by you to list the pages as is expected for the particular view.<br/>
