@@ -19,39 +19,39 @@ In contrast, when executed in a _list-view_, it is not any single page that is a
 
 A complete list of all the variables that become available during the above mentioned conditions are listed below.
 
-For the sake of this example we make use of a template named _blog.php_ that has three editable regions defined within it - *my\_blog\_text*, *my\_blog\_image* and *my\_blog\_author* (these will be made available as variables with the same names. They are shown highlighted below).
+For the sake of this example we make use of a template named _blog.php_ that has three editable regions defined within it - *my_blog_text*, *my_blog_image* and *my_blog_author* (these will be made available as variables with the same names. They are shown highlighted below).
 
 The following variables are available in ALL the cases, irrespective of the clonable status of the template and the current view -
 
-* k\_page\_link
-* k\_admin\_link
-* k\_site\_link
-* k\_admin\_path
-* k\_site\_path
-* k\_template\_title
-* k\_template\_name
-* k\_template\_id
-* k\_template\_link
-* k\_prettyurls
-* k\_site\_charset
-* k\_email\_from
-* k\_email\_to
-* k\_is\_commentable
+* k_page_link
+* k_admin_link
+* k_site_link
+* k_admin_path
+* k_site_path
+* k_template_title
+* k_template_name
+* k_template_id
+* k_template_link
+* k_prettyurls
+* k_site_charset
+* k_email_from
+* k_email_to
+* k_is_commentable
 
 ### NON-CLONABLE TEMPLATE -
 
 If _blog.php_ is non-clonable, the only way it can be accessed is -<br/>
-_http&#58;//www.mysite.com/blog.php_
+_<http://www.mysite.com/blog.php>_
 
 \- and the available variables are -
 
-* k\_is\_list\_page
-* k\_comments\_count
-* k\_page\_date
-* k\_page\_modification\_date
-* **my\_blog\_text**
-* **my\_blog\_image**
-* **my\_blog\_author**
+* k_is_list_page
+* k_comments_count
+* k_page_date
+* k_page_modification_date
+* **my_blog_text**
+* **my_blog_image**
+* **my_blog_author**
 
 ### CLONABLE TEMPLATE -
 
@@ -59,73 +59,73 @@ If _blog.php_ is made clonable, the different views it can be accessed in and th
 
 #### PAGE VIEW
 
-e.g. *http&#58;//www.mysite.com/blog/some\_page\_name.html*<br/>
+e.g. *<http://www.mysite.com/blog/some_page_name.html>*<br/>
 In this view, variables giving information about the current page, the containing folder (if the page resides in one) and the contents of the page's editable regions are made available.
 
 The folowing variables carry information about the page in question -
 
-* k\_is\_page
-* k\_page\_title
-* k\_page\_name
-* k\_page\_id
-* k\_page\_date
-* k\_page\_modification\_date
-* k\_comments\_count
+* k_is_page
+* k_page_title
+* k_page_name
+* k_page_id
+* k_page_date
+* k_page_modification_date
+* k_comments_count
 
 The following variables carry Information about the folder, if the page resides in one -
 
-* k\_page\_folderid
-* k\_page\_foldername
-* k\_page\_foldertitle
-* k\_page\_folderlink
-* k\_page\_folderpagecount
-* k\_page\_foldertotalpagecount
+* k_page_folderid
+* k_page_foldername
+* k_page_foldertitle
+* k_page_folderlink
+* k_page_folderpagecount
+* k_page_foldertotalpagecount
 
 Finally the contents of editable regions -
 
-* **my\_blog\_text**
-* **my\_blog\_image**
-* **my\_blog\_author**
+* **my_blog_text**
+* **my_blog_image**
+* **my_blog_author**
 
 #### FOLDER VIEW
 
-e.g. *http&#58;//www.mysite.com/blog/some\_subfolder/*<br/>
+e.g. *<http://www.mysite.com/blog/some_subfolder/>*<br/>
 In this view, variables giving information about the folder mentioned in the URL are set.
 
-* k\_is\_list
-* k\_is\_folder
-* k\_folder\_id
-* k\_folder\_name
-* k\_folder\_title
-* k\_folder\_link
-* k\_folder\_pagecount (_Number of pages in the folder_)
-* k\_folder\_totalpagecount (_Total number of pages, including pages in subfolders_)
+* k_is_list
+* k_is_folder
+* k_folder_id
+* k_folder_name
+* k_folder_title
+* k_folder_link
+* k_folder_pagecount (_Number of pages in the folder_)
+* k_folder_totalpagecount (_Total number of pages, including pages in subfolders_)
 
 #### ARCHIVE VIEW
 
-e.g. _http&#58;//www.mysite.com/blog/2010/05/_<br/>
+e.g. _<http://www.mysite.com/blog/2010/05/>_<br/>
 In this view, variables giving information about the archive's time period (as given in the URL) are set.
 
-* k\_is\_list
-* k\_is\_archive
-* k\_archive\_date
-* k\_next\_archive\_date
-* k\_archive\_link
-* k\_day
-* k\_month
-* k\_year
+* k_is_list
+* k_is_archive
+* k_archive_date
+* k_next_archive_date
+* k_archive_link
+* k_day
+* k_month
+* k_year
 
 #### HOME VIEW
 
-e.g. _http&#58;//www.mysite.com/blog/_
+e.g. _<http://www.mysite.com/blog/>_
 
-* k\_is\_list
-* k\_is\_home
-* k\_folder\_pagecount (_Number of pages. Remember home view is also the root folder_)
-* k\_folder\_totalpagecount (_Total number of cloned pages, including pages in subfolders_)
+* k_is_list
+* k_is_home
+* k_folder_pagecount (_Number of pages. Remember home view is also the root folder_)
+* k_folder_totalpagecount (_Total number of cloned pages, including pages in subfolders_)
 
-<p class="notice">**IMP.** Notice that for cloneable templates, the contents of the editable regions associated with a page are made available only in page view.</p>
+> **IMP.** Notice that for cloneable templates, the contents of the editable regions associated with a page are made available only in page view.
 
-<p class="success">**TIP:** You can use the Couch tags - [__*dump*__](../tags-reference/dump.html) and [__*dump\_all*__](../tags-reference/dump_all.html) to see for youself all the variables with their current values.</p>
+> **TIP:** You can use the Couch tags - [__*dump*__](../tags-reference/dump.html) and [__*dump_all*__](../tags-reference/dump_all.html) to see for youself all the variables with their current values.
 
-Next is [**Listing Pages**](../listing-pages.html)
+Next is [**Listing Pages**](./listing-pages.html)

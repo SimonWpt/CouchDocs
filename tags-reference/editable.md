@@ -20,13 +20,13 @@ The following are the parameters that are **common** to all the _types_ of edita
 * order
 * group
 * searchable
-* search\_type
+* search_type
 * hidden
 * required
 * validator
-* validator\_msg
+* validator_msg
 * separator
-* val\_separator
+* val_separator
 
 ### name
 
@@ -73,13 +73,13 @@ The default order number given to all editable regions is '0'.
 
 ### group
 
-Related editable regions can be grouped together by setting the _group_ parameter of each region to the name of an another editable region of type [**group**](../editable/group.html). For example -
+Related editable regions can be grouped together by setting the _group_ parameter of each region to the name of an another editable region of type [**group**](./editable/group.html). For example -
 
 ```html
 group='paypal_group'
 ```
 
-\- where paypal\_group is the name of an editable region of type [**group**](../editable/group.html).
+\- where paypal_group is the name of an editable region of type [**group**](./editable/group.html).
 
 ### searchable
 
@@ -95,15 +95,15 @@ Setting the _searchable_ parameter to '0' for an editable region will exclude it
 search_type='decimal'
 ```
 
-*search\_type* parameter determines how the values contained within an editable region are _sorted_ and _compared_. Couch recognizes three different search\_types -
+*search_type* parameter determines how the values contained within an editable region are _sorted_ and _compared_. Couch recognizes three different search_types -
 
 * text
 * integer
 * decimal
 
-The default *search\_type* of all editable regions is _text_. For editable regions of type [**text**](../editable/text.html), [**radio**](../editable/radio.html) and [**dropdown**](../editable/dropdown.html), the *search\_type* can be changed to _integer_ or _decimal_ if the values contained within them would be numeric.
+The default *search_type* of all editable regions is _text_. For editable regions of type [**text**](./editable/text.html), [**radio**](./editable/radio.html) and [**dropdown**](./editable/dropdown.html), the *search_type* can be changed to _integer_ or _decimal_ if the values contained within them would be numeric.
 
-<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../pages.html#custom_field).</p>
+> It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](./pages.html#custom_field).
 
 ### hidden
 
@@ -111,7 +111,7 @@ The default *search\_type* of all editable regions is _text_. For editable regio
 hidden='1'
 ```
 
-_hidden_ parameter can be set to '1' to supress the output of an editable region that has been defined outside the [**Template**](../template.html) tag.
+_hidden_ parameter can be set to '1' to supress the output of an editable region that has been defined outside the [**Template**](./template.html) tag.
 
 ### required
 
@@ -121,7 +121,7 @@ required='1'
 
 Setting the _required_ parameter to '1' for an editable region will make it mandatory for the user to input something within it. i.e. the region cannot be left empty.
 
-<p class="success">If an editable region marked as required is left empty, the user is not allowed to save his changes and a default error message gets displayed. You can display your custom error message by setting the *validator\_msg* parameter described below.</p>
+<p class="success">If an editable region marked as required is left empty, the user is not allowed to save his changes and a default error message gets displayed. You can display your custom error message by setting the *validator_msg* parameter described below.</p>
 
 ### validator
 
@@ -263,7 +263,7 @@ This is used to ensure that the user has input identical contents into two ediat
 validator='matches_field=my_password'
 ```
 
-In the example above, Couch will allow input only if it matches that in another editable region named *my\_password*.
+In the example above, Couch will allow input only if it matches that in another editable region named *my_password*.
 
 #### regex
 
@@ -288,7 +288,7 @@ validator='alpha_num | min_len=6 | max_len=14'
 
 When a validator mentioned above fails (this includes the _required_ parameter too) and the input is rejected, the changes made by the user are not saved and a default error message is displayed.
 
-You can display your own custom message instead by setting the *validator\_msg* parameter. For example, the following is a custom message that is displayed when a _required_ region is left empty -
+You can display your own custom message instead by setting the *validator_msg* parameter. For example, the following is a custom message that is displayed when a _required_ region is left empty -
 
 ```html
 validator_msg='required=What! You think you can get away with leaving this empty?'
@@ -306,7 +306,7 @@ validator_msg='required=Please enter something | min_len=Too short!'
 
 ### val_separator
 
-The use of '|' (pipe) character as the default separator between _validators_ and *validator\_msg* parameters, as well as the use of '=' (equals-to) before a value, is sometimes not possible if the same characters appear elsewhere within the expression. e.g. in the regex example -
+The use of '|' (pipe) character as the default separator between _validators_ and *validator_msg* parameters, as well as the use of '=' (equals-to) before a value, is sometimes not possible if the same characters appear elsewhere within the expression. e.g. in the regex example -
 
 ```html
 validator='regex=/(cat|dog)$/i'
@@ -314,20 +314,20 @@ validator='regex=/(cat|dog)$/i'
 
 \- the pipe character appears within the regular expression itself, thus that validator cannot be combined with any other using a pipe.
 
-In such cases, the default separator and value separator can be set to any other character using the _separator_ and *val\_separator* parameters. For example -
+In such cases, the default separator and value separator can be set to any other character using the _separator_ and *val_separator* parameters. For example -
 
 ```html
 separator='#'
 val_separator=':'
 ```
 
-With the _separator_ and the *val\_separator* having changed, the regex validator can now be combined with other validator thus -
+With the _separator_ and the *val_separator* having changed, the regex validator can now be combined with other validator thus -
 
 ```html
 validator='regex:/(cat|dog)$/i # min_len:14'
 ```
 
-The *validator\_msg* will now become -
+The *validator_msg* will now become -
 
 ```html
 validator_msg='required:Please enter something # min_len:Too short!'

@@ -27,7 +27,7 @@ Supports the same parameter as the **folders** tag. In addition, takes one more 
 * extended\_info
 * show\_count
 
-Please see the [**folders**](../folders.html#parameters) documentation for an expanation of these parameters.
+Please see the [**folders**](./folders.html#parameters) documentation for an expanation of these parameters.
 
 ## Variables
 

@@ -6,26 +6,35 @@ layout: default
 
 # Shopping Cart (Part II)
 
-* [Shipping Charges](#shipping-charges)
-    *   [Cart level charges](#cart-level-charges)
-        *   [Flat rate per order](#flat-rate-per-order)
-        *   [Flat rate per item](#flat-rate-per-item)
-        *   [Ship by order total](#ship-by-order-total)
-        *   [Ship by quantity ordered](#ship-by-quantity-ordered)
-    *   [Item level charges](#item-level-charges)
-* [Discounts](#discounts)
-    *   [Cart level discounts](#cart-level-discounts)
-        *   [Discount by order total](#discount-by-order-total)
-        *   [Discount by quantity ordered](#discount-by-quantity-ordered)
-    *   [Item level discounts (Quantity based pricing)](#item-level-discounts)
-* [Taxes](#taxes)
-* [Promotional Coupons](#promotional-coupons)
-    *   [Creating coupons](#creating-coupons)
-    *   [Processing coupons](#processing-coupons)
+- [Shopping Cart (Part II)](#shopping-cart-part-ii)
+  - [Shipping Charges](#shipping-charges)
+    - [Cart level charges](#cart-level-charges)
+      - [Flat rate per order](#flat-rate-per-order)
+      - [Flat rate per item](#flat-rate-per-item)
+      - [Ship by order total](#ship-by-order-total)
+      - [Ship by quantity ordered](#ship-by-quantity-ordered)
+    - [Item level charges](#item-level-charges)
+  - [Discounts](#discounts)
+    - [Cart level discounts](#cart-level-discounts)
+      - [Discount by order total](#discount-by-order-total)
+      - [Discount by quantity ordered](#discount-by-quantity-ordered)
+    - [Item level discounts](#item-level-discounts)
+  - [Taxes](#taxes)
+  - [Promotional Coupons](#promotional-coupons)
+    - [Creating coupons](#creating-coupons)
+      - [Description](#description)
+      - [Code](#code)
+      - [Discount](#discount)
+      - [Type](#type)
+      - [Minimum Amount](#minimum-amount)
+      - [Free Shipping](#free-shipping)
+      - [End Date](#end-date)
+    - [Processing coupons](#processing-coupons)
+  - [The end, finally...](#the-end-finally)
 
 --------------------------------
 
-By this point, our [initial store assembly is nearly complete](../shopping-cart-1.html).
+By this point, our [initial store assembly is nearly complete](./shopping-cart-1.html).
 
 The product catalog is built, the shopping cart is in place and we can accept online payments via PayPal.<br/>
 However, almost every eStore will need to configure a few '**adjustments**' before it can finally throw open its (virtual) doors to the world and start doing business.

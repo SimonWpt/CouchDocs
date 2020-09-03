@@ -11,15 +11,15 @@ Please see [**Core Concepts - Comments**](../concepts/using-comments.html) for a
 ## Parameters
 
 * masterpage
-* page\_id
-* page\_name
+* page_id
+* page_name
 * limit
 * paginate
 * offset
 * order
 
 Normally _comments_ tag will fetch all the available approved comments.<br/>
-It can be constrained into fetching comments from only certain pages by setting the _masterpage_, *page\_id* and *page\_name* parameters.
+It can be constrained into fetching comments from only certain pages by setting the _masterpage_, *page_id* and *page_name* parameters.
 
 ### masterpage
 
@@ -67,19 +67,19 @@ Fetch comments of all the pages except the pages that have an id of '13' or '17'
 <cms:comments page_name='my_first_entry'></cms:comments>
 ```
 
-Fetch comments of only the page named 'my\_first\_entry'.
+Fetch comments of only the page named 'my_first_entry'.
 
 ```html
 <cms:comments page_name='my_first_entry, my_another_entry'></cms:comments>
 ```
 
-Fetch comments of only the pages named 'my\_first\_entry' or 'my\_another\_entry'.
+Fetch comments of only the pages named 'my_first_entry' or 'my_another_entry'.
 
 ```html
 <cms:comments page_name='NOT my_first_entry, my_another_entry'></cms:comments>
 ```
 
-Fetch comments of all the pages except the pages named 'my\_first\_entry' or 'my\_another\_entry'.
+Fetch comments of all the pages except the pages named 'my_first_entry' or 'my_another_entry'.
 
 ### limit
 
@@ -95,7 +95,7 @@ Fetch five approved comments. (Since 'order' is not specified, the default value
 <cms:comments limit='5' paginate='1'></cms:comments>
 ```
 
-Fetch ALL approved comments but show only 5 at one time. To move to the next 5 or the previous 5 comments, pagination code has to be used (see [**paginator**](../paginator.html)).
+Fetch ALL approved comments but show only 5 at one time. To move to the next 5 or the previous 5 comments, pagination code has to be used (see [**paginator**](./paginator.html)).
 
 ### offset
 
@@ -117,24 +117,24 @@ Fetch all approved comments and order them in ascending order (oldest first) of 
 
 ## Variables
 
-* k\_comment\_id
-* k\_comment
-* k\_comment\_author\_id
-* k\_comment\_author
-* k\_comment\_author\_email
-* k\_comment\_author\_website
-* k\_comment\_date
-* k\_comment\_link
-* k\_comment\_page\_id
-* k\_comment\_page\_title
-* k\_comment\_page\_name
-* k\_comment\_template\_name
+* k_comment_id
+* k_comment
+* k_comment_author_id
+* k_comment_author
+* k_comment_author_email
+* k_comment_author_website
+* k_comment_date
+* k_comment_link
+* k_comment_page_id
+* k_comment_page_title
+* k_comment_page_name
+* k_comment_template_name
 
 In addition to these variables, the pagination related variables that describe the current status of the loop are also set. Please see [**paginator**](./paginator.html) for details.
 
 ## Related Tags
 
-* [process\_comment](./process_comment.html)
+* [process_comment](./process_comment.html)
 * [pages](./pages.html)
 * [folders](./folders.html)
 * [archives](./archives.html)

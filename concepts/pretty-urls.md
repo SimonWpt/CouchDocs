@@ -59,7 +59,7 @@ define( 'K_PRETTY_URLS', 0 );
 Set the K\_PRETTY\_URLS to 1\.
 
 **2\.** Fire up your browser and visit the following page (substitute the domain name with that of yours) -<br/>
-*http&#58;//www.yoursite.com/couch/gen\_htaccess.php*
+*<https://www.yoursite.com/couch/gen\>_htaccess.php*
 
 A list of rewrite rules should appear on the page.<br/>
 Select and copy the ENTIRE content of the page (press Ctrl + A) and paste it into a file named '.htaccess' and place this file in your website's root.

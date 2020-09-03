@@ -205,7 +205,7 @@ Output:
     ```
     In the snippet above we are instructing Couch to find out all the parents of the current page and then use the top most parent (first parent) as the value for the 'root' parameter.<br/>
     Thus, if the page being visited was<br/>
-    'Nevada News' (http&#58;//www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>
+    'Nevada News' (<https://www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>>
     the first parent would be 'world-news' and that is the value that would be used as the 'root' parameter.<br/>
     Whereas, in the following snippet<br/>
     <br/>
@@ -224,7 +224,7 @@ Output:
 <cms:menu masterpage='menu.php' root='@current' />
     ```
     In the snippet above, if the page being visited was<br/>
-    'North American News' (http&#58;//www.yoursite.com/world-news/north-american-news/)<br/>
+    'North American News' (<https://www.yoursite.com/world-news/north-american-news/)<br/>>
     the value used for the 'root' parameter would be 'north-american-news'.<br/>
     <br/>
     **@current-n** (where n is a number starting from 1 e.g. @current-1, @current-2 etc.)<br/>
@@ -237,7 +237,7 @@ Output:
 <cms:menu masterpage='menu.php' root='@current-1' />
     ```
     In the snippet above, if the page being visited was<br/>
-    'Nevada News' (http&#58;//www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>
+    'Nevada News' (<https://www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>>
     the value used for the 'root' parameter would be 'united-states-news' while for the following snippet<br/>
     <br/>
     ```

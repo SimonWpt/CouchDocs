@@ -74,17 +74,16 @@ Printing out the value contained within the editable region -
 
 \- will now output '2'.
 
-<p class="success">
-    **TIP:** Specifying an empty option makes Couch generate a break '&lt;BR&gt;'. e.g.<br/>
-    <br/>
-    ```
+> **TIP:** Specifying an empty option makes Couch generate a break '&lt;BR&gt;'. e.g.
+
+```
 opt_values='Residential=0 | Commercial=1 | | Rental=2'
-    ```
-    In the code above, actually four options have been specified - the third option (between _Commercial_ and _Rental_) is empty.<br/>
+```
+
+>In the code above, actually four options have been specified - the third option (between _Commercial_ and _Rental_) is empty.<br/>
     This results in -<br/>
     <br/>
     ![](../../assets/img/contents/editable-radio-2.gif)
-</p>
 
 ### opt_selected
 
@@ -144,4 +143,4 @@ Can be set to the following valid values -
 The default *search\_type* is (as with all other types of editable regions) _text_.<br/>
 If you wish to use this region to input numeric values (e.g. age or salary), set the type to either _numeric_ or _decimal_ (if the value can be fractional).
 
-<p class="notice">It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../pages.html#custom_field).</p>
+> It is necessary to set an explicit numeric type on an editable region only when you wish to use the values contained within it to make comparisions (i.e. age &lt; 40) or to sort some output based on these values. See [**Pages**](../pages.html#custom_field).

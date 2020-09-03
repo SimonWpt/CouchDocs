@@ -13,7 +13,7 @@ To recap -<br/>
 Suppose we have a template named _blog.php_.
 
 The simplest case is when this template has not yet been set as clonable (i.e. having similar pages created out of it). No views are associated with this page. The only possible way to execute this page is -<br/>
-_http&#58;//www.yoursite.com/blog.php_
+_<https://www.yoursite.com/blog.php>_
 
 However, once _blog.php_ is set as being clonable there can be multiple pages that have been cloned out of this template.<br/>
 Obviously, we now have atleast two scenarios _blog.php_ may be executed in -

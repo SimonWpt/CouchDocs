@@ -43,7 +43,7 @@ To do so, simply enclose this part by an [__*editable*__](../tags-reference/edit
 [__*Editable*__](../tags-reference/editable.html) tag accepts several parameters but only one is mandatory - _name_. It has to be unique within a template.
 
 Now, while being logged in as the super-admin, visit the template in your browser.<br/>
-For example, if the template was _property.php_, visit _http&#58;//www.yoursite.com/property.php_
+For example, if the template was _property.php_, visit _<https://www.yoursite.com/property.php>_
 
 <p class="notice">At the risk of repeating ourselves - for your changes to show up in the admin panel, you'll always need to run the modified template in the browser while being logged in as the super-admin.</p>
 

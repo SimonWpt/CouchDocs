@@ -15,7 +15,7 @@ A website will have several blog pages, each page representing a single blog ent
 We'll take the example of _blog.php_ to illustrate the point we are trying to make.<br/>
 Suppose we created three editable regions, named *my\_blog\_text*, *my\_blog\_image* and *my\_blog\_author*, within _blog.php_ template.<br/>
 The user edits the contents within these areas and after saving his changes visits the template in his browser -<br/>
-_http&#58;//www.yoursite.com/blog.php_
+_<https://www.yoursite.com/blog.php>_
 
 As expected, the changes he made should be visible on this page. But this is one single page.<br/>
 Any number of times he edits the contents of this template in the admin panel, it is only this page that will reflect the changes.<br/>
@@ -53,20 +53,20 @@ Let us change the title of the newly created page to 'My First Page' and its nam
 Scroll to the bottom of the page and you'll find the 'View' button adjacent to the 'Save' button.<br/>
 Clicking it will bring up the new page in the browser. It should be IDENTICAL to what we used to see on visiting blog.php before it became clonable.<br/>
 Take a look at the URL displayed in the address-bar of the browser. It should be something like -<br/>
-_http&#58;//www.yoursite.com/blog.php?p=12_<br/>
+_<https://www.yoursite.com/blog.php?p=12>_<br/>
 Notice the addition of the '?p=' followed by a number after blog.php.
 
 Let us now add a new cloned page.<br/>
 Going back to the dashboard, create a new page from _blog.php_ and we'll be shown the same three editable regions (along with the _Name_ and _Title_ fields).<br/>
 Edit and place new contents within all regions. Name this page as 'My Second Page' and save it.<br/>
 Click 'View' to visit this page. You should see a new page with the data we entered into it. The URL should be something like -<br/>
-_http&#58;//www.yoursite.com/blog.php?p=13_<br/>
+_<https://www.yoursite.com/blog.php?p=13>_<br/>
 Notice how the number after '?p=' is different from the first page.
 
 So now we have two blog pages. One was created by default and contained the data that was originally placed within the not-yet-clonable blog.php while the second page was created by us.
 
 Finally, visit one more time the blog.php page as we used to do before making it clonable -<br/>
-_http&#58;//www.yoursite.com/blog.php_<br/>
+_<https://www.yoursite.com/blog.php>_<br/>
 Notice that just as before we are not suffixing blog.php with anything at all.
 
 You might be surprised to see that all the data that we had previously placed into the editable regions of blog.php is GONE. The HTML elements of the template are all there but the updatable regions are all empty.
@@ -74,23 +74,23 @@ You might be surprised to see that all the data that we had previously placed in
 And this brings us to the important concept we mentioned above.<br/>
 When a template is non-clonable (the default), it represents one single page of the website and so all the data that is entered in its editable regions belongs to it.<br/>
 Thus a non-clonable template like _about-us.php_, when visited like this -<br/>
-_http&#58;//www.yoursite.com/about-us.php_<br/>
+_<https://www.yoursite.com/about-us.php>_<br/>
 \- is unequivocally one single page.
 
 In contrast, as in the case with _blog.php_ above, once a template is declared clonable, it can now represent one to any number of pages that might be cloned out of it. Thus<br/>
-_http&#58;//www.yoursite.com/blog.php?p=12_ is one page while<br/>
-_http&#58;//www.yoursite.com/blog.php?p=13_ is a totally different page.
+_<https://www.yoursite.com/blog.php?p=12>_ is one page while<br/>
+_<https://www.yoursite.com/blog.php?p=13>_ is a totally different page.
 
 <p class="success">
     It becomes even more distinct when we use pretty urls (see).<br/>
     Then the URLs for the above two pages will become -<br/>
-    _http&#58;//www.yoursite.com/blog/my-first-page.html_<br/>
-    _http&#58;//www.yoursite.com/blog/my-second-page.html_
+    _<https://www.yoursite.com/blog/my-first-page.html>_<br/>
+    _<https://www.yoursite.com/blog/my-second-page.html>_
 </p>
 
 Notice how in each of the instances above, the template is the same (_blog.php_) but the page is different.<br/>
 However when _blog.php_ is accessed in the following manner -<br/>
-_http&#58;//www.yoursite.com/blog.php_<br/>
+_<https://www.yoursite.com/blog.php>_<br/>
 \- _blog.php_ is not representing any page (there is no '?=p' present). It is, well, simply itself.<br/>
 And this is the point that we were trying to make -
 
@@ -103,15 +103,15 @@ This should explain the page that appeared out of nowhere and why it is identica
 
 Each of the page (including the default first page) that gets cloned out of _blog.php_ has its own editable data.<br/>
 When _blog.php_ is visited as<br/>
-_http&#58;//www.yoursite.com/blog.php?p=12_<br/>
+_<https://www.yoursite.com/blog.php?p=12>_<br/>
 the number after '?p=' provides it with information as to which cloned page it is representing and thus it displays the data that belongs to that cloned page.
 
 It should be easy to see that when a clonable template is accessed in a stand-alone manner (i.e. not providing it with any information about the cloned page it could stand for e.g. -<br/>
-_http&#58;//www.yoursite.com/blog.php_<br/>
+_<https://www.yoursite.com/blog.php>_<br/>
 \- _blog.php_ is clueless about which cloned page's data it should display and since it has no data of its own, the updatable regions come up empty.
 
 So is the URL<br/>
-_http&#58;//www.yoursite.com/blog.php_<br/>
+_<https://www.yoursite.com/blog.php>_<br/>
 useless?
 
 Not at all. By default Couch displays nothing here but it is totally upto you as to what you wish to show on this page.<br/>

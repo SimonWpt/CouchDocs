@@ -7,7 +7,7 @@ layout: default
 # set
 
 The **Set** tag is used to put some value in a variable. The variable, if not already present, is created.<br/>
-(This tag is the counterpart of [**Show**](../show.html) tag which is used to display set variables)
+(This tag is the counterpart of [**Show**](./show.html) tag which is used to display set variables)
 
 The following example will create a variable called 'greeting' and set its value to 'Hello'
 

@@ -38,7 +38,7 @@ If this parameter is set to '0', non-super-admin users will be unable to access 
 
 ### commentable
 
-To allow users to comment on pages of this template, this parameter has to be set to '1'. See [**Comments**](./concepts/using-comments.html).
+To allow users to comment on pages of this template, this parameter has to be set to '1'. See [**Comments**](../concepts/using-comments.html).
 
 ### hidden
 

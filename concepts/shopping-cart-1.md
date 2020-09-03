@@ -6,18 +6,36 @@ layout: default
 
 # Shopping Cart (Part I)
 
-* [Creating products](#creating-the-products)
-* [Creating product variants (or Options)](#product-options-or-variants-)
-* [Listing products](#listing-products)
-* [The Cart](#core-actions-of-cart)
-    *   [Adding item to cart](#add-item-to-cart)
-    *   [Listing cart items](#listing-cart-items)
-    *   [Updating item quantity](#update-quantity-of-item-in-cart)
-    *   [Removing item from cart](#remove-item-from-cart)
-    *   [Displaying global cart values](#displaying-global-cart-values)
-    *   [Checking out](#checkout)
-* [AJAXifying the cart](#ajaxifying-the-cart)
-* [List of all tags](#appendix)
+- [Shopping Cart (Part I)](#shopping-cart-part-i)
+  - [Creating the products](#creating-the-products)
+  - [Product Options (or Variants)](#product-options-or-variants)
+      - [Raised Relief World Globe:](#raised-relief-world-globe)
+      - [Paper Airplane:](#paper-airplane)
+      - [500 Steel Paper Clips:](#500-steel-paper-clips)
+  - [Listing products](#listing-products)
+  - [Core actions of cart](#core-actions-of-cart)
+    - [Add item to cart](#add-item-to-cart)
+    - [Listing cart items](#listing-cart-items)
+      - [Custom variables for line-items:](#custom-variables-for-line-items)
+    - [Update quantity of item in cart](#update-quantity-of-item-in-cart)
+    - [Remove item from cart](#remove-item-from-cart)
+    - [Displaying global cart values](#displaying-global-cart-values)
+      - [pp_count_items](#pp_count_items)
+      - [pp_count_unique_items](#pp_count_unique_items)
+      - [pp_count_shippable_items](#pp_count_shippable_items)
+      - [pp_sub_total](#pp_sub_total)
+      - [pp_discount](#pp_discount)
+      - [pp_sub_total_discounted](#pp_sub_total_discounted)
+      - [pp_taxes](#pp_taxes)
+      - [pp_shipping](#pp_shipping)
+      - [pp_total](#pp_total)
+      - [pp_currency_symbol](#pp_currency_symbol)
+      - [pp_config](#pp_config)
+      - [pp_cart_link](#pp_cart_link)
+    - [Checkout](#checkout)
+  - [AJAXifying the cart](#ajaxifying-the-cart)
+  - [A little break...](#a-little-break)
+  - [Appendix](#appendix)
 
 --------------------------------
 
@@ -913,7 +931,7 @@ So, there we have it. A fully functional shopping cart that required only minima
 
 Of course, there is more to an e-commerce site than just a shopping cart :)<br/>
 No e-commerce site can do without functions like discounts, shipping charges and taxes.<br/>
-We'll get all that done in [**part II of this topic**](../shopping-cart-2.html).
+We'll get all that done in [**part II of this topic**](./shopping-cart-2.html).
 
 ## Appendix
 

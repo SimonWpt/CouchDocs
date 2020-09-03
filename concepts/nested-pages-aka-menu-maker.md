@@ -47,12 +47,12 @@ It is almost identical to the regular cloned page except for the following chara
 **1\.** A nested-page allows another nested-page (cloned out of the same template) to be placed below it as its child page. The child page in its turn can have another nested-page as its child and so on. This allows us to create the hierarchical relation between the pages that we were looking for.
 
 **2\.** The position of a nested-page in the hierarchy gets reflected in its URL (if prettyURLs are used) with its parent pages listed before it.<br/>
-E.g. if the URL of a nested-page is _http&#58;//www.yoursite.com/one/two/three/_, 'three' would be the page itself with 'two' and 'one' being its parent nested-pages.
+E.g. if the URL of a nested-page is _<https://www.yoursite.com/one/two/three/>_, 'three' would be the page itself with 'two' and 'one' being its parent nested-pages.
 
 **3\.** Nested-pages do not have a folder-view.<br/>
 Regular cloned-pages (i.e. non-nested) use 'folders' to create the hierarchical structure. Since for nested-pages, the pages themselves fulfill this task a folder-view is redundant.<br/>
 In fact, if you look closely at the sample URL of a nested-page given in the point above<br/>
-_http&#58;//www.yoursite.com/one/two/three/_<br/>
+_<https://www.yoursite.com/one/two/three/>_<br/>
 you'll notice that had this URL been of a regular cloned template (i.e. non-nested), it would represent a folder-view - with 'one', 'two' and 'three' being folders of the template. For a nested-page, the 'three' becomes the name of the page (notice that unlike regular cloned pages, there is no '.html' extension).
 
 ### How do we create nested pages?
@@ -134,14 +134,14 @@ This is the plan -<br/>
 We'll declare our index.php as clonable (and as supporting nested-page) and then create all the standalone pages as cloned pages of index.php.<br/>
 By using index.php as the template we'll benefit from the URL structure that will emerge with prettyURLs turned on (the word 'index' gets removed from the URL).<br/>
 For example, the URL of 'about-us' page will become<br/>
-_http&#58;//www.yoursite.com/about-us/_<br/>
+_<https://www.yoursite.com/about-us/>_<br/>
 while that of 'testimonials' will become<br/>
-_http&#58;//www.yoursite.com/about-us/what-we-do/testimonials/_
+_<https://www.yoursite.com/about-us/what-we-do/testimonials/>_
 
-It is easy to see that when the URL _http&#58;//www.yoursite.com/about-us/_ is visited, the 'about-us' in the URL will indicate to Couch to load the 'about-us' page.<br/>
-Same applies for the 'testimonials' in _http&#58;//www.yoursite.com/about-us/what-we-do/testimonials/_.<br/>
+It is easy to see that when the URL _<https://www.yoursite.com/about-us/>_ is visited, the 'about-us' in the URL will indicate to Couch to load the 'about-us' page.<br/>
+Same applies for the 'testimonials' in _<https://www.yoursite.com/about-us/what-we-do/testimonials/>_.<br/>
 However which page do you think will get loaded for this URL? -<br/>
-_http&#58;//www.yoursite.com/_
+_<https://www.yoursite.com/>_
 
 If you are familiar with the regular cloned pages, you'll recognize that this is the 'list-view' \[see [cloned-pages](./cloned-pages.html) and [views](./views.html)\].<br/>
 Since no page is indicated, none gets loaded. Only the empty template will show up (i.e. the HTML will appear but the editable regions will be empty).<br/>
@@ -156,7 +156,7 @@ As with any other clonable template, we'll add the following logic to the index.
 </cms:if>
 ```
 
-This is all staple stuff we use with cloned pages. I am repeating it here to bring home the point that the 'home page' (http&#58;//www.yoursite.com/) of the site is not a 'page' that we can create but is a 'view' that has to be handled in template code.
+This is all staple stuff we use with cloned pages. I am repeating it here to bring home the point that the 'home page' (<https://www.yoursite.com/)> of the site is not a 'page' that we can create but is a 'view' that has to be handled in template code.
 
 Moving on, we now define the editable regions for index.php. Since all the cloned pages will share these editable regions, we'll create one that can be generically used in all the stand-alone pages. We'll create only a single region of type richtext and name it 'content'.
 
@@ -180,12 +180,12 @@ A nested-page, as we have seen so far, is no different from a regular page (exce
 However a nested-page has one more card up its sleeve - it can act as a _pointer_ to a different page or section.<br/>
 When one visits a nested-page that is acting as a pointer, instead of seeing the nested-page's own data, one gets to see the data of the page that is being pointed to.
 
-Try this out - we already have a discrete 'portfolio' section. Let us suppose its URL is _http&#58;//www.yoursite.com/portfolio/_ (assuming the template is 'portfolio.php' and prettyURLs are turned on).<br/>
+Try this out - we already have a discrete 'portfolio' section. Let us suppose its URL is _<https://www.yoursite.com/portfolio/>_ (assuming the template is 'portfolio.php' and prettyURLs are turned on).<br/>
 To assimilate this section into the hierarchical tree of nested-pages that we have created so far, create a new cloned page of 'index.php' and name it 'portfolio'. Set the 'what-we-do' page as its parent to end up having this structure -
 
 ![](../assets/img/contents/nested-pages-14.png)
 
-The new page is now part of the hierarchy and can be accessed as _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_.<br/>
+The new page is now part of the hierarchy and can be accessed as _<https://www.yoursite.com/about-us/what-we-do/portfolio/>_.<br/>
 Now for the fun part - edit this nested 'portfolio' page. Click on the 'Advanced settings'. You'll see that nested-pages have some new options in their advanced settings.
 
 ![](../assets/img/contents/nested-pages-15.png)
@@ -210,7 +210,7 @@ Paste the URL of the actual portfolio section into the textbox
 
 <p class="error">**IMP:** always get the URL of any section being pointed to by visiting it and copying its URL from the address bar of the browser.</p>
 
-Click save. Click on the 'View' button to visit this nested page of ours. You'll notice that, instead of _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_ (this nested 'portfolio' page's canonical URL), we get redirected to _http&#58;//www.yoursite.com/portfolio/_.
+Click save. Click on the 'View' button to visit this nested page of ours. You'll notice that, instead of _<https://www.yoursite.com/about-us/what-we-do/portfolio/>_ (this nested 'portfolio' page's canonical URL), we get redirected to _<https://www.yoursite.com/portfolio/>_.
 
 #### MASQUERADING
 
@@ -229,15 +229,15 @@ Edit the nested 'portfolio' page we used above. This time, instead of the previo
 
 ![](../assets/img/contents/nested-pages-20.png)
 
-Remember that the canonical URL of this nested-page is _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_ and we are making it point to a separate portfolio section with the canonical URL of _http&#58;//www.yoursite.com/portfolio/_ (with prettyURLs enabled).
+Remember that the canonical URL of this nested-page is _<https://www.yoursite.com/about-us/what-we-do/portfolio/>_ and we are making it point to a separate portfolio section with the canonical URL of _<https://www.yoursite.com/portfolio/>_ (with prettyURLs enabled).
 
-Save your changes and visit the nested page _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_.<br/>
-You'll find that this time, instead of redirecting to _http&#58;//www.yoursite.com/portfolio/_, the nested-page itself shows the same content that you would have seen had you visited _http&#58;//www.yoursite.com/portfolio/_.
+Save your changes and visit the nested page _<https://www.yoursite.com/about-us/what-we-do/portfolio/>_.<br/>
+You'll find that this time, instead of redirecting to _<https://www.yoursite.com/portfolio/>_, the nested-page itself shows the same content that you would have seen had you visited _<https://www.yoursite.com/portfolio/>_.
 
-If the portfolio section has links to its cloned pages and to its various views (i.e. page-view, folder-view, archive-view etc.), try clicking on them and you'll find that all the links of the portfolio section have now changed automatically and appear as _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/somepagename.html_, _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/some-folder/_ etc. instead of the original _http&#58;//www.yoursite.com/portfolio/somepagename.html_, _http&#58;//www.yoursite.com/portfolio/some-folder/_ etc.
+If the portfolio section has links to its cloned pages and to its various views (i.e. page-view, folder-view, archive-view etc.), try clicking on them and you'll find that all the links of the portfolio section have now changed automatically and appear as _<https://www.yoursite.com/about-us/what-we-do/portfolio/somepagename.html>_, _<https://www.yoursite.com/about-us/what-we-do/portfolio/some-folder/>_ etc. instead of the original _<https://www.yoursite.com/portfolio/somepagename.html>_, _<https://www.yoursite.com/portfolio/some-folder/>_ etc.
 
-**For all practical purposes, the portfolio section has been moved in its entirety** from _http&#58;//www.yoursite.com/portfolio/_ to _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/_ **without making any changes whatsover to the portfolio section!**<br/>
-In fact, if now you try to access the portfolio section using its original URL (_http&#58;//www.yoursite.com/portfolio/_), it will send you back to its new URL _http&#58;//www.yoursite.com/about-us/what-we-do/portfolio/some-folder/_ with a 301 HTTP code that the page has moved to the new location.
+**For all practical purposes, the portfolio section has been moved in its entirety** from _<https://www.yoursite.com/portfolio/>_ to _<https://www.yoursite.com/about-us/what-we-do/portfolio/>_ **without making any changes whatsover to the portfolio section!**<br/>
+In fact, if now you try to access the portfolio section using its original URL (_<https://www.yoursite.com/portfolio/>_), it will send you back to its new URL _<https://www.yoursite.com/about-us/what-we-do/portfolio/some-folder/>_ with a 301 HTTP code that the page has moved to the new location.
 
 A comparision between the two methods used by pointer pages may be in order:
 
@@ -253,7 +253,7 @@ A comparision between the two methods used by pointer pages may be in order:
 With the 'pointer page' concept understood, it should be easy to see how a menu of any complexity can be implemented using the nested-pages. Simply create a nested-page that reflects the desired hierarchical position and make it point to any page (hence the title 'AKA Menu maker').
 
 Create a similar pointer-page for the 'blog' section and another one for the 'home' section.<br/>
-Remember that the 'home' section' is actually a 'view' (as opposed to being a 'page'). That is perfectly okay. Just paste in the home page's URL _http&#58;//www.yoursite.com/_ in the 'points to' textbox. Uncheck the 'Mark as selected for all pages below this link' (this is important - we'll explain why a little later. For now just be sure to uncheck it).
+Remember that the 'home' section' is actually a 'view' (as opposed to being a 'page'). That is perfectly okay. Just paste in the home page's URL _<https://www.yoursite.com/>_ in the 'points to' textbox. Uncheck the 'Mark as selected for all pages below this link' (this is important - we'll explain why a little later. For now just be sure to uncheck it).
 
 ![](../assets/img/contents/nested-pages-21.png)
 
@@ -274,11 +274,11 @@ Implement the 'contact-us' page as a section in itself by using a separate non-c
 
 ![](../assets/img/contents/nested-pages-23.png)
 
-Edit the nested-page named 'contact-us' (_http&#58;//www.yoursite.com/about-us/contact-us/_) that we have in our tree and make it a pointer page masquerading as the 'contact-us.php' we implemented above -
+Edit the nested-page named 'contact-us' (_<https://www.yoursite.com/about-us/contact-us/>_) that we have in our tree and make it a pointer page masquerading as the 'contact-us.php' we implemented above -
 
 ![](../assets/img/contents/nested-pages-24.png)
 
-Visit _http&#58;//www.yoursite.com/about-us/contact-us/_ and the contents of the original _http&#58;//www.yoursite.com/contact-us/_ should appear.
+Visit _<https://www.yoursite.com/about-us/contact-us/>_ and the contents of the original _<https://www.yoursite.com/contact-us/>_ should appear.
 
 Our hierarchical tree structure is now complete.
 
@@ -420,44 +420,44 @@ By default, the 'menu' tag applies the classname 'current' to the current menu-i
     <br/>
     For menu-items that point to other pages, however, the 'menu' tag needs to apply a fair bit of intelligence to recognize if a menu-item is current.<br/>
     Let us say that a menu-item being tested by the 'menu' tag points to the following location -<br/>
-    _http&#58;//www.yoursite.com/portfolio.php_ (_http&#58;//www.yoursite.com/portfolio/_ with prettyURL) - the home-view of template 'portfolio.php'.<br/>
+    _<https://www.yoursite.com/portfolio.php>_ (_<https://www.yoursite.com/portfolio/>_ with prettyURL) - the home-view of template 'portfolio.php'.<br/>
     <br/>
-    Now if the page being visited is _http&#58;//www.yoursite.com/portfolio.php_, it is perfect match and so the menu-item in question will be marked as 'current', its parents will be marked as 'active' and the process will end i.e. no further menu-items will be examined (there can be only one current page in the tree at any time). This was no different than what happens with non-pointer pages.<br/>
+    Now if the page being visited is _<https://www.yoursite.com/portfolio.php>_, it is perfect match and so the menu-item in question will be marked as 'current', its parents will be marked as 'active' and the process will end i.e. no further menu-items will be examined (there can be only one current page in the tree at any time). This was no different than what happens with non-pointer pages.<br/>
     <br/>
     However, consider if the page being visited happens to be a cloned page of 'portfolio.php'<br/>
-    e.g. _http&#58;//www.yoursite.com/portfolio.php?p=34_ (_http&#58;//www.yoursite.com/portfolio/some-item.html_ with prettyURL).<br/>
+    e.g. _<https://www.yoursite.com/portfolio.php?p=34>_ (_<https://www.yoursite.com/portfolio/some-item.html>_ with prettyURL).<br/>
     Or it happens to be a folder-view of 'portfolio.php'<br/>
-    e.g. _http&#58;//www.yoursite.com/portfolio.php?f=2_ (_http&#58;//www.yoursite.com/portfolio/some-folder/_ with prettyURL).<br/>
+    e.g. _<https://www.yoursite.com/portfolio.php?f=2>_ (_<https://www.yoursite.com/portfolio/some-folder/>_ with prettyURL).<br/>
     In both these cases, although the same template is involved (i.e. portfolio.php), the URL of the pages does not match that which the menu-item is pointing to.<br/>
     <br/>
     For such cases, by default, the 'menu' tag tries to figure out if the page being visited 'logically' falls below the page being pointed to.<br/>
     <br/>
     Thus, in the example above, both<br/>
-    _http&#58;//www.yoursite.com/portfolio/some-item.html_<br/>
+    _<https://www.yoursite.com/portfolio/some-item.html>_<br/>
     as well as<br/>
-    _http&#58;//www.yoursite.com/portfolio/some-folder/_<br/>
+    _<https://www.yoursite.com/portfolio/some-folder/>_<br/>
     logically are sub-pages of<br/>
-    _http&#58;//www.yoursite.com/portfolio/_ (with prettyURL)<br/>
+    _<https://www.yoursite.com/portfolio/>_ (with prettyURL)<br/>
     and so the 'menu' tag goes ahead and marks the menu-item in question as 'current' and all its parents as 'active'.<br/>
     <br/>
     Now consider another menu-item - this one pointing to a folder-view<br/>
-    e.g. _http&#58;//www.yoursite.com/portfolio.php?f=2_ (_http&#58;//www.yoursite.com/portfolio/some-folder/_ with prettyURL)<br/>
+    e.g. _<https://www.yoursite.com/portfolio.php?f=2>_ (_<https://www.yoursite.com/portfolio/some-folder/>_ with prettyURL)<br/>
     In this case, the menu-item will be marked as 'current' only for the same folder<br/>
-    _http&#58;//www.yoursite.com/portfolio/some-folder/_<br/>
+    _<https://www.yoursite.com/portfolio/some-folder/>_<br/>
     and any page that is below the folder<br/>
-    e.g. _http&#58;//www.yoursite.com/portfolio/some-folder/some-item.html_<br/>
+    e.g. _<https://www.yoursite.com/portfolio/some-folder/some-item.html>_<br/>
     but NOT for<br/>
-    _http&#58;//www.yoursite.com/portfolio/_ or<br/>
-    _http&#58;//www.yoursite.com/portfolio/some-item.html_ or<br/>
-    _http&#58;//www.yoursite.com/portfolio/some-other-folder/_<br/>
+    _<https://www.yoursite.com/portfolio/>_ or<br/>
+    _<https://www.yoursite.com/portfolio/some-item.html>_ or<br/>
+    _<https://www.yoursite.com/portfolio/some-other-folder/>_<br/>
     as they are logically not sub-pages of folder being pointed to.<br/>
     <br/>
     This is a powerful functionality and allows the menu to seamlessly blend with other discrete sections of the site, for example the portfolio section, as we saw above.<br/>
     <br/>
     Finally consider a point we touched upon earlier but deferred the explanation for later -<br/>
-    in our tree, we have a 'Home' menu-item that points to the home-view of index.php (_http&#58;//www.yoursite.com_) and we have separate menu-items that represent other pages of index.php e.g. _http&#58;//www.yoursite.com/about-us/_ and _http&#58;//www.yoursite.com/about-us/what-we-do/_.<br/>
+    in our tree, we have a 'Home' menu-item that points to the home-view of index.php (_<https://www.yoursite.com>_) and we have separate menu-items that represent other pages of index.php e.g. _<https://www.yoursite.com/about-us/>_ and _<https://www.yoursite.com/about-us/what-we-do/>_.<br/>
     <br/>
-    Going by the logic we discussed above, if we visit _http&#58;//www.yoursite.com/about-us/_ or _http&#58;//www.yoursite.com/about-us/what-we-do/_, since in the tree the 'Home' menu-item physically comes before the menu-item representing the visited page, **it is the 'Home' menu-item that will always get selected although we have a menu-item that specifically represents the visited page**.<br/>
+    Going by the logic we discussed above, if we visit _<https://www.yoursite.com/about-us/>_ or _<https://www.yoursite.com/about-us/what-we-do/>_, since in the tree the 'Home' menu-item physically comes before the menu-item representing the visited page, **it is the 'Home' menu-item that will always get selected although we have a menu-item that specifically represents the visited page**.<br/>
     <br/>
     For such cases we can configure the nested-page behind the menu-item NOT to be marked as current for the child-pages (i.e. be marked as current only for the page that is perfect match).
 </p>
