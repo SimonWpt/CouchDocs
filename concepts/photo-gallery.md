@@ -115,13 +115,11 @@ Once all the images are queued up, click 'Start upload'
 
 You'll see Couch uploading and processing the images one after another.
 
-<p class="success">Errors that might occur in the process will be reported as they are encountered - one common error is trying to upload an image that is too large. For now only a **maximum size of 2MB** is supported.</p>
+> Errors that might occur in the process will be reported as they are encountered - one common error is trying to upload an image that is too large. For now only a **maximum size of 2MB** is supported.
 
-<p class="error">
-    You might receive errors at this point stating something like 'Access not allowed' or 'Failed to open stream' etc. This can happen if your server is running under **SAFE MODE restrictions** (this mode has been deprecated but you still might run into some paranoid hosts insisting on using it).<br/>
-    To by-pass these restrictions you'll have to lend a helping hand to PHP by creating some folders and setting their permissions manually.<br/>
-    This thread of our forum discusses the procedure in detail - [**http&#58;//www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703**](http://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703).
-</p>
+> You might receive errors at this point stating something like 'Access not allowed' or 'Failed to open stream' etc. This can happen if your server is running under **SAFE MODE restrictions** (this mode has been deprecated but you still might run into some paranoid hosts insisting on using it).<br/>
+   To by-pass these restrictions you'll have to lend a helping hand to PHP by creating some folders and setting their permissions manually.<br/>
+    This thread of our forum discusses the procedure in detail - [**http://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703**](http://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703).
 
 Once all the images are successfully uploaded, the admin-panel you were on will refresh and there you have it -
 
