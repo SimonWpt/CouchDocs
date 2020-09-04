@@ -1,6 +1,6 @@
 ---
 title: Customizing the List screen
-parent: Core Concepts
+parent: Tags Reference
 layout: default
 ---
 

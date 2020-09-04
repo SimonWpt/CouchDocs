@@ -1,6 +1,6 @@
 ---
 title: Customizing forms
-parent: Core Concepts
+parent: Tags Reference
 layout: default
 ---
 
