@@ -17,7 +17,7 @@ To use Couch you must at least have a working knowledge of HTML and CSS and know
 <p class="error">**IMPORTANT!** Microsoft IIS web server is NOT supported.</p>
 
 * (Optional) GD library compiled into PHP for CAPTCHA.
-* (Optional) Apache mod\_rewrite module for prettyURLS.
+* (Optional) Apache mod_rewrite module for prettyURLS.
 
 ### Local Testing
 

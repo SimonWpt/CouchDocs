@@ -14,9 +14,9 @@ Please see [**Documentation - Core concepts - Relationships**](../../concepts/re
 * name
 * masterpage
 * has
-* reverse\_has
+* reverse_has
 * folder
-* include\_subfolders
+* include_subfolders
 * orderby
 * order_dir
 
@@ -73,7 +73,7 @@ The example above will list all pages of the template except those belonging to 
 ### include_subfolders
 
 The default value of this parameter is '1' and this causes the 'folder' parameter mentioned above to list pages belonging to the specified folder AND all sub-folders in the hierarchy below it.<br/>
-Setting 'include\_subfolders' to '0' will make this tag list only pages that are located directly within the specified folder.
+Setting 'include_subfolders' to '0' will make this tag list only pages that are located directly within the specified folder.
 
 ```html
 <cms:editable type='relation' name='artist_albums' masterpage='albums.php' folder='classical' include_subfolders='1' />
@@ -85,11 +85,11 @@ The example above will list only pages belonging directly to 'classical' folder.
 
 The pages being listed can be sorted according to the following fields
 
-* publish\_date
-* page\_title
-* page\_name
+* publish_date
+* page_title
+* page_name
 
-If unspecified, 'publish\_date' is used as the default value.
+If unspecified, 'publish_date' is used as the default value.
 
 ### order_dir
 

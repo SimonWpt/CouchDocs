@@ -44,7 +44,7 @@ A more practical example -
 </TABLE>
 ```
 
-In the snippet above, we are using the repeat tag to create a table. The zebra tag will alternately output 'row' and 'alternate\_row' as class names for the table rows. This can be used to color alternate rows differently.
+In the snippet above, we are using the repeat tag to create a table. The zebra tag will alternately output 'row' and 'alternate_row' as class names for the table rows. This can be used to color alternate rows differently.
 
 ## Parameters
 

@@ -15,7 +15,7 @@ Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.htm
 ## Parameters
 
 * limit
-* skip\_custom\_fields
+* skip_custom_fields
 
 ### limit
 

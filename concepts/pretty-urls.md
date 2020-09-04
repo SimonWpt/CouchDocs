@@ -11,33 +11,33 @@ This feature uses URL rewriting to transform the default Couch URLs containing q
 For Example, a URL like this -
 
 ```html
-http://www.mysite.com/blog.php?f=3
+<https://www.mysite.com/blog.php?f=3>
 ```
 
 where 3 is the id of a folder named 'electronics', will get converted to -
 
 ```html
-http://www.mysite.com/blog/electronics/
+<https://www.mysite.com/blog/electronics/>
 ```
 
 and another URL -
 
 ```html
-http://www.mysite.com/blog.php?p=12
+<https://www.mysite.com/blog.php?p=12>
 ```
 
 where 12 is the id of a cloned page named 'mobile-phones' which is in 'electronics' folder, will get converted to -
 
 ```html
-http://www.mysite.com/blog/electronics/mobile-phones.html
+<https://www.mysite.com/blog/electronics/mobile-phones.html>
 ```
 
 It is obvious that the 'pretty' versions of the URLs convey more meaning about the pages they represent.<br/>
 Not only do they appear friendlier to the visitors but they also offer immense benefit from the SEO (Search Engine Optimization) perspective - something that cannot be ignored if you wish your pages to rank high in Google search.
 
 <p class="notice">
-    For Pretty URLS to work in Couch, the Apache server it is hosted on must have the 'mod\_rewrite' module enabled.<br/>
-    To make sure this module is indeed available at your server, [please use this utility available at our forums](http://www.couchcms.com/forum/viewtopic.php?p=11832#p11832).
+    For Pretty URLS to work in Couch, the Apache server it is hosted on must have the 'mod_rewrite' module enabled.<br/>
+    To make sure this module is indeed available at your server, [please use this utility available at our forums](https://www.couchcms.com/forum/viewtopic.php?p=11832#p11832).
 </p>
 
 ### ENABLING PRETTY URLS
@@ -56,7 +56,7 @@ Enabling Pretty URLS is a two step process -
 define( 'K_PRETTY_URLS', 0 );
 ```
 
-Set the K\_PRETTY\_URLS to 1\.
+Set the K_PRETTY_URLS to 1\.
 
 **2\.** Fire up your browser and visit the following page (substitute the domain name with that of yours) -<br/>
 *<https://www.yoursite.com/couch/gen\>_htaccess.php*
@@ -72,11 +72,11 @@ Select and copy the ENTIRE content of the page (press Ctrl + A) and paste it int
 
 Try visiting your cloned pages from the Admin Panel and the pretty urls should be now seen in action.
 
-The rules that are copied and pasted into the .htaccess file pertain to all your clonable templates. If you happen to add other clonable templates after you have taken the steps outlined above, you'll have to regenerate the rewrite rules (using *gen\_htaccess.php*) and replace the former contents of the _.htaccess_ file with these new rules.
+The rules that are copied and pasted into the .htaccess file pertain to all your clonable templates. If you happen to add other clonable templates after you have taken the steps outlined above, you'll have to regenerate the rewrite rules (using *gen_htaccess.php*) and replace the former contents of the _.htaccess_ file with these new rules.
 
 This is the reason why it is advisable to turn on Pretty URLS after all the clonable templates are already in place.
 
-<p class="error">The rewrite rules created by *gen\_htaccess.php* use PCRE flavor of Regular Expressions instead of the now deprecated (and much slower) POSIX type. Unfortunately, some very old versions of Apache 1.x have been reported to still be using POSIX and as such the PrettyURLs feature might not work on them. Placing the generated .htaccess file on such servers will usually result in an '_HTTP 500: Internal Server Error_'.</p>
+<p class="error">The rewrite rules created by *gen_htaccess.php* use PCRE flavor of Regular Expressions instead of the now deprecated (and much slower) POSIX type. Unfortunately, some very old versions of Apache 1.x have been reported to still be using POSIX and as such the PrettyURLs feature might not work on them. Placing the generated .htaccess file on such servers will usually result in an '_HTTP 500: Internal Server Error_'.</p>
 
 ### TROUBLESHOOTING
 
@@ -84,7 +84,7 @@ There are two problems very commonly encountered once prettyURLs are turned on:
 
 #### 1. The pages throw 'Internal Server Error'.
 
-Please make sure that your server has the required *mod\_rewrite* module enabled. As mentioned above, [you can use this utility for testing it](http://www.couchcms.com/forum/viewtopic.php?p=11832#p11832).
+Please make sure that your server has the required *mod_rewrite* module enabled. As mentioned above, [you can use this utility for testing it](https://www.couchcms.com/forum/viewtopic.php?p=11832#p11832).
 
 #### 2. The pages do come up but all the CSS, JS or image links are broken.
 

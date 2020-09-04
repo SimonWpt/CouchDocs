@@ -35,14 +35,14 @@ The template containing the folder above. If skipped, the template of the curren
 
 At each iteration, this tag sets variables that describe the parent folder being enumerated.
 
-* k\_folder\_id
-* k\_folder\_name
-* k\_folder\_title
-* k\_folder\_desc
-* k\_folder\_link
-* k\_folder\_pagecount
-* k\_folder\_totalpagecount
-* k\_level
+* k_folder_id
+* k_folder_name
+* k_folder_title
+* k_folder_desc
+* k_folder_link
+* k_folder_pagecount
+* k_folder_totalpagecount
+* k_level
 
 ## Related Tags
 
@@ -50,5 +50,5 @@ At each iteration, this tag sets variables that describe the parent folder being
 * [folders](./folders.html)
 * [listfolders](./listfolders.html)
 * [dropdownfolders](./dropdownfolders.html)
-* [is\_ancestor](./is_ancestor.html)
+* [is_ancestor](./is_ancestor.html)
 * [breadcrumbs](./breadcrumbs.html)

@@ -112,7 +112,7 @@ Thus you can see that in the resulting webpage, the [__*editable*__](../tags-ref
 **2\. As variables automatically set by Couch -**
 
 When a page is executed, Couch makes available the current contents of all the editable regions contained within the page as variables of the same names.<br/>
-Thus in the example above, since the name of the editable region is *prop\_desc*, a variable by the same name will also be set by Couch during the execution of this page.<br/>
+Thus in the example above, since the name of the editable region is *prop_desc*, a variable by the same name will also be set by Couch during the execution of this page.<br/>
 So if you use the following snippet anywhere within your template -
 
 ```html
@@ -129,11 +129,11 @@ The [__*pages*__](../tags-reference/pages.html) tag is used to list (all or spec
 
 See also [**Listing Pages**](./listing-pages.html)
 
-**4\. By using the [*get\_custom\_field*](../tags-reference/get_custom_field.html) tag -**
+**4\. By using the [*get_custom_field*](../tags-reference/get_custom_field.html) tag -**
 
-While the [__*pages*__](../tags-reference/pages.html) tag mentioned in the previous method can be used to access all the variables of a page (or multiple pages) in a single go, the [__*get\_custom\_field*__](../tags-reference/get_custom_field.html) tag can be used to access a single variable of a page.
+While the [__*pages*__](../tags-reference/pages.html) tag mentioned in the previous method can be used to access all the variables of a page (or multiple pages) in a single go, the [__*get_custom_field*__](../tags-reference/get_custom_field.html) tag can be used to access a single variable of a page.
 
-See [__*get\_custom\_field*__](../tags-reference/get_custom_field.html) tag for more details.
+See [__*get_custom_field*__](../tags-reference/get_custom_field.html) tag for more details.
 
 ### SEPARATING THE DEFINITION OF EDITABLE REGION FROM ITS DISPLAY
 

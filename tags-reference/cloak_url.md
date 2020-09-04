@@ -6,7 +6,7 @@ layout: default
 
 # cloak_url
 
-The **cloak\_url** tag, as the name suggests, can be used to cloak links so that it does not become apparent from just looking at the links as to where they actually lead to.
+The **cloak_url** tag, as the name suggests, can be used to cloak links so that it does not become apparent from just looking at the links as to where they actually lead to.
 
 Please see [**Core Concepts - Cloaked Links**](../concepts/cloaked-links.html) for a detailed discussion of this tag.
 
@@ -14,10 +14,10 @@ Please see [**Core Concepts - Cloaked Links**](../concepts/cloaked-links.html) f
 
 * link
 * expiry
-* access\_level
-* prompt\_login
+* access_level
+* prompt_login
 * redirect
-* force\_download
+* force_download
 
 ### link
 
@@ -33,7 +33,7 @@ If an access level is set by this parameter, only authenticated users with the r
 
 ### prompt_login
 
-This parameter works in tandem with the *access\_level* parameter above. With this parameter set to '1', if a link that has an access level set on it is accessed by someone who is not privileged enough, a login box is shown to hime thus promting him to login for accessing the link.<br/>
+This parameter works in tandem with the *access_level* parameter above. With this parameter set to '1', if a link that has an access level set on it is accessed by someone who is not privileged enough, a login box is shown to hime thus promting him to login for accessing the link.<br/>
 By default, this parameter is '0' and unauthorized users are simply served a blank page.
 
 ### redirect
@@ -51,4 +51,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [cloak\_email](./cloak_email.html)
+* [cloak_email](./cloak_email.html)

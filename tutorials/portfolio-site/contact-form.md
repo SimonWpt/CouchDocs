@@ -6,7 +6,7 @@ layout: default
 
 # Contact Form
 
-[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/contact.zip)
+[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](https://www.couchcms.com/docs/code/contact.zip)
 
 The _contact.html_ that comes with Aurelius provides a contact form as well as some contact details.
 
@@ -72,16 +72,16 @@ We can deploy simple conditional tags to handle this -
 
 ![](../../assets/img/contents/portfolio-site-158.png)
 
-We enclose each LI element representing an icon within Couch conditional if tag that tests for the result of Couch not\_empty tag. The not\_empty tag returns 1 only if the variable it is testing has any value within it. This way an icon is output only if the associated variable is not empty.
+We enclose each LI element representing an icon within Couch conditional if tag that tests for the result of Couch not_empty tag. The not_empty tag returns 1 only if the variable it is testing has any value within it. This way an icon is output only if the associated variable is not empty.
 
 <p class="notice">
     In case you are wondering why we are using the construct<br/>
-    **&lt;cms:if "&lt;cms:not\_empty flickr\_id /&gt;"&gt; Display this &lt;/cms:if&gt;**<br/>
+    **&lt;cms:if "&lt;cms:not_empty flickr_id /&gt;"&gt; Display this &lt;/cms:if&gt;**<br/>
     instead of the more straightforward<br/>
-    **&lt;cms:if flickr\_id &gt; Display this &lt;/cms:if&gt;**<br/>
+    **&lt;cms:if flickr_id &gt; Display this &lt;/cms:if&gt;**<br/>
     The answer is that for richtext type editable regions, even if seemingly the region is empty, the CKEditor used to create the editor silently places some **&lt;BR/&gt;** or empty **&lt;P&gt;** elements within it. This will cause the simpler version of if to fail as it will consider these empty elements to be the input of the region.<br/>
     <br/>
-    The not\_empty tag, on the other hand, strips off these empty HTML tags and returns 1 only if some value remains after this cleansing.<br/>
+    The not_empty tag, on the other hand, strips off these empty HTML tags and returns 1 only if some value remains after this cleansing.<br/>
     The editable regions in the case of profiles section above are not of richtext type, hence the simpler conditional check would have worked the same as the one we used.
 </p>
 
@@ -106,14 +106,14 @@ Enclose the _profiles_ section we are working on within the capture tag like thi
 
 ![](../../assets/img/contents/portfolio-site-161.png)
 
-Notice that we are instructing the capture tag to buffer all output of its enclosed content into a variable named *profiles\_output*. Also note that at the end we are showing this *profiles\_output* variable.<br/>
+Notice that we are instructing the capture tag to buffer all output of its enclosed content into a variable named *profiles_output*. Also note that at the end we are showing this *profiles_output* variable.<br/>
 Try removing this show statement and the entire profiles block will disappear.
 
 The value of buffering everything into one variable and then outputting the single variable is that now we can conditionally output the single variable.
 
-What we'll do is, within the block enclosed by the capture tag, everyplace where we check whether or not a social link variable is present, if the variable is indeed present we set a variable named has\_profile to 1\.<br/>
-If even one social link variable is present, the *has\_profile* variable will be set to 1 else this variable will simply not be present.<br/>
-Finally, we'll check for this variable as the condition to output the contents buffered within *profiles\_output*.
+What we'll do is, within the block enclosed by the capture tag, everyplace where we check whether or not a social link variable is present, if the variable is indeed present we set a variable named has_profile to 1\.<br/>
+If even one social link variable is present, the *has_profile* variable will be set to 1 else this variable will simply not be present.<br/>
+Finally, we'll check for this variable as the condition to output the contents buffered within *profiles_output*.
 
 ![](../../assets/img/contents/portfolio-site-162.png)
 
@@ -195,32 +195,32 @@ Don't worry though. We'll now make Couch display these messages upon validation 
 
 To make Couch validate the submitted values, the input tags need to have validation constrains placed upon them.<br/>
 The most common constrain is to make sure an input is not left empty. This can be enforced by setting the _required_ parameter of input tag to 1\.<br/>
-There are several other kinds of validations available (e.g. *min\_len*, *max\_len* etc.) which are set using the _validator_ parameter (see Forms).<br/>
+There are several other kinds of validations available (e.g. *min_len*, *max_len* etc.) which are set using the _validator_ parameter (see Forms).<br/>
 We'll use the _validator='email'_ with the input meant for email address.<br/>
 The modified code with the validation constrains in place -
 
 ![](../../assets/img/contents/portfolio-site-173.png)
 
 Once the validation constrains are imposed, Couch validates the submitted values accordingly at each form submission.<br/>
-If any of the constrains are violated, the form tag sets up a variable named *k\_error* to indicate this.<br/>
-Additionally, it also sets up variables named after the input tags that failed the validation, prefixing their names with a 'k\_error\_' string. Thus for example, in the case of our form here, if the input tag named 'email' fails to validate, a variable named *k\_error\_email* will be set up.<br/>
+If any of the constrains are violated, the form tag sets up a variable named *k_error* to indicate this.<br/>
+Additionally, it also sets up variables named after the input tags that failed the validation, prefixing their names with a 'k_error_' string. Thus for example, in the case of our form here, if the input tag named 'email' fails to validate, a variable named *k_error_email* will be set up.<br/>
 We can test for the presence of these variables to find whether a validation error has occurred and take actions accordingly.
 
-On the flip side of it, if all the inputs pass the validation constrains successfully, the form tag also signals this by setting up similar variables. On successful submission of form a variable named *k\_success* gets set up. In addition to it, variables named after all the input tags, with 'frm\_' prefixed to their names, are set up. These variables contain the respective submitted values.
+On the flip side of it, if all the inputs pass the validation constrains successfully, the form tag also signals this by setting up similar variables. On successful submission of form a variable named *k_success* gets set up. In addition to it, variables named after all the input tags, with 'frm_' prefixed to their names, are set up. These variables contain the respective submitted values.
 
-For the form we are configuring, we'll use the 'k\_error\_tagname' variables to detect validation failures and then conditionally output the error reporting paragraphs we made visible above -
+For the form we are configuring, we'll use the 'k_error_tagname' variables to detect validation failures and then conditionally output the error reporting paragraphs we made visible above -
 
 ![](../../assets/img/contents/portfolio-site-174.png)
 
 Try using the form by leaving some inputs empty and placing malformed email address. The error messages should display correctly.
 
 Now to handle the success condition.<br/>
-We'll make use of the *k\_success* variable to detect this condition and take appropriate action.<br/>
+We'll make use of the *k_success* variable to detect this condition and take appropriate action.<br/>
 The form already has a message for successful condition -
 
 ![](../../assets/img/contents/portfolio-site-175.png)
 
-We'll display it conditionally only when *k\_success* variable is found set -
+We'll display it conditionally only when *k_success* variable is found set -
 
 ![](../../assets/img/contents/portfolio-site-176.png)
 
@@ -235,9 +235,9 @@ In the case of this form, we'd wish to send an email to the site owner, informin
 
 ![](../../assets/img/contents/portfolio-site-177.png)
 
-We'll use the Couch email tag to send an email to the site owner. Anything enclosed within the email tags will form the body of the email to be sent. Notice how we are using the *k\_success* variable (contains submitted values of all the inputs) to inform him of the submitted values.
+We'll use the Couch email tag to send an email to the site owner. Anything enclosed within the email tags will form the body of the email to be sent. Notice how we are using the *k_success* variable (contains submitted values of all the inputs) to inform him of the submitted values.
 
-The *k\_email\_from* and the *k\_email\_to* contain these values set in _config.php_ -
+The *k_email_from* and the *k_email_to* contain these values set in _config.php_ -
 
 ![](../../assets/img/contents/portfolio-site-178.png)
 

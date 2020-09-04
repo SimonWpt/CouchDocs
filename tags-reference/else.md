@@ -19,7 +19,7 @@ For example -
 </cms:if>
 ```
 
-In the snippet above, if variable 'my\_var' contains 'hello', all the statements within the **if** tag block upto the **else** tag will be executed. In case 'my\_var' contains any other value, all the statements within the **if** tag block starting from the **else** tag upto the end tag of **if**, will be executed. (In our example there are only single statements for both conditions but there can be any number of them).
+In the snippet above, if variable 'my_var' contains 'hello', all the statements within the **if** tag block upto the **else** tag will be executed. In case 'my_var' contains any other value, all the statements within the **if** tag block starting from the **else** tag upto the end tag of **if**, will be executed. (In our example there are only single statements for both conditions but there can be any number of them).
 
 <p class="notice">Notice that the **else** tag is a self closing tag.</p>
 

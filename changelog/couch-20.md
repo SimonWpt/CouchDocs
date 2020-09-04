@@ -65,7 +65,7 @@ Edit the `'main.html'` copied to the new location and make some changes - you ca
 **Code:**
 
 ```html
-<a href="http://www.couchcms.com/">CouchCMS Version <cms:show k_cms_version /> (<cms:show k_cms_build />)</a>
+<a href="https://www.couchcms.com/">CouchCMS Version <cms:show k_cms_version /> (<cms:show k_cms_build />)</a>
 ```
 
 to

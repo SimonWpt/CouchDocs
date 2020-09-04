@@ -46,7 +46,7 @@ To enable this module, please edit the 'kfunctions.php' file found in 'couch/add
 require_once( K_COUCH_DIR.'addons/data-bound-form/data-bound-form.php' );
 ```
 
-The code in our tutorial will also utilize the *cms:set\_flash* tag to set flash messages signifying successful form submission. This will require the 'sessions' module to be enabled so uncomment the following line too (if not already so)
+The code in our tutorial will also utilize the *cms:set_flash* tag to set flash messages signifying successful form submission. This will require the 'sessions' module to be enabled so uncomment the following line too (if not already so)
 
 ```html
 require_once( K_COUCH_DIR.'addons/cart/session.php' );
@@ -78,7 +78,7 @@ This is where the new 'databound form' feature comes in.<br/>
 You see, this simply connects an existing front-end form with existing back-end editable regions (in other words - 'binds' a Couch form with Couch database i.e. editable regions. This, incidentally, also explains why we chose to call this feaure 'DataBound Forms').
 
 So, when working with databound forms, we always start off with two concepts that are already well known to us - [**form**](./forms.html) and [**editable regions**](./editable-regions.html).<br/>
-This is the form we'll be working on (kindly provided by [@cheesypoof](http://www.couchcms.com/forum/memberlist.php?mode=viewprofile&u=11919)) -
+This is the form we'll be working on (kindly provided by [@cheesypoof](https://www.couchcms.com/forum/memberlist.php?mode=viewprofile&u=11919)) -
 
 ![](../assets/img/contents/databound-forms-1.png)
 
@@ -156,7 +156,7 @@ Notice that we have defined editable regions that are equivalent to the input fi
 
 > The type of last editable region (securefile) would seem unfamiliar. This is a new editable region that debuts with v1.4 and is meant exclusively to be used for uploading files securely from the front-end.
 
-Also notice that we've also added all data constrains (e.g. the field being required, validator, search\_type etc.) to the editable regions. This part is exactly how we use other templates in Couch and can be tested independently of the front-end form - i.e. after visiting the template as super-admin for the changes to be picked up, we can create cloned pages from the admin-panel, add data to the editable regions we defined and save.<br/>
+Also notice that we've also added all data constrains (e.g. the field being required, validator, search_type etc.) to the editable regions. This part is exactly how we use other templates in Couch and can be tested independently of the front-end form - i.e. after visiting the template as super-admin for the changes to be picked up, we can create cloned pages from the admin-panel, add data to the editable regions we defined and save.<br/>
 This is the right time to manually test everything e.g. validations etc. work as expected.
 
 With the 'data' component completed, time to move to the 'form' component.
@@ -340,7 +340,7 @@ So, actually what we are seeing on the front-end form are the very editable regi
 
 Test the form out. All the validations, requirements etc. that we defined for the editable regions will be enforced on the front-end too (not surprising as these actually \*are\* the editable regions).
 
-When all the inputs are filled with proper data, the form submission succeeds and the *&lt;cms:if k\_success &gt;* block executes.<br/>
+When all the inputs are filled with proper data, the form submission succeeds and the *&lt;cms:if k_success &gt;* block executes.<br/>
 However, we haven't placed anything there. Let us do that in the final modification
 
 #### c. Persist submitted values on successful form submission
@@ -372,7 +372,7 @@ After:
 </cms:if>
 ```
 
-The 'db\_persist\_form' tag is the final piece of this puzzle.
+The 'db_persist_form' tag is the final piece of this puzzle.
 
 Used without any parameters, this tag simply pulls in the submitted values (from the 'bound' inputs) and saves them into the template the form is bound to. Since in our case, the binding 'mode' of the form is 'create', this saving action results in the creation of a new cloned page of our template.
 
@@ -460,7 +460,7 @@ This is how our form stands right now:
 ```
 
 <p class="success">
-    The '\_auto\_title' parameter of *cms:db\_persist\_form* tag merits some discussion.<br/>
+    The '_auto_title' parameter of *cms:db_persist_form* tag merits some discussion.<br/>
     Take a look at the edit screen of any cloned page in the back-end and you'll find that it has two default fields - name & title.<br/>
     Of the two, only the 'name' is mandatory. This is the unique id by which a cloned page is known internally by the system.<br/>
     However, you are permitted to leave it blank as long as you fill the 'title' field. This is because if the 'name' is not supplied, Couch automatically generates a 'name' from the 'title'. If, however, even the 'title' is left empty this results in an error.<br/>
@@ -480,9 +480,9 @@ This is how our form stands right now:
 <cms:input type="bound" name="k_page_name" />
 <cms:input type="bound" name="k_page_title" />
     ```
-    If the input bound to 'k\_page\_name' is omitted, a name would be auto-generated using the value from the field bound to the 'title' (i.e. k\_page\_title).<br/>
+    If the input bound to 'k_page_name' is omitted, a name would be auto-generated using the value from the field bound to the 'title' (i.e. k_page_title).<br/>
     <br/>
-    2\. We could indirectly supply values for the name/title as parameters of the cms:db\_persist\_form tag e.g.<br/>
+    2\. We could indirectly supply values for the name/title as parameters of the cms:db_persist_form tag e.g.<br/>
     <br/>
     ```
 <cms:db_persist_form
@@ -490,14 +490,14 @@ This is how our form stands right now:
     k_page_title='My Page Name'
 />
     ```
-    As before, if the 'k\_page\_name' is skipped, the value of 'k\_page\_title' will be used to generate a name automatically.<br/>
+    As before, if the 'k_page_name' is skipped, the value of 'k_page_title' will be used to generate a name automatically.<br/>
     Of course, in a real-life situation instead of hard-coding the values you'd want to use some code or algorithm to provide unique values.<br/>
     <br/>
     For the case we are dealing with in our tutorial, the first solution (explicit input boxes) would be too much to ask from the visitor.<br/>
     The second solution would either require providing a unique name at every submission or provide a fixed 'title' and then bank on the system to generate a unique 'name' out of it. Since the 'title' is fixed, the generated name will always be suffixed with a unique number (1, 2 etc.). Doing this would be wasteful if the number of submissions could run into thousands.<br/>
     <br/>
     In any case, if we reflect over it, the 'name' is just a requirement of the system and adds nothing to the data we are capturing (i.e. the application). So the most efficient way of providing the required name would be to ask the form to generate one for itself.<br/>
-    This is what the '\_auto\_title' parameter is doing.<br/>
+    This is what the '_auto_title' parameter is doing.<br/>
     <br/>
     ```
 <cms:db_persist_form
@@ -515,7 +515,7 @@ The onus of securing up the form lies squarely on our shoulders.
 
 Since the form is Couch managed, the default security offered by the CMS against serious attacks like XSS, CSRF, SQL injection etc. covers the form as well. Nothing needs to be done on this front. Preventing spam submissions will require some work though.
 
-As discussed elsewhere on our forum (Fighting Spam - [http://www.couchcms.com/forum/viewtopic.php?f=8&t=7047](http://www.couchcms.com/forum/viewtopic.php?f=8&t=7047)), Captcha has long lost its efficacy in stopping spam. We have to look at other measures now. As discussed in the mentioned thread, there are two main sources of spam to contend with -
+As discussed elsewhere on our forum (Fighting Spam - [https://www.couchcms.com/forum/viewtopic.php?f=8&t=7047](https://www.couchcms.com/forum/viewtopic.php?f=8&t=7047)), Captcha has long lost its efficacy in stopping spam. We have to look at other measures now. As discussed in the mentioned thread, there are two main sources of spam to contend with -
 
 1. Spambots
 2. Human
@@ -561,7 +561,7 @@ validator='regex=/^blue$/i'
 Make sure to change the highlited portion to match whatever is the answer to the question you put. Your visitors will also appreciate if you provided a hint about the length of the right answer.
 
 > This step, incidentally, also shows that we can use 'bound' and normal cms:inputs together in the same form (the 'human' input we used above, unlike others, is not a bound field).<br/>
-> Submitted values or error messages from both types will be made available by the form in identical fashion (i.e. as variables prefixed by 'frm\_' and 'k\_error\_' to input names).<br/>
+> Submitted values or error messages from both types will be made available by the form in identical fashion (i.e. as variables prefixed by 'frm_' and 'k_error_' to input names).<br/>
 > The only difference between the two lies in the fact that values of normal inputs, unlike those of bound inputs, will not be saved into the database.
 
 This one step alone should cut down the spam spewed by bots appreciably.<br/>
@@ -577,8 +577,8 @@ The service responds back with whether or not the email, username and IP address
 
 The idea is simple but I can vouch for its effectiveness as I've seen it cut the, literally, hundreds of daily spam registrations on our forum to nearly zero.
 
-Incorporating this spam-check in our form couldn't be any simpler. We have a new tag named 'check\_spam' to handle that.<br/>
-Just before we persist a successful form submission in the database by using '*cms:db\_persist\_form*', we place the '*check\_spam*' tag like this -
+Incorporating this spam-check in our form couldn't be any simpler. We have a new tag named 'check_spam' to handle that.<br/>
+Just before we persist a successful form submission in the database by using '*cms:db_persist_form*', we place the '*check_spam*' tag like this -
 
 Before:
 
@@ -614,7 +614,7 @@ After:
 </cms:if>
 ```
 
-Notice how we are sending the submitted email address (made available as 'frm\_email' in the k\_success block) as its 'email' parameter.<br/>
+Notice how we are sending the submitted email address (made available as 'frm_email' in the k_success block) as its 'email' parameter.<br/>
 And that is all that would be required. The tag contacts stopforumspam.com and if the user is reported as a spammer, simply terminates the submission after displaying a short notice.
 
 At this point, we have a fully functional and secure form on the website that can accept user-submitted content.<br/>
@@ -749,7 +749,7 @@ As you can see, it shows the auto-generated titles assigned to the cloned pages 
 We'd rather have the applicant's 'Name', 'EMail' and the 'Position' applied for shown here.<br/>
 Let us do just that.
 
-We'll begin by creating a snippet, say named 'my\_list.html', and saving it in the 'snippets' folder of Couch (or in whichever folder you have configured to hold the snippets. If you've used the [**cms:embed**](../tags-reference/embed.html) tag this process will seem familiar).
+We'll begin by creating a snippet, say named 'my_list.html', and saving it in the 'snippets' folder of Couch (or in whichever folder you have configured to hold the snippets. If you've used the [**cms:embed**](../tags-reference/embed.html) tag this process will seem familiar).
 
 For a quick test, let us put the following in the snippet -
 
@@ -795,13 +795,13 @@ Once we specify our snippet to be used for the display, it is an 'all or nothing
 That is to say, Couch true to its principle gets you a blank slate and now the onus for providing all the default functionality (assuming we need it) rests on our snippet.
 
 Chances, however, are that in most cases we'd only want to modify the way the pages are listed - like using other fields as columns or showing the pages in a non-tabular manner. Rest of the functions would normally remain unchanged.<br/>
-To help jumpstart the process, the attached zip at the bottom contains in the 'couchified\\snippets' folder a sample snippet named 'default\_list.html' that duplicates (well, almost) the default listing using regular Couch tags.<br/>
+To help jumpstart the process, the attached zip at the bottom contains in the 'couchified\\snippets' folder a sample snippet named 'default_list.html' that duplicates (well, almost) the default listing using regular Couch tags.<br/>
 This can be used to create our custom listing and then make changes only to the parts relevant to us.
 
 For the task in hand, let us copy the contents of the sample snippet mentioned above into the snippet we are using to render our custom listing.<br/>
 Coming back to the admin-panel should show that it mimics the default listing pretty well. But now since the code is accessible we can tweak it to suit our need.
 
-The attached zip contains the final version of our 'my\_list.html' snippet.<br/>
+The attached zip contains the final version of our 'my_list.html' snippet.<br/>
 You can do a comparison of both versions to find the minimal modifications needed.<br/>
 The portions requiring changes are marked by<br/>
 &lt;!-- EDIT --&gt; and &lt;!-- END EDIT --&gt;
@@ -828,7 +828,7 @@ Anyways, just to illustrate how to use a custom edit screen, we'll (redundantly)
 
 The procedure is very similar to what we used for custom listing above.<br/>
 It begins by creating a snippet file in Couch's snippets folder and then registering it for the template in kfunctions.php.<br/>
-Assuming the snippet we use is named 'my\_edit.html', this is what needs to be placed in kfunctions.php -
+Assuming the snippet we use is named 'my_edit.html', this is what needs to be placed in kfunctions.php -
 
 ```html
 $FUNCS->register_admin_pageview( 'application.php', 'my_edit.html', 1 ); // '1' for showing the 'advanced setting dropdown'
@@ -841,9 +841,9 @@ So, although we can do anything we wish through our snippet it is only fair to a
 Speaking of which, remember our databound form? I think you get the connection - yes, we'll use the databound form in our snippet to handle page editing.
 
 Once again, it'd be useful to begin with a snippet that mimics the default edit screen and then add our modifications to it.<br/>
-The attached zip at the bottom contains (in the 'couchified\\snippets' folder) a sample snippet named 'default\_edit.html' that has all the necessary boilerplate code.<br/>
+The attached zip at the bottom contains (in the 'couchified\\snippets' folder) a sample snippet named 'default_edit.html' that has all the necessary boilerplate code.<br/>
 The block between &lt;!-- EDIT --&gt; and &lt;!-- END EDIT --&gt; is where we should place our 'bound' cms:inputs (the cms:form is already in place).<br/>
-'my\_edit.html' found in the same folder is its modified version tailored for our applications module.
+'my_edit.html' found in the same folder is its modified version tailored for our applications module.
 
 If you do a comparison of both versions, you'll find that the added code for the 'bound' inputs is just a copy/paste job from the front-end template (i.e. applications.php found in the 'couchified' folder). So we are basically just duplicating the front-end form on the back-end.
 
@@ -874,4 +874,4 @@ So, in a sense, Couch then would become a 'CMS maker' instead of just a CMS.
 
 Keeping my fingers crossed :)
 
-#### [**Download Source Code**](http://www.couchcms.com/docs/code/db_code.zip)
+#### [**Download Source Code**](https://www.couchcms.com/docs/code/db_code.zip)

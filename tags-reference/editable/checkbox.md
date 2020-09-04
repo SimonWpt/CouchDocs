@@ -52,10 +52,10 @@ As you can see, the value consists of all the three selected options clubbed tog
 
 In addition to the parameters common to all the types of editable regions, _checkbox_ accepts the following parameters
 
-* opt\_values
-* opt\_selected
+* opt_values
+* opt_selected
 * separator
-* val\_separator
+* val_separator
 
 ### opt_values
 
@@ -105,7 +105,7 @@ opt_values='Entertainment=0 | | Computers=1 | | Sports=2 | | Health=3'
 
 ### opt_selected
 
-You can show any option as selected by setting *opt\_selected* to the value of that option. For example -
+You can show any option as selected by setting *opt_selected* to the value of that option. For example -
 
 ```html
 <cms:editable name="my_categories" label="Categories" desc="Check all applicable"
@@ -137,7 +137,7 @@ The above will show _Entertainment_ and _Sports_ selected by default.
 
 ### separator
 
-As seen in the examples above, the list provided to *opt\_values* parameter consists of the options separated by a '|' (pipe) character and so are the values provided to *opt\_selected*.<br/>
+As seen in the examples above, the list provided to *opt_values* parameter consists of the options separated by a '|' (pipe) character and so are the values provided to *opt_selected*.<br/>
 This is the default separator used by Couch. For some reason if you do not wish to have a pipe as separator (e.g. if any of the options contains the pipe character within itself, obviously the same character cannot be used as the separator), any other character can be designated as the separator by setting this parameter. For example as in follows -
 
 ```html
@@ -149,7 +149,7 @@ This is the default separator used by Couch. For some reason if you do not wish 
 />
 ```
 
-Note how the *opt\_values* and *opt\_selected* are separated by '\*'.
+Note how the *opt_values* and *opt_selected* are separated by '\*'.
 
 ### val_separator
 

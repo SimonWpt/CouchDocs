@@ -6,13 +6,13 @@ layout: default
 
 # get_cookie
 
-The **get\_cookie** tag can be used to fetch value contained within any cookie set by the **set\_cookie** tag.
+The **get_cookie** tag can be used to fetch value contained within any cookie set by the **set_cookie** tag.
 
 ```html
 <cms:get_cookie 'my_test_cookie' />
 ```
 
-The snippet above will retrieve the value set within the cookie named 'my\_test\_cookie'
+The snippet above will retrieve the value set within the cookie named 'my_test_cookie'
 
 ## Parameters
 
@@ -28,5 +28,5 @@ This is a self closing tag and sets no variables of its own.
 
 ## Related Tags
 
-* [set\_cookie](./set_cookie.html)
-* [delete\_cookie](./delete_cookie.html)
+* [set_cookie](./set_cookie.html)
+* [delete_cookie](./delete_cookie.html)

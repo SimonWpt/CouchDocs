@@ -12,8 +12,8 @@ As already discussed, _<https://www.mytestsite.com/blog.php>_ is the view where 
 Access it through your browser and you'll see that currently it is showing some hard coded HTML.<br/>
 We are going to change that now to make it display pages cloned from _blog.php_ template in descending order of their publication date.
 
-The way we have configured it, template _blog.php_ is using an embedded template *blog\_list.html* to render the list-view.<br/>
-File *blog\_list.html* is where we'll make the changes now. Open it up in your text editor.
+The way we have configured it, template _blog.php_ is using an embedded template *blog_list.html* to render the list-view.<br/>
+File *blog_list.html* is where we'll make the changes now. Open it up in your text editor.
 
 Couch has a tag named pages that is used to enumerate or list pages belonging to a particular template.<br/>
 Let us take a little overview of how this tag works before putting it into real use.<br/>
@@ -35,7 +35,7 @@ As a quick and dirty test, place the following code
 
 ![](../../assets/img/contents/portfolio-site-73.png)
 
-anywhere within *blog\_list.html* (I chose just after the BODY tag) and access _<https://www.mytestsite.com/blog.php>_.
+anywhere within *blog_list.html* (I chose just after the BODY tag) and access _<https://www.mytestsite.com/blog.php>_.
 
 You'll see that the heading '_Hi, I am a page!_' appears twice.
 
@@ -55,9 +55,9 @@ As you can see we can access all variables belonging to each cloned pages just t
 
 <p class="notice">The [pages](../../tags-reference/pages.html) tag, in a way, is one of the most powerful tags in Couch and supports several parameters that you can use to fine-tune the cloned pages that are fetched and the way they are fetched. Please consult the [documentation](../../tags-reference/pages.html) for a full discussion.</p>
 
-With this ability to list cloned pages and access their data, we can now make changes to the *blog\_list.html* snippet to display the cloned pages instead of its hard coded content.
+With this ability to list cloned pages and access their data, we can now make changes to the *blog_list.html* snippet to display the cloned pages instead of its hard coded content.
 
-The *blog\_list.html* is hard coded to display three blog posts.<br/>
+The *blog_list.html* is hard coded to display three blog posts.<br/>
 Delete two posts so that we are left with only one. Visit _<https://www.mytestsite.com/blog.php>_ to ensure that it displays only one blog post.
 
 We have already seen that the pages tag repeats the contents enclosed by it as many times as there are pages for it to display. We are going to enclose the remaining one post with the pages tag hence we need the HTML for only one blog post.<br/>
@@ -125,18 +125,18 @@ After -
 ![](../../assets/img/contents/portfolio-site-86.png)
 
 But now when you access _blog.php_, you'll see that the next and previous buttons now get repeated for all the posts that are listed on the page. Certainly not what we desired. We wish to display the navigation buttons only after the last post on the page. As noted above, Couch sets up several variables that reflect the current status of the loop as the pages tag iterates through the fetched pages.<br/>
-*k\_paginated\_top* and *k\_paginated\_bottom* are two such variables.
+*k_paginated_top* and *k_paginated_bottom* are two such variables.
 
-<p class="success">Use &lt;cms:dump /&gt; or &lt;cms:dump\_all /&gt; anywhere within the opening and closing component of the pages tag to see the variables change values as the cloned pages are looped through.</p>
+<p class="success">Use &lt;cms:dump /&gt; or &lt;cms:dump_all /&gt; anywhere within the opening and closing component of the pages tag to see the variables change values as the cloned pages are looped through.</p>
 
-*k\_paginated\_top* is set when the first page of the current set of pages is being displayed while *k\_paginated\_bottom* is set when it is the last page that is getting displayed.<br/>
-We can use the *k\_paginated\_bottom* variable to conditionally output the navigation buttons only after the last entry -
+*k_paginated_top* is set when the first page of the current set of pages is being displayed while *k_paginated_bottom* is set when it is the last page that is getting displayed.<br/>
+We can use the *k_paginated_bottom* variable to conditionally output the navigation buttons only after the last entry -
 
 ![](../../assets/img/contents/portfolio-site-87.png)
 
 Visit _blog.php_ and the navigation buttons should now display properly after the last post.<br/>
 We can now set the two buttons to link to the next and previous set of pages.<br/>
-Couch sets two variables - *k\_paginate\_link\_prev* and *k\_paginate\_link\_next* that give us these links.<br/>
+Couch sets two variables - *k_paginate_link_prev* and *k_paginate_link_next* that give us these links.<br/>
 We'll add them to the buttons.
 
 ![](../../assets/img/contents/portfolio-site-88.png)
@@ -148,7 +148,7 @@ The five posts were split into two sets - the first set (or page) had three post
 We are at the second set and there are no more posts to display after this. Yet the '_Previous Posts_' is still being displayed.<br/>
 Similarly, when we were at the first set there were no '_Newer Posts_' to display and yet this button was being displayed.
 
-Couch, in fact, is aware of which set is being displayed and actually sets the *k\_paginate\_link\_prev* and *k\_paginate\_link\_next* variables only if there are any next or previous sets to display.<br/>
+Couch, in fact, is aware of which set is being displayed and actually sets the *k_paginate_link_prev* and *k_paginate_link_next* variables only if there are any next or previous sets to display.<br/>
 We simply have to check for these variables before displaying the navigation buttons.<br/>
 Let us modify the code to do this -
 
@@ -171,16 +171,16 @@ Find the following sidebar code in _blog.php_.
 
 ![](../../assets/img/contents/portfolio-site-91.png)
 
-Cut and paste it into a file and save it as *blog\_sidebar.html* in the snippets folder.<br/>
+Cut and paste it into a file and save it as *blog_sidebar.html* in the snippets folder.<br/>
 Place the following code in _blog.php_ in place the code removed above
 
 ![](../../assets/img/contents/portfolio-site-92.png)
 
-Similarly remove the sidebar code from *blog\_list.html* (list-view) and replace it with the embed tag shown above.
+Similarly remove the sidebar code from *blog_list.html* (list-view) and replace it with the embed tag shown above.
 
 The two views should now show identical sidebars. However the '_Latest News_' portion of the sidebar was supposed to be visible only in the page-view.<br/>
 A little conditional code should handle this -<br/>
-Open up *blog\_sidebar.html* in your text editor and enclose the '_Latest News_' list with a conditional tag like this -
+Open up *blog_sidebar.html* in your text editor and enclose the '_Latest News_' list with a conditional tag like this -
 
 ![](../../assets/img/contents/portfolio-site-93.png)
 
@@ -222,14 +222,14 @@ We can, for example, display information about the folder in question in this vi
 In our case, currently we are not checking at all if the list-view is actually also a folder-view (i.e. we do need to list pages in this view but the pages should belong only to the particular folder that is being specified in the URL).<br/>
 Let us add this intelligence to our template.
 
-As we know, it is the pages tag in *blog\_list.html* template that is fetching and displaying pages in list-view.<br/>
+As we know, it is the pages tag in *blog_list.html* template that is fetching and displaying pages in list-view.<br/>
 Currently it only has the _masterpage_ parameter that is constraining the pages fetched.<br/>
 The tag also supports a parameter named '_folder_' where we can specify the name of the folder (or folders) the pages belonging to which need to be fetched.<br/>
 For example, if we hardcode the name of folder as '_clients_', the list-view will start showing only the two pages that currently reside in this folder -
 
 ![](../../assets/img/contents/portfolio-site-97.png)
 
-As it happens, during folder-view, a variable named *k\_folder\_name* gets set by Couch, which gives us the name of the folder specified in the URL. Place this variable as the '_folder_' parameter in the pages tag -
+As it happens, during folder-view, a variable named *k_folder_name* gets set by Couch, which gives us the name of the folder specified in the URL. Place this variable as the '_folder_' parameter in the pages tag -
 
 ![](../../assets/img/contents/portfolio-site-98.png)
 
@@ -238,7 +238,7 @@ Only two pages, each belonging to '_Clients_' folder will be displayed.<br/>
 Click on the '_Philosophy_' folder and you should now see only the two pages belonging to '_Philosophy_' being listed.<br/>
 Remove the '_?f=n_' part from the URL and access _<https://www.mytestsite.com/blog.php>_ directly.<br/>
 It will display all folders, regardless of their containing folders, as before.<br/>
-This works as before because this view not being the folder-view, the *k\_folder\_name* variable comes up empty and hence the '_folder_' parameter of the pages tag is ignored.
+This works as before because this view not being the folder-view, the *k_folder_name* variable comes up empty and hence the '_folder_' parameter of the pages tag is ignored.
 
 Thus with only the addition of one parameter we were able to handle the folder-view too.<br/>
 Couch supports one last sub-category of the list-view - the _archive-view_.<br/>
@@ -251,14 +251,14 @@ This section is very similar to the Listing folders section we handled above -
 
 ![](../../assets/img/contents/portfolio-site-99.png)
 
-Edit *blog\_sidebar.html* to delete all the LIs within the UL except one.<br/>
+Edit *blog_sidebar.html* to delete all the LIs within the UL except one.<br/>
 The Couch tag used to enumerate all the archive periods that have published pages within them is the archives tag.<br/>
 Enclose the solitary LI with this tag -
 
 ![](../../assets/img/contents/portfolio-site-100.png)
 
 Similar to the pages or folders tag, the archives tag makes available all information about each archive period by setting up variables.<br/>
-Variable *k\_archive\_date* gives the date that represents the first day of the archive period while *k\_archive\_link* provides the link to the archive-view that should display all pages belonging to this period.<br/>
+Variable *k_archive_date* gives the date that represents the first day of the archive period while *k_archive_link* provides the link to the archive-view that should display all pages belonging to this period.<br/>
 Add the aforesaid variables to the LI -
 
 ![](../../assets/img/contents/portfolio-site-101.png)
@@ -274,9 +274,9 @@ It is up to the template being accessed to handle the archive period anyway it c
 For now, our _blog.php_ will simply display whatever it did in the list-view (remember archive-view and folder-view are sub-categories of list-view) because we have not yet handled the archive-view.<br/>
 Let us do that now.
 
-Once again it is the pages tag that we placed within the *blog\_list.html* (that handles list-view) that needs a little modification.<br/>
-Pages tag supports two parameters that can be set to constrain the fetched pages to belong to a certain time period - *start\_on* and *stop\_before*.<br/>
-We'll set the values of these parameters by using two variables that are set by Couch in archive-view that denote the start and end dates of the archive period - *k\_archive\_date* and *k\_next\_archive\_date*.<br/>
+Once again it is the pages tag that we placed within the *blog_list.html* (that handles list-view) that needs a little modification.<br/>
+Pages tag supports two parameters that can be set to constrain the fetched pages to belong to a certain time period - *start_on* and *stop_before*.<br/>
+We'll set the values of these parameters by using two variables that are set by Couch in archive-view that denote the start and end dates of the archive period - *k_archive_date* and *k_next_archive_date*.<br/>
 The modified pages tag should look like -
 
 ![](../../assets/img/contents/portfolio-site-102.png)
@@ -286,7 +286,7 @@ As with the folder-view, this works because when _blog.php_ is accessed in a vie
 
 This wraps up the two lists that appear in the sidebar of list-view.<br/>
 The page-view has an additional list, the _Latest News list_, which we'll use to display the latest four blog posts.<br/>
-Open up *blog\_sidebar.html* in your text editor and find the _Latest News_ listing.
+Open up *blog_sidebar.html* in your text editor and find the _Latest News_ listing.
 
 ![](../../assets/img/contents/portfolio-site-103.png)
 
@@ -332,7 +332,7 @@ Within _blog.php_, find the form that is meant to submit comments -
 ![](../../assets/img/contents/portfolio-site-108.png)
 
 We could modify this form to make Couch fit into it. However, since a comments submission form is such a standard component of a blog, in this case we can save some time by reusing the submission form that is described in Couch documentation of [comments](../../concepts/using-comments.html).<br/>
-Copy and save that sample form into a file named *comments\_form.html* [\[download it\]](http://www.couchcms.com/docs/code/blog.zip) and save this into the snippet folder of Couch.<br/>
+Copy and save that sample form into a file named *comments_form.html* [\[download it\]](https://www.couchcms.com/docs/code/blog.zip) and save this into the snippet folder of Couch.<br/>
 Replace the original form block in _blog.php_ shown above with -
 
 ![](../../assets/img/contents/portfolio-site-109.png)
@@ -370,14 +370,14 @@ Approve the comments that need approval and now we can move on to getting all th
 
 Listing comments follows the same pattern we have seen so far with all the listings we have configured i.e. pages, folders and archives.<br/>
 The enumerator tag for listing comments is, no prizes for guessing, the comments tag.<br/>
-With no parameters specified, comments tag will list all the approved comments in the system regardless of the template they belong to. However, you can use the _masterpage_, *page\_id* or *page\_name* parameters to make it fetch only the comments that belong to a particular template or page.
+With no parameters specified, comments tag will list all the approved comments in the system regardless of the template they belong to. However, you can use the _masterpage_, *page_id* or *page_name* parameters to make it fetch only the comments that belong to a particular template or page.
 
 To put the comments tag into use, follow the usual method of isolating a single item and enclosing it with the enumerator tags.<br/>
 Here is how the sample comment contained in _blog.php_ looks like after being enclosed by the comments tag -
 
 ![](../../assets/img/contents/portfolio-site-115.png)
 
-Notice how we are using the system variable *k\_page\_id*, which is set by Couch to give the current page's id, to fetch only the comments that are associated with the page being accessed in page-view.
+Notice how we are using the system variable *k_page_id*, which is set by Couch to give the current page's id, to fetch only the comments that are associated with the page being accessed in page-view.
 
 Follow this with the usual step of replacing the static content with the variables set by the enumerator tag.
 

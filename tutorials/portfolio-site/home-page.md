@@ -6,7 +6,7 @@ layout: default
 
 # Finally home
 
-[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/home.zip)
+[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](https://www.couchcms.com/docs/code/home.zip)
 
 The home page in Aurelius is represented by _index.html_.
 

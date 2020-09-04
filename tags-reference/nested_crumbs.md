@@ -6,11 +6,11 @@ layout: default
 
 # nested_crumbs
 
-The **nested\_crumbs** tag can be used to easily create breadcrumbs out of [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
+The **nested_crumbs** tag can be used to easily create breadcrumbs out of [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
 
 <p class="notice">
     There is another tag named '[breadcrumbs](../breadcrumbs.html)', which is used with the folder hierarchy associated with normal cloned pages.<br/>
-    'nested\_crumbs' on the other hand works with nested-pages only.
+    'nested_crumbs' on the other hand works with nested-pages only.
 </p>
 
 ### Usage
@@ -36,7 +36,7 @@ where 'masterpage' points to the template behind the nested-pages tree.
 ## Parameters
 
 * masterpage
-* ignore\_show\_in\_menu
+* ignore_show_in_menu
 * prepend
 * append
 
@@ -49,7 +49,7 @@ If left empty, the template of the currently executing page is assumed.
 
 The 'Advanced Settings' of each nested-page has a checkbox labeled 'Show in menu'.<br/>
 If that is unchecked, the page is not included by default in the breadcrumbs.<br/>
-You can override this by setting 'ignore\_show\_in\_menu' parameter to '1'.
+You can override this by setting 'ignore_show_in_menu' parameter to '1'.
 
 ### prepend
 
@@ -65,17 +65,17 @@ When used as a self-closing tag, this tag sets no variables.
 
 When used as a tag-pair, the following variables are set for each crumb -
 
-* k\_crumb\_id
-* k\_crumb\_name
-* k\_crumb\_text
-* k\_crumb\_link
-* k\_crumb\_is\_nested\_page
-* k\_crumb\_is\_folder
-* k\_crumb\_open\_external
-* k\_crumb\_is\_last
+* k_crumb_id
+* k_crumb_name
+* k_crumb_text
+* k_crumb_link
+* k_crumb_is_nested_page
+* k_crumb_is_folder
+* k_crumb_open_external
+* k_crumb_is_last
 
 ## Related Tags
 
 * [menu](./menu.html)
 * [breadcrumbs](./breadcrumbs.html)
-* [nested\_pages](./nested_pages.html)
+* [nested_pages](./nested_pages.html)

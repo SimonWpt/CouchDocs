@@ -6,7 +6,7 @@ layout: default
 
 # set_cookie
 
-The **set\_cookie** tag can be used to set a cookie with a name and value. An expiration time can also be set for the cookie.
+The **set_cookie** tag can be used to set a cookie with a name and value. An expiration time can also be set for the cookie.
 
 ```html
 <cms:set_cookie 'my_test_cookie' 'hello world' />
@@ -46,5 +46,5 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [get\_cookie](./get_cookie.html)
-* [delete\_cookie](./delete_cookie.html)
+* [get_cookie](./get_cookie.html)
+* [delete_cookie](./delete_cookie.html)

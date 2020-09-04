@@ -40,14 +40,14 @@ Now add the individual news items to this channel -
 
         <item>
             <title>My Second News</title>
-            <link>http://www.mysite.com/breaking/my-second-news.html</link>
+            <link>https://www.mysite.com/breaking/my-second-news.html</link>
             <description>This is my second news item.</description>
             <pubDate>10 Jul 2007</pubDate>
         </item>
 
         <item>
             <title>My First News</title>
-            <link>http://www.mysite.com/my-first-news.html</link>
+            <link>https://www.mysite.com/my-first-news.html</link>
             <description>This is my first news item.</description>
             <pubDate>10 Jul 2007</pubDate>
         </item>
@@ -77,9 +77,9 @@ The following snippet using Couch's [__*concat*__](../tags-reference/concat.html
 <cms:concat '<' '?xml version="1.0" encoding="' k_site_charset '"?' '>' />
 ```
 
-<p class="notice">The *k\_site\_charset* variable contains the value set in _config.php_ for the character set used by your web-site.</p>
+<p class="notice">The *k_site_charset* variable contains the value set in _config.php_ for the character set used by your web-site.</p>
 
-The second problem can be rectified by using the Couch's [__*content\_type*__](../tags-reference/content_type.html) tag. This tag instructs the web server to output the desired mime-type. We'll use it to output _text/xml_.
+The second problem can be rectified by using the Couch's [__*content_type*__](../tags-reference/content_type.html) tag. This tag instructs the web server to output the desired mime-type. We'll use it to output _text/xml_.
 
 The modified snippet should now look like this -
 
@@ -96,14 +96,14 @@ The modified snippet should now look like this -
 
     <item>
         <title>My Second News</title>
-        <link>http://www.mysite.com/breaking/my-second-news.html</link>
+        <link>https://www.mysite.com/breaking/my-second-news.html</link>
         <description>This is my second news item.</description>
         <pubDate>10 Jul 2007</pubDate>
     </item>
 
     <item>
         <title>My First News</title>
-        <link>http://www.mysite.com/my-first-news.html</link>
+        <link>https://www.mysite.com/my-first-news.html</link>
         <description>This is my first news item.</description>
         <pubDate>10 Jul 2007</pubDate>
     </item>
@@ -112,7 +112,7 @@ The modified snippet should now look like this -
 <?php COUCH::invoke(); ?>
 ```
 
-<p class="notice">**IMP.** Do not split the [__*content\_type*__](../tags-reference/content_type.html) statement and the [__*concat*__](../tags-reference/concat.html) statement into separate lines. This will cause an empty line to be output before the xml declaration and will invalidate the feed.</p>
+<p class="notice">**IMP.** Do not split the [__*content_type*__](../tags-reference/content_type.html) statement and the [__*concat*__](../tags-reference/concat.html) statement into separate lines. This will cause an empty line to be output before the xml declaration and will invalidate the feed.</p>
 
 We can now fetch the news items from the _news.php_ template by using [__*pages*__](../tags-reference/pages.html) tag and add it to our feed to make it dynamic -
 
@@ -146,9 +146,9 @@ We can now fetch the news items from the _news.php_ template by using [__*pages*
 <?php COUCH::invoke(); ?>
 ```
 
-We are assuming that an editable field named *my\_news\_text* contains the news text.<br/>
+We are assuming that an editable field named *my_news_text* contains the news text.<br/>
 The [__*excerptHTML*__](../tags-reference/excerpthtml.html) tag can be used to output only an excerpt of your page.<br/>
-We need to wrap the output within [__*html\_encode*__](../tags-reference/html_encode.html) to encode certain characters that are not valid in XML.
+We need to wrap the output within [__*html_encode*__](../tags-reference/html_encode.html) to encode certain characters that are not valid in XML.
 
 And that is it. Your automated RSS feed is ready.<br/>
 Modify the snippet to suit your web-site's needs.

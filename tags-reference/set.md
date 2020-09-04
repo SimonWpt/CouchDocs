@@ -29,7 +29,7 @@ The following will set the value of 'message' to 'Hello World'.
 ```
 
 > A valid variable name starts with a letter or underscore, followed by any number of letters, numbers, or underscores.
-> **Set** cannot be used to set system variables (i.e. those that begin with prefix 'k\_').
+> **Set** cannot be used to set system variables (i.e. those that begin with prefix 'k_').
 
 ## Parameters
 
@@ -109,5 +109,5 @@ This tag does not set any variables of its own.
 
 * [show](./show.html)
 * [get](./get.html)
-* [get\_custom\_field](./get_custom_field.html)
+* [get_custom_field](./get_custom_field.html)
 * [pages](./pages.html)

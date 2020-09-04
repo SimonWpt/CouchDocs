@@ -41,7 +41,7 @@ The following variables are available in ALL the cases, irrespective of the clon
 ### NON-CLONABLE TEMPLATE -
 
 If _blog.php_ is non-clonable, the only way it can be accessed is -<br/>
-_<http://www.mysite.com/blog.php>_
+_<https://www.mysite.com/blog.php>_
 
 \- and the available variables are -
 
@@ -59,7 +59,7 @@ If _blog.php_ is made clonable, the different views it can be accessed in and th
 
 #### PAGE VIEW
 
-e.g. *<http://www.mysite.com/blog/some_page_name.html>*<br/>
+e.g. *<https://www.mysite.com/blog/some_page_name.html>*<br/>
 In this view, variables giving information about the current page, the containing folder (if the page resides in one) and the contents of the page's editable regions are made available.
 
 The folowing variables carry information about the page in question -
@@ -89,7 +89,7 @@ Finally the contents of editable regions -
 
 #### FOLDER VIEW
 
-e.g. *<http://www.mysite.com/blog/some_subfolder/>*<br/>
+e.g. *<https://www.mysite.com/blog/some_subfolder/>*<br/>
 In this view, variables giving information about the folder mentioned in the URL are set.
 
 * k_is_list
@@ -103,7 +103,7 @@ In this view, variables giving information about the folder mentioned in the URL
 
 #### ARCHIVE VIEW
 
-e.g. _<http://www.mysite.com/blog/2010/05/>_<br/>
+e.g. _<https://www.mysite.com/blog/2010/05/>_<br/>
 In this view, variables giving information about the archive's time period (as given in the URL) are set.
 
 * k_is_list
@@ -117,7 +117,7 @@ In this view, variables giving information about the archive's time period (as g
 
 #### HOME VIEW
 
-e.g. _<http://www.mysite.com/blog/>_
+e.g. _<https://www.mysite.com/blog/>_
 
 * k_is_list
 * k_is_home

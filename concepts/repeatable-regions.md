@@ -14,7 +14,7 @@ Each portfolio item will have, of other things, a number of images associated wi
 We know that we can define an editable region of type 'image' for each image however the problem here is that **we cannot know beforehand exactly how many images any portfolio item might have**.<br/>
 Some item might require only a single image while another one might require 20 images (or even more).
 
-The solution used up till now ([http&://www.couchcms.com/forum/viewtopic.php?p=790\#p790](http://www.couchcms.com/forum/viewtopic.php?p=790#p790)) has been to work out the maximum number of images an item could possibly have and then define as many editable regions.<br/>
+The solution used up till now ([http&://www.couchcms.com/forum/viewtopic.php?p=790\#p790](https://www.couchcms.com/forum/viewtopic.php?p=790#p790)) has been to work out the maximum number of images an item could possibly have and then define as many editable regions.<br/>
 This works but it is far from perfect -
 
 * It clutters up the admin panel. If suppose we define twenty regions for the images - while editing, every single portfolio page will display all the twenty regions even if the page requires only one image.
@@ -100,8 +100,8 @@ This is ideal for inputting tabular data where each row can represent a table's 
 <p class="notice">
     Since all the editable regions forming the 'repeatable unit' appear side-by-side in a single row, you'll want to have more control over how wide individual region appears in a row.<br/>
     <br/>
-    For this purpose, all editable regions in Couch v1.3 (when being used within the [**repeatable**](../tags-reference/repeatable.html) tag) now support a **col\_width** parameter that sets how wide the containing column of the region will be.<br/>
-    Additionally, the 'image' as well as the 'file' types also support a **input\_width** parameter that sets the width of the textbox the two regions display.<br/>
+    For this purpose, all editable regions in Couch v1.3 (when being used within the [**repeatable**](../tags-reference/repeatable.html) tag) now support a **col_width** parameter that sets how wide the containing column of the region will be.<br/>
+    Additionally, the 'image' as well as the 'file' types also support a **input_width** parameter that sets the width of the textbox the two regions display.<br/>
     <br/>
     Please take a look at the definition of the 'nicedit' type in the code above for an example of the use of these new parameters.
 </p>
@@ -110,9 +110,9 @@ This is ideal for inputting tabular data where each row can represent a table's 
 
 With the definition and data entry of the repeatable regions completed, now comes the time to display the inputted data on the front-end of our site.
 
-Since the repeatable editable regions now actually form a 'composite' entry (i.e. do not have a single value), we have to use a new tag named [**show\_repeatable**](../tags-reference/show_repeatable.html) as a helper to make the individual values available to us.
+Since the repeatable editable regions now actually form a 'composite' entry (i.e. do not have a single value), we have to use a new tag named [**show_repeatable**](../tags-reference/show_repeatable.html) as a helper to make the individual values available to us.
 
-The following snippet placed in the page\_view of our template will display the data contained within each 'cell' of each 'row' of our repeatable regions defined above -
+The following snippet placed in the page_view of our template will display the data contained within each 'cell' of each 'row' of our repeatable regions defined above -
 
 ```html
 <cms:show_repeatable 'my_multiple_images' >
@@ -122,10 +122,10 @@ The following snippet placed in the page\_view of our template will display the 
 </cms:show_repeatable>
 ```
 
-Please note that the [**show\_repeatable**](../tags-reference/show_repeatable.html) tag has to be given the name associated with a [**repeatable**](../tags-reference/repeatable.html) tag (take care of using the quotes).<br/>
+Please note that the [**show_repeatable**](../tags-reference/show_repeatable.html) tag has to be given the name associated with a [**repeatable**](../tags-reference/repeatable.html) tag (take care of using the quotes).<br/>
 It iterates through each row of regions in the set making available the values within each constituent region. These values then can be displayed using the regular [**show**](../tags-reference/show.html) tag.
 
-Tag 'show\_repeatable' sets two variables of its own - 'k\_count' and 'k\_total\_records' as it iterates through the rows. It accepts a parameter named 'startcount' that can be set to specify the start value of 'k\_count' (default value being '1'). Following is the same snippet as above with the parameters and variables used.
+Tag 'show_repeatable' sets two variables of its own - 'k_count' and 'k_total_records' as it iterates through the rows. It accepts a parameter named 'startcount' that can be set to specify the start value of 'k_count' (default value being '1'). Following is the same snippet as above with the parameters and variables used.
 
 ```html
 <cms:show_repeatable 'my_multiple_images' startcount='0' >

@@ -44,7 +44,7 @@ From now on, your admin panel will be accessible only through _<https://www.your
 
 **3\.** The two steps given above should be enough but anyone accessing _<https://www.yoursite.com/couch/>_ will be shown a 'File not found' error.<br/>
 This is not bad at all but will give a clue to someone looking for gaining entry that the index file has been renamed.<br/>
-To make our defense complete, you'll find a file named '\_index.php' (that is an underscore before the 'index'). Make a copy of it and rename the copy to 'index.php' (i.e. remove the underscore). Upon accessing _<https://www.yoursite.com/couch/>_ the usual login box will be shown, however this 'index.php' is a specially crafted one and will NEVER allow a login to be successful. So any one trying to get in can try for as long as he wishes but will never be able to get it in.<br/>
+To make our defense complete, you'll find a file named '_index.php' (that is an underscore before the 'index'). Make a copy of it and rename the copy to 'index.php' (i.e. remove the underscore). Upon accessing _<https://www.yoursite.com/couch/>_ the usual login box will be shown, however this 'index.php' is a specially crafted one and will NEVER allow a login to be successful. So any one trying to get in can try for as long as he wishes but will never be able to get it in.<br/>
 This completes the illusion and will make someone trying to get in to bark up a different tree altogether
 
 <p class="success">Be sure to remember yourself that the admin panel is now accessed through _<https://www.yoursite.com/couch/prada78.php>_ and not _<https://www.yoursite.com/couch/>_ lest you find yourself wondering why you are unable to login :).</p>

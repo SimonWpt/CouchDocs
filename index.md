@@ -6,7 +6,7 @@ nav_order: 1
 # CouchDocs
 A maintained [documentation copy](https://github.com/CouchCMS/Documentation/) of [CouchCMS](https://github.com/CouchCMS/CouchCMS)
 
-Visit the [forum](http://www.couchcms.com/forum/) for help and latest infos.
+Visit the [forum](https://www.couchcms.com/forum/) for help and latest infos.
 
 ## Some GitHub member you should follow:
 * [@cheesypoof](https://github.com/cheesypoof)

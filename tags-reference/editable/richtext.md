@@ -58,11 +58,11 @@ In addition to the parameters common to all the types of editable regions, _rich
 * height
 * width
 * css
-* body\_id
-* body\_class
-* custom\_styles
+* body_id
+* body_class
+* custom_styles
 * toolbar
-* custom\_toolbar
+* custom_toolbar
 
 ### height
 
@@ -91,14 +91,14 @@ In order to make the appearance of the content within the editor as similar as p
     type='richtext'/>
 ```
 
-If a fully qualified path (URL) is not provided, the path is assumed to be relative to the main site (remember that Couch considers its own parent folder i.e. the folder within which the folder named _couch_ resides, as the main website). Thus in the example above, the editor will try and use a stylesheet named *editor\_styles.css* contained within a folder named _styles_ which itself resides within the main website folder.
+If a fully qualified path (URL) is not provided, the path is assumed to be relative to the main site (remember that Couch considers its own parent folder i.e. the folder within which the folder named _couch_ resides, as the main website). Thus in the example above, the editor will try and use a stylesheet named *editor_styles.css* contained within a folder named _styles_ which itself resides within the main website folder.
 
 The full URL of the stylesheet can also be used e.g.
 
 ```html
 <cms:editable name='desc' label='Description'
     desc='Enter description of property here'
-    css='http://www.mysite.com/styles/editor_styles.css'
+    css='https://www.mysite.com/styles/editor_styles.css'
     type='richtext'/>
 ```
 
@@ -124,9 +124,9 @@ Multiple stylesheets may also be specified by separating each by a pipe '|' -
 
 ### body_class
 
-Parameters *body\_id* and *body\_class* augment the functionality provided by the _css_ parameter discussed above where we try to make the content within the editor look similar to what it would look like on the published webpage .
+Parameters *body_id* and *body_class* augment the functionality provided by the _css_ parameter discussed above where we try to make the content within the editor look similar to what it would look like on the published webpage .
 
-Suppose the contents of the WYSIWYG editor will eventually appear on the webpage within a **div** with an **id** of *prop\_desc*. Also assume that this **div** has been styled with CSS statements that refer to it by its **id** e.g.
+Suppose the contents of the WYSIWYG editor will eventually appear on the webpage within a **div** with an **id** of *prop_desc*. Also assume that this **div** has been styled with CSS statements that refer to it by its **id** e.g.
 
 ```html
 #prop_desc {
@@ -136,7 +136,7 @@ Suppose the contents of the WYSIWYG editor will eventually appear on the webpage
 }
 ```
 
-In this case, to style the contents within the editor with the CSS rules given above, set the _css_ parameter to a stylesheet that contains the statement given above and set the *body\_id* parameter to *prop\_desc*. This way, CSS will treat the WYSIWYG editor as having this **id** and all the contents within it will be rendered accordingly.
+In this case, to style the contents within the editor with the CSS rules given above, set the _css_ parameter to a stylesheet that contains the statement given above and set the *body_id* parameter to *prop_desc*. This way, CSS will treat the WYSIWYG editor as having this **id** and all the contents within it will be rendered accordingly.
 
 ```html
 <cms:editable name='desc' label='Description'
@@ -146,7 +146,7 @@ In this case, to style the contents within the editor with the CSS rules given a
     type='richtext'/>
 ```
 
-Similarly, if the CSS rules are applicable to an element of a certain **class**, to make the editor take on those rules, set the *body\_class* parameter to that class. Unlike *body\_id*, *body\_class* can be set to multiple classes, each separated by a space. e.g. in the snippet below, the editor will have two classes applied - _class1_ and _class2_.
+Similarly, if the CSS rules are applicable to an element of a certain **class**, to make the editor take on those rules, set the *body_class* parameter to that class. Unlike *body_id*, *body_class* can be set to multiple classes, each separated by a space. e.g. in the snippet below, the editor will have two classes applied - _class1_ and _class2_.
 
 ```html
 <cms:editable name='desc' label='Description'
@@ -166,7 +166,7 @@ The toolbar above the editor contains a drop-down list that allows the user to a
 
 This is a very powerful technique to give the user access to a set of predefined styles that correspond to the styles used by your website and thus ensure that any formatting that he applies will be in concordance to your design.
 
-The method that [CKEditor](http://ckeditor.com/) provides requires you to create a JavaScript file defining the list elements in a particular (JSON) format. You can see a sample file provided by them [here](http://www.couchcms.com/docs/style/ckeditor_custom_styles.js). Even if you do not happen to be conversant with JavaScript, it shouldn't be too difficult to figure out how this sample script works.
+The method that [CKEditor](http://ckeditor.com/) provides requires you to create a JavaScript file defining the list elements in a particular (JSON) format. You can see a sample file provided by them [here](https://www.couchcms.com/docs/style/ckeditor_custom_styles.js). Even if you do not happen to be conversant with JavaScript, it shouldn't be too difficult to figure out how this sample script works.
 
 As an example, suppose that the websites stylesheet has certain **classes** defined that set the background and border to specific colors
 
@@ -176,7 +176,7 @@ As an example, suppose that the websites stylesheet has certain **classes** defi
 .success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
 ```
 
-To allow the user easily apply any of these styles to the content while editing, create a file named *custom\_styles.js* (can be named anything) and place the following code within it -
+To allow the user easily apply any of these styles to the content while editing, create a file named *custom_styles.js* (can be named anything) and place the following code within it -
 
 ```html
 CKEDITOR.stylesSet.add( 'my_styles',
@@ -188,9 +188,9 @@ CKEDITOR.stylesSet.add( 'my_styles',
 ]);
 ```
 
-Notice the highlighted part - *my\_styles*. It is a requirement of [CKEditor](http://ckeditor.com/) to give a unique name to each set of custom styles that you may use. For this example, we have named it *my\_styles*.
+Notice the highlighted part - *my_styles*. It is a requirement of [CKEditor](http://ckeditor.com/) to give a unique name to each set of custom styles that you may use. For this example, we have named it *my_styles*.
 
-Next we need to inform [CKEditor](http://ckeditor.com/) to use the elements defined in this file to create a drop-down list. Couch makes this part easy. Simply set the *custom\_styles* parameter of the **Editable** tag in the following manner -
+Next we need to inform [CKEditor](http://ckeditor.com/) to use the elements defined in this file to create a drop-down list. Couch makes this part easy. Simply set the *custom_styles* parameter of the **Editable** tag in the following manner -
 
 ```html
 <cms:editable name='desc' label='Description'
@@ -199,7 +199,7 @@ Next we need to inform [CKEditor](http://ckeditor.com/) to use the elements defi
     type='richtext'/>
 ```
 
-<p class="notice">**IMP.** Notice how we have provided the value of *custom\_styles* in two parts - name given to this set of styles (*my\_styles*) follwed by an **equal-to** sign and then the path of the JavaScript file (for our example, we assume that it has been saved within _styles_ folder of your website). Absolute path can also be used (see discussion of path in _css_ parameter above).</p>
+<p class="notice">**IMP.** Notice how we have provided the value of *custom_styles* in two parts - name given to this set of styles (*my_styles*) follwed by an **equal-to** sign and then the path of the JavaScript file (for our example, we assume that it has been saved within _styles_ folder of your website). Absolute path can also be used (see discussion of path in _css_ parameter above).</p>
 
 The resulting drop-down list -
 
@@ -268,7 +268,7 @@ results in -
     type='richtext'/>
 ```
 
-If none of the three sets of buttons shown above suits your need, set the _toolbar_ parameter to _custom_. By doing this you can specify your handpicked buttons and their positions in the toolbar by using the *custom\_toolbar* parameter discussed below.
+If none of the three sets of buttons shown above suits your need, set the _toolbar_ parameter to _custom_. By doing this you can specify your handpicked buttons and their positions in the toolbar by using the *custom_toolbar* parameter discussed below.
 
 ### custom_toolbar
 
@@ -320,7 +320,7 @@ You have the following buttons to choose from to display them in the toolbar -
 * maximize
 * source
 * -
-* \_
+* _
 
 <p class="notice">The last two buttons are hyphen and underscore. Both can be used to create a separator between buttons.</p>
 
@@ -361,13 +361,13 @@ A more practical example - here is how you can mimic the _medium_ type of toolba
 
 **Points to note in the example above -**
 
-A space can be introduced between two buttons by placing a '-' (hyphen) or '\_' (underscore) between them while related buttons can be grouped together by placing a '|' (pipe character) between two groups.<br/>
+A space can be introduced between two buttons by placing a '-' (hyphen) or '_' (underscore) between them while related buttons can be grouped together by placing a '|' (pipe character) between two groups.<br/>
 Visually both might appear to be the same but when the toolbar needs to be broken up due to lack of space, buttons in the same group are treated as a unit and are kept together.
 
 Also note that you can force the toolbar to be break into a new row by specifying '|' twice (i.e. no buttons between two pipes - see how the group begining with the **cut** button has been forced into a new row).
 
 <p class="success">
-    **TIP** - if you find yourself reusing a custom toolbar at many places, instead of repeating the quite large chunk of code everywhere, use the [**Embed**](../../embed.html) tag. Cut and paste the _value_ of the *custom\_toolbar* parameter (everything between the quotes) and save it in a file named, say, *my\_toolbar.inc*. Instruct the [**Embed**](../../embed.html) tag to use this file.<br/>
+    **TIP** - if you find yourself reusing a custom toolbar at many places, instead of repeating the quite large chunk of code everywhere, use the [**Embed**](../../embed.html) tag. Cut and paste the _value_ of the *custom_toolbar* parameter (everything between the quotes) and save it in a file named, say, *my_toolbar.inc*. Instruct the [**Embed**](../../embed.html) tag to use this file.<br/>
     <br/>
     ```
 <cms:editable name='desc' label='Description'

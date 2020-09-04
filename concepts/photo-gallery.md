@@ -82,13 +82,13 @@ Let us add the following declarations to the code above -
 
 As you can see, we are using the regular way to define the two editable regions.<br/>
 The only new part in this step is that **the gallery module expects the two regions to have specific names**.<br/>
-It is mandatory to name the region of type 'image' as **gg\_image** while the region of type 'thumbnail' is required to be named as **gg\_thumb**.<br/>
+It is mandatory to name the region of type 'image' as **gg_image** while the region of type 'thumbnail' is required to be named as **gg_thumb**.<br/>
 This is necessary because later on while automatically creating the cloned pages, Couch will populate these regions without requiring any user intervention. To do so, it will need to know the names of the regions.
 
 You can tweak all other parameters of the two regions to your fill but the names cannot be changed if Couch is to recognize them.<br/>
 You can, of course, also create as many other editable regions as you wish (e.g. a region for 'description' is a usual addition).
 
-<p class="success">The thumbnail region **gg\_thumb** is used by Couch for displaying the image thumbnails in the admin panel as such it is not advised to modify the dimensions of it. You can always create another associated thumbnail region if you wish to use thumbnails of other dimensions.</p>
+<p class="success">The thumbnail region **gg_thumb** is used by Couch for displaying the image thumbnails in the admin panel as such it is not advised to modify the dimensions of it. You can always create another associated thumbnail region if you wish to use thumbnails of other dimensions.</p>
 
 To persist the changes made to the template, make the mandatory visit to the template using your browser while being logged on as the super-admin.<br/>
 This will add the template to Couch admin. We are now all set to begin adding images to our gallery.
@@ -119,7 +119,7 @@ You'll see Couch uploading and processing the images one after another.
 
 > You might receive errors at this point stating something like 'Access not allowed' or 'Failed to open stream' etc. This can happen if your server is running under **SAFE MODE restrictions** (this mode has been deprecated but you still might run into some paranoid hosts insisting on using it).<br/>
    To by-pass these restrictions you'll have to lend a helping hand to PHP by creating some folders and setting their permissions manually.<br/>
-    This thread of our forum discusses the procedure in detail - [**http://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703**](http://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703).
+    This thread of our forum discusses the procedure in detail - [**https://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703**](https://www.couchcms.com/forum/viewtopic.php?f=4&t=6912&p=8703).
 
 Once all the images are successfully uploaded, the admin-panel you were on will refresh and there you have it -
 
@@ -152,17 +152,17 @@ Example -
 
 Apart from all the [usual variables pertaining to a page](./variables-in-views.html) made available by Couch, the following new variables are also made available for gallery pages -
 
-* k\_file\_name
-* k\_file\_ext
-* k\_file\_size
+* k_file_name
+* k_file_ext
+* k_file_size
 
 As the names of the variables suggest, they show meta data about the uploaded image.
 
 For gallery pages, the [**cms:pages**](../tags-reference/pages.html) tag also recognizes the following new values for the **orderby** parameter. These can be helpful in ordering the listing of images according to the meta data of the images.
 
-* file\_name
-* file\_ext
-* file\_size
+* file_name
+* file_ext
+* file_size
 
 ## EXIF data
 
@@ -181,47 +181,47 @@ define( 'K_EXTRACT_EXIF_DATA', 0 );
 
 Following is the complete list of variables that may become available (depending on their presence in the image) -
 
-* exif\_aperture
-* exif\_color
-* exif\_componentconfig
-* exif\_jpegquality
-* exif\_exifcomment
-* exif\_contrast
-* exif\_copyright
-* exif\_customrendered
-* exif\_datetime
-* exif\_datetimedigitized
-* exif\_zoomratio
-* exif\_distancerange
-* exif\_height
-* exif\_width
-* exif\_exifversion
-* exif\_exposurebias
-* exif\_exposuremode
-* exif\_exposure
-* exif\_exposuretime
-* exif\_fnumber
-* exif\_flashused
-* exif\_flashpixversion
-* exif\_focallength
-* exif\_focusdistance
-* exif\_gaincontrol
-* exif\_isoequiv
-* exif\_make
-* exif\_meteringmode
-* exif\_model
-* exif\_orientation
-* exif\_jpegquality
-* exif\_resolution
-* exif\_resolutionunit
-* exif\_saturation
-* exif\_screencapturetype
-* exif\_sharpness
-* exif\_software
-* exif\_whitebalance
-* exif\_ycbcrpositioning
-* exif\_xresolution
-* exif\_yresolution
+* exif_aperture
+* exif_color
+* exif_componentconfig
+* exif_jpegquality
+* exif_exifcomment
+* exif_contrast
+* exif_copyright
+* exif_customrendered
+* exif_datetime
+* exif_datetimedigitized
+* exif_zoomratio
+* exif_distancerange
+* exif_height
+* exif_width
+* exif_exifversion
+* exif_exposurebias
+* exif_exposuremode
+* exif_exposure
+* exif_exposuretime
+* exif_fnumber
+* exif_flashused
+* exif_flashpixversion
+* exif_focallength
+* exif_focusdistance
+* exif_gaincontrol
+* exif_isoequiv
+* exif_make
+* exif_meteringmode
+* exif_model
+* exif_orientation
+* exif_jpegquality
+* exif_resolution
+* exif_resolutionunit
+* exif_saturation
+* exif_screencapturetype
+* exif_sharpness
+* exif_software
+* exif_whitebalance
+* exif_ycbcrpositioning
+* exif_xresolution
+* exif_yresolution
 
 These variables, however, are not available for direct use.<br/>
 To get to them, you need to make use of a new tag named 'exif'. The usage is simply -
@@ -259,8 +259,8 @@ As can be seen, the 'exif' tag makes available all the Exif data within its open
 
 To jump-start your development, here is a complete sample gallery template that can be used as a guide (or even 'as-is' if you are in a hurry - the markup is neutral enough to go with almost any design).
 
-[**Download the template here**](http://www.couchcms.com/docs/code/gallery.zip).<br/>
-[**Download the Slimbox version here**](http://www.couchcms.com/docs/code/gallery_using_slimbox.zip) (this is another version of the same template using JavaScript (Slimbox) to display the images).
+[**Download the template here**](https://www.couchcms.com/docs/code/gallery.zip).<br/>
+[**Download the Slimbox version here**](https://www.couchcms.com/docs/code/gallery_using_slimbox.zip) (this is another version of the same template using JavaScript (Slimbox) to display the images).
 
 ![](../assets/img/contents/photo-gallery-6.jpg)
 
@@ -270,4 +270,4 @@ To jump-start your development, here is a complete sample gallery template that 
 
 To sum up, to use the new gallery feature you are only required making the following changes -<br/>
 **1\.** Declare your clonable template with the **gallery** attribute.<br/>
-**2\.** Declare an editable region of type 'image' with the name **gg\_image** and an associated editable region of type thumbnail with the name **gg\_thumb**.
+**2\.** Declare an editable region of type 'image' with the name **gg_image** and an associated editable region of type thumbnail with the name **gg_thumb**.

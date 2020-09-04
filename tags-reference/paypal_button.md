@@ -12,7 +12,7 @@ Please see [**Core Concepts - PayPal**](../concepts/paypal.html) for a detailed 
 
 * image
 * processor
-* show\_shipping
+* show_shipping
 
 ### image
 
@@ -39,7 +39,7 @@ The numbers represent the folllowing images -
 
 ### processor
 
-The generated button provides PayPal with a link to the page that will process the IPN sent by it. By default this will be the link of the page the button is located on. If you have placed the **paypal\_processor** tag, that handles the IPN, on some other page, set that pages link as this parameter.
+The generated button provides PayPal with a link to the page that will process the IPN sent by it. By default this will be the link of the page the button is located on. If you have placed the **paypal_processor** tag, that handles the IPN, on some other page, set that pages link as this parameter.
 
 ### show_shipping
 
@@ -51,4 +51,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [paypal\_processor](./paypal_processor.html)
+* [paypal_processor](./paypal_processor.html)

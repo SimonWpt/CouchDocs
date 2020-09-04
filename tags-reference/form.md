@@ -32,7 +32,7 @@ The script handling the form submission. Normally you do not require to set this
 
 ### separator
 
-If the form fails to validate, the names of each failed fields, along with their error messages, are concatanated using a '|' pipe character to get a single string and this string is placed in a variable named *k\_error*. You can change the default pipe separator to any other character by setting this parameter.
+If the form fails to validate, the names of each failed fields, along with their error messages, are concatanated using a '|' pipe character to get a single string and this string is placed in a variable named *k_error*. You can change the default pipe separator to any other character by setting this parameter.
 
 ### anchor
 
@@ -41,20 +41,20 @@ By setting the _anchor_ parameter to '1', Couch adds an HTML anchor ('\#') to th
 
 ## Variables
 
-* k\_success
-* k\_error
+* k_success
+* k_error
 
-### k\_success
+### k_success
 
 If the form successfully validates, the names and values of each fields are concatenated using a '\\n' newline character to get a single string and this string is placed in a this variable.
 
-### k\_error
+### k_error
 
 If the form fails to validate, the names of each failed fields along with their error messages are concatenated using a '|' pipe character to get a single string and this string is placed in this variable.
 
 In addition to the two above mentioned variables, the values of the fields are also made available individually by setting discrete variables for each field. The names of the variables, however, differ between the success and error conditions.<br/>
-Suppose a form has two fields named _name_ and _password_. Upon successful validation of both fields, two variables named after the two fields will get set - *frm\_name* and *frm\_password*. Each will contain the value submitted through them.<br/>
-However, if any of the fields fail to validate, variables representing only those failed fields will get set. Suppose the password field is the one that fails. In this case a variable named *k\_error\_password* will get set. This variable will contain the error message set for the validating condition.
+Suppose a form has two fields named _name_ and _password_. Upon successful validation of both fields, two variables named after the two fields will get set - *frm_name* and *frm_password*. Each will contain the value submitted through them.<br/>
+However, if any of the fields fail to validate, variables representing only those failed fields will get set. Suppose the password field is the one that fails. In this case a variable named *k_error_password* will get set. This variable will contain the error message set for the validating condition.
 
 ## Related Tags
 

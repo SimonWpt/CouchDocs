@@ -61,7 +61,7 @@ In addition to the parameters common to all the types of editable regions, _text
 
 * width
 * height
-* no\_xss\_check
+* no_xss_check
 
 ### width
 
@@ -82,7 +82,7 @@ The dimensions of the textarea can be changed by setting the _width_ and _height
 
 XSS (Cross Site Scripting) is a type of Web Application vulnerability which is caused by user managing to inject malicious script code into a webpage. Couch, by default, sanitizes all user input and that includes all inputs through all types of editable regions.
 
-In some cases though, you'll wish to allow your user to input Javascript code, or even script containing Couch tags, into an editable region. This could be, for example, when you have created a textarea type editable region into which the user is supposed to enter his Google AdSense code. In such cases, to instruct Couch to leave the input alone and not to sanitize it, set the *no\_xss\_check* to '1'. As an example -
+In some cases though, you'll wish to allow your user to input Javascript code, or even script containing Couch tags, into an editable region. This could be, for example, when you have created a textarea type editable region into which the user is supposed to enter his Google AdSense code. In such cases, to instruct Couch to leave the input alone and not to sanitize it, set the *no_xss_check* to '1'. As an example -
 
 ```html
 <cms:editable name='my_adsense' label="Adsense Code" desc="Enter your Adsense code here"
@@ -92,4 +92,4 @@ In some cases though, you'll wish to allow your user to input Javascript code, o
 />
 ```
 
-Without the *no\_xss\_check* explicitly set, Couch would disable all Javascript code contained within the AdSense code and thus make it useless.
+Without the *no_xss_check* explicitly set, Couch would disable all Javascript code contained within the AdSense code and thus make it useless.

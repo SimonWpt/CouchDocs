@@ -14,7 +14,7 @@ For example -
 <cms:get 'my_var' />
 ```
 
-In the snippet given above,  'my\_var' is the name of the variable the value of which is output by the **get** tag.<br/>
+In the snippet given above,  'my_var' is the name of the variable the value of which is output by the **get** tag.<br/>
 The output of the snippet is '10'.
 
 Compare the **get** tag with the **show** tag that takes a value (not the name) as its parameter.
@@ -26,9 +26,9 @@ In the snippet given above, if we substitute the **get** tag with the **show** t
 <cms:show 'my_var' />
 ```
 
-\- the output would be 'my\_var' and not '10'.
+\- the output would be 'my_var' and not '10'.
 
-The snippet has to be written in the following manner to make it show the value contained within variable *my\_var* -
+The snippet has to be written in the following manner to make it show the value contained within variable *my_var* -
 
 ```html
 <cms:set my_var='10' />
@@ -51,7 +51,7 @@ The **get** tag is useful in the cases where we have to fetch the values of vari
 ## Parameters
 
 * var
-* local\_only
+* local_only
 
 ### var
 
@@ -69,5 +69,5 @@ This tag is self-closing and does not set any variables of its own.
 
 * [show](./show.html)
 * [set](./set.html)
-* [get\_custom\_field](./get_custom_field.html)
+* [get_custom_field](./get_custom_field.html)
 * [pages](./pages.html)

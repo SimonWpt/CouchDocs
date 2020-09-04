@@ -26,19 +26,19 @@ This tag iterates through each of the fetched page and makes available all the d
 
 * masterpage
 * id
-* page\_name
+* page_name
 * limit
 * paginate
 * offset
 * startcount
 * folder
-* include\_subfolders
-* start\_on
-* stop\_before
-* show\_future\_entries
+* include_subfolders
+* start_on
+* stop_before
+* show_future_entries
 * orderby
 * order
-* custom\_field
+* custom_field
 
 ### masterpage
 
@@ -82,19 +82,19 @@ This example would fetch all pages cloned from blog.php except the two with the 
 <cms:pages masterpage='blog.php' page_name='my_first_entry'></cms:pages>
 ```
 
-This example would fetch the page named 'my\_first\_entry' that has been cloned from blog.php.
+This example would fetch the page named 'my_first_entry' that has been cloned from blog.php.
 
 ```html
 <cms:pages masterpage='blog.php' page_name='my_first_entry, my_another_entry'></cms:pages>
 ```
 
-This example would fetch pages named 'my\_first\_entry' or 'my\_another\_entry' that have been cloned from blog.php.
+This example would fetch pages named 'my_first_entry' or 'my_another_entry' that have been cloned from blog.php.
 
 ```html
 <cms:pages masterpage='blog.php' page_name='NOT my_first_entry, my_another_entry'></cms:pages>
 ```
 
-This example would fetch all pages cloned from blog.php except the two named 'my\_first\_entry' or 'my\_another\_entry'.
+This example would fetch all pages cloned from blog.php except the two named 'my_first_entry' or 'my_another_entry'.
 
 ### limit
 
@@ -126,7 +126,7 @@ This example would fetch pages cloned from blog.php after skipping the first two
 <cms:pages masterpage='blog.php' startcount='0'></cms:pages>
 ```
 
-The *k\_count*, *k\_record\_from*, *k\_current\_record* and *k\_record\_to* variables (see [**Pagination**](../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
+The *k_count*, *k_record_from*, *k_current_record* and *k_record_to* variables (see [**Pagination**](../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
 
 ### folder
 
@@ -149,10 +149,10 @@ This example would fetch pages cloned from blog.php and belonging to folders nam
 This example would fetch all pages cloned from blog.php except those belonging to folders named 'classic-bikes' or 'super-bikes'.
 
 By default Couch will only fetch pages that lie DIRECTLY within the given folder(s).<br/>
-To include the pages that are within the subfolders of the given folder(s), set the *include\_subfolders* parameter as well.<br/>
+To include the pages that are within the subfolders of the given folder(s), set the *include_subfolders* parameter as well.<br/>
 See below.
 
-In the _folder-view_ (see [**Views**](../concepts/views.html)), the *k\_folder\_name* variable is set to the name of the current folder. It can be used to list the right pages -
+In the _folder-view_ (see [**Views**](../concepts/views.html)), the *k_folder_name* variable is set to the name of the current folder. It can be used to list the right pages -
 
 ```html
 <cms:pages folder=k_folder_name include_subfolders='1'></cms:pages>
@@ -184,7 +184,7 @@ This example would fetch all pages cloned from blog.php that have been published
 
 This example would fetch all pages cloned from blog.php that have been published before the first of March, 2010\.
 
-The parameters *start\_on* and *stop\_before* can be combined to fetch pages published betwen a particular time period. Thus -
+The parameters *start_on* and *stop_before* can be combined to fetch pages published betwen a particular time period. Thus -
 
 ```html
 <cms:pages masterpage='blog.php' start_on='2010-02-01' stop_before='2010-03-01'></cms:pages>
@@ -192,7 +192,7 @@ The parameters *start\_on* and *stop\_before* can be combined to fetch pages pub
 
 This example would fetch all pages cloned from blog.php that have been published on or after the first of February, 2010 but before the first of March, 2010\. (i.e. only during the month of February of 2010)
 
-In the _archive-view_ (see [**Views**](../concepts/views.html)), the *k\_archive\_date* and the *k\_next\_archive\_date* are set to the first day of the archive and the first day of the next archive (month). These can be used to easily fetch pages that belong to only that archive period -
+In the _archive-view_ (see [**Views**](../concepts/views.html)), the *k_archive_date* and the *k_next_archive_date* are set to the first day of the archive and the first day of the next archive (month). These can be used to easily fetch pages that belong to only that archive period -
 
 ```html
 <cms:pages start_on=k_archive_date stop_before=k_next_archive_date ></cms:pages>
@@ -210,11 +210,11 @@ This example would fetch only those pages cloned from blog.php that have been pu
 
 The pages fetched can be sorted and ordered according to the following fields -
 
-* publish\_date (_default_)
-* page\_name
-* page\_title
-* modification\_date
-* comments\_count
+* publish_date (_default_)
+* page_name
+* page_title
+* modification_date
+* comments_count
 * random
 
 Thus -
@@ -223,13 +223,13 @@ Thus -
 <cms:pages masterpage='blog.php' orderby='page_name'></cms:pages>
 ```
 
-Apart from the three fields mentioned above, any of the custom field defined in the template (i.e. the editable regions contained within the template) may be used for sorting the fetched pages. Thus, for example if the template 'blog.php' has three editable regions - *my\_blog\_text*, *my\_blog\_image* and *my\_blog\_author*, the following snippet -
+Apart from the three fields mentioned above, any of the custom field defined in the template (i.e. the editable regions contained within the template) may be used for sorting the fetched pages. Thus, for example if the template 'blog.php' has three editable regions - *my_blog_text*, *my_blog_image* and *my_blog_author*, the following snippet -
 
 ```html
 <cms:pages masterpage='blog.php' orderby='my_blog_author'></cms:pages>
 ```
 
-will sort the fetched pages by the custom field named 'my\_blog\_author'.
+will sort the fetched pages by the custom field named 'my_blog_author'.
 
 <p class="notice">**IMP.** Though any type of editable region can be used as the orderby field, it is the 'text', 'textarea', 'dropdown' and 'radio' types that are best suited for ordering the pages.</p>
 
@@ -245,9 +245,9 @@ Multiple fields can be used together for sorting e.g.
 <cms:pages masterpage='blog.php' orderby='publish_date' order='desc'></cms:pages>
 ```
 
-This example would fetch all pages cloned from blog.php and arrange them in descending order of 'publish\_date'.
+This example would fetch all pages cloned from blog.php and arrange them in descending order of 'publish_date'.
 
-If _order_ parameter is not set, the default value used is 'desc'. Since the default value used for _orderby_ is 'publish\_date', the above snippet is equivalent to the following -
+If _order_ parameter is not set, the default value used is 'desc'. Since the default value used for _orderby_ is 'publish_date', the above snippet is equivalent to the following -
 
 ```html
 <cms:pages masterpage='blog.php'></cms:pages>
@@ -259,7 +259,7 @@ If multiple fields have been used in the _orderby_ parameter, separate sort orde
 <cms:pages orderby='my_custom_field_1, my_custom_field_2' order='asc, desc'></cms:pages>
 ```
 
-The above will first sort pages in ascending order of 'my\_custom\_field\_1'. The pages having the same value for 'my\_custom\_field\_1' will then be sorted in descending order of 'my\_custom\_field\_2'.
+The above will first sort pages in ascending order of 'my_custom_field_1'. The pages having the same value for 'my_custom_field_1' will then be sorted in descending order of 'my_custom_field_2'.
 
 ### custom_field
 
@@ -269,9 +269,9 @@ The editable regions defined for a template can be used to fetch cloned pages th
 <cms:pages masterpage='blog.php' custom_field='my_blog_author=jeffrey'></cms:pages>
 ```
 
-This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' contained the word 'jeffrey' anywhere within it.
+This example would fetch all cloned pages of blog.php where the editable region 'my_blog_author' contained the word 'jeffrey' anywhere within it.
 
-To fetch those pages where the editable region 'my\_blog\_author' exactly matches the term 'jeffrey', use '==' instead of '='. Thus -
+To fetch those pages where the editable region 'my_blog_author' exactly matches the term 'jeffrey', use '==' instead of '='. Thus -
 
 ```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author==jeffrey'></cms:pages>
@@ -281,13 +281,13 @@ To fetch those pages where the editable region 'my\_blog\_author' exactly matche
 <cms:pages masterpage='blog.php' custom_field='my_blog_author==jeffrey, arthur'></cms:pages>
 ```
 
-This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' exactly matches either the term 'jeffrey' or 'arthur'.
+This example would fetch all cloned pages of blog.php where the editable region 'my_blog_author' exactly matches either the term 'jeffrey' or 'arthur'.
 
 <p class="notice">
     Since a comma ',' is being used to separate two values, if any of the values contains a comma<br/>
     within itself you'll have to 'escape' the comma by prepending it with a backward slash -<br/>
-    'my\_blog\_text=veni, vidi, veci'  - contains any of the terms veni, vidi or veci<br/>
-    'my\_blog\_text=veni\\, vidi\\, veci' - contains the phrase 'veni, vidi, veci'.<br/>
+    'my_blog_text=veni, vidi, veci'  - contains any of the terms veni, vidi or veci<br/>
+    'my_blog_text=veni\\, vidi\\, veci' - contains the phrase 'veni, vidi, veci'.<br/>
     <br/>
     Similarly if any of the values contains a single quote ''' or double quote '"', it can be escaped likewise.
 </p>
@@ -296,19 +296,19 @@ This example would fetch all cloned pages of blog.php where the editable region 
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!=jeffrey'></cms:pages>
 ```
 
-This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' DOES NOT contain the word 'jeffrey' anywhere within it.
+This example would fetch all cloned pages of blog.php where the editable region 'my_blog_author' DOES NOT contain the word 'jeffrey' anywhere within it.
 
 ```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!==jeffrey'></cms:pages>
 ```
 
-This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' DOES NOT exactly match the term 'jeffrey'.
+This example would fetch all cloned pages of blog.php where the editable region 'my_blog_author' DOES NOT exactly match the term 'jeffrey'.
 
 ```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!=jeffrey, arthur'></cms:pages>
 ```
 
-This example would fetch all cloned pages of blog.php where the editable region 'my\_blog\_author' DOES NOT contain the words 'jeffrey' and 'arthur' anywhere within it.
+This example would fetch all cloned pages of blog.php where the editable region 'my_blog_author' DOES NOT contain the words 'jeffrey' and 'arthur' anywhere within it.
 
 <p class="error">
     The above snippet might seem a little counter-intuitive.<br/>
@@ -324,19 +324,19 @@ The same custom field may be repeated.
 <cms:pages masterpage='blog.php' custom_field='my_blog_author!=jeffrey | my_blog_author!=arthur'></cms:pages>
 ```
 
-This example would fetch all pages that do not contain 'jeffrey' AND do not contain 'arthur' anywhere within 'my\_blog\_author' (i.e. have neither jeffrey nor arthur).
+This example would fetch all pages that do not contain 'jeffrey' AND do not contain 'arthur' anywhere within 'my_blog_author' (i.e. have neither jeffrey nor arthur).
 
 ```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author=jeffrey | my_blog_author=arthur'></cms:pages>
 ```
 
-This example would fetch all pages that contain 'jeffery' AND contain 'arthur' somewhere within 'my\_blog\_author' (i.e. contain both jeffery as well as arthur).
+This example would fetch all pages that contain 'jeffery' AND contain 'arthur' somewhere within 'my_blog_author' (i.e. contain both jeffery as well as arthur).
 
 ```html
 <cms:pages masterpage='blog.php' custom_field='my_blog_author=jeffrey | my_blog_text=fellow countrymen'></cms:pages>
 ```
 
-This example would fetch all pages that contain 'jeffery' within 'my\_blog\_author' AND contain 'fellow countrymen' within 'my\_blog\_text'
+This example would fetch all pages that contain 'jeffery' within 'my_blog_author' AND contain 'fellow countrymen' within 'my_blog_text'
 
 Custom fields can also be used for comparisions other than the equality and non-equality described above.<br/>
 For example, we can fetch pages that have the value of a certain editable region 'greater than' or 'less than' a particular value.
@@ -350,11 +350,11 @@ For example, we can fetch pages that have the value of a certain editable region
     price = 355.39<br/>
     <br/>
     Telephone number, though it might contain all numeric values, is not a 'number' because you are unlikely to do something like -<br/>
-    telephone\_number &lt; 234567878<br/>
+    telephone_number &lt; 234567878<br/>
     <br/>
-    For all such cases where the values will be numbers and you'd want to use them in the *custom\_field* parameter, MAKE SURE to set the *search\_type* parameter of the editable regions to either 'integer' (for values that will not be fractional e.g. number of bathrooms) or 'decimal' (for values that can be fractional e.g. price).<br/>
+    For all such cases where the values will be numbers and you'd want to use them in the *custom_field* parameter, MAKE SURE to set the *search_type* parameter of the editable regions to either 'integer' (for values that will not be fractional e.g. number of bathrooms) or 'decimal' (for values that can be fractional e.g. price).<br/>
     <br/>
-    Remember that only editable regions of types 'text', 'radio' and 'dropdown' can be made of 'integer'/'decimal' search\_type.
+    Remember that only editable regions of types 'text', 'radio' and 'dropdown' can be made of 'integer'/'decimal' search_type.
 </p>
 
 As an example of numeric fields -

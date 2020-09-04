@@ -44,7 +44,7 @@ It is ultimately upto you whether or not you choose to list pages in the expecte
 
 ### Handling home-view
 
-The *k\_is\_home* variable can be used to recognize this view and then the [__*pages*__](../tags-reference/pages.html) tag can be used to list all pages cloned from the template being accessed.
+The *k_is_home* variable can be used to recognize this view and then the [__*pages*__](../tags-reference/pages.html) tag can be used to list all pages cloned from the template being accessed.
 
 ```html
 <cms:if k_is_home >
@@ -56,7 +56,7 @@ The *k\_is\_home* variable can be used to recognize this view and then the [__*p
 
 ### Handling folder-view
 
-The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\_name* variable made available by Couch in this view can then be used as a parameter of the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging to that folder -
+The *k_is_folder* variable can be used to recognize this view. The *k_folder_name* variable made available by Couch in this view can then be used as a parameter of the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging to that folder -
 
 ```html
 <cms:if k_is_folder >
@@ -68,7 +68,7 @@ The *k\_is\_folder* variable can be used to recognize this view. The *k\_folder\
 
 ### Handling archive-view
 
-The *k\_is\_archive* can be used to recognize this view. In this view, Couch makes available the *k\_archive\_date* and *k\_next\_archive\_date* variables that denote the boundries of the archive's period. These two variables can then be used as parameters of the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging to that time period -
+The *k_is_archive* can be used to recognize this view. In this view, Couch makes available the *k_archive_date* and *k_next_archive_date* variables that denote the boundries of the archive's period. These two variables can then be used as parameters of the [__*pages*__](../tags-reference/pages.html) tag to list pages belonging to that time period -
 
 ```html
 <cms:if k_is_archive >
@@ -90,4 +90,4 @@ The three list views can be handled separately if the way the pages and their co
 </cms:if>
 ```
 
-<p class="success">The snippet given above can handle all the list-views because if the current view is a _home-view_, the *k\_folder\_name*, *k\_archive\_date* and *k\_next\_archive\_date* will not be set and hence these parameters will have no effect on the pages fetched. Similarly in the *folder-view* the *k\_archive\_date* and *k\_next\_archive\_date* will not be set and in the archive-view the *k\_folder\_name* will not be set.</p>
+<p class="success">The snippet given above can handle all the list-views because if the current view is a _home-view_, the *k_folder_name*, *k_archive_date* and *k_next_archive_date* will not be set and hence these parameters will have no effect on the pages fetched. Similarly in the *folder-view* the *k_archive_date* and *k_next_archive_date* will not be set and in the archive-view the *k_folder_name* will not be set.</p>

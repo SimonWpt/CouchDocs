@@ -290,10 +290,10 @@ What remains now is to make Couch automatically generate a menu for the site tha
 
 Typically, menu and breadcrumbs are the two elements on a web page that reflect the hierarchical structure of the website.<br/>
 The tree we created above using nested-pages contains all the information that is needed to create such menus and breadcrumbs.<br/>
-To help us with this task, Couch now has three new tags - '[nested\_pages](../tags-reference/nested_pages.html)', '[menu](../tags-reference/menu.html)' and '[nested\_crumbs](../tags-reference/nested_crumbs.html)' that can iterate through our tree and output the desired markup.<br/>
-'nested\_pages' is a rather low-level (but very powerful) tag that can be used to iterate through the hierarchy of nested-pages and output just about any kind of markup. The 'menu' and 'nested\_crumbs' are actually just thin veneers around the 'nested\_pages' tag but can be used to very quickly generate the typical markup associated with menus and breadcrumbs respectively.
+To help us with this task, Couch now has three new tags - '[nested_pages](../tags-reference/nested_pages.html)', '[menu](../tags-reference/menu.html)' and '[nested_crumbs](../tags-reference/nested_crumbs.html)' that can iterate through our tree and output the desired markup.<br/>
+'nested_pages' is a rather low-level (but very powerful) tag that can be used to iterate through the hierarchy of nested-pages and output just about any kind of markup. The 'menu' and 'nested_crumbs' are actually just thin veneers around the 'nested_pages' tag but can be used to very quickly generate the typical markup associated with menus and breadcrumbs respectively.
 
-More often than not, you'll find the 'menu' and 'nested\_crumbs' tags more than sufficient for working with typical menus and breadcrumbs of a website and will rarely need to resort to using 'nested\_pages' tag directly.<br/>
+More often than not, you'll find the 'menu' and 'nested_crumbs' tags more than sufficient for working with typical menus and breadcrumbs of a website and will rarely need to resort to using 'nested_pages' tag directly.<br/>
 Here is how we use them.
 
 #### Menu
@@ -348,10 +348,10 @@ We now have the requisite HTML structure for our menu.<br/>
 What remains now is putting in some CSS styling and we are done.
 
 We could code up all the CSS required to shape up a good-looking dropdown menu ourselves or use any of the several very good off-the-shelf scripts that do the job for us.<br/>
-For our example, we'll make use of a jQuery plugin - [Superfish](http://users.tpg.com.au/j_birch/plugins/superfish/) (http://users.tpg.com.au/j\_birch/plugins/superfish/).
+For our example, we'll make use of a jQuery plugin - [Superfish](http://users.tpg.com.au/j_birch/plugins/superfish/) (http://users.tpg.com.au/j_birch/plugins/superfish/).
 
 Superfish is a set of CSS and JavaScript files that need to be included within our templates.<br/>
-You can choose to either download the files from Superfish's site or [use the slightly modified version that we used for this example](http://www.couchcms.com/docs/code/superfish.zip) - \[[Download superfish.zip](http://www.couchcms.com/docs/code/superfish.zip)\].<br/>
+You can choose to either download the files from Superfish's site or [use the slightly modified version that we used for this example](https://www.couchcms.com/docs/code/superfish.zip) - \[[Download superfish.zip](https://www.couchcms.com/docs/code/superfish.zip)\].<br/>
 For our example we have placed the Superfish folder within the site's root. If you choose to place the files elsewhere make sure to adjust the paths in the code that follows.
 
 Since the menu is likely to be shown on all the templates of our website, instead of placing the menu related code in each of our site's templates,  we'll put it in a single snippet (name it 'menu.html') and then embed the snippet in our templates.
@@ -396,7 +396,7 @@ $(document).ready(function(){
 });
 ```
 
-Superfish needs to be informed about the classname of the menu's outermost list container (ul or ol). In our case we have indicated 'sf-menu'. Notice how we use the cms:menu tag's 'menu\_class' parameter to make the tag apply a classname of 'sf-menu' to the menu markup.
+Superfish needs to be informed about the classname of the menu's outermost list container (ul or ol). In our case we have indicated 'sf-menu'. Notice how we use the cms:menu tag's 'menu_class' parameter to make the tag apply a classname of 'sf-menu' to the menu markup.
 
 Finally, embed the menu snippet within each of our templates by placing the following line within each of them -
 
@@ -469,11 +469,11 @@ Please see the tag's documentation for a full list of the parameters and their u
 
 Another element on a typical web page that reflects the hierarchy of pages is the breadcrumb where the parent pages of the page being visited show up as crumbs.
 
-The Couch tag that can be used to easily create breadcrumbs is the '[nested\_crumbs](../tags-reference/nested_crumbs.html)' tag.
+The Couch tag that can be used to easily create breadcrumbs is the '[nested_crumbs](../tags-reference/nested_crumbs.html)' tag.
 
 <p class="notice">
     There already is an existing tag named '[breadcrumbs](../tags-reference/breadcrumbs.html)' which is used with the folder hierarchy associated with normal cloned pages.<br/>
-    '[nested\_crumbs](../tags-reference/nested_crumbs.html)' on the other hand works with nested-pages only.
+    '[nested_crumbs](../tags-reference/nested_crumbs.html)' on the other hand works with nested-pages only.
 </p>
 
 #### Usage
@@ -494,4 +494,4 @@ where 'masterpage' points to the template behind the nested-pages tree.
 </cms:nested_crumbs>
 ```
 
-Please see the '[nested\_crumbs](../tags-reference/nested_crumbs.html)' tag's documentation for a full list of the parameters and their use.
+Please see the '[nested_crumbs](../tags-reference/nested_crumbs.html)' tag's documentation for a full list of the parameters and their use.

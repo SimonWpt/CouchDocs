@@ -6,7 +6,7 @@ layout: default
 
 # google_map
 
-The **google\_map** tag can be used to easily create a Google map on a web page.
+The **google_map** tag can be used to easily create a Google map on a web page.
 
 ```html
 <cms:google_map

@@ -6,7 +6,7 @@ layout: default
 
 # not_empty
 
-The **not\_empty** tag can be used to find out whether or not an editable region contains any value.
+The **not_empty** tag can be used to find out whether or not an editable region contains any value.
 
 It returns a '1' if the variable representing the editable region contains some value (i.e. is not empty) else it returns a '0'.<br/>
 This property makes it possible to use it with conditional tags, like **if** and **else**.
@@ -17,7 +17,7 @@ This property makes it possible to use it with conditional tags, like **if** and
 </cms:if>
 ```
 
-The snippet above, where we are checking if the editable region named *my\_content* contains any value,  could have been written in the following simpler manner -
+The snippet above, where we are checking if the editable region named *my_content* contains any value,  could have been written in the following simpler manner -
 
 ```html
 <cms:if my_content >
@@ -25,7 +25,7 @@ The snippet above, where we are checking if the editable region named *my\_conte
 </cms:if>
 ```
 
-\- however, if the editable region is of type _richtext_, the CKEditor sometimes inserts some spurious &lt;BR /&gt; or empty &lt;P&gt; tags into it even if nothing is entered into the editable region by the user. This will cause the simple test above to fail with _richtext_ types. The **not\_empty** strips off all HTML tags from the variable it is testing and then returns the result, thus making it useful for such cases.
+\- however, if the editable region is of type _richtext_, the CKEditor sometimes inserts some spurious &lt;BR /&gt; or empty &lt;P&gt; tags into it even if nothing is entered into the editable region by the user. This will cause the simple test above to fail with _richtext_ types. The **not_empty** strips off all HTML tags from the variable it is testing and then returns the result, thus making it useful for such cases.
 
 ## Parameters
 

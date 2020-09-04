@@ -15,7 +15,7 @@ Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.htm
 
 * masterpage
 * date
-* week\_starts
+* week_starts
 
 Apart from these parameters, this tag also accepts all the arguments of the [**pages**](./pages.html) tag. This can be used to further refine the types of pages that are shown as entries of the calendar.
 
@@ -34,16 +34,16 @@ It is a numeric value ranging from 0 (Sunday) to 6 (Saturday). If skipped, the d
 
 ## Variables
 
-* k\_count\_weeks
-* k\_calendar\_date
-* k\_calendar\_year
-* k\_calendar\_month
-* k\_next\_calendar\_date
-* k\_next\_calendar\_year
-* k\_next\_calendar\_month
-* k\_prev\_calendar\_date
-* k\_prev\_calendar\_year
-* k\_prev\_calendar\_month
+* k_count_weeks
+* k_calendar_date
+* k_calendar_year
+* k_calendar_month
+* k_next_calendar_date
+* k_next_calendar_year
+* k_next_calendar_month
+* k_prev_calendar_date
+* k_prev_calendar_year
+* k_prev_calendar_month
 
 ## Related Tags
 

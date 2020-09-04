@@ -14,7 +14,7 @@ The **dropdownfolders** tag can be used to create a quick-n-dirty HTML dropdown 
 
 ## Parameters
 
-Supports the same parameter as the **folders** tag. In addition, takes one more parameter - *show\_count*.
+Supports the same parameter as the **folders** tag. In addition, takes one more parameter - *show_count*.
 
 * masterpage
 * root
@@ -24,8 +24,8 @@ Supports the same parameter as the **folders** tag. In addition, takes one more 
 * orderby
 * order
 * exclude
-* extended\_info
-* show\_count
+* extended_info
+* show_count
 
 Please see the [**folders**](./folders.html) documentation for an explanation of these parameters.
 
@@ -39,5 +39,5 @@ This tag is self-closing and does not set any variables of its own.
 * [folders](./folders.html)
 * [listfolders](./listfolders.html)
 * [parentfolders](./parentfolders.html)
-* [is\_ancestor](./is_ancestor.html)
+* [is_ancestor](./is_ancestor.html)
 * [breadcrumbs](./breadcrumbs.html)

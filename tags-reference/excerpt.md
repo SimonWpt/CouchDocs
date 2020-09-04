@@ -14,13 +14,13 @@ Unlike the **excerptHTML** tag, the **excerpt** tag strips off all HTML tags (ex
 * count
 * allow
 * trail
-* truncate\_chars
+* truncate_chars
 
 ### count
 
 The maximum number of words/characters that the excerpt can contain. The default value is 50\.<br/>
 By default, this parameter is applied to the number of words in the excerpt.<br/>
-By setting the 'truncate\_chars' parameter (see below)  to '1', it can be made to apply to the number of characters in the excerpt instead.
+By setting the 'truncate_chars' parameter (see below)  to '1', it can be made to apply to the number of characters in the excerpt instead.
 
 ### allow
 
@@ -38,13 +38,13 @@ By default the produced excerpt is appended with '...' (three ellipses). You can
 ### truncate_chars
 
 By default, the 'count' paramater is considered to be the number of words the excerpt can contain.<br/>
-By setting the 'truncate\_chars' to '1', the 'count' becomes the number of characters the excerpt can contain.
+By setting the 'truncate_chars' to '1', the 'count' becomes the number of characters the excerpt can contain.
 
 ```html
 <cms:excerpt count='100' truncate_chars='1'>...blah blah...</cms:excerpt>
 ```
 
-<p class="notice">Please note that if 'truncate\_chars' is set to '1', the 'allow' parameter is ignored and all the HTML tags are stripped off the input.</p>
+<p class="notice">Please note that if 'truncate_chars' is set to '1', the 'allow' parameter is ignored and all the HTML tags are stripped off the input.</p>
 
 ## Variables
 

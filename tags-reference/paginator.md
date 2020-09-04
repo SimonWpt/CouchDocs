@@ -23,8 +23,8 @@ Please see [**Core Concepts - Pagination**](../concepts/pagination.html) for a d
 * simple
 * position
 * adjacents
-* prev\_text
-* next\_text
+* prev_text
+* next_text
 
 ### simple
 

@@ -15,13 +15,13 @@ Once the thumbnail has been created, this editable region then holds its fully q
 
 <p class="notice">The thumbnail gets created in the same folder as that of the main image.</p>
 
-Suppose we have an editable region, named *my\_image*, of type _image_ -
+Suppose we have an editable region, named *my_image*, of type _image_ -
 
 ```html
 <cms:editable name='my_image' label='Image' desc='Upload main image here' type="image" />
 ```
 
-To create a thumbnail automatically for any image that gets selected into it, we can define a new editable region of type _thumbnail_ and associate it with the region above by using the *assoc\_field* parameter -
+To create a thumbnail automatically for any image that gets selected into it, we can define a new editable region of type _thumbnail_ and associate it with the region above by using the *assoc_field* parameter -
 
 ```html
 <cms:editable
@@ -59,11 +59,11 @@ Apart from the parameters common to all types of editable regions, the regions o
 
 * width
 * height
-* enforce\_max
+* enforce_max
 * quality
-* show\_preview
-* preview\_width
-* preview\_height
+* show_preview
+* preview_width
+* preview_height
 
 ### width
 
@@ -136,7 +136,7 @@ You can set _quality_ from 0 (worst quality, smaller file) to 100 (best quality,
     type='thumbnail' />
 ```
 
-Setting show\_preview to '1' makes Couch display a preview of the created thumbnail (as visible in the examples above). Omitting this parameter or explicitly setting it to '0' will make Couch display only a link to the thumbnail instead of the preview image.
+Setting show_preview to '1' makes Couch display a preview of the created thumbnail (as visible in the examples above). Omitting this parameter or explicitly setting it to '0' will make Couch display only a link to the thumbnail instead of the preview image.
 
 ![](../../assets/img/contents/editable-thumbnail-9.gif)
 
@@ -144,7 +144,7 @@ Setting show\_preview to '1' makes Couch display a preview of the created thumbn
 
 ### preview_height
 
-As noted above, setting *show\_preview* to '1' causes a preview of the thumbnail to appear. The dimensions of this preview can be set by using *preview\_width* and *preview\_height* (needless to say, these two parameters take effect only with *show\_preview* set to '1').
+As noted above, setting *show_preview* to '1' causes a preview of the thumbnail to appear. The dimensions of this preview can be set by using *preview_width* and *preview_height* (needless to say, these two parameters take effect only with *show_preview* set to '1').
 
 ```html
 <cms:editable name='my_image_thumb' label='Image Thumbnail' desc='Thumbnail of main image'
@@ -155,4 +155,4 @@ As noted above, setting *show\_preview* to '1' causes a preview of the thumbnail
     type='thumbnail' />
 ```
 
-<p class="success">If both *preview\_width* and *preview\_height* are omitted, the thumbnail preview is of exactly the same dimensions as the thumbnail. Usually this is what you'd want and you won't find yourself setting *preview\_width* or *preview\_height* too often.</p>
+<p class="success">If both *preview_width* and *preview_height* are omitted, the thumbnail preview is of exactly the same dimensions as the thumbnail. Usually this is what you'd want and you won't find yourself setting *preview_width* or *preview_height* too often.</p>

@@ -6,7 +6,7 @@ layout: default
 
 # cloak_email
 
-The **cloak\_email** tag can be used to hide email addresses from spambots (email harvesters).<br/>
+The **cloak_email** tag can be used to hide email addresses from spambots (email harvesters).<br/>
 This tag creates a JavaScript encrypted mailto link that remains inaccessible to spambots.
 
 ```html
@@ -58,4 +58,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [cloak\_url](./cloak_url.html)
+* [cloak_url](./cloak_url.html)

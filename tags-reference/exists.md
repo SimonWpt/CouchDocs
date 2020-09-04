@@ -32,7 +32,7 @@ will output either '1' or '0' depending on whether the file 'contact.inc' is pre
 </p>
 
 Combined with the [**If**](./if.html) tag and [**Embed**](./embed.html) tag, the **Exists** tag provides a very powerful method of choosing the right template to display while showing a particular page.<br/>
-For example, let us say we have a template 'index.php' that is clonable and several pages have been made out of it - e.g. 'about-us', 'services',  'contact-us' etc.. The template has defined one editable richtext area named 'my\_content' and, as usual, every page has its own data in this area. The code within this template to display the data for each cloned page might go somewhat like this
+For example, let us say we have a template 'index.php' that is clonable and several pages have been made out of it - e.g. 'about-us', 'services',  'contact-us' etc.. The template has defined one editable richtext area named 'my_content' and, as usual, every page has its own data in this area. The code within this template to display the data for each cloned page might go somewhat like this
 
 ```html
 <cms:if k_is_page >
@@ -40,7 +40,7 @@ For example, let us say we have a template 'index.php' that is clonable and seve
 </cms:if>
 ```
 
-This is perfect for all pages but for 'contact-us', we do not want to display 'my\_content'. We wish to display a form (created by using [**Form**](./form.html) tag). One way to do this would be to make 'contact-us' a separate template in itself. However a better method would be to check in the code snippet above whether the page being displayed is 'contact-us' or not and if it is, instead of displaying the usual 'my\_content', display the form instead.<br/>
+This is perfect for all pages but for 'contact-us', we do not want to display 'my_content'. We wish to display a form (created by using [**Form**](./form.html) tag). One way to do this would be to make 'contact-us' a separate template in itself. However a better method would be to check in the code snippet above whether the page being displayed is 'contact-us' or not and if it is, instead of displaying the usual 'my_content', display the form instead.<br/>
 Let us say we have saved the code for the form in a snippet called 'contact-us.inc' within 'couch/snippets' folder. The modified code will be -
 
 ```html
@@ -104,4 +104,4 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-* [page\_exists](./page_exists.html)
+* [page_exists](./page_exists.html)

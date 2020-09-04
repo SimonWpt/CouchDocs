@@ -13,7 +13,7 @@ Some other templates, e.g. _blog.php_ or _property.php_, cannot possibly represe
 A website will have several blog pages, each page representing a single blog entry. Similarly, there will be several property pages where each page would stand for a single property.
 
 We'll take the example of _blog.php_ to illustrate the point we are trying to make.<br/>
-Suppose we created three editable regions, named *my\_blog\_text*, *my\_blog\_image* and *my\_blog\_author*, within _blog.php_ template.<br/>
+Suppose we created three editable regions, named *my_blog_text*, *my_blog_image* and *my_blog_author*, within _blog.php_ template.<br/>
 The user edits the contents within these areas and after saving his changes visits the template in his browser -<br/>
 _<https://www.yoursite.com/blog.php>_
 

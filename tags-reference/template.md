@@ -13,7 +13,7 @@ It is customary to place this tag somewhere at the beginning of a template. This
 
 * title
 * clonable
-* access\_level
+* access_level
 * executable
 * commentable
 * hidden
@@ -34,7 +34,7 @@ This parameter can be set to restrict the access to the template and all its clo
 
 ### executable
 
-If this parameter is set to '0', non-super-admin users will be unable to access the template and all its cloned pages via their URLs. This is usually done when a template is used only to define editable regions that will be used to capture data in the admin panel. The captured data is then usually displayed on other templates by the use of either [**pages**](./pages.html) tag or [**get\_custom\_field**](./get_custom_field.html) tag.
+If this parameter is set to '0', non-super-admin users will be unable to access the template and all its cloned pages via their URLs. This is usually done when a template is used only to define editable regions that will be used to capture data in the admin panel. The captured data is then usually displayed on other templates by the use of either [**pages**](./pages.html) tag or [**get_custom_field**](./get_custom_field.html) tag.
 
 ### commentable
 

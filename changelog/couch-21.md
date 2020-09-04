@@ -8,7 +8,7 @@ layout: default
 
 > **11 May 2018**  *taken from https://www.couchcms.com/forum/viewtopic.php?f=5&t=11105*
 >
-> This version of Couch has been promoted to become the release version 2.1 available from the main download page  [http://www.couchcms.com/products/](http://www.couchcms.com/products/) or [https://github.com/CouchCMS/CouchCMS/tree/v2.1](https://github.com/CouchCMS/CouchCMS/tree/v2.1)
+> This version of Couch has been promoted to become the release version 2.1 available from the main download page  [https://www.couchcms.com/products/](https://www.couchcms.com/products/) or [https://github.com/CouchCMS/CouchCMS/tree/v2.1](https://github.com/CouchCMS/CouchCMS/tree/v2.1)
 
 Hi everybody,  
   

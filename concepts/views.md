@@ -24,7 +24,7 @@ _<https://www.mysite.com/blog/>_ (if pretty-urls activated)
 
 **2\.** A page created out of blog.php is executed -<br/>
 _<https://www.mysite.com/blog.php?p=12>_ or<br/>
-*<http://www.mysite.com/blog/some\_page\_name.html>* (if pretty-urls activated)
+*<https://www.mysite.com/blog/some_page_name.html>* (if pretty-urls activated)
 
 In the first scenario, _blog.php_ is said to be executing in **list view** while in the second case it is said to be executing in **page view**.
 
@@ -41,7 +41,7 @@ Thus the _list view_ can be further categorised into two final views -
 
 **1\. Folder view** - while listing pages belonging to a particular folder -<br/>
 _<https://www.mysite.com/blog.php?f=3>_ or<br/>
-*<http://www.mysite.com/blog/some\_subfolder/>* (if pretty-urls activated)
+*<https://www.mysite.com/blog/some_subfolder/>* (if pretty-urls activated)
 
 **2\. Archive view** - while listing pages belonging to a particular time period -<br/>
 _<https://www.mysite.com/blog.php?d=201005>_ or<br/>
@@ -56,40 +56,40 @@ Once again, while accessing pages through these URLs, it is expected that you'll
 The following variables are set by Couch for your script to know the view it is executing in -
 
 **Page View**<br/>
-k\_is\_page = '1'
+k_is_page = '1'
 
 **List View**<br/>
-k\_is\_list = '1'<br/>
-k\_is\_home = '1'
+k_is_list = '1'<br/>
+k_is_home = '1'
 
 **Folder View**<br/>
-k\_is\_list = '1'<br/>
-k\_is\_folder = '1'
+k_is_list = '1'<br/>
+k_is_folder = '1'
 
 **Archive View**<br/>
-k\_is\_list = '1'<br/>
-k\_is\_archive = '1'<br/>
-k\_is\_day = '1' (if daily archive)<br/>
-k\_is\_month = '1' (if monthly archive)<br/>
-k\_is\_year = '1' (if yearly archive)
+k_is_list = '1'<br/>
+k_is_archive = '1'<br/>
+k_is_day = '1' (if daily archive)<br/>
+k_is_month = '1' (if monthly archive)<br/>
+k_is_year = '1' (if yearly archive)
 
-Notice how the variable *k\_is\_home* gets set only when _blog.php_ gets executed in a simple _List view_ that is neither a _Folder view_ nor an _Archive view_. We can call this view - the **Home view**.
+Notice how the variable *k_is_home* gets set only when _blog.php_ gets executed in a simple _List view_ that is neither a _Folder view_ nor an _Archive view_. We can call this view - the **Home view**.
 
 Taking the example of _blog.php_, notice how the views and variables change according to the URL used to access it -<br/>
 _<https://www.mysite.com/blog/>_<br/>
-k\_is\_list = 1<br/>
-k\_is\_home = 1
+k_is_list = 1<br/>
+k_is_home = 1
 
-*<http://www.mysite.com/blog/some\_subfolder/>*<br/>
-k\_is\_list = 1<br/>
-k\_is\_folder = 1
+*<https://www.mysite.com/blog/some_subfolder/>*<br/>
+k_is_list = 1<br/>
+k_is_folder = 1
 
 _<https://www.mysite.com/blog/2010/05/>_<br/>
-k\_is\_list = 1<br/>
-k\_is\_archive = 1
+k_is_list = 1<br/>
+k_is_archive = 1
 
-*http://www.mysite.com/blog/some\_page\_name.html>*<br/>
-k\_is\_page = 1
+*https://www.mysite.com/blog/some_page_name.html>*<br/>
+k_is_page = 1
 
 For clonable templates, you'll have to recognize which view the template is being executed in (by testing the variables given above) and then display the relevant data.<br/>
 It could be something like the following -

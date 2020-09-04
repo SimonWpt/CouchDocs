@@ -18,7 +18,7 @@ Example -
 
 ## Parameters
 
-* show\_hidden
+* show_hidden
 * orderby
 * order
 
@@ -36,18 +36,18 @@ Can be set to either _asc_ or _desc_.
 
 ## Variables
 
-* k\_total
-* k\_template\_id
-* k\_template\_name
-* k\_template\_title
-* k\_template\_desc
-* k\_template\_access\_level
-* k\_template\_is\_clonable
-* k\_template\_is\_commentable
-* k\_template\_is\_executable
-* k\_template\_is\_hidden
-* k\_template\_order
-* k\_template\_link
+* k_total
+* k_template_id
+* k_template_name
+* k_template_title
+* k_template_desc
+* k_template_access_level
+* k_template_is_clonable
+* k_template_is_commentable
+* k_template_is_executable
+* k_template_is_hidden
+* k_template_order
+* k_template_link
 
 ## Related Tags
 

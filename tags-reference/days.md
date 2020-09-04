@@ -12,22 +12,22 @@ Please see [**Core Concepts - Events Calendar**](../concepts/events-calendar.htm
 
 ## Parameters
 
-* pad\_with\_zeroes
+* pad_with_zeroes
 
 ### pad_with_zeroes
 
-If set to '1' will pad all single digit days in variable *k\_day* with a leading zero.
+If set to '1' will pad all single digit days in variable *k_day* with a leading zero.
 
 ## Variables
 
-* k\_date
-* k\_day
-* k\_month
-* k\_year
-* k\_day\_of\_week
-* k\_position
-* k\_count\_entries
-* k\_timeline\_position
+* k_date
+* k_day
+* k_month
+* k_year
+* k_day_of_week
+* k_position
+* k_count_entries
+* k_timeline_position
 
 ### k_date
 
@@ -53,9 +53,9 @@ Number representing the week - ranges from 0 (Sun) to 6 (Sat)
 
 A calendar grid can contain days that belong to the month being shown as well as the previous and the next month. Depending on which month a day belongs to, its position is denoted by this parameter as one of these three values -
 
-* previous\_month
-* current\_month
-* next\_month
+* previous_month
+* current_month
+* next_month
 
 ### k_count_entries
 

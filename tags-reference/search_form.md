@@ -6,7 +6,7 @@ layout: default
 
 # search_form
 
-The **search\_form** is a simple tag that creates a form that could be used with the **search** tag.
+The **search_form** is a simple tag that creates a form that could be used with the **search** tag.
 
 Examples -
 
@@ -30,7 +30,7 @@ This parameter sets the message displayed within the search textbox. By default 
 ### processor
 
 This parameter sets the _action_ parameter of the generated form. This needs to be set to the URL of the page that has the **pages** tag on it.<br/>
-If left empty, the **pages** tag is expected to be on the same page as the **search\_form** tag.
+If left empty, the **pages** tag is expected to be on the same page as the **search_form** tag.
 
 ## Variables
 

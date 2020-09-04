@@ -29,4 +29,4 @@ Please see [**Documentation - Tags - Pages**](./pages.html#variables) for a comp
 
 ## Related Tags
 
-* [reverse\_related\_pages](./reverse_related_pages.html)
+* [reverse_related_pages](./reverse_related_pages.html)

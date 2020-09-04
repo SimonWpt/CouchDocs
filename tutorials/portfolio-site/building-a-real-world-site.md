@@ -8,7 +8,7 @@ layout: default
 
 To demonstrate the power and ease of Couch, we'll build a complete real world site from scratch using it.
 
-The template we have chosen to do so is Aurelius.[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/Aurelius.zip)<br/>
+The template we have chosen to do so is Aurelius.[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](https://www.couchcms.com/docs/code/Aurelius.zip)<br/>
 It was originally created to be sold commercially at Themeforest. However the author later on changed his mind and very graciously released it as a free template.
 
 We chose this template because it has almost all the sections that you'll come across while building a similar site -
@@ -19,7 +19,7 @@ We chose this template because it has almost all the sections that you'll come a
 * Contact Us
 * Home
 
-It can be found at [_<https://net.tutsplus.com/articles/news/free-website-template/>_](http://net.tutsplus.com/articles/news/free-website-template/). You can choose to download it from the aforesaid link or get it from [here](http://www.couchcms.com/docs/code/Aurelius.zip) (our version has all unnecessary files removed).
+It can be found at [_<https://net.tutsplus.com/articles/news/free-website-template/>_](http://net.tutsplus.com/articles/news/free-website-template/). You can choose to download it from the aforesaid link or get it from [here](https://www.couchcms.com/docs/code/Aurelius.zip) (our version has all unnecessary files removed).
 
 ### Installing Aurelius
 
@@ -34,7 +34,7 @@ Unzip and upload all the files of Aurelius to your web server.
     For this tutorial, we'll assume that your web server is hosted locally and hence will simply say 'edit this file and save it' instead of 'edit this file locally and FTP it back to your server'.
 </p>
 
-If you are using the files downloaded from _<https://net.tutsplus.com/>_, remove the _Documentation_ and _psd_ folders as well as the _config.php_, *send\_email.php* and *full\_width.html* files as these will no longer be needed by us (this won't be necessary if you downloaded the template from our site).
+If you are using the files downloaded from _<https://net.tutsplus.com/>_, remove the _Documentation_ and _psd_ folders as well as the _config.php_, *send_email.php* and *full_width.html* files as these will no longer be needed by us (this won't be necessary if you downloaded the template from our site).
 
 The resulting folder structure should look like this -
 
