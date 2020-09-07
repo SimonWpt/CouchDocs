@@ -1,5 +1,5 @@
 ---
-title: Customizing forms
+title: config_form_view
 parent: Tags Reference
 layout: default
 ---
