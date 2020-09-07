@@ -1,5 +1,5 @@
 ---
-title: Customizing the List screen
+title: config_list_view
 parent: Tags Reference
 layout: default
 ---
