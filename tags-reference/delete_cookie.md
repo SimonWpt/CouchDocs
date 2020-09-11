@@ -26,3 +26,8 @@ This tag is self-closing and does not set any variables of its own.
 
 * [set_cookie](./set_cookie.html)
 * [get_cookie](./get_cookie.html)
+* [set_flash](./set_flash.html)
+* [get_flash](./get_flash.html)
+* [set_session](./set_session.html)
+* [get_session](./get_session.html)
+* [delete_session](./delete_session.html)
