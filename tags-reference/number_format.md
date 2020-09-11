@@ -6,7 +6,7 @@ layout: default
 
 # number_format
 
-The **number\_format** tag can be used to properly format numeric values.
+The **number_format** tag can be used to properly format numeric values.
 
 For example
 
@@ -23,9 +23,9 @@ The snippet above will output
 ## Parameters
 
 * number
-* decimal\_precision
-* decimal\_character
-* thousands\_separator
+* decimal_precision
+* decimal_character
+* thousands_separator
 
 ### number
 

@@ -35,7 +35,7 @@ The following example will make the relationship clear where we are displaying a
 </cms:calendar>
 ```
 
-<p class="notice">For all the examples of calendar on this page, we'll use _calendar.css_ to format the display. You can use the same CSS for your work or create your own CSS \[[Download](http://www.couchcms.com/docs/code/calendar.css)\].</p>
+<p class="notice">For all the examples of calendar on this page, we'll use _calendar.css_ to format the display. You can use the same CSS for your work or create your own CSS \[[Download](https://www.couchcms.com/docs/code/calendar.css)\].</p>
 
 Executing the code given above should result in the following -
 
@@ -50,24 +50,24 @@ Some of the variables that can be used are -
 
 #### calendar
 
-*k\_count\_weeks* - Number of weeks in the month<br/>
-*k\_calendar\_date* - The month being displayed in yyyy-mm-dd format (e.g. 2010-10-01 for October, 2010)<br/>
-*k\_next\_calendar\_date* - The month that comes after the one being displayed<br/>
-*k\_prev\_calendar\_date* - The month that came before the one being displayed
+*k_count_weeks* - Number of weeks in the month<br/>
+*k_calendar_date* - The month being displayed in yyyy-mm-dd format (e.g. 2010-10-01 for October, 2010)<br/>
+*k_next_calendar_date* - The month that comes after the one being displayed<br/>
+*k_prev_calendar_date* - The month that came before the one being displayed
 
 #### weeks
 
-*k\_week\_num* - Number of the week being iterated
+*k_week_num* - Number of the week being iterated
 
 #### days
 
-*k\_date* - date of the day being iterated<br/>
-*k\_day* - Number representing the day<br/>
-*k\_month* - Number representing the month of the day<br/>
-*k\_year* - Number representing the year of the day<br/>
-*k\_day\_of\_week* - Number representing the day of the week the day falls on<br/>
-*k\_position* - One of these three values: *previous\_month*, *current\_month* or *next\_month*<br/>
-*k\_timeline\_position* - One of these three values: _past_, _present_ or _future_
+*k_date* - date of the day being iterated<br/>
+*k_day* - Number representing the day<br/>
+*k_month* - Number representing the month of the day<br/>
+*k_year* - Number representing the year of the day<br/>
+*k_day_of_week* - Number representing the day of the week the day falls on<br/>
+*k_position* - One of these three values: *previous_month*, *current_month* or *next_month*<br/>
+*k_timeline_position* - One of these three values: _past_, _present_ or _future_
 
 We can use these variables to format the display of the calendar more finely.
 
@@ -138,7 +138,7 @@ The modified code of our calendar -
 
 ![](../assets/img/contents/calendar-3.png)
 
-Notice how for days that belong to previous and next months we set up a class named 'other\_month'. Also note how for the current day amongst the days of the month being shown, we mark the cell with a 'today' class.
+Notice how for days that belong to previous and next months we set up a class named 'other_month'. Also note how for the current day amongst the days of the month being shown, we mark the cell with a 'today' class.
 
 The calendar generated is for the current date. To generate one for any arbitrary date, use the calendar tag's _date_ parameter.<br/>
 For example, the following addition to our code will display the calendar for month of September, 2010 -
@@ -154,7 +154,7 @@ For example, the following addition to our code will display the calendar for mo
 A clonable template can be attached to a calendar, like the one we have created so far, by setting the _masterpage_ parameter.<br/>
 Once a template gets associated with a calendar, the days tag starts supporting another tag named entries within it.<br/>
 The entries tag, when used within the days tag, will iterate through all cloned pages of the template that were published on the day being iterated through.<br/>
-The days tag also sets a variable named *k\_count\_entries* to indicate the number of entries (i.e. cloned pages) present for each day.
+The days tag also sets a variable named *k_count_entries* to indicate the number of entries (i.e. cloned pages) present for each day.
 
 ```html
 <cms:calendar date='2010-09-01' masterpage='events.php'>
@@ -200,7 +200,7 @@ Result of the changes -
 ![](../assets/img/contents/calendar-4.png)
 
 The calendar above is well suited to be placed in a sidebar.<br/>
-Notice how we are displaying the dates that have cloned pages in a different color and how that cell is linked to an archive\_view (daily archive) of the template that can be used to display all pages belonging to a particular day in a list-view.
+Notice how we are displaying the dates that have cloned pages in a different color and how that cell is linked to an archive_view (daily archive) of the template that can be used to display all pages belonging to a particular day in a list-view.
 
 If we wish, we can display the names and links of pages right within the table cell they fall in by creating a bigger table.
 
@@ -254,9 +254,9 @@ The changes will result in the following -
 
 ![](../assets/img/contents/calendar-5.png)
 
-Notice how we used the class 'calendar\_big' with the table.<br/>
+Notice how we used the class 'calendar_big' with the table.<br/>
 Also notice how we used the entries tag to enumerate two of the cloned pages available within a day.<br/>
-The 'skip\_custom\_fields' parameter is set to '1' to avoid the overhead of fetching in all the values contained within the editable regions of the cloned pages, as we won't be needing them here.
+The 'skip_custom_fields' parameter is set to '1' to avoid the overhead of fetching in all the values contained within the editable regions of the cloned pages, as we won't be needing them here.
 
 The date of the calendar shown is still hard-coded. As final modification, let us change that by providing the date via the querystring via a parameter named cal.
 
@@ -385,6 +385,6 @@ Points to note in the code above -
 4.  We are using a querystring variable named 'cal' to set the _date_ parameter of calendar tag.<br/>
     The Couch gpc tag is used to get the value of this variable from the querystring.<br/>
     When this variable is not present in the querystring and hence the _date_ parameter turns up empty, the calendar tag uses the current date instead.
-5.  We have set a link to the previous month and another to the next month by using the *k\_prev\_calendar\_date* and *k\_next\_calendar\_date* variables that are set by the calendar tag.
+5.  We have set a link to the previous month and another to the next month by using the *k_prev_calendar_date* and *k_next_calendar_date* variables that are set by the calendar tag.
 6.  The calendar tag accepts all the parameters that are normally used with the pages tag. Similar to the pages tag, this tag too does not fetch pages that have their publication dates set in the future.<br/>
-    Since events will normally be for the future, we have set the *show\_future\_entries* parameter to '1' to prevent the calendar tag from skipping future entries.
+    Since events will normally be for the future, we have set the *show_future_entries* parameter to '1' to prevent the calendar tag from skipping future entries.

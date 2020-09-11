@@ -6,7 +6,7 @@ layout: default
 
 # send_mail
 
-The **send\_mail** tag, as the name suggests, can be used to send emails.
+The **send_mail** tag, as the name suggests, can be used to send emails.
 
 ```html
 <cms:send_mail from='admin@mysite.com' to='johndoe@gmail.com' subject='Feedback from your site'>

@@ -40,7 +40,7 @@ or
 </cms:repeat>
 ```
 
-In the snippets above, *k\_template\_name* and *my\_count* are variables that are used as parameters.<br/>
+In the snippets above, *k_template_name* and *my_count* are variables that are used as parameters.<br/>
 Please notice that **any value that is NOT enclosed by quotes is considered by Couch to be a variable**.
 
 **3\. By using the output of another tag** -
@@ -94,7 +94,7 @@ and everything should make sense.
 
 The example given above is rather extreme and futile but using the output of one tag as input for another is a very powerful mechanism and we'll be using it very often to solve some otherwise very sticky problems.
 
-<p class="error">**ADVANCED** (skip the following section if you are not keen to delve any deeper into nested tags):</p>
+> **ADVANCED** (skip the following section if you are not keen to delve any deeper into nested tags):
 
 As a more practical example consider the following very useful snippet -
 
@@ -108,7 +108,7 @@ Don't worry, we'll replace the tags by their outputs and everything will start m
 The above snippet uses three new tags - [__*if*__](../tags-reference/if.html), [__*exists*__](../tags-reference/exists.html) and [__*embed*__](../tags-reference/embed.html).<br/>
 You can find more about them in the documentation but for now a brief word about these tags will do.
 
-If the parameter passed to [__*if*__](../tags-reference/if.html) tag is '1', it outputs anything contained between its start\_tag and end\_tag else it does not.<br/>
+If the parameter passed to [__*if*__](../tags-reference/if.html) tag is '1', it outputs anything contained between its start_tag and end_tag else it does not.<br/>
 [__*exists*__](../tags-reference/exists.html) expects the parameter passed to it to be a file's (or folder's) name. It tests if the given file/folder is actually present and if it is, it outputs '1', else it outputs '0'.<br/>
 Finally, the [__*embed*__](../tags-reference/embed.html) tag expects the parameter passed to it to be a file's name. It then simply reads the file and returns back its contents as its own output.
 
@@ -121,7 +121,7 @@ We are already familiar with the [__*show*__](../tags-reference/show.html) tag.
 ```
 
 \- the parameter being passed to it has no quotes around it so it must be a variable.<br/>
-The *k\_page\_name* variable is set by Couch everytime a page (see [**pages**](../cloned-pages.html)) is executed to hold the page's name. Thus if the page being currently executed is _about-us_, the value of *k\_page\_name* will be *about\_us* while if the page being executed is _contact-us_, *k\_page\_name* will be set to _contact-us_.
+The *k_page_name* variable is set by Couch everytime a page (see [**pages**](./cloned-pages.html)) is executed to hold the page's name. Thus if the page being currently executed is _about-us_, the value of *k_page_name* will be *about_us* while if the page being executed is _contact-us_, *k_page_name* will be set to _contact-us_.
 
 Assuming that the current page is _about-us_, substituting [__*show*__](../tags-reference/show.html) tag with its output will result in -
 
@@ -162,4 +162,4 @@ and finally the output of _if_ -
 
 &lt;h1&gt;Hello I am About Us&lt;/h1&gt;
 
-With the information we have had so far, we are ready to move on to the [**Editable Regions**](../editable-regions.html).
+With the information we have had so far, we are ready to move on to the [**Editable Regions**](./editable-regions.html).

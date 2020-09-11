@@ -65,7 +65,7 @@ The code above has two parts. First where we register our shortcode with Couch:
 $FUNCS->register_shortcode( 'hello', 'hello_handler' );
 ```
 
-By using the code above we are letting Couch know that it will now have to keep a look out for a shortcode named _hello_ and that anywhere it encounters this shortcode, Couch should invoke a function named *hello\_handler*.
+By using the code above we are letting Couch know that it will now have to keep a look out for a shortcode named _hello_ and that anywhere it encounters this shortcode, Couch should invoke a function named *hello_handler*.
 
 ```html
 function hello_handler( $params, $content=null ){
@@ -73,9 +73,9 @@ function hello_handler( $params, $content=null ){
 }
 ```
 
-The code above is the *hello\_handler* function that we instructed Couch to execute anytime it finds our shortcode named _hello_.
+The code above is the *hello_handler* function that we instructed Couch to execute anytime it finds our shortcode named _hello_.
 
-Couch upon encountering a shortcode, executes the handler function associated with it and then **replaces the shortcode with the return value** of that function. Thus, in our shortcode the _\[hello\]_ anywhere in the content will be replaced by the return value of *hello\_handler* function and that is _&lt;h1&gt;Hello from a shortcode!&lt;/h1&gt;_.
+Couch upon encountering a shortcode, executes the handler function associated with it and then **replaces the shortcode with the return value** of that function. Thus, in our shortcode the _\[hello\]_ anywhere in the content will be replaced by the return value of *hello_handler* function and that is _&lt;h1&gt;Hello from a shortcode!&lt;/h1&gt;_.
 
 This is a trivial example but it illustrates clearly the logic behind shortcodes. You can make the handler function return any HTML code you wish.<br/>
 At the end of this page you'll find some serious real world examples of shortcodes that you can use in your code.
@@ -84,8 +84,8 @@ At the end of this page you'll find some serious real world examples of shortcod
 
 Couch, unlike most other CMSes, can have any number of editable regions. Therefore, it would have been too taxing to make it keep a watch for the registered shortcodes in all of them automatically. For Couch to search and replace any registered shortcode present within an editable region, you'll have to explicitly instruct it to do so.
 
-Suppose a template has an editable region of richtext type named *my\_content*.<br/>
-This is how you'd probably be displaying the value contained within *my\_content* in your template:
+Suppose a template has an editable region of richtext type named *my_content*.<br/>
+This is how you'd probably be displaying the value contained within *my_content* in your template:
 
 ```html
 <cms:show my_content />
@@ -97,9 +97,9 @@ If the end user is supposed to be inserting shortcodes within this editable regi
 <cms:do_shortcodes><cms:show my_content /></cms:do_shortcodes>
 ```
 
-In the code above we are wrapping the **show** tag with the newly introduced **do\_shortcodes** tag. The **do\_shortcodes** tag actually does all the heavy lifting associated with shortcodes. It parses out the content enclosed within it, searches out all registered shortcodes and replaces them with their associated values by executing their handler functions.
+In the code above we are wrapping the **show** tag with the newly introduced **do_shortcodes** tag. The **do_shortcodes** tag actually does all the heavy lifting associated with shortcodes. It parses out the content enclosed within it, searches out all registered shortcodes and replaces them with their associated values by executing their handler functions.
 
-And that's it. Now if the user places the following shortcode anywhere within the *my\_content* editable region:
+And that's it. Now if the user places the following shortcode anywhere within the *my_content* editable region:
 
 ```html
 [hello]
@@ -211,7 +211,7 @@ e.g. the following shortcode is exactly the same as above:
 
 Couch delivers all the parameters that are provided to a shortcode to the relevant handler function as its first parameter (the one named _$params_ in all the examples above) in the form of an array.
 
-Instead of dealing directly with the raw array, a helper function provided by Couch - *$FUNCS-\>get\_named\_vars()* - should be used.<br/>
+Instead of dealing directly with the raw array, a helper function provided by Couch - *$FUNCS-\>get_named_vars()* - should be used.<br/>
 An example of how the parameters should ideally be handled is as follows:
 
 ```html
@@ -232,7 +232,7 @@ function googlemap_handler( $params, $content=null ){
 
 The code given above creates a shortcode named **\[googlemap\]** that can be used to easily insert a Google map anywhere within an editable region's contents.
 
-Notice how by using *$FUNCS-\>get\_named\_vars()* we are explicitly specifying the parameters our shortcode expects. Also notice how we provide default values for some of the parameters, which effectively makes them optional parameters.
+Notice how by using *$FUNCS-\>get_named_vars()* we are explicitly specifying the parameters our shortcode expects. Also notice how we provide default values for some of the parameters, which effectively makes them optional parameters.
 
 The PHP _extract()_ function creates local variables for us with the same names as that of the parameters we specified. This makes it very easy to use the parameters in the function's logic - usually for constructing the return value. Notice in the code above how PHP variables _$width_, _$height_ and _$src_ become available for our use.
 
@@ -244,7 +244,7 @@ The shortcode described above can be used by the end user in any of the followin
 [googlemap src="http://maps.google.com/?ll=23.250652,77.402072&spn=0.019912,0.038581&z=15" width='600' height='480']
 ```
 
-<p class="success">If you are wondering where that URL given as _src_ came from, you can get it from http&#58;//maps.google.com/ by navigating to the desired geographical location and then clicking the 'link' button available at the top.</p>
+<p class="success">If you are wondering where that URL given as _src_ came from, you can get it from <http://maps.google.com/> by navigating to the desired geographical location and then clicking the 'link' button available at the top.</p>
 
 That wraps up all that is there for you to know about shortcodes in Couch.<br/>
 We end this section by providing some very useful (and real world) examples of shortcodes that you can use as guides for your own shortcodes or use them as-is in your projects.
@@ -252,7 +252,7 @@ We end this section by providing some very useful (and real world) examples of s
 ## Ready to use examples of shortcodes
 
 Following is a sample _kfunctions.php_ file, defining some useful shortcodes, which you can use directly within your projects:<br/>
-\[[**Download kfunctions.php**](http://www.couchcms.com/docs/code/kfunctions.zip)\]
+\[[**Download kfunctions.php**](https://www.couchcms.com/docs/code/kfunctions.zip)\]
 
 ```html
 <?php

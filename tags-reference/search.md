@@ -48,13 +48,13 @@ _Limit_ parameter can be set to display only a limited number of pages that were
 
 For each page found, all the variables normally available in its _page-view_ will be available. Apart from these, the following variables are also made available -
 
-* k\_search\_title
-* k\_search\_content
-* k\_search\_excerpt
-* k\_search\_query
+* k_search_title
+* k_search_content
+* k_search_excerpt
+* k_search_query
 
 Please see [**Core Concepts - Search**](../concepts/using-search.html) for details.
 
 ## Related Tags
 
-* [search\_form](../search_form.html)
+* [search_form](./search_form.html)

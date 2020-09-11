@@ -32,5 +32,5 @@ This tag does not set any variables of its own.
 
 * [get](./get.html)
 * [set](./set.html)
-* [get\_custom\_field](../get_custom_field.html)
+* [get_custom_field](./get_custom_field.html)
 * [pages](./pages.html)

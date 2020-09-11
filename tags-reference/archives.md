@@ -13,9 +13,9 @@ Please see [**Core Concepts - Archives**](../concepts/using-archives.html) for a
 * masterpage
 * order
 * limit
-* start\_on
-* stop\_before
-* show\_future\_entries
+* start_on
+* stop_before
+* show_future_entries
 * type
 * startcount
 
@@ -49,15 +49,15 @@ The type of the archives created - valid values are _yearly_, _monthly_ or _dail
 
 ### startcount
 
-As this tag enumerates the archives, it sets a variable named *k\_count* to the number of the current iteration. *k\_count* begins from '0' by default. It can be set to start from any other number by setting this parameter.
+As this tag enumerates the archives, it sets a variable named *k_count* to the number of the current iteration. *k_count* begins from '0' by default. It can be set to start from any other number by setting this parameter.
 
 ## Variables
 
-* k\_archive\_date
-* k\_next\_archive\_date
-* k\_archive\_link
-* k\_archive\_count
-* k\_count
+* k_archive_date
+* k_next_archive_date
+* k_archive_link
+* k_archive_count
+* k_count
 
 Please see [**Core Concepts - Archives**](../concepts/using-archives.html) for details of these variables.
 

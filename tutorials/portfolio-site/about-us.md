@@ -6,16 +6,16 @@ layout: default
 
 # Starting off simple - the About-Us page
 
-Of all the five sections that Aurelius has (i.e. _About-Us_, _Portfolio_, _Blog_, _Contact-Us_ and _Home_), the _Portfolio_ and _Blog_ sections will need the 'cloned pages' feature of Couch because they consist of multiple pages each cloned out of the same template.[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/about.zip)
+Of all the five sections that Aurelius has (i.e. _About-Us_, _Portfolio_, _Blog_, _Contact-Us_ and _Home_), the _Portfolio_ and _Blog_ sections will need the 'cloned pages' feature of Couch because they consist of multiple pages each cloned out of the same template.[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](https://www.couchcms.com/docs/code/about.zip)
 
 We'll tackle the cloned pages in the next chapter. For now let us begin with a simpler section that doesn't require cloning. The _About Us_ page will serve our purpose.<br/>
 Before proceeding further, make sure that you are logged into Couch using the super-admin account that got created during installation.
 
-Access _about.html_ in your browser by visiting _http&#58;//www.mytestsite.com/about.html_<br/>
+Access _about.html_ in your browser by visiting _<https://www.mytestsite.com/about.html>_<br/>
 The _About Us_ page should appear.
 
 Change the extension of the template from _.html_ to _.php_ so that _about.html_ now becomes _about.php_. Access _about.php_ in your browser -<br/>
-_http&#58;//www.mytestsite.com/about.php_<br/>
+_<https://www.mytestsite.com/about.php>_<br/>
 The same _About Us_ page should appear as did when the file's extension was _html_.<br/>
 This change of extension from _.html_ to _.php_ is necessary before Couch can be retrofitted into a template.
 
@@ -31,7 +31,7 @@ Open up _about.php_ in your favorite text editor and paste the following line to
 <p class="notice">
     If you had chosen to rename the default admin folder from couch to something else, make sure the line pasted above also reflects the change. Thus if the new name of the folder was myadmin, the line to be pasted will become -<br/>
     <br/>
-    &lt;?php require\_once( 'myadmin/cms.php' ); ?&gt;
+    &lt;?php require_once( 'myadmin/cms.php' ); ?&gt;
 </p>
 
 As the final step, paste the following to _about.php_ as the last line of the file (i.e. after all other content of the file) -

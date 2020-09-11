@@ -6,7 +6,7 @@ layout: default
 
 # get_field
 
-The **get\_field** tag can be used to fetch the value contained within any editable region defined within any template.
+The **get_field** tag can be used to fetch the value contained within any editable region defined within any template.
 
 This tag replaces the existing `<cms:get_custom_field>` tag which is deprecated. Unlike the `<cms:get_custom_field>` tag, this new tag works with almost all custom field types and also system fields. It takes the same parameters as its older counterpart but can also be used as a tag-pair.
 

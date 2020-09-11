@@ -6,26 +6,35 @@ layout: default
 
 # Shopping Cart (Part II)
 
-* [Shipping Charges](#shipping-charges)
-    *   [Cart level charges](#cart-level-charges)
-        *   [Flat rate per order](#flat-rate-per-order)
-        *   [Flat rate per item](#flat-rate-per-item)
-        *   [Ship by order total](#ship-by-order-total)
-        *   [Ship by quantity ordered](#ship-by-quantity-ordered)
-    *   [Item level charges](#item-level-charges)
-* [Discounts](#discounts)
-    *   [Cart level discounts](#cart-level-discounts)
-        *   [Discount by order total](#discount-by-order-total)
-        *   [Discount by quantity ordered](#discount-by-quantity-ordered)
-    *   [Item level discounts (Quantity based pricing)](#item-level-discounts)
-* [Taxes](#taxes)
-* [Promotional Coupons](#promotional-coupons)
-    *   [Creating coupons](#creating-coupons)
-    *   [Processing coupons](#processing-coupons)
+- [Shopping Cart (Part II)](#shopping-cart-part-ii)
+  - [Shipping Charges](#shipping-charges)
+    - [Cart level charges](#cart-level-charges)
+      - [Flat rate per order](#flat-rate-per-order)
+      - [Flat rate per item](#flat-rate-per-item)
+      - [Ship by order total](#ship-by-order-total)
+      - [Ship by quantity ordered](#ship-by-quantity-ordered)
+    - [Item level charges](#item-level-charges)
+  - [Discounts](#discounts)
+    - [Cart level discounts](#cart-level-discounts)
+      - [Discount by order total](#discount-by-order-total)
+      - [Discount by quantity ordered](#discount-by-quantity-ordered)
+    - [Item level discounts](#item-level-discounts)
+  - [Taxes](#taxes)
+  - [Promotional Coupons](#promotional-coupons)
+    - [Creating coupons](#creating-coupons)
+      - [Description](#description)
+      - [Code](#code)
+      - [Discount](#discount)
+      - [Type](#type)
+      - [Minimum Amount](#minimum-amount)
+      - [Free Shipping](#free-shipping)
+      - [End Date](#end-date)
+    - [Processing coupons](#processing-coupons)
+  - [The end, finally...](#the-end-finally)
 
 --------------------------------
 
-By this point, our [initial store assembly is nearly complete](../shopping-cart-1.html).
+By this point, our [initial store assembly is nearly complete](./shopping-cart-1.html).
 
 The product catalog is built, the shopping cart is in place and we can accept online payments via PayPal.<br/>
 However, almost every eStore will need to configure a few '**adjustments**' before it can finally throw open its (virtual) doors to the world and start doing business.
@@ -37,19 +46,19 @@ As to how these adjustments are calculated - that really depends on the specific
 So what does CouchCart do? Well. It does nothing!<br/>
 Yes, you read that right. Rather than trying and falling short (like many others before it), CouchCart's approach is to **make you do the calculations instead, and hand it back the calculated values** to incorporate in the cart.
 
-The way this works is as follows: while executing, CouchCart looks for a PHP script file named '**cart\_ex.php**' within its own folder (i.e. '_addons/cart_'). If such a file is found, it delegates the responsibility of calculating discounts, shipping charges and taxes to specific functions expected to be in that file. Whatever values are returned by these functions will then be used in the totals calculated for the cart.
+The way this works is as follows: while executing, CouchCart looks for a PHP script file named '**cart_ex.php**' within its own folder (i.e. '_addons/cart_'). If such a file is found, it delegates the responsibility of calculating discounts, shipping charges and taxes to specific functions expected to be in that file. Whatever values are returned by these functions will then be used in the totals calculated for the cart.
 
 Of course, this means that somebody has to code those functions.<br/>
 Now, I realize that it would be unreasonable to expect designers (Couch's primary users) to write all that PHP code by themselves.<br/>
 I have, therefore, gone ahead and coded up for them, some of the most common calculation methods used by businesses.<br/>
-You can find my implementation in a file named '**cart\_ex.example.php**' within the 'addons/cart' folder. Rename it to '**cart\_ex.php**'. CouchCart will now use the code within it. The designer or the shop-owner, now needs only to set certain values with CouchCart's config file to use these calculations.
+You can find my implementation in a file named '**cart_ex.example.php**' within the 'addons/cart' folder. Rename it to '**cart_ex.php**'. CouchCart will now use the code within it. The designer or the shop-owner, now needs only to set certain values with CouchCart's config file to use these calculations.
 
 Please keep in mind that this is just my implementation of the required calculations. As I said, I've tried to cover some of the most common ways of doing them. However, it might, or might not, be suitable for your client's business requirements.<br/>
 In case it is not, feel free to tweak, modify heavily or even discard this implementation completely and put in your version tailored to your specific needs.
 
 <p class="success">If it comes down to having to use your own custom implementation and you are not conversant with PHP, it is likely that you'll require the services of a competent PHP developer. In which case, my implementation can at least serve as sample code to guide the developer. All the functions are profusely commented for this very purpose.</p>
 
-**All the calculation methods discussed below assume that you've decided to use my implementation** (by renaming '*cart\_ex.example.php*' to '*cart\_ex.php*').
+**All the calculation methods discussed below assume that you've decided to use my implementation** (by renaming '*cart_ex.example.php*' to '*cart_ex.php*').
 
 <p class="notice">
     Before we delve into the details of available calculations, however, a little concept (used both by shipping and by discount calculations that follow) requires some explanation.<br/>
@@ -139,7 +148,7 @@ where the string above stands for '3 for more than 0, 7 for more than 5, 10 for 
 
 ### Item level charges
 
-To enable specifying shipping charges on individual products, **an editable region named '*pp\_shipping\_scale*' needs to be defined** in the product template.<br/>
+To enable specifying shipping charges on individual products, **an editable region named '*pp_shipping_scale*' needs to be defined** in the product template.<br/>
 If you are using the editable region definitions contained in our sample template, this region is already defined and you can enter the shipping scale for each product in the following panel:
 
 ![](../assets/img/contents/shopping-cart-16.png)
@@ -153,7 +162,7 @@ For example, if you charge $3 to deliver one to five units, $7 to ship six to 15
 
 where the string above stands for '3 for more than 0, 7 for more than 5, 10 for more than 15'.
 
-<p class="notice">The shipping charges will be **calculated for only** those items that have their '*pp\_requires\_shipping*' editable region set to 'Yes'.</p>
+<p class="notice">The shipping charges will be **calculated for only** those items that have their '*pp_requires_shipping*' editable region set to 'Yes'.</p>
 
 ![](../assets/img/contents/shopping-cart-17.png)
 
@@ -214,11 +223,11 @@ where the string above stands for '10 for more than 4 items'.
 ### Item level discounts
 
 Similar to setting item-level shipping charges, we can also set item level discounts (i.e. discounts **set directly over individual products**).<br/>
-However, unlike shipping, item level discounts **don't appear in the 'Discounts' total of the cart** (the one output by *&lt;cms:pp\_discount /&gt;*), as do the two cart level discounts discussed above. Rather, these discounts **serve to decrease the base-price of the product**.
+However, unlike shipping, item level discounts **don't appear in the 'Discounts' total of the cart** (the one output by *&lt;cms:pp_discount /&gt;*), as do the two cart level discounts discussed above. Rather, these discounts **serve to decrease the base-price of the product**.
 
 This property can be used to implement **Quantity based pricing** (also known as "**tiered pricing**") where the product's base price varies based on the quantity of it purchased (useful for bulk purchases).
 
-This method **requires defining an editable region named '*pp\_discount\_scale*'** in the products template.<br/>
+This method **requires defining an editable region named '*pp_discount_scale*'** in the products template.<br/>
 If you are using the editable region definitions contained in our sample template, this region is already defined and you can enter the discount scale for each product in the following panel:
 
 ![](../assets/img/contents/shopping-cart-18.png)
@@ -240,10 +249,10 @@ To setup price-reductions (discounts) as a **percentage** of the product's base 
 where the scale now becomes 'reduce product's base-price by 10% if customer buys more than 5 units of it, by 15% if buys more than 10'.
 
 <p class="notice">
-    If a product's base price gets reduced by this method, two custom variables are made available within '__*pp\_cart\_items*__' tag (the tag used to display the cart) -<br/>
+    If a product's base price gets reduced by this method, two custom variables are made available within '__*pp_cart_items*__' tag (the tag used to display the cart) -<br/>
     <br/>
-    **line\_discount**: this shows the discounted value<br/>
-    **orig\_price**: this shows the original base price without the discount applied.<br/>
+    **line_discount**: this shows the discounted value<br/>
+    **orig_price**: this shows the original base price without the discount applied.<br/>
     <br/>
     e.g. in cart.php template, this is how we display the original price of discounted cart items (with a strikethrough style)<br/>
     <br/>
@@ -274,7 +283,7 @@ Coupons can be used to provide **cart level discount** and/or **free shipping** 
 This simple implementation of the coupon feature is an example of using Couch's cloned pages in tandem with CouchCart to add features not originally available.<br/>
 The finished version of our sample site contains a template named '_coupons.php'_. It is a regular Couch template defining a set of editable regions. Execute it as super-admin to register it with Couch. In the admin-panel, we can now create coupons as cloned pages of this template.
 
-<p class="notice">**NOTE:** The '_End Date_' field defined by this template makes use of the [**Date-Picker addon**](http://www.couchcms.com/forum/viewtopic.php?f=8&t=7126) for ease in inputting dates. If you don't wish to use the addon, you may safely remove the _editable name='datepicker'_ region from the template.</p>
+<p class="notice">**NOTE:** The '_End Date_' field defined by this template makes use of the [**Date-Picker addon**](https://www.couchcms.com/forum/viewtopic.php?f=8&t=7126) for ease in inputting dates. If you don't wish to use the addon, you may safely remove the _editable name='datepicker'_ region from the template.</p>
 
 ### Creating coupons
 
@@ -331,7 +340,7 @@ You can simply copy the entire form code (every thing between the _&lt;!-- START
 <p class="notice">
     You can use the code as it is but a little understanding of what it does will do no harm (feel free to skip this section if it does not interest you).<br/>
     <br/>
-    The logic is pretty simple - successful submission of the form will trigger the *k\_success* condition.<br/>
+    The logic is pretty simple - successful submission of the form will trigger the *k_success* condition.<br/>
     In this condition, we use _**pages**_ tag to fetch the cloned page (i.e. the coupon) that contains the submitted coupon code as value of its edtitable region named '_code_'.<br/>
     <br/>
     ```
@@ -341,8 +350,8 @@ You can simply copy the entire form code (every thing between the _&lt;!-- START
    </cms:pages>
 </cms:if>
     ```
-    If one is found, the inputted coupon is valid. Now comes the important technique. As we know, it is '*cart\_ex.php*' that does all the calculations for discounts and shipping. We provide '*cart\_ex.php*' all the coupon data we fetched via cms:pages by using '**session variables**' (these variables can be accessed site-wide. The shopping cart itself is internally implemented as a session variable).<br/>
-    Note the last statement '__*pp\_refresh\_cart*__'. By refreshing the cart, we make '*cart\_ex.php*' redo all the calculations (which now will take into account the coupon data we provided)<br/>
+    If one is found, the inputted coupon is valid. Now comes the important technique. As we know, it is '*cart_ex.php*' that does all the calculations for discounts and shipping. We provide '*cart_ex.php*' all the coupon data we fetched via cms:pages by using '**session variables**' (these variables can be accessed site-wide. The shopping cart itself is internally implemented as a session variable).<br/>
+    Note the last statement '__*pp_refresh_cart*__'. By refreshing the cart, we make '*cart_ex.php*' redo all the calculations (which now will take into account the coupon data we provided)<br/>
     <br/>
     ```
 <cms:if k_success >

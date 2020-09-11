@@ -8,14 +8,14 @@ layout: default
 
 The **concat** tag is a utility tag that can be used to concatenate several values together into a single variable.
 
-For example, suppose we have two variables 'first\_name' and 'last\_name'.
+For example, suppose we have two variables 'first_name' and 'last_name'.
 
 ```html
 <cms:set first_name = 'John' />
 <cms:set last_name = 'Doe' />
 ```
 
-To set a variable, 'welcome\_message' to 'Hello John Doe! We welcome you!', using both the variables, we can do either this -
+To set a variable, 'welcome_message' to 'Hello John Doe! We welcome you!', using both the variables, we can do either this -
 
 ```html
 <cms:set welcome_message="Hello <cms:show first_name/> <cms:show last_name/>! We welcome you!" />
@@ -27,7 +27,7 @@ or use **concat** as follows -
 <cms:set welcome_message="<cms:concat 'Hello ' first_name ' ' last_name '! We welcome you!' />" />
 ```
 
-Here we supply **concat** with all parts of the string as unnamed parameters separated by spaces (i.e. 'Hello ', first\_name, ' ', last\_name, and '! We welcome you!' with space between each as separator) and **concat** simply returns back the concatenated string.
+Here we supply **concat** with all parts of the string as unnamed parameters separated by spaces (i.e. 'Hello ', first_name, ' ', last_name, and '! We welcome you!' with space between each as separator) and **concat** simply returns back the concatenated string.
 
 <p class="success">
     If many values are supplied to **concat**, the code sometimes becomes a little difficult to comprehend (as might be the case in the snippet above) because the only demarcation between the parameters is the space.<br/>

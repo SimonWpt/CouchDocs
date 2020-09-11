@@ -13,21 +13,21 @@ The **incr** tag accepts as its first parameter a variable and increases the val
 <cms:show my_value />
 ```
 
-In the snippet above, value of variable my\_value is outputted as 11\.
+In the snippet above, value of variable my_value is outputted as 11\.
 
 ```html
 <cms:incr my_value '2' />
 <cms:show my_value />
 ```
 
-The value of  variable my\_value now becomes 13\.
+The value of  variable my_value now becomes 13\.
 
 ```html
 <cms:incr my_value />
 <cms:show my_value />
 ```
 
-The value of variable my\_value now becomes 14\.
+The value of variable my_value now becomes 14\.
 
 ## Parameters
 

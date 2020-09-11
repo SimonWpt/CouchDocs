@@ -24,6 +24,7 @@ You'll find an interesting example of this tag's use in [**Sample Portfolio Site
 ## Parameters
 
 * into
+* is_json
 * scope
 
 ### into
@@ -34,6 +35,24 @@ Name of the variable to store the output in.
 
 Scope of the aforesaid variable. Can be either _global_ or _parent_.<br/>
 If set to _global_, the variable will be available anywhere throughout the page. If set to _parent_, the variable will only be available only within the  scope of the parent tag (if any) that is nesting the **capture** tag.
+
+### is_json
+
+The content of the tag is in json format and the vyaraible is converted into a multi-string array.
+
+```html
+<cms:capture into='climate' is_json='1'>
+{
+   "Russia" : {
+      "Moscow" : "cold",
+      "Sochi"   : "warm"
+   }
+}
+</cms:capture >
+
+Climate in Moscow: <cms:show climate.Russia.Moscow /><br>
+Climate in Sochi: <cms:show climate.Russia.Sochi />
+```
 
 ## Variables
 

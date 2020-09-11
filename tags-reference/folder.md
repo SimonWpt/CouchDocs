@@ -44,5 +44,5 @@ This tag sets no parameters of its own.
 * [listfolders](./listfolders.html)
 * [dropdownfolders](./dropdownfolders.html)
 * [parentfolders](./parentfolders.html)
-* [is\_ancestor](../is_ancestor.html)
+* [is_ancestor](./is_ancestor.html)
 * [breadcrumbs](./breadcrumbs.html)

@@ -16,7 +16,7 @@ This tag takes no parameters.
 
 ## Variables
 
-* k\_week\_num
+* k_week_num
 
 ### k_week_num
 

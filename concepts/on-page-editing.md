@@ -12,7 +12,7 @@ Apart form the obvious disconnect between the place where change is required and
 
 An alternative to the mentioned dedicated admin-panel paradigm could be where the user simply clicks right on the place that requires changes (or on a nearby link), edits the content on the page itself and saves. This is 'On Page' editing. Hardly a new concept really, and with the obvious benefits discussed so far you might well ask why most CMSes (including Couch) do not use it?
 
-The reason is that implementing on-page editing entails some very sticky technical issues that, almost always, out-weigh the expected advantages. This issue has been [discussed before on our forums](http://www.couchcms.com/forum/viewtopic.php?p=10146#p10146) as has been [done by others elsewhere](http://allinthehead.com/retro/357/the-lure-of-on-page-editing).
+The reason is that implementing on-page editing entails some very sticky technical issues that, almost always, out-weigh the expected advantages. This issue has been [discussed before on our forums](https://www.couchcms.com/forum/viewtopic.php?p=10146#p10146) as has been [done by others elsewhere](http://allinthehead.com/retro/357/the-lure-of-on-page-editing).
 
 Broadly speaking, the challenges are two-fold:
 
@@ -45,7 +45,7 @@ To demonstrate how onpage editing works in Couch, I've gone ahead and completely
 
 ![](../assets/img/contents/on-page-editing-1.png)
 
-You can [**download the ported version**](http://www.couchcms.com/docs/code/miniport.zip) and take it for a spin to see for yourself how everything works.
+You can [**download the ported version**](https://www.couchcms.com/docs/code/miniport.zip) and take it for a spin to see for yourself how everything works.
 
 For this particular tutorial, I'll take you step-by-step through the process of adding onpage editing to only the first section of the template.<br/>
 Following is the section we'll be working with.
@@ -58,7 +58,7 @@ Following is the HTML markup behind the section (with the four possible editable
 
 One point I'd like to emphasize here is that **implementing onpage editing requires no changes, whatsoever, to the way you normally implement a site using Couch**. That is to say, you create your templates, define the editable-regions etc. exactly the way you'd normally do and once the site is ready we can bolt on the onpage editing component to the functioning site.
 
-Taking the example of the section we are working with, if you take a look at the attached source files, you'll find that it required defining 4 editable regions - *intro\_image* (type image), *intro\_title* (type nicedit), *intro\_text* (type richtext) and *intro\_button* (type text).
+Taking the example of the section we are working with, if you take a look at the attached source files, you'll find that it required defining 4 editable regions - *intro_image* (type image), *intro_title* (type nicedit), *intro_text* (type richtext) and *intro_button* (type text).
 
 The modified HTML markup with Couch's editable regions added in now looks like this -
 
@@ -111,7 +111,7 @@ Following is how the markup for the image exists as of now
 </div>
 ```
 
-We'll add a **popup\_edit** tag near it specifying the name of the editable region handled through the popup (the image region in this case)
+We'll add a **popup_edit** tag near it specifying the name of the editable region handled through the popup (the image region in this case)
 
 ```html
 <div class="4u">
@@ -124,11 +124,11 @@ Saving the template and visiting it as admin will show the following change
 
 ![](../assets/img/contents/on-page-editing-8.png)
 
-Notice the 'Edit' link where we placed the **popup\_edit** tag.
+Notice the 'Edit' link where we placed the **popup_edit** tag.
 
 <p class="notice">
-    The text shown for the link can be changed from the default 'Edit' to anything of your choice using the '*link\_text*' parameter of the **popup\_edit** tag.<br/>
-    You can also style this link anyway you like - it is a regular anchor element with its class set as 'k\_inline'. You can add you own classes using the '_class_' parameter.  This can be used, for example, to show a pencil icon instead of the text.
+    The text shown for the link can be changed from the default 'Edit' to anything of your choice using the '*link_text*' parameter of the **popup_edit** tag.<br/>
+    You can also style this link anyway you like - it is a regular anchor element with its class set as 'k_inline'. You can add you own classes using the '_class_' parameter.  This can be used, for example, to show a pencil icon instead of the text.
 </p>
 
 Clicking on the link will bring up the promised popup.
@@ -146,7 +146,7 @@ The existing markup
 <a href="#work" class="button button-big"><cms:show intro_button /></a>
 ```
 
-can be appended with a **popup\_edit** tag
+can be appended with a **popup_edit** tag
 
 ```html
 <a href="#work" class="button button-big"><cms:show intro_button /></a>
@@ -155,7 +155,7 @@ can be appended with a **popup\_edit** tag
 
 ![](../assets/img/contents/on-page-editing-10.png)
 
-In both the cases above, we've specified only one editable region as parameter to the **popup\_edit** tag. If the use-case requires, we can also specify multiple editable regions by separating the names with a '|' (pipe) character. For example, the following definition -
+In both the cases above, we've specified only one editable region as parameter to the **popup_edit** tag. If the use-case requires, we can also specify multiple editable regions by separating the names with a '|' (pipe) character. For example, the following definition -
 
 ```html
 <cms:popup_edit 'intro_image|intro_title|intro_text' />
@@ -169,7 +169,7 @@ In case you didn't notice, the popup has no problems displaying the textual regi
 
 ### Inline-editing:
 
-The tag for inline-editing is **inline\_edit**. Let us see how it works.
+The tag for inline-editing is **inline_edit**. Let us see how it works.
 
 The existing markup for the first text region is as follows
 
@@ -179,7 +179,7 @@ The existing markup for the first text region is as follows
 </header>
 ```
 
-Add an **inline\_edit** tag to it as follows
+Add an **inline_edit** tag to it as follows
 
 ```html
 <header>
@@ -187,7 +187,7 @@ Add an **inline\_edit** tag to it as follows
 </header>
 ```
 
-<p class="error">**IMP:** Please notice that the **inline\_edit** tag is always added as a parameter to a block-level HTML element.</p>
+<p class="error">**IMP:** Please notice that the **inline_edit** tag is always added as a parameter to a block-level HTML element.</p>
 
 Visiting the template should show the following
 
@@ -200,7 +200,7 @@ Clicking anywhere within the text will display the editing toolbar
 Changing the heading now only requires editing it directly and clicking the 'save' icon.
 
 <p class="notice">
-    If the light-yellow outline, demarcating the inline editable regions, bothers you, it can be turned off by setting the 'no\_border' parameter of the **load\_edit** tag we placed in the header<br/>
+    If the light-yellow outline, demarcating the inline editable regions, bothers you, it can be turned off by setting the 'no_border' parameter of the **load_edit** tag we placed in the header<br/>
     <br/>
     ```
 <cms:load_edit no_border='1' />
@@ -215,7 +215,7 @@ The existing markup is as follows -
 <cms:show intro_text />
 ```
 
-Now, if you recall the caveat a little way up that said the "the inline\_edit tag is always added **as a parameter to a block-level HTML element**" - you'll notice the quandary here. There is no block level element around the region.
+Now, if you recall the caveat a little way up that said the "the inline_edit tag is always added **as a parameter to a block-level HTML element**" - you'll notice the quandary here. There is no block level element around the region.
 
 This is one place where a little fudging of the original markup becomes imperative. We can solve such issues by wrapping a block level HTML element (like a DIV or P) around the region in question.
 
@@ -225,7 +225,7 @@ This is what our code becomes -
 <div <cms:inline_edit 'intro_text' /> ><cms:show intro_text /></div>
 ```
 
-As you can see, we chose to add a parent DIV element and then add the **inline\_edit** tag to it.
+As you can see, we chose to add a parent DIV element and then add the **inline_edit** tag to it.
 
 The result -
 
@@ -234,7 +234,7 @@ The result -
 ## Wrapping up...
 
 From our discussion so far, we've really seen everything that needs to be known about implementing onpage editing.<br/>
-In short, adding onpage editing to any Couch managed template involves only judiciously placing the two tags i.e. **inline\_edit** and **popup\_edit** at the right spots.
+In short, adding onpage editing to any Couch managed template involves only judiciously placing the two tags i.e. **inline_edit** and **popup_edit** at the right spots.
 
 You must have certainly noticed one behaviour of these tags by now - they come into action only when the person visiting the webpage is a Couch admin. For everybody else, the tags practically do not exist.
 
@@ -248,12 +248,12 @@ Place the following statement somewhere at the top of the template (i.e. before 
 
 and you'll find that the onpage editing functionality disappears from our template completely.
 
-Of course, that is not much good. It'd be better if the admin could selectively 'toggle' this **no\_edit** tag on/off.<br/>
+Of course, that is not much good. It'd be better if the admin could selectively 'toggle' this **no_edit** tag on/off.<br/>
 We can use the standard Couch tags for doing that. I'll describe one quick method of doing so below.
 
 <p class="notice">Please bear in mind that the following method is just one of the N number of ways we could implement the toggle - feel free to code/design you own if this method does no suit you.</p>
 
-My solution relies on using a session variable to conditionally output the **no\_edit** tag. The line of code mentioned above now becomes
+My solution relies on using a session variable to conditionally output the **no_edit** tag. The line of code mentioned above now becomes
 
 ```html
 <cms:if k_user_access_level ge '7' && "<cms:not "<cms:get_session 'inline_edit_on' />" />" >
@@ -261,7 +261,7 @@ My solution relies on using a session variable to conditionally output the **no\
 </cms:if>
 ```
 
-As you can see, the code kicks in only for admin. If checks whether a session variable named **inline\_edit\_on** is on. If not, it outputs the **no\_edit** tag and thus turns off onpage editing.
+As you can see, the code kicks in only for admin. If checks whether a session variable named **inline_edit_on** is on. If not, it outputs the **no_edit** tag and thus turns off onpage editing.
 
 It now becomes a simple matter of setting the value of the session variable to enable/disable onpage editing.
 
@@ -291,7 +291,7 @@ Place the following FORM code somewhere at the bottom of the template
 </cms:if>
 ```
 
-Submitting the form simply toggles the value of the session variable named **inline\_edit\_on** and refreshes the page. The current state of the variable then dictates whether or not onpage editing becomes available.
+Submitting the form simply toggles the value of the session variable named **inline_edit_on** and refreshes the page. The current state of the variable then dictates whether or not onpage editing becomes available.
 
 That brings us to the end of our little tutorial.<br/>
 Following is a complete documentation of all the tags made available by the **inline** module.
@@ -308,7 +308,7 @@ This tag needs to be placed in the &lt;HEAD&gt; to load the js/css libraries req
 <cms:load_edit />
 ```
 
-The *load\_edit* tag supports the following optional parameters:
+The *load_edit* tag supports the following optional parameters:
 
 #### skip_ckeditor
 
@@ -336,11 +336,11 @@ Multiple editable regions may be specified by using the 'pipe' separator between
 <cms:popup_edit 'my_text|my_richtext|k_page_folder_id' />
 ```
 
-Please note in the examples above that we have specified only the field-names. There is no mention about the template or (if the template is clonable) the page to which the field(s) belong. This is because the *popup\_edit* tag picks up the information about template and page from the context in which the tag is used.
+Please note in the examples above that we have specified only the field-names. There is no mention about the template or (if the template is clonable) the page to which the field(s) belong. This is because the *popup_edit* tag picks up the information about template and page from the context in which the tag is used.
 
-So, for example, if the *popup\_edit* tag is used within the page\_view of a template, it'll use the current template and the page in context.
+So, for example, if the *popup_edit* tag is used within the page_view of a template, it'll use the current template and the page in context.
 
-If, however, you wish to edit regions belonging to a different template or page than the one where this tag is being used (e.g. editing regions belonging to 'globals.php' with the link placed on 'blog.php'), the right context needs to be specifically provided. This can be done by wrapping the *popup\_edit* tag around by a _pages_ tag block that fetches the template/page containing the editable regions being edited e.g.
+If, however, you wish to edit regions belonging to a different template or page than the one where this tag is being used (e.g. editing regions belonging to 'globals.php' with the link placed on 'blog.php'), the right context needs to be specifically provided. This can be done by wrapping the *popup_edit* tag around by a _pages_ tag block that fetches the template/page containing the editable regions being edited e.g.
 
 ```html
 <cms:pages masterpage='globals.php' >
@@ -356,7 +356,7 @@ or
 </cms:pages>
 ```
 
-The *popup\_edit* tag supports the following parameters:
+The *popup_edit* tag supports the following parameters:
 
 #### fields
 
@@ -368,19 +368,19 @@ The default text shown for the link is 'Edit'. This can be changed by specifying
 
 #### prompt_text
 
-Upon saving changes within the popup window, the parent page is always refreshed for the changes to be seen. If it happens that there is any inline editable region on the page (created by the **inline\_edit** tag below) with modified but unsaved changes, this refresh will cause the changes to be lost.
+Upon saving changes within the popup window, the parent page is always refreshed for the changes to be seen. If it happens that there is any inline editable region on the page (created by the **inline_edit** tag below) with modified but unsaved changes, this refresh will cause the changes to be lost.
 
 To prevent this from happening, in such cases, Couch prompts you to first save the inline modifications. The text used for the prompt may be changed by this parameter.
 
 #### class
 
-The anchor element of the link always has a class 'k\_inline'. If required, you can set any additional classes using this parameter.
+The anchor element of the link always has a class 'k_inline'. If required, you can set any additional classes using this parameter.
 
 ### 3. inline_edit
 
 This tag is used to convert any block-level HTML element into a true inline editor.
 
-For example, suppose a template has a richtext editable region named 'my\_description' and this is how it is being output on the front-end (without inline-editing being implemented yet) -
+For example, suppose a template has a richtext editable region named 'my_description' and this is how it is being output on the front-end (without inline-editing being implemented yet) -
 
 ```html
 <div id="desc" >
@@ -388,7 +388,7 @@ For example, suppose a template has a richtext editable region named 'my\_descri
 </div>
 ```
 
-\- this is how we can convert the container 'div' element into an inline editor that saves back its contents into the 'my\_description' field
+\- this is how we can convert the container 'div' element into an inline editor that saves back its contents into the 'my_description' field
 
 ```html
 <div id="desc" <cms:inline_edit 'my_description' /> >
@@ -396,9 +396,9 @@ For example, suppose a template has a richtext editable region named 'my\_descri
 </div>
 ```
 
-<p class="notice">Please notice that we need to add the *inline\_edit* tag as if it were an unnamed parameter of the element being converted.</p>
+<p class="notice">Please notice that we need to add the *inline_edit* tag as if it were an unnamed parameter of the element being converted.</p>
 
-The *inline\_edit* tag supports the following parameters:
+The *inline_edit* tag supports the following parameters:
 
 #### fields
 
@@ -411,14 +411,14 @@ Please see the 'toolbar' parameter of [Editable region type: richtext](../tags-r
 
 #### custom_toolbar
 
-Please see the 'custom\_toolbar' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html).
+Please see the 'custom_toolbar' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html).
 
 #### custom_styles
 
-Please see the 'custom\_styles' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html).
+Please see the 'custom_styles' parameter of [Editable region type: richtext](../tags-reference/editable/richtext.html).
 
 ### 4. no_edit
 
 This tag disables any of the three above-mentioned tags that come after it in a template.
 
-#### [**Download Sample Template**](http://www.couchcms.com/docs/code/miniport.zip)
+#### [**Download Sample Template**](https://www.couchcms.com/docs/code/miniport.zip)

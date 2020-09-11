@@ -8,13 +8,11 @@ layout: default
 
 Couch makes it very easy for you to sell single digital products (ebooks, software, images etc) online using PayPal.
 
-<p class="success">
-    Paypal can be used to accept _single-item purchase_ payments (the ones with Buy Now buttons), _contribution_ payments (Donate buttons), _recurring_ payments (Subscribe buttons) and _multi-items purchase_ payments (shopping cart buttons).<br/>
+> Paypal can be used to accept _single-item purchase_ payments (the ones with Buy Now buttons), _contribution_ payments (Donate buttons), _recurring_ payments (Subscribe buttons) and _multi-items purchase_ payments (shopping cart buttons).<br/>
     <br/>
     The current version of Couch supports only accepting _single-item purchase_ payments.<br/>
     <br/>
     Couch currently has no provisions for advanced features like shipping charges, volume/weight based pricing etc. These features are normally required only with physical goods and hence the caveat that this feature of Couch is suitable only for digital goods that can simply be downloaded. However, for such physical goods that do not require these advanced features, there is no reason why Couch's method cannot be used.
-</p>
 
 ### AN OVERVIEW OF PAYPAL IPN
 
@@ -51,22 +49,20 @@ define( 'K_PAYPAL_EMAIL', 'seller_3272492192_biz@gmail.com' );
 define( 'K_PAYPAL_CURRENCY', 'USD' );
 ```
 
-<p class="notice">
-    Usually while testing you'll be using PayPal's Sandbox.<br/>
-    Setup a test environment (sandbox) at https&#58;//developer.paypal.com/. Generate and use the fictitious accounts for testing (make sure to set K\_PAYPAL\_USE\_SANDBOX to 1 and K\_PAYPAL\_EMAIL to the fictitious seller's account, in _config.php_ mentioned above).
-</p>
+> Usually while testing you'll be using PayPal's Sandbox.<br/>
+    Setup a test environment (sandbox) at <https://developer.paypal.com/>. Generate and use the fictitious accounts for testing (make sure to set `K_PAYPAL_USE_SANDBOX` to `1` and `K_PAYPAL_EMAIL` to the fictitious seller's account, in _config.php_ mentioned above).
 
 For the next step, it is necessary to understand that each saleable item in Couch is represented by a separate cloned page.<br/>
 For our example, let us say we use a template named _product.php_ for this purpose.<br/>
-Make this template clonable and define in it all [**editable regions**](../editable-regions.html) that are relevant to your products (e.g. ISBN number, Author, Link to the downloadable file etc.)
+Make this template clonable and define in it all [**editable regions**](./editable-regions.html) that are relevant to your products (e.g. ISBN number, Author, Link to the downloadable file etc.)
 
 Two fields are mandatory and need your special attention -
 
-1.  **Item's name** - every saleable item needs to have a name. However, you don't have to create a separate editable region for this because Couch expects the _Title_ field (present by default in all clonable pages and accessible via *k\_page\_title* variable) to be the item's name. Hence always input the item's name as the title of the page representing the item.
+1.  **Item's name** - every saleable item needs to have a name. However, you don't have to create a separate editable region for this because Couch expects the _Title_ field (present by default in all clonable pages and accessible via *k_page_title* variable) to be the item's name. Hence always input the item's name as the title of the page representing the item.
 2.  **Item's price** - this is an important one.<br/>
     PayPal does not allow zero value transactions, hence it is mandatory for each saleable item to have a non-zero price.<br/>
     We'll have to create an editable region to hold the item's price.<br/>
-    The important point is that - Couch requires this editable region to be named *pp\_price*.
+    The important point is that - Couch requires this editable region to be named *pp_price*.
 
 As an example, the following snippet can be used to create such a field (as a good practice, we have added the vaiidations normally required for a price field) -
 
@@ -90,7 +86,7 @@ To create the PayPal 'Buy Button' simply place the following Couch tag in your _
 
 The image used as the button can be changed by setting the _image_ parameter of the tag (See [**Tags Reference - PayPal Button**](../tags-reference/paypal_button.html)).
 
-<p class="error">Remember: If the **paypal\_button** tag fails to find a variable named *pp\_price*, that we mentioned in the previous section, it will not display any button at all.</p>
+<p class="error">Remember: If the **paypal_button** tag fails to find a variable named *pp_price*, that we mentioned in the previous section, it will not display any button at all.</p>
 
 Create a few items and visit their pages to try out the buttons.<br/>
 Clicking any item's button should lead to PayPal's site with the item's name and price correctly supplied.<br/>
@@ -100,7 +96,7 @@ Now we only need to handle the incoming IPN notification.
 
 #### PROCESSING PAYPAL IPN
 
-[__*paypal\_processor*__](../tags-reference/paypal_processor.html) is the tag that will handle IPNs for you.
+[__*paypal_processor*__](../tags-reference/paypal_processor.html) is the tag that will handle IPNs for you.
 
 To see how it works, place the following snippet somewhere at the top of your _product.php_ template -
 
@@ -116,7 +112,7 @@ In the snippet above we have set the _debug_ parameter to '1'. This causes this 
     ```
 <cms:paypal_processor debug='1' logfile='paypal.log' />
     ```
-    The snippet given above will make *paypal\_processor* use a log file named _paypal.log_.
+    The snippet given above will make *paypal_processor* use a log file named _paypal.log_.
 </p>
 
 Try clicking an item's 'Buy Now' button and upon reaching the PayPal's site, complete the transaction by logging in and buying the item. Once the transaction completes, check in your website's root for the aforesaid log file.
@@ -188,26 +184,26 @@ Exiting
 The snippet above shows a successful transaction. If you find any error being reported in the log, you'll need to investigate it further.<br/>
 This should give you a fair idea as to what PayPal sends back as details of the transaction and what goes on while processing an IPN.
 
-Once we are sure that the IPN is being handled properly, we can now go ahead and make [__*paypal\_processor*__](../tags-reference/paypal_processor.html) do whatever is supposed to be done on successfully getting paid for a product. We'll assume we are to send the buyer an email with a link to the item he bought.
+Once we are sure that the IPN is being handled properly, we can now go ahead and make [__*paypal_processor*__](../tags-reference/paypal_processor.html) do whatever is supposed to be done on successfully getting paid for a product. We'll assume we are to send the buyer an email with a link to the item he bought.
 
-Once [__*paypal\_processor*__](../tags-reference/paypal_processor.html) verifies that the IPN is indeed from PayPal, it sets the following variables for use in your script -
+Once [__*paypal_processor*__](../tags-reference/paypal_processor.html) verifies that the IPN is indeed from PayPal, it sets the following variables for use in your script -
 
-* pp\_item\_name
-* pp\_item\_number
-* pp\_quantity
-* pp\_mc\_gross
-* pp\_mc\_currency
-* pp\_txn\_id
-* pp\_receiver\_email
-* pp\_payer\_email
-* pp\_first\_name
-* pp\_last\_name
-* pp\_payer\_business\_name
+* pp_item_name
+* pp_item_number
+* pp_quantity
+* pp_mc_gross
+* pp_mc_currency
+* pp_txn_id
+* pp_receiver_email
+* pp_payer_email
+* pp_first_name
+* pp_last_name
+* pp_payer_business_name
 
 <p class="notice">As should be obvious, these variables represent the values that PayPal provided through the IPN. We can use these values to take further actions.</p>
 
-[__*paypal\_processor*__](../tags-reference/paypal_processor.html) then validates if the transaction was valid by using the IPN values and comparing them with the values stored in Couch's database. Thus it makes sure that the amount paid is not less than the item's price multiplied by the bought quantity, that the payment has been made in the right currency and that the payment has been made into the right account.<br/>
-If the transaction is valid, it sets another variable named *k\_paypal\_success* else it sets a variable named *k\_paypal\_error* and places the error message into it. Additionaly, it also makes available all the variables associated with the page representing the item.
+[__*paypal_processor*__](../tags-reference/paypal_processor.html) then validates if the transaction was valid by using the IPN values and comparing them with the values stored in Couch's database. Thus it makes sure that the amount paid is not less than the item's price multiplied by the bought quantity, that the payment has been made in the right currency and that the payment has been made into the right account.<br/>
+If the transaction is valid, it sets another variable named *k_paypal_success* else it sets a variable named *k_paypal_error* and places the error message into it. Additionaly, it also makes available all the variables associated with the page representing the item.
 
 A skeletal snippet will look like the following -
 
@@ -250,6 +246,6 @@ A real world example could be -
 </cms:paypal_processor>
 ```
 
-In the snippet above, we are sending an email to the buyer on a successful transaction. Note how the variables set by [__*paypal\_processor*__](../tags-reference/paypal_processor.html) are being used in the [__*send\_mail*__](../tags-reference/send_mail.html) tag.<br/>
-The email contains a link to the downloadable item (the variable *downloadable\_file* is an editable region of type file within the template and contains the item's link).<br/>
-The [__*cloak\_url*__](../tags-reference/cloak_url.html) tag is used to conceal the real path of the item.
+In the snippet above, we are sending an email to the buyer on a successful transaction. Note how the variables set by [__*paypal_processor*__](../tags-reference/paypal_processor.html) are being used in the [__*send_mail*__](../tags-reference/send_mail.html) tag.<br/>
+The email contains a link to the downloadable item (the variable *downloadable_file* is an editable region of type file within the template and contains the item's link).<br/>
+The [__*cloak_url*__](../tags-reference/cloak_url.html) tag is used to conceal the real path of the item.

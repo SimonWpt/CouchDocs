@@ -20,7 +20,7 @@ Please see [**Core Concepts - Folders**](../concepts/using-folders.html) for an 
 * orderby
 * order
 * exclude
-* extended\_info
+* extended_info
 
 ### masterpage
 
@@ -63,21 +63,21 @@ If this parameter is set, additional variables get set to report the changes in 
 
 The following variables are set to provide information about each folder that gets enumerated
 
-* k\_folder\_id
-* k\_folder\_name
-* k\_folder\_title
-* k\_folder\_desc
-* k\_folder\_link
-* k\_folder\_pagecount
-* k\_folder\_totalpagecount
-* k\_level
+* k_folder_id
+* k_folder_name
+* k_folder_title
+* k_folder_desc
+* k_folder_link
+* k_folder_pagecount
+* k_folder_totalpagecount
+* k_level
 
 If the _hierarchical_ parameter is set to '1', the following variables also get set to indicate the current position in the hierarchy as this tag enumerates the folders -
 
-* k\_level\_start
-* k\_element\_start
-* k\_element\_end
-* k\_level\_end
+* k_level_start
+* k_element_start
+* k_element_end
+* k_level_end
 
 You can use these variables to easily create HTML ordered or unordered lists. Please see **Folders** in **Core Concepts**.
 
@@ -87,7 +87,7 @@ You can use these variables to easily create HTML ordered or unordered lists. Pl
 * [listfolders](./listfolders.html)
 * [dropdownfolders](./dropdownfolders.html)
 * [parentfolders](./parentfolders.html)
-* [is\_ancestor](../is_ancestor.html)
+* [is_ancestor](./is_ancestor.html)
 * [breadcrumbs](./breadcrumbs.html)
 * [pages](./pages.html)
 * [archives](./archives.html)

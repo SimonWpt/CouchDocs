@@ -14,9 +14,9 @@ The **If** tag is one of the most important tags. It can be used to make decisio
 </cms:if>
 ```
 
-In the snippet above, the heading will be outputted only if a variable named 'my\_var' is present and has a value that is not '0'.
+In the snippet above, the heading will be outputted only if a variable named 'my_var' is present and has a value that is not '0'.
 
-<p class="notice">**If** evaluates the condition(s) provided as parameter and executes all the statements enclosed within it **only** if the result of the evaluation is **neither '' (i.e. blank or no value) nor '0'**.</p>
+> **If** evaluates the condition(s) provided as parameter and executes all the statements enclosed within it **only** if the result of the evaluation is **neither '' (i.e. blank or no value) nor '0'**.
 
 In the above snippet we were checking if the variable has any value at all. We can also check if a variable has a certain value or if that value is greater than or smaller than a certain value -
 
@@ -28,9 +28,9 @@ In the above snippet we were checking if the variable has any value at all. We c
 </cms:if>
 ```
 
-In the snippet above we are checking if the variable 'my\_var' holds the string 'hello' and output 'Hello' only if it does.
+In the snippet above we are checking if the variable 'my_var' holds the string 'hello' and output 'Hello' only if it does.
 
-<p class="notice">As noted above, **If** goes ahead with executing statements enclosed within it only if the result of evaluating the condition is neither blank nor '0'. During the comparision above, if my\_var is indeed equal to 'hello', the result of the evaluation is '1', otherwise the result is '0'.</p>
+> As noted above, **If** goes ahead with executing statements enclosed within it only if the result of evaluating the condition is neither blank nor '0'. During the comparision above, if my_var is indeed equal to 'hello', the result of the evaluation is '1', otherwise the result is '0'.
 
 Instead of '=' we can also use 'eq' or '==' -
 
@@ -52,7 +52,7 @@ The above are the same as using '='.
 </cms:if>
 ```
 
-In the snippet above we are checking if the variable 'my\_var' does NOT hold the string 'hello' and output 'Not Hello' only if it is true.<br/>
+In the snippet above we are checking if the variable 'my_var' does NOT hold the string 'hello' and output 'Not Hello' only if it is true.<br/>
 Instead of '!=' we can instead use 'ne' -
 
 ```html
@@ -69,7 +69,7 @@ The above is the same as using '!='.
 </cms:if>
 ```
 
-In the snippet above we are checking if the value in variable 'my\_var' is greater than 100\.
+In the snippet above we are checking if the value in variable 'my_var' is greater than 100\.
 
 ### Checking if greater than or equal
 
@@ -79,7 +79,7 @@ In the snippet above we are checking if the value in variable 'my\_var' is great
 </cms:if>
 ```
 
-In the snippet above we are checking if the value in variable 'my\_var' is greater than or equal to 100\.
+In the snippet above we are checking if the value in variable 'my_var' is greater than or equal to 100\.
 
 ### Checking if lesser than
 
@@ -89,7 +89,7 @@ In the snippet above we are checking if the value in variable 'my\_var' is great
 </cms:if>
 ```
 
-In the snippet above we are checking if the value in variable 'my\_var' is lesser than 100\.
+In the snippet above we are checking if the value in variable 'my_var' is lesser than 100\.
 
 ### Checking if lesser than or equal
 
@@ -99,7 +99,7 @@ In the snippet above we are checking if the value in variable 'my\_var' is lesse
 </cms:if>
 ```
 
-In the snippet above we are checking if the value in variable 'my\_var' is lesser than or equal to 100\.
+In the snippet above we are checking if the value in variable 'my_var' is lesser than or equal to 100\.
 
 ### Combining multiple conditions using && (AND), || (OR)
 
@@ -172,7 +172,7 @@ The right way of using both || and && together is to **always explicitly indicat
 
 will make the code behave the way we had originally intended. The Welcome message will dissapear and will only reappear when we set 'sex' as 'M'. Notice how we enclosed the first two conditions that were supposed to be evaluated together within an extra pair of paranthesis.
 
-<p class="error">Always explicitly indicate the evaluation precedence of the conditions by using brackets when you use && and || together.</p>
+> Always explicitly indicate the evaluation precedence of the conditions by using brackets when you use `&&` and `||` together.
 
 ## Parameters
 
@@ -185,3 +185,5 @@ This tag does not set any variables of its own.
 ## Related Tags
 
 * [else](./else.html)
+* [else_if](./else_if.html)
+* [not](./not.html)

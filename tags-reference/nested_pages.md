@@ -6,13 +6,13 @@ layout: default
 
 # nested_pages
 
-The **nested\_pages** tag is used to list [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
+The **nested_pages** tag is used to list [nested-pages](../concepts/nested-pages-aka-menu-maker.html).
 
-Since the primary purpose of nested-pages (as explained in the [Core Concepts](../concepts/nested-pages-aka-menu-maker.html)) is to create a hierarchy of pages that can be represented as the site's menu, you'll find that usually the '[menu](../menu.html)' tag will suffice for the purpose of creating a menu.<br/>
-However, sometimes you'll need more control over the generated menu than what the '[menu](../menu.html)' tag offers.<br/>
-For such cases, the 'nested\_pages' tag can be used as it is a lower level tag (in fact, the '[menu](../menu.html)' tag uses the 'nested\_pages' internally).
+Since the primary purpose of nested-pages (as explained in the [Core Concepts](../concepts/nested-pages-aka-menu-maker.html)) is to create a hierarchy of pages that can be represented as the site's menu, you'll find that usually the '[menu](./menu.html)' tag will suffice for the purpose of creating a menu.<br/>
+However, sometimes you'll need more control over the generated menu than what the '[menu](./menu.html)' tag offers.<br/>
+For such cases, the 'nested_pages' tag can be used as it is a lower level tag (in fact, the '[menu](./menu.html)' tag uses the 'nested_pages' internally).
 
-To illustrate the use of 'nested\_pages', we'll use the same sample hierarchy of elements that we used in the '[folders](../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.<br/>
+To illustrate the use of 'nested_pages', we'll use the same sample hierarchy of elements that we used in the '[folders](../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.<br/>
 We'll assume that a template named 'index.php' has been used to create the nested-pages.
 
 ```html
@@ -56,7 +56,7 @@ Entertainment News
 
 Notice how the hierarchical relationship between the pages has been preserved.
 
-As is the norm with other similar tags in Couch, the 'nested\_pages' tag too, as it iterates through the pages within the tree, makes available all the information pertaining the page it is currently on by setting various variables.<br/>
+As is the norm with other similar tags in Couch, the 'nested_pages' tag too, as it iterates through the pages within the tree, makes available all the information pertaining the page it is currently on by setting various variables.<br/>
 Place a _&lt;cms:dump /&gt;_ statement inside the loop and you'll see that Couch provides all the information that was inputted in the admin-section for each nested-page.
 
 ```html
@@ -97,7 +97,7 @@ Let us use is to create one.
 
 ### Creating menu using 'nested_pages' tag
 
-A menu is normally created using nested &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; elements. To make the task of doing so easy, the 'nested\_pages' tag, like the '[folders](../folders.html)' tag, supports the 'extended\_info' parameter. Setting the 'extended\_info' parameter to '1' makes the 'nested\_pages' tag provide additional information that can be used to output the closing and opening &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; tags without any pain.
+A menu is normally created using nested &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; elements. To make the task of doing so easy, the 'nested_pages' tag, like the '[folders](./folders.html)' tag, supports the 'extended_info' parameter. Setting the 'extended_info' parameter to '1' makes the 'nested_pages' tag provide additional information that can be used to output the closing and opening &lt;UL&gt;/&lt;OL&gt; and &lt;LI&gt; tags without any pain.
 
 ```html
 <cms:nested_pages masterpage='index.php' extended_info='1' >
@@ -158,7 +158,7 @@ Following is a complete example that makes use of the variables mentioned before
 </cms:nested_pages>
 ```
 
-The example shown above is equivalent to the following using '[menu](../menu.html)' tag -
+The example shown above is equivalent to the following using '[menu](./menu.html)' tag -
 
 ```html
 <cms:menu masterpage='index.php' menu_class='my-menu-class-1 my-menu-class-2' menu_id='my-menu-id' first_class='first' last_class='last' active_trail_class='active' selected_class='current' />
@@ -166,9 +166,9 @@ The example shown above is equivalent to the following using '[menu](../menu.htm
 
 ### Creating a paginated listing using 'nested_pages' tag
 
-Apart from being used to create a menu, the 'nested\_pages' tag may also be used to create a conventional listing of pages, complete with pagination etc., the way it is usually done using the '[pages](../pages.html)' tag with normal (i.e. non nestable) pages.
+Apart from being used to create a menu, the 'nested_pages' tag may also be used to create a conventional listing of pages, complete with pagination etc., the way it is usually done using the '[pages](./pages.html)' tag with normal (i.e. non nestable) pages.
 
-If you are familiar with the '[pages](../pages.html)' tag, the following snippet will seem familiar -
+If you are familiar with the '[pages](./pages.html)' tag, the following snippet will seem familiar -
 
 ```html
 <cms:nested_pages masterpage='index.php' extended_info='1' paginate='1' limit='5' >
@@ -205,8 +205,8 @@ Nevada News
 
 Some points to note -
 
-1.  With 'paginate' set to '1', the 'extended\_info' is automatically turned off - i.e. only the conventional linear listing is possible.
-2.  For performance reasons, data from the custom fields (i.e. the editable regions defined for the nested-pages template) is not made available by default. You can set the 'include\_custom\_fields' parameter to '1' to make the custom fields available.
+1.  With 'paginate' set to '1', the 'extended_info' is automatically turned off - i.e. only the conventional linear listing is possible.
+2.  For performance reasons, data from the custom fields (i.e. the editable regions defined for the nested-pages template) is not made available by default. You can set the 'include_custom_fields' parameter to '1' to make the custom fields available.
 
 <p class="notice">
     **IMPORTANT:** Since, as you just saw, the nested pages can be listed in the conventional manner (like the one produced by the 'pages' tag), it is perfectly possible to create entire sections of a website using nested-pages instead of the regular cloned pages.<br/>
@@ -223,11 +223,11 @@ Some points to note -
 * orderby
 * order
 * exclude
-* ignore\_show\_in\_menu
+* ignore_show_in_menu
 * root
 * childof
-* extended\_info
-* include\_custom\_fields
+* extended_info
+* include_custom_fields
 * paginate
 * limit
 * offset
@@ -263,7 +263,7 @@ If multiple pages are to be excluded, separate their names using comma.
 
 The 'Advanced Settings' of each nested-page has a checkbox labeled 'Show in menu'.<br/>
 If that is unchecked, the page (an all its child pages) is not included by default in the listing.<br/>
-You can override this by setting 'ignore\_show\_in\_menu' parameter to '1'
+You can override this by setting 'ignore_show_in_menu' parameter to '1'
 
 ### root
 
@@ -279,18 +279,18 @@ Only the children of the page specified are displayed (compare with 'root' param
 
 ### extended_info
 
-If this parameter is set, additional variables get set to report the changes in hierarchy encountered by the nested\_pages tag, as it traverses through the tree. Please see the Variables section below.
+If this parameter is set, additional variables get set to report the changes in hierarchy encountered by the nested_pages tag, as it traverses through the tree. Please see the Variables section below.
 
 ### include_custom_fields
 
-By default, in a bid to enhance performance, the custom-field's data (i.e. data within the editable regions) are not made available as the nested\_pages tag traverses through the pages in the tree.<br/>
-If the 'include\_custom\_fields' is set to '1', all the values within the editable regions of each page are made available as variables named after the regions.
+By default, in a bid to enhance performance, the custom-field's data (i.e. data within the editable regions) are not made available as the nested_pages tag traverses through the pages in the tree.<br/>
+If the 'include_custom_fields' is set to '1', all the values within the editable regions of each page are made available as variables named after the regions.
 
 ### paginate
 
 To list the nested-pages in conventional manner (i.e. the way the 'pages' tag lists the regular cloned pages), set this parameter to '1'.<br/>
 One the 'paginate' parameter is set -<br/>
-**a.** 'extended\_info' is automatically turned off so information about the changes in hierarchy levels in no longer available.<br/>
+**a.** 'extended_info' is automatically turned off so information about the changes in hierarchy levels in no longer available.<br/>
 **b.** All the variables that help in creating the pagination buttons become available (see [Pagination](../concepts/pagination.html))<br/>
 **c.** The 'limit', 'offset' and 'startcount' parameters described below become effective.
 
@@ -307,43 +307,43 @@ it can be used to skip any number of pages before beginning the listing.
 ### startcount
 
 This parameter takes effect only when the 'paginate' parameter is set to '1'.<br/>
-The k\_count, k\_record\_from, k\_current\_record and k\_record\_to variables (see [Pagination](../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
+The k_count, k_record_from, k_current_record and k_record_to variables (see [Pagination](../concepts/pagination.html)) start by default from '1'. This can be changed to any other value by setting this parameter.
 
 ## Variables
 
 The following variables are set to provide information about each nested-page that gets enumerated -
 
-* k\_nestedpage\_id
-* k\_nestedpage\_name
-* k\_nestedpage\_title
-* k\_nestedpage\_is\_active
-* k\_nestedpage\_comments\_count
-* k\_nestedpage\_parent\_id
-* k\_nestedpage\_weight
-* k\_show\_in\_menu
-* k\_menu\_text:
-* k\_menu\_link
-* k\_menu\_title
-* k\_is\_pointer
-* k\_pointer\_link:
-* k\_open\_external
-* k\_masquerades
-* k\_is\_active
-* k\_is\_current
-* k\_immediate\_children
-* k\_total\_children
-* k\_first\_child
-* k\_last\_child
-* k\_nestedpage\_link
+* k_nestedpage_id
+* k_nestedpage_name
+* k_nestedpage_title
+* k_nestedpage_is_active
+* k_nestedpage_comments_count
+* k_nestedpage_parent_id
+* k_nestedpage_weight
+* k_show_in_menu
+* k_menu_text:
+* k_menu_link
+* k_menu_title
+* k_is_pointer
+* k_pointer_link:
+* k_open_external
+* k_masquerades
+* k_is_active
+* k_is_current
+* k_immediate_children
+* k_total_children
+* k_first_child
+* k_last_child
+* k_nestedpage_link
 
-If the 'extended\_info' parameter is set to '1', the following variables also get set to indicate the current position in the hierarchy as this tag enumerates the pages -
+If the 'extended_info' parameter is set to '1', the following variables also get set to indicate the current position in the hierarchy as this tag enumerates the pages -
 
-* k\_level\_start
-* k\_element\_start
-* k\_element\_end
-* k\_level\_end
+* k_level_start
+* k_element_start
+* k_element_end
+* k_level_end
 
-If the 'include\_custom\_fields' parameter is set to '1', all the values within the editable regions of each page are made available as variables named after the regions.
+If the 'include_custom_fields' parameter is set to '1', all the values within the editable regions of each page are made available as variables named after the regions.
 
 If the 'paginate' parameter is set to '1', variables that help in creating the pagination buttons become available (see [Pagination](../concepts/pagination.html))
 

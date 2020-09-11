@@ -31,7 +31,7 @@ The **date** tag outputs a string according to the given _format_ parameter usin
 ### date
 
 The date to be formated.<br/>
-This parameter is expected to be in '_Y-m-d H:i:s_' format (e.g. 2010-05-30 21:35:54). All date related variables set by Couch tags, e.g. *k\_page\_date* etc., are in this format.
+This parameter is expected to be in '_Y-m-d H:i:s_' format (e.g. 2010-05-30 21:35:54). All date related variables set by Couch tags, e.g. *k_page_date* etc., are in this format.
 
 ### format
 
@@ -215,4 +215,4 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [number\_format](../number_format.html)
+* [number_format](./number_format.html)

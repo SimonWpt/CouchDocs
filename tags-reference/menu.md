@@ -17,21 +17,21 @@ Please see [**Core Concepts - Nested Pages**](../concepts/nested-pages-aka-menu-
 * orderby
 * order
 * exclude
-* ignore\_show\_in\_menu
+* ignore_show_in_menu
 * root
 * childof
-* extended\_info
+* extended_info
 
 
-* menu\_class
-* menu\_id
-* first\_class
-* last\_class,
-* no\_selected
-* selected\_class
-* no\_active\_trail
-* active\_trail\_class
-* list\_type
+* menu_class
+* menu_id
+* first_class
+* last_class,
+* no_selected
+* selected_class
+* no_active_trail
+* active_trail_class
+* list_type
 
 To illustrate the use of 'menu' tag, we'll use the same sample hierarchy of elements that we used in the '[folders](../concepts/using-folders.html)' section. The difference being that in this case the elements represent pages instead of folders.
 
@@ -53,7 +53,7 @@ menu.php
 ### masterpage
 
 This parameter is used to specify the template behind the nested-pages tree used to create the menu.<br/>
-If left empty, the template of the currently executing page is assumed (which is unlikely to be correct as you'll usually want to display the menu on all sections (templates) of your site - typically by using '[embed](../embed.html)' tag).
+If left empty, the template of the currently executing page is assumed (which is unlikely to be correct as you'll usually want to display the menu on all sections (templates) of your site - typically by using '[embed](./embed.html)' tag).
 
 ```html
 <cms:menu masterpage='menu.php'/>
@@ -143,7 +143,7 @@ Output:
 
 The 'Advanced Settings' of each nested-page has a checkbox labeled 'Show in menu'.<br/>
 If that is unchecked, the page (an all its child pages) is not included by default in the menu.<br/>
-You can override this by setting 'ignore\_show\_in\_menu' parameter to '1'.
+You can override this by setting 'ignore_show_in_menu' parameter to '1'.
 
 ```html
 <cms:menu masterpage='menu.php' ignore_show_in_menu='1' />
@@ -205,7 +205,7 @@ Output:
     ```
     In the snippet above we are instructing Couch to find out all the parents of the current page and then use the top most parent (first parent) as the value for the 'root' parameter.<br/>
     Thus, if the page being visited was<br/>
-    'Nevada News' (http&#58;//www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>
+    'Nevada News' (<https://www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>>
     the first parent would be 'world-news' and that is the value that would be used as the 'root' parameter.<br/>
     Whereas, in the following snippet<br/>
     <br/>
@@ -224,7 +224,7 @@ Output:
 <cms:menu masterpage='menu.php' root='@current' />
     ```
     In the snippet above, if the page being visited was<br/>
-    'North American News' (http&#58;//www.yoursite.com/world-news/north-american-news/)<br/>
+    'North American News' (<https://www.yoursite.com/world-news/north-american-news/)<br/>>
     the value used for the 'root' parameter would be 'north-american-news'.<br/>
     <br/>
     **@current-n** (where n is a number starting from 1 e.g. @current-1, @current-2 etc.)<br/>
@@ -237,7 +237,7 @@ Output:
 <cms:menu masterpage='menu.php' root='@current-1' />
     ```
     In the snippet above, if the page being visited was<br/>
-    'Nevada News' (http&#58;//www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>
+    'Nevada News' (<https://www.yoursite.com/world-news/north-american-news/united-states-news/nevada-news/)<br/>>
     the value used for the 'root' parameter would be 'united-states-news' while for the following snippet<br/>
     <br/>
     ```
@@ -305,7 +305,7 @@ A different class name can be set by using this parameter.
 
 ### no_selected
 
-The default behavior of the menu tag is to apply a special class 'current' (can be changed using the 'selected\_class' parameter) to the menu-item that matches the page being visited. This behavior can be turned off by setting the 'no\_selected' parameter to '1'.
+The default behavior of the menu tag is to apply a special class 'current' (can be changed using the 'selected_class' parameter) to the menu-item that matches the page being visited. This behavior can be turned off by setting the 'no_selected' parameter to '1'.
 
 ```html
 <cms:menu masterpage='menu.php' no_selected='1' />
@@ -323,7 +323,7 @@ A different class name can be set by using this parameter.
 ### no_active_trail
 
 The default behavior of the menu tag is to apply a special class 'active' to all the menu-items leading up to (and including) the menu-item that matches the current page - thus marking out an 'active-trail' that can be used for CSS styling.<br/>
-This behavior can be turned off by setting the 'no\_active\_trail' parameter to '1'.
+This behavior can be turned off by setting the 'no_active_trail' parameter to '1'.
 
 ```html
 <cms:menu masterpage='menu.php' no_active_trail='1' />
@@ -344,5 +344,5 @@ This tag is self-closing and does not set any variables of its own.
 
 ## Related Tags
 
-* [nested\_pages](../nested_pages.html)
-* [nested\_crumbs](../nested_crumbs.html)
+* [nested_pages](./nested_pages.html)
+* [nested_crumbs](./nested_crumbs.html)

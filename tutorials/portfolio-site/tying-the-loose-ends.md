@@ -8,7 +8,7 @@ layout: default
 <br/>
 ### The Menu
 
-[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](http://www.couchcms.com/docs/code/final.zip)
+[<img alt="" src="../assets/img/contents/download.png" style="border: 0; float: right;"/>](https://www.couchcms.com/docs/code/final.zip)
 
 The links in the menu at the top of all the five templates are still pointing to the original files of Aurelius (those with the _.html_ extensions). We need to link them to our new templates.
 
@@ -27,7 +27,7 @@ Thus the modified code of the menu (we are modifying _blog.php_) will become -
 
 That is a straightforward change. The _blog_ section will now display the correct menu.<br/>
 To make all the other templates do the same, we need to make the same modifications in all of them.<br/>
-That is a total of 7 places to do so (the five templates and the two embedded list-views - *blog\_list.html* and *portfolio\_list.html*.
+That is a total of 7 places to do so (the five templates and the two embedded list-views - *blog_list.html* and *portfolio_list.html*.
 
 A cleaner approach would be to place the code for menu in a separate snippet and then embed the snippet at all the required places.<br/>
 We'll take this approach.
@@ -44,7 +44,7 @@ That is not surprising as the code we embedded had the _class="current"_ string 
 
 To rectify the situation, let us now modify the embedded _header.html_.<br/>
 We'll place some simple conditional tags to check for the current template and then output the _class="current"_ within the right menu item.<br/>
-The variable to check is the *k\_template\_name* that is always set by Couch to indicate the template being used.<br/>
+The variable to check is the *k_template_name* that is always set by Couch to indicate the template being used.<br/>
 The modified code -
 
 ![](../../assets/img/contents/portfolio-site-193.png)
@@ -79,7 +79,7 @@ Add the mandatory PHP code to it to attach Couch to it -
 
 ![](../../assets/img/contents/portfolio-site-196.png)
 
-Access _http&#58;//www.mytestsite.com/globals.php_ as super-admin and then visit the admin section.<br/>
+Access _<https://www.mytestsite.com/globals.php>_ as super-admin and then visit the admin section.<br/>
 Our new template should now be available.
 
 ![](../../assets/img/contents/portfolio-site-197.png)
@@ -92,7 +92,7 @@ The finished code should look like this -
 
 ![](../../assets/img/contents/portfolio-site-198.png)
 
-Refresh _http&#58;//www.mytestsite.com/globals.php_ still logged-in as the super-admin to make Couch pick up the changes.<br/>
+Refresh _<https://www.mytestsite.com/globals.php>_ still logged-in as the super-admin to make Couch pick up the changes.<br/>
 Visiting the admin panel should reveal the following editable regions -
 
 ![](../../assets/img/contents/portfolio-site-199.png)
@@ -109,7 +109,7 @@ Somewhere at the start of a template, use the pages tag and specify _globals.php
 
 The variables set by the pages tag are available for use only within the opening and closing components of the pages tag. We want to use them at other parts of the template and hence we copy their values to new variables. These new variables are specified to have a global scope, which makes them available everywhere on the page.
 
-Notice in the code above how we are copying the value of the variable *site\_name*, containing the value of the editable region by the same name, into a variable named *g\_site\_name* (we can use any arbitrary name). The *g\_site\_name* has been specified to have a global scope hence, unlike variable *site\_name*, can be used even outside the pages tag anywhere in the template.
+Notice in the code above how we are copying the value of the variable *site_name*, containing the value of the editable region by the same name, into a variable named *g_site_name* (we can use any arbitrary name). The *g_site_name* has been specified to have a global scope hence, unlike variable *site_name*, can be used even outside the pages tag anywhere in the template.
 
 The new global variable can now be in the regular manner.<br/>
 For example, the following code in the embedded _header.html_
@@ -121,7 +121,7 @@ becomes
 ![](../../assets/img/contents/portfolio-site-202.png)
 
 **b.** The first method given above is good to fetch in all global values in one fell sweep but has the drawback of having to place the code using the pages tag somewhere at the start of every template where the values are to be used.<br/>
-Sometimes you need to show only a few values from the global template. For such cases you can use the Couch get\_custom\_field tag to directly fetch the variable's value. This tag takes as parameters the name of the variable to be fetched, the template's name and the page's name if the template is clonable.<br/>
+Sometimes you need to show only a few values from the global template. For such cases you can use the Couch get_custom_field tag to directly fetch the variable's value. This tag takes as parameters the name of the variable to be fetched, the template's name and the page's name if the template is clonable.<br/>
 Since our _globals.php_ template is non-clonable, we can skip the cloned page's name and simply state -
 
 ```html
@@ -167,7 +167,7 @@ Modified -
 
 ![](../../assets/img/contents/portfolio-site-209.png)
 
-<br/>**portfolio\_list.html**<br/>
+<br/>**portfolio_list.html**<br/>
 Original -
 
 ![](../../assets/img/contents/portfolio-site-210.png)
@@ -192,7 +192,7 @@ The reason lies in the original code of Aurelius -
 ![](../../assets/img/contents/portfolio-site-212.png)
 
 As you can see, the hrefs of the stylesheets are given in relative format. With prettyurls turned on, once the URL of any containing page changes, so do these links.<br/>
-We need to make the hrefs absolute. To do so, modify the code shown above to the following in all the templates (don't forget the embedded *blog\_list.html* and *portfolio\_list.html* -
+We need to make the hrefs absolute. To do so, modify the code shown above to the following in all the templates (don't forget the embedded *blog_list.html* and *portfolio_list.html* -
 
 ![](../../assets/img/contents/portfolio-site-213.png)
 
@@ -204,7 +204,7 @@ With these changes, the CSS files should now load properly in all the templates.
 
 ### Parting words
 
-This brings us finally to the end of this tutorial ([Download the finished code](http://www.couchcms.com/docs/code/final.zip)).<br/>
+This brings us finally to the end of this tutorial ([Download the finished code](https://www.couchcms.com/docs/code/final.zip)).<br/>
 We started with a plain HTML template and transformed it into a dynamic, fully CMS enabled site that even the most tech-challenged client should be able to manage easily.<br/>
 The real beauty of all this was that we were able to accomplish it without writing any PHP at all (except for the two lines that remain the same for every template).<br/>
 There is a lot more that you can do with Couch. It is a highly flexible system and there are several ways of accomplishing the same thing in it. Please take a look at the [documentation](../../index.html) for a fuller treatment of all its features.

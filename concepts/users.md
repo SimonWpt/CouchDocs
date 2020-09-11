@@ -19,7 +19,7 @@ A Super Admin can do everything that a user possibly can in Couch. Specifically,
 * Create/manage any number of lower level user accounts.
 * Access the website.
 
-Usually it is the designer/coder building the site that uses this _super-admin_ account. If you've gone through the creation of [**editable regions**](../editable-regions.html) and some other tags like the [__*folder*__](../tags-reference/folder.html) tag, you'll recall that persisting the changes made to the template using these tags, requires visiting the web-page while logged in as this super-admin account.<br/>
+Usually it is the designer/coder building the site that uses this _super-admin_ account. If you've gone through the creation of [**editable regions**](./editable-regions.html) and some other tags like the [__*folder*__](../tags-reference/folder.html) tag, you'll recall that persisting the changes made to the template using these tags, requires visiting the web-page while logged in as this super-admin account.<br/>
 Hence this account is used by someone who makes structural changes to the web-site.
 
 #### 2. Administrator
@@ -66,21 +66,21 @@ Before us see how, we need to know a few facts that we'll use -
 
 Upon the execution of every page, the following variables are set by Couch to give information about the visitor accessing the page -
 
-* k\_logged\_in
-* k\_logged\_out
-* k\_user\_id
-* k\_user\_name
-* k\_user\_title
-* k\_user\_email
-* k\_user\_access\_level
-* k\_user\_disabled
-* k\_login\_link
-* k\_logout\_link
+* k_logged_in
+* k_logged_out
+* k_user_id
+* k_user_name
+* k_user_title
+* k_user_email
+* k_user_access_level
+* k_user_disabled
+* k_login_link
+* k_logout_link
 
-The *k\_logged\_in* or *k\_logged\_out* variable can be used to figure out if the visitor is currently logged in and hence possesses an account on the website.<br/>
-If he is logged-in, the *k\_user\_id*, *k\_user\_name*, *k\_user\_title*, *k\_user\_email* and *k\_user\_access\_level* can be used to get details about him.
+The *k_logged_in* or *k_logged_out* variable can be used to figure out if the visitor is currently logged in and hence possesses an account on the website.<br/>
+If he is logged-in, the *k_user_id*, *k_user_name*, *k_user_title*, *k_user_email* and *k_user_access_level* can be used to get details about him.
 
-The *k\_user\_access\_level* is an important variable and indicates the 'group' of the user by the following numeric values -
+The *k_user_access_level* is an important variable and indicates the 'group' of the user by the following numeric values -
 
 * Super Admin: 10
 * Administrator: 7
@@ -92,7 +92,7 @@ As can be seen, the higher the number, the more powerful an account is deemed to
 
 ### Template level access
 
-All the pages cloned from a particular template can be configured to be accessible by only users of a certain level by simply setting the *access\_level* parameter of the [__*template*__](../tags-reference/template.html) tag to the minimum level required. Thus -
+All the pages cloned from a particular template can be configured to be accessible by only users of a certain level by simply setting the *access_level* parameter of the [__*template*__](../tags-reference/template.html) tag to the minimum level required. Thus -
 
 ```html
 <cms:template title='News' clonable='1' access_level='2'>
@@ -108,10 +108,8 @@ Access to any individual page can be controlled by selecting the minimum access 
 
 ![](../assets/img/contents/users.png)
 
-<p class="notice">
-    In both the cases mentioned above, if a page is accessed by a user who is not logged-in, the login box is displayed to him to input his credentials.<br/>
-    If the user is already logged-in but his current access level is less than that required to access the page, a message is displayed to him prompting him to logout and re-login with proper credentials.
-</p>
+> In both the cases mentioned above, if a page is accessed by a user who is not logged-in, the login box is displayed to him to input his credentials.<br/>
+> If the user is already logged-in but his current access level is less than that required to access the page, a message is displayed to him prompting him to logout and re-login with proper credentials.
 
 ### Element level access
 
@@ -134,10 +132,10 @@ The most fine-grained access control can be achieved by restricting access to ce
 
 In the snippet given above, we first check if the access level of the current visitor is sufficient for him to see the text.<br/>
 If it is not, it could either be that the user is not logged-in or that he is logged-in but the access level of his account is lesser than the required level.<br/>
-We check this by the *k\_logged\_out* variable and then show the appropriate message.<br/>
-Note how we use the *k\_login\_link* and *k\_logout\_link* to diplay the links that the user can click to either login or logout.
+We check this by the *k_logged_out* variable and then show the appropriate message.<br/>
+Note how we use the *k_login_link* and *k_logout_link* to diplay the links that the user can click to either login or logout.
 
 ### Access control of discrete files
 
-Access control can be exercised upon discrete files placed on your server, e.g. image files and pdf files, by using the [__*cloak\_url*__](../tags-reference/cloak_url.html) tag.<br/>
-Please see [**Cloaked links - Allowing only registered users to a access links**](../cloaked-links.html#allowing-only-registered-users-to-access-links) section for a full discussion of this.
+Access control can be exercised upon discrete files placed on your server, e.g. image files and pdf files, by using the [__*cloak_url*__](../tags-reference/cloak_url.html) tag.<br/>
+Please see [**Cloaked links - Allowing only registered users to a access links**](./cloaked-links.html#allowing-only-registered-users-to-access-links) section for a full discussion of this.

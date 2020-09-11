@@ -33,26 +33,26 @@ Total records fetched - 23 in our example
 
 Will range from 1 to 10 on each page. Thus it points to the relative position of the current record on the page.<br/>
 Can be changed by setting 'startcount' parameter.<br/>
-Thus if 'startcount' is set to 0, *k\_count* will range from 0-9 on each page.
+Thus if 'startcount' is set to 0, *k_count* will range from 0-9 on each page.
 
 #### k_record_from
 
 First record on page. Thus it will be 1 for page 1, 11 for page 2 and 21 for page 3\.<br/>
 Can be changed by setting 'startcount' parameter.<br/>
-Thus if 'startcount' is set to 0, *k\_record\_from* will be 0 for page 1, 10 for page 2 and 20 for page 3\.
+Thus if 'startcount' is set to 0, *k_record_from* will be 0 for page 1, 10 for page 2 and 20 for page 3\.
 
 #### k_current_record
 
 Will range from 1-10 for page 1, 11-20 for page 2 and 21-23 for page 3\.<br/>
 Thus it always points to the absolute position of the current record.<br/>
 Can be changed by setting 'startcount' parameter.<br/>
-Thus if 'startcount' is set to 0, *k\_current\_record* will range from 0-9 for page 1, 10-19 for page 2 and 20 to 22 for page 3\.
+Thus if 'startcount' is set to 0, *k_current_record* will range from 0-9 for page 1, 10-19 for page 2 and 20 to 22 for page 3\.
 
 #### k_record_to
 
 Last record on page. Thus it will be 10 for page 1, 20 for page 2 and 23 for page 3\.<br/>
 Can be changed by setting 'startcount' parameter.<br/>
-Thus if 'startcount' is set to 0, *k\_record\_to* will be 9 for page 1, 19 for page 2 and 22 for page 3\.
+Thus if 'startcount' is set to 0, *k_record_to* will be 9 for page 1, 19 for page 2 and 22 for page 3\.
 
 #### k_total_pages
 
@@ -65,20 +65,20 @@ Current page number - will change from 1 to 3 in our example.
 #### k_paginated_top
 
 'Pages' tag loops through 10 records on each page in our example.<br/>
-*k\_paginated\_top* gets set for the first record of each page.<br/>
+*k_paginated_top* gets set for the first record of each page.<br/>
 It can be used to output something at the very start of the loop.
 
 #### k_paginated_bottom
 
 'Pages' tag loops through 10 records on each page in our example.<br/>
-*k\_paginated\_bottom* gets set for the last record of each page.<br/>
+*k_paginated_bottom* gets set for the last record of each page.<br/>
 It can be used to output something at the very end of the loop.
 
 #### k_paginator_required
 
 When the total number of pages fetched exceeds the maximum set by the 'limit' parameter,<br/>
 (and 'paginate' parameter is also set), the fetched set of pages is split across pages and<br/>
-*k\_paginator\_required* gets set to indicate this.<br/>
+*k_paginator_required* gets set to indicate this.<br/>
 It can be used to figure out when to display text that makes sense only in such situation<br/>
 for example - the 'next' and 'forward' links or the 'Page 1 of 3'.
 

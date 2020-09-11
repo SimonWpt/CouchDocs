@@ -71,4 +71,4 @@ Two new variables are also made available while looping through the rows in repe
 </cms:show_repeatable>
 ```
 
-To get the values entered into the editable regions enclosed by this block, use [**show\_repeatable**](./show_repeatable.html) tag.
+To get the values entered into the editable regions enclosed by this block, use [**show_repeatable**](./show_repeatable.html) tag.

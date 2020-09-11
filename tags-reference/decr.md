@@ -13,21 +13,21 @@ The **decr** tag accepts as its first parameter a variable and decreases the val
 <cms:show my_value />
 ```
 
-In the snippet above, value of variable my\_value is output as 11\.
+In the snippet above, value of variable my_value is output as 11\.
 
 ```html
 <cms:decr my_value '2' />
 <cms:show my_value />
 ```
 
-The value of variable my\_value now becomes 9\.
+The value of variable my_value now becomes 9\.
 
 ```html
 <cms:decr my_value />
 <cms:show my_value />
 ```
 
-The value of variable my\_value now becomes 8\.
+The value of variable my_value now becomes 8\.
 
 ## Parameters
 
