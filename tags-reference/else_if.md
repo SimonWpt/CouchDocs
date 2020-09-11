@@ -52,3 +52,4 @@ This tag does not set any variables of its own.
 
 * [if](./if.html)
 * [else](./else.html)
+* [not](./not.html)

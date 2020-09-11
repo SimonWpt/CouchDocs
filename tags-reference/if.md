@@ -184,5 +184,6 @@ This tag does not set any variables of its own.
 
 ## Related Tags
 
-* [else](./if.html)
 * [else](./else.html)
+* [else_if](./else_if.html)
+* [not](./not.html)
