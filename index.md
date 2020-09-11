@@ -13,5 +13,5 @@ Visit the [forum](https://www.couchcms.com/forum/) for help and latest infos. We
 * [@fallingsprings](https://github.com/fallingsprings)
 * [@genxcoders](https://github.com/genxcoders)
 * [@kksidd](https://github.com/kksidd)
-* [@simonWpt] (https://github.com/simonWpt)
+* [@simonWpt](https://github.com/simonWpt)
 * [@trendoman](https://github.com/trendoman)
