@@ -6,7 +6,7 @@ layout: default
 
 # concat
 
-The **Concat** tag is a utility tag that can be used to concatenate several values together into a single variable.
+The **concat** tag is a utility tag that can be used to concatenate several values together into a single variable.
 
 For example, suppose we have two variables 'first_name' and 'last_name'.
 
