@@ -90,4 +90,4 @@ The three list views can be handled separately if the way the pages and their co
 </cms:if>
 ```
 
-<p class="success">The snippet given above can handle all the list-views because if the current view is a _home-view_, the *k_folder_name*, *k_archive_date* and *k_next_archive_date* will not be set and hence these parameters will have no effect on the pages fetched. Similarly in the *folder-view* the *k_archive_date* and *k_next_archive_date* will not be set and in the archive-view the *k_folder_name* will not be set.</p>
+> The snippet given above can handle all the list-views because if the current view is a _home-view_, the *k_folder_name*, *k_archive_date* and *k_next_archive_date* will not be set and hence these parameters will have no effect on the pages fetched. Similarly in the *folder-view* the *k_archive_date* and *k_next_archive_date* will not be set and in the archive-view the *k_folder_name* will not be set.

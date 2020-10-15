@@ -31,18 +31,18 @@ Three steps are required to accomplish this -
     Open the template in a text editor (any plain text editor will do fine. We recommend using Notepad++. It is free and awesome).<br/>
     At the very top of the page, add the following line -<br/>
 
-    ```php
+    ```html
     <?php require_once( 'couch/cms.php' ); ?>
     ```
 
-    > [IMP. It is important that you place it at the very top so that it becomes the first line of your template.]<br>
-    > Add the following as the LAST line of your template -<br/>
-    ```<?php COUCH::invoke(); ?>```<br>
+    > *IMP. It is important that you place it at the very top so that it becomes the first line of your template.*    
+    Add the following as the LAST line of your template -<br/>
+    ```<?php COUCH::invoke(); ?>```  
     That is it. That is all the PHP that you'll ever need to write for using Couch.
 3. As the final step, you'll need to execute the template - i.e. access it through the browser.<br/>
     For example, if _about-us.php_ was the template, upload it back to your server and access <http://www.yoursite.com/about-us.php> through a browser.<br/>
     <br/>
-    > [IMP. This is something you'll come across often - for your changes to show up in the admin panel, you'll need to run the modified template in the browser while being logged in as the super-admin]
+    > **IMPORTANT This is something you'll come across often - for your changes to show up in the admin panel, you'll need to run the modified template in the browser while being logged in as the super-admin**
 
     If everything goes right, nothing should appear to have changed. The page should look exactly the same in the browser as it did before. However, now when you visit Couch's Admin Panel (_<http://www.yoursite.com/couch/>_) you should see that _about-us.php_ has been added to the list of templates that are managed by Couch.
 

@@ -11,34 +11,32 @@ This feature uses URL rewriting to transform the default Couch URLs containing q
 For Example, a URL like this -
 
 ```html
-<https://www.mysite.com/blog.php?f=3>
+https://www.mysite.com/blog.php?f=3
 ```
 
 where 3 is the id of a folder named 'electronics', will get converted to -
 
 ```html
-<https://www.mysite.com/blog/electronics/>
+https://www.mysite.com/blog/electronics/
 ```
 
 and another URL -
 
 ```html
-<https://www.mysite.com/blog.php?p=12>
+https://www.mysite.com/blog.php?p=12
 ```
 
 where 12 is the id of a cloned page named 'mobile-phones' which is in 'electronics' folder, will get converted to -
 
 ```html
-<https://www.mysite.com/blog/electronics/mobile-phones.html>
+https://www.mysite.com/blog/electronics/mobile-phones.html
 ```
 
-It is obvious that the 'pretty' versions of the URLs convey more meaning about the pages they represent.<br/>
+It is obvious that the 'pretty' versions of the URLs convey more meaning about the pages they represent.  
 Not only do they appear friendlier to the visitors but they also offer immense benefit from the SEO (Search Engine Optimization) perspective - something that cannot be ignored if you wish your pages to rank high in Google search.
 
-<p class="notice">
-    For Pretty URLS to work in Couch, the Apache server it is hosted on must have the 'mod_rewrite' module enabled.<br/>
-    To make sure this module is indeed available at your server, [please use this utility available at our forums](https://www.couchcms.com/forum/viewtopic.php?p=11832#p11832).
-</p>
+> For Pretty URLS to work in Couch, the Apache server it is hosted on must have the 'mod_rewrite' module enabled.  
+> To make sure this module is indeed available at your server, [please use this utility available at our forums](https://www.couchcms.com/forum/viewtopic.php?p=11832#p11832).
 
 ### ENABLING PRETTY URLS
 
@@ -58,17 +56,15 @@ define( 'K_PRETTY_URLS', 0 );
 
 Set the K_PRETTY_URLS to 1\.
 
-**2\.** Fire up your browser and visit the following page (substitute the domain name with that of yours) -<br/>
-*<https://www.yoursite.com/couch/gen\>_htaccess.php*
+**2\.** Fire up your browser and visit the following page (substitute the domain name with that of yours) -  
+_http://www.yoursite.com/couch/gen_htaccess.php_
 
 A list of rewrite rules should appear on the page.<br/>
 Select and copy the ENTIRE content of the page (press Ctrl + A) and paste it into a file named '.htaccess' and place this file in your website's root.
 
-<p class="notice">
-    If you are on a Windows machine, your OS might not allow you to create a file which only has an extension and no name. For such cases name the file temporarily to anything e.g. 'dummy.htaccess', upload it to your server and then rename it to remove the name.<br/>
-    <br/>
-    **EDIT:** You can also use Notepad to create a new file and when asked for a name while saving it, enclose the name with **double-quotes**.
-</p>
+> If you are on a Windows machine, your OS might not allow you to create a file which only has an extension and no name. For such cases name the file temporarily to anything e.g. 'dummy.htaccess', upload it to your server and then rename it to remove the name.
+>
+> **EDIT:** You can also use Notepad to create a new file and when asked for a name while saving it, enclose the name with **double-quotes**.
 
 Try visiting your cloned pages from the Admin Panel and the pretty urls should be now seen in action.
 
@@ -76,7 +72,7 @@ The rules that are copied and pasted into the .htaccess file pertain to all your
 
 This is the reason why it is advisable to turn on Pretty URLS after all the clonable templates are already in place.
 
-<p class="error">The rewrite rules created by *gen_htaccess.php* use PCRE flavor of Regular Expressions instead of the now deprecated (and much slower) POSIX type. Unfortunately, some very old versions of Apache 1.x have been reported to still be using POSIX and as such the PrettyURLs feature might not work on them. Placing the generated .htaccess file on such servers will usually result in an '_HTTP 500: Internal Server Error_'.</p>
+> The rewrite rules created by *gen_htaccess.php* use PCRE flavor of Regular Expressions instead of the now deprecated (and much slower) POSIX type. Unfortunately, some very old versions of Apache 1.x have been reported to still be using POSIX and as such the PrettyURLs feature might not work on them. Placing the generated .htaccess file on such servers will usually result in an '_HTTP 500: Internal Server Error_'
 
 ### TROUBLESHOOTING
 

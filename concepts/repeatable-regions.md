@@ -14,7 +14,7 @@ Each portfolio item will have, of other things, a number of images associated wi
 We know that we can define an editable region of type 'image' for each image however the problem here is that **we cannot know beforehand exactly how many images any portfolio item might have**.<br/>
 Some item might require only a single image while another one might require 20 images (or even more).
 
-The solution used up till now ([http&://www.couchcms.com/forum/viewtopic.php?p=790\#p790](https://www.couchcms.com/forum/viewtopic.php?p=790#p790)) has been to work out the maximum number of images an item could possibly have and then define as many editable regions.<br/>
+The solution used up till now ([http://www.couchcms.com/forum/viewtopic.php?p=790\#p790](https://www.couchcms.com/forum/viewtopic.php?p=790#p790)) has been to work out the maximum number of images an item could possibly have and then define as many editable regions.<br/>
 This works but it is far from perfect -
 
 * It clutters up the admin panel. If suppose we define twenty regions for the images - while editing, every single portfolio page will display all the twenty regions even if the page requires only one image.
@@ -53,29 +53,27 @@ You are free to add as many images as you desire
 
 This was the 'Repeatable regions' feature in action and I'm sure you'll agree this is a much better way of doing things.
 
-<p class="notice">
-    At this point you might want to ask if 'image' is the only type of editable region that can be repeated.<br/>
-    Well, no! Of the 12 native types of editable regions in Couch, the [**repeatable**](../tags-reference/repeatable.html) tag supports the following 8 -<br/>
-    **text**<br/>
-    **password**<br/>
-    **textarea**<br/>
-    **image**<br/>
-    **file**<br/>
-    **radio**<br/>
-    **checkbox**<br/>
-    **dropdown**<br/>
-    <br/>
-    Out of the remaining 4 types that are unsupported, the 'message' and 'group' types actually make no sense getting repeated.<br/>
-    However the 'richtext' and 'thumbnail' types are really far too important to be left out.<br/>
-    The reason for the two being left out is rather technical however considering the importance that 'richtext' and 'thumbnail' types carry, Couch v1.3 offers us alternatives for both.<br/>
-    <br/>
-    Instead of using the 'richtext' type we can now use a new type of editable region named [**nicedit**](../tags-reference/editable/nicedit.html).<br/>
-    'nicedit' uses a very light-weight wysiwyg editor of the same name. It is not as full-featured as the CKEditor that 'richtext' uses however it gets the job done well and is light enough to be repeated any number of times on a single page (we'll find an example of its use below).<br/>
-    <br/>
-    **We can also use 'nicedit' type as a regular editable region (i.e. as the usual non-repeatable regions)**.<br/>
-    <br/>
-    As for the 'thumbnail' type, we do not have any substitute editable region for it but v1.3 has a new tag named [**thumbnail**](../tags-reference/thumbnail.html) that does an identical job. Please see [**thumbnail**](../tags-reference/thumbnail.html) documentation for this tag's use.
-</p>
+> At this point you might want to ask if 'image' is the only type of editable region that can be repeated.  
+> Well, no! Of the 12 native types of editable regions in Couch, the **[repeatable](../tags-reference/repeatable.html)** tag supports the following 8 -  
+> - **text**  
+> - **password**  
+> - **textarea**  
+> - **image**  
+> - **file**  
+> - **radio**  
+> - **checkbox**  
+> - **dropdown**  
+> 
+> Out of the remaining 4 types that are unsupported, the 'message' and 'group' types actually make no sense getting repeated.<br/>
+> However the 'richtext' and 'thumbnail' types are really far too important to be left out.<br/>
+> The reason for the two being left out is rather technical however considering the importance that 'richtext' and 'thumbnail' types carry, Couch v1.3 offers us alternatives for both.<br/>
+> 
+> Instead of using the 'richtext' type we can now use a new type of editable region named [**nicedit**](../tags-reference/editable/nicedit.html).<br/>
+> 'nicedit' uses a very light-weight wysiwyg editor of the same name. It is not as full-featured as the CKEditor that 'richtext' uses however it gets the job done well and is light enough to be repeated any number of times on a single page (we'll find an example of its use below).<br/>
+> 
+> **We can also use 'nicedit' type as a regular editable region (i.e. as the usual non-repeatable regions)**.<br/>
+> 
+> As for the 'thumbnail' type, we do not have any substitute editable region for it but v1.3 has a new tag named [**thumbnail**](../tags-reference/thumbnail.html) that does an identical job. Please see [**thumbnail**](../tags-reference/thumbnail.html) documentation for this tag's use.
 
 ## Repeating multiple regions together
 

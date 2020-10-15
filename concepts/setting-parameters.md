@@ -56,22 +56,18 @@ This feature can be utilized to set a tag's parameter by using the output of ano
 In the snippet above, message will be set to 'Hello World' which was the output of the nested [__*show*__](../tags-reference/show.html) tag.<br/>
 Please notice that **the nested tag is ALWAYS enclosed within DOUBLE quotes**.
 
-<p class="notice">
-    **V.IMP -**<br/>
-    **If single quotes are used, Couch considers the parameter's value to be an explicit value.<br/>
-    If double quotes are used, Couch considers the value to be either an explicit value OR the output from a nested tag.<br/>
-    If no quotes are used, Couch considers the value to be a variable.**<br/>
-    <br/>
-    This is a very important point because it is very easy to forget the quotes while setting a parameter, e.g.<br/><br/>
-    ```
-<cms:repeat count=4></cms:repeat>
-    ```
-    \- in the snippet above the value being passed to _count_ is not enclosed within quotes and thus Couch, instead of considering it to be an explicit value '4', will consider it to be a variable named 4 and try and use the value of a variable named '4' as the parameter. Incidently, it is illegal to begin a variable's name with a number and so Couch will throw an error. But had this value been a text string e.g.<br/><br/>
-    ```
-<cms:show var=Hello />
-    ```
-    Couch would have used the value of an non-existent variable _Hello_ as parameter for [__*show*__](../tags-reference/show.html), which would then have printed nothing.
-</p>
+> **Very important**  
+> **If single quotes are used, Couch considers the parameter's value to be an explicit value.  
+> If double quotes are used, Couch considers the value to be either an explicit value OR the output from a nested tag.<br/>
+> If no quotes are used, Couch considers the value to be a variable.**
+>
+> This is a very important point because it is very easy to forget the quotes while setting a parameter, e.g.
+>
+> `<cms:repeat count=4></cms:repeat>`  
+> \- in the snippet above the value being passed to _count_ is not enclosed within quotes and thus Couch, instead of considering it to be an explicit value '4', will consider it to be a variable named 4 and try and use the value of a variable named '4' as the parameter. Incidently, it is illegal to begin a variable's name with a number and so Couch will throw an error. But had this value been a text string e.g.  
+> `<cms:show var=Hello />`  
+> Couch would have used the value of an non-existent variable _Hello_ as parameter for [__*show*__](../tags-reference/show.html), which would then have printed nothing.
+
 
 ### NESTING PARAMETERS
 
@@ -148,8 +144,8 @@ Since the parameter being passed to _if_ is '1', it will go ahead and execute th
 </cms:if>
 ```
 
-Suppose the sole content of _about-us.inc_ is -<br/>
-&lt;h1&gt;Hello I am About Us&lt;/h1&gt;,<br/>
+Suppose the sole content of _about-us.inc_ is -  
+`<h1>Hello I am About Us</h1>`  
 this will be the output of the [__*embed*__](../tags-reference/embed.html) tag, so we end up being -
 
 ```html
@@ -160,6 +156,6 @@ this will be the output of the [__*embed*__](../tags-reference/embed.html) tag, 
 
 and finally the output of _if_ -
 
-&lt;h1&gt;Hello I am About Us&lt;/h1&gt;
+`<h1>Hello I am About Us</h1>`
 
 With the information we have had so far, we are ready to move on to the [**Editable Regions**](./editable-regions.html).
