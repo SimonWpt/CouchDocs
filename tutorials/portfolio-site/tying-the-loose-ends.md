@@ -1,6 +1,7 @@
 ---
 title: Tying the loose ends
 parent: Sample Portfolio Site
+grand_parent: Tutorials
 layout: default
 ---
 

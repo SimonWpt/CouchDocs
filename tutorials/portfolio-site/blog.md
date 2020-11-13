@@ -1,6 +1,7 @@
 ---
 title: Diving deep - the Blog (Part 1)
 parent: Sample Portfolio Site
+grand_parent: Tutorials
 layout: default
 ---
 

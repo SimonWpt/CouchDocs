@@ -1,6 +1,7 @@
 ---
 title: Starting off simple - the About-Us page
 parent: Sample Portfolio Site
+grand_parent: Tutorials
 layout: default
 ---
 
