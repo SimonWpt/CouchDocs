@@ -10,16 +10,15 @@ layout: default
 Editable region of type **image** is primarily used to allow the user to upload an image from his local computer onto the server. The user can also browse and select any of the previously uploaded images.<br/>
 Once an image has been selected, this editable region then holds a fully qualified URL of the uploaded image.
 
-<p class="notice">
-    **NOTE:** By default, all uploaded images will be saved within the _**couch/uploads/image**_ folder (or any subfolders created by the user within it). You can set the location to any other folder by uncommenting entry number 12 (*K_UPLOAD_DIR*) in _config.php_ and changing it to the desired location.<br/>
-    <br/>
-    ```
-// 12.
-// Upload folder if not using the default upload folder within 'couch'.
-// Should be relative to your site (don't forget to set write permissions on it).
-define( 'K_UPLOAD_DIR', 'myuploads' );
-    ```
-</p>
+
+> **NOTE:** By default, all uploaded images will be saved within the _**couch/uploads/image**_ folder (or any subfolders created by the user within it). You can set the location to any other folder by uncommenting entry number 12 (*K_UPLOAD_DIR*) in _config.php_ and changing it to the desired location.
+>
+> ```php
+> // 12.
+> // Upload folder if not using the default upload folder within 'couch'.
+> // Should be relative to your site (don't forget to set write permissions on it).
+> define( 'K_UPLOAD_DIR', 'myuploads' );
+> ```
 
 An editable region of type _image_ can be defined this way -
 
@@ -71,14 +70,13 @@ These dimensions (in pixels) are represented by the _width_ and _height_ paramet
 How these dimensions are interpreted by Couch depends on the settings of two other (mutually exclusive) parameters -<br/>
 *enforce_max* and _crop_.
 
-<p class="notice">
-    **NOTE:** If **none** of the two dimensions are specified, e.g.<br/>
-    <br/>
-    ```
-<cms:editable name='prop_image' type='image' />
-    ```
-    regardless of any settings of *enforce_max* and _crop_, the saved image will always be of exactly the same dimensions as the one uploaded (i.e. not resized at all).
-</p>
+
+> **NOTE:** If **none** of the two dimensions are specified, e.g.
+>  ```html
+> <cms:editable name='prop_image' type='image' />
+> ```
+> regardless of any settings of *enforce_max* and _crop_, the saved image will always be of exactly the same dimensions as the one uploaded (i.e. not resized at all).
+
 
 ### enforce_max
 
@@ -88,7 +86,7 @@ If any of the dimensions of an uploaded image exceeds the provided value, Couch 
 
 If both height and width are specified, enforcing the limit of one dimension might end up making the other dimension smaller than what was specified (_see examples below_).
 
-<p class="notice">**By default *enforce_max* is always on so you do not have to explicitly set it.** It can be turned off either by specifically setting it to _0_ (enforce_max='0') or by turnng on _crop_ (crop='1').</p>
+> **By default *enforce_max* is always on so you do not have to explicitly set it.** It can be turned off either by specifically setting it to _0_ (enforce_max='0') or by turnng on _crop_ (crop='1').
 
 #### Examples:
 

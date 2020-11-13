@@ -24,15 +24,12 @@ The code above will result in -
 
 ![](../../assets/img/contents/editable-text.gif)
 
-<p class="notice">
-    Any text enclosed between the opening and the closing tags will appear as the default text within the textbox. If you do not wish to have any default text, simply make the **Editable** tag self-closing e.g.<br/>
-    <br/>
-    ```
-<cms:editable name='prop_title' label='Title'
- desc='Enter title of property here'
- type='text' />
-    ```
-</p>
+> Any text enclosed between the opening and the closing tags will appear as the default text within the textbox. If you do not wish to have any default text, simply make the **Editable** tag self-closing e.g.
+> ```
+> <cms:editable name='prop_title' label='Title'
+> desc='Enter title of property here'
+> type='text' />
+> ```
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 

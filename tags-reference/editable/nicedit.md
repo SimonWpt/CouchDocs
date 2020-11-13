@@ -8,7 +8,7 @@ layout: default
 # type = 'nicedit' (deprecated)
 
 Editable region of type nicedit can be used as a light-weight alternative to editable region of type [**richtext**](../richtext.html).<br/>
-It is primarily meant to be used with [**repeatable regions**](../../concepts/repeatable-regions.html) (as type 'richtext' does not support being repeated), however it can be used as an independent editable region too.
+It is primarily meant to be used with [**repeatable regions**](../../concepts/repeatable-regions.html) (as type `richtext' does not support being repeated), however it can be used as an independent editable region too.
 
 Unlike 'richtext' that uses CKEditor - a full fledged Wysiwyg editor, 'nicedit' is somewhat limited in the wysiwyg features it offers but is perfect for situations where only basic HTML editing capability is required. 
 

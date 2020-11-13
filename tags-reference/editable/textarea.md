@@ -41,13 +41,10 @@ The default type of an editable region is _textarea_. Hence if the code example 
 
 will result in an identical textbox.
 
-<p class="notice">
-    Any text enclosed between the opening and the closing tags will appear as the default text within the textbox. If you do not wish to have any default text, simply make the **Editable** tag self-closing e.g.<br/>
-    <br/>
-    ```
-<cms:editable name='prop_desc' label='Description' desc='Enter description of property here' />
-    ```
-</p>
+> Any text enclosed between the opening and the closing tags will appear as the default text within the textbox. If you do not wish to have any default text, simply make the **Editable** tag self-closing e.g.
+> ```
+> <cms:editable name='prop_desc' label='Description' desc='Enter description of property here' />
+> ```
 
 The contents of this region can be accessed, as with all other editable regions, by using the variable named after it -
 

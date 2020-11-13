@@ -75,12 +75,10 @@ Printing out the value contained within the editable region -
 \- will now output '2'.
 
 > **TIP:** Specifying an empty option makes Couch generate a break '&lt;BR&gt;'. e.g.
-
-```
-opt_values='Residential=0 | Commercial=1 | | Rental=2'
-```
-
->In the code above, actually four options have been specified - the third option (between _Commercial_ and _Rental_) is empty.<br/>
+> ```
+> opt_values='Residential=0 | Commercial=1 | | Rental=2'
+> ```
+> In the code above, actually four options have been specified - the third option (between _Commercial_ and _Rental_) is empty.<br/>
     This results in -<br/>
     <br/>
     ![](../../assets/img/contents/editable-radio-2.gif)

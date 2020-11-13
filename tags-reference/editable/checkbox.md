@@ -37,7 +37,7 @@ will output -
 Entertainment|Sports|Health
 ```
 
-As you can see, the value consists of all the three selected options clubbed together with a '|' (pipe) character separating them.
+As you can see, the value consists of all the three selected options clubbed together with a '\|' (pipe) character separating them.
 
 > **TIP:** To access each of the individual selected option, you can use the [**Each**](../../each.html) tag -<br/>
 
@@ -127,7 +127,7 @@ You can show any option as selected by setting *opt_selected* to the value of th
 
 \- will show _Sports_ as the option selected by default.
 
-Multiple options can be shown as selected by separating the values by a '|' (pipe character) -
+Multiple options can be shown as selected by separating the values by a '\|' (pipe character) -
 
 ```html
 opt_selected = '0 | 2'
