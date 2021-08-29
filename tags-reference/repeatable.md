@@ -30,6 +30,11 @@ Label instructs Couch to display a more user friendly name than the _name_ attri
 
 Can be set to either _asc_ or _desc_ or _random_ for setting the sort order to ascending, descending or random.
 
+```html
+<cms:show_repeatable 'banners' limit='1' order='random'>
+  <cms:show banner />
+</cms:show_repeatable>
+```
 ### limit
 
 The `'limit'` parameter will make the tag show only the specified number of rows.
