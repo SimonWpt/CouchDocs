@@ -16,6 +16,7 @@ Please see [**Core Concepts - Repeatable Regions**](../concepts/repeatable-regio
 * limit
 * offset
 * stacked_layout
+* startcount
 
 ### name
 
@@ -27,7 +28,7 @@ Label instructs Couch to display a more user friendly name than the _name_ attri
 
 ### order
 
-Can be set to either _asc_ or _desc_ for setting the sort order to ascending or descending.
+Can be set to either _asc_ or _desc_ or _random_ for setting the sort order to ascending, descending or random.
 
 ### limit
 
