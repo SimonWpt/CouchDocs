@@ -24,8 +24,9 @@ You'll find an interesting example of this tag's use in [**Sample Portfolio Site
 ## Parameters
 
 * into
-* is_json
 * scope
+* trim
+* is_json
 
 ### into
 
@@ -36,9 +37,22 @@ Name of the variable to store the output in.
 Scope of the aforesaid variable. Can be either _global_ or _parent_.<br/>
 If set to _global_, the variable will be available anywhere throughout the page. If set to _parent_, the variable will only be available only within the  scope of the parent tag (if any) that is nesting the **capture** tag.
 
+### trim
+
+Can be either **0** (default) or **1**. The output of the block of code will be stripped of whitespace from the beginning and end.<br>
+Following characters will be stripped &mdash;
+* " " &ndash; an ordinary space.
+* "\t" &ndash; a tab.
+* "\n" &ndash; a new line (line feed).
+* "\r" &ndash; a carriage return.
+* "\v" &ndash; a vertical tab.
+* "\0" &ndash; the NUL-byte.
+
+As you might have noted, the effect of applying this parameter will be identical to the output of the standalone tag `<cms:trim>`.
+
 ### is_json
 
-The content of the tag is in json format and the vyaraible is converted into a multi-string array.
+The content of the tag is in json format and the varaible is converted into a multi-string array.
 
 ```html
 <cms:capture into='climate' is_json='1'>
