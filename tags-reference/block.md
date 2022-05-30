@@ -6,7 +6,9 @@ layout: default
 
 # block
 
-The **block** tag is some kind of a placeholder. Any snippet 'extending' (or 'inheriting') this snippet can then choose to replace these placeholders (blocks) with its own.
+The **block** tag is some kind of a placeholder. Any snippet 'extending' (or 'inheriting') the snippet containing **block** can choose to replace these placeholders (blocks) with its own content.
+
+Please see [**Template inheritance**](https://www.couchcms.com/forum/viewtopic.php?f=5&t=10984) for an in-depth discussion about this tag and its relevant mates.
 
 ## Parameters
 
@@ -16,7 +18,7 @@ The first parameter is unnamed (i.e. only the value is passed) and the name of t
 
 ## Example
 
-`parent.html`  
+`parent.html`
 ```html
 <!DOCTYPE html>
 <html>
@@ -37,8 +39,8 @@ The first parameter is unnamed (i.e. only the value is passed) and the name of t
 </html>
 ```
 
-`child.html`  
-```html  
+`child.html`
+```html
 <cms:extends 'parent.html' />
 
 <cms:block 'title' >Index</cms:block>
@@ -58,7 +60,7 @@ The first parameter is unnamed (i.e. only the value is passed) and the name of t
 </cms:block>
 ```
 
-`test.php`  
+`test.php`
 ```html
 <?php require_once("couch/cms.php"); ?>
 <cms:template>
@@ -72,7 +74,7 @@ The first parameter is unnamed (i.e. only the value is passed) and the name of t
 
 Please notice, that this child snippet contains *only* `<cms:block>`s as first-level tags. This is important - all other tags at first-level will be totally ignored (in Symfony this actually throws an error). These blocks, in turn, can have any markup or Couch tags within them (even other `<cms:block>` tags nested within).
 
-For more information visit [https://www.couchcms.com/forum/viewtopic.php?f=5&t=10984]
+
 
 ## Related Tags
 

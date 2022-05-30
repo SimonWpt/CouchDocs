@@ -5,7 +5,8 @@ layout: default
 ---
 
 # addslashes
-The `<cms:addslashes>`-Tag as been created specially for use with cms:php tag where a PHP variable is set using Couch statements.
+
+The **addslashes** has become a necessary addition to escape characters. Very helpful in many situations where a mixture of single and double quotes creates problems. For instance, use it with **php** tag where a PHP variable is usually set by Couch statements.
 
 ## Parameters
 

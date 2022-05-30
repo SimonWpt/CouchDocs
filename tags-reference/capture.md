@@ -39,7 +39,7 @@ If set to _global_, the variable will be available anywhere throughout the page.
 
 ### trim
 
-Can be either **0** (default) or **1**. The output of the block of code will be stripped of whitespace from the beginning and end.<br>
+Can be either *0* (default) or *1*. The output of the block of code will be stripped of whitespace from the beginning and end.<br>
 Following characters will be stripped &mdash;
 * " " &ndash; an ordinary space.
 * "\t" &ndash; a tab.
@@ -52,7 +52,7 @@ As you might have noted, the effect of applying this parameter will be identical
 
 ### is_json
 
-The content of the tag is in json format and the varaible is converted into a multi-string array.
+The content of the tag is in json format and the variable is converted into a multi-string array.
 
 ```html
 <cms:capture into='climate' is_json='1'>

@@ -5,12 +5,14 @@ layout: default
 ---
 
 # func
-The `<cms:func>`-Tag defines a function with parameter support, which can be called with the  `<cms:call>`-tag.
+
+The **func** tag works by wrapping a piece of code and executing it sometime later upon a call. Unlike 'cms:capture' the code is not executed immediately.<br>
+Enclosed code may be configured to output different results depending on different values of its variables. Tag 'cms:func' then  helps define such variables and, titled with a name, becomes a powerful instrument with unlimited function.
 
 ## Parameters
 
-* unnamed
-* parameters (optional)
+* unnamed, &ndash; mandatory parameter that gives name to the function
+* parameters (optional), &ndash; virtually unlimited number of user-defined variables that accept values from a caller.
 
 ## Example
 

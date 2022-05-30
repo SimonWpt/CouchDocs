@@ -6,13 +6,14 @@ layout: default
 
 # block_parent
 
-`<cms:block_parent />` fetches the parent block's original code so the effective child code becomes a mix of the parent code plus the child code that follows the `<cms:block_parent />`.
+Tag **block_parent** fetches the parent block's original code so the effective child code becomes a mix of the parent code plus the added child code that follows the `<cms:block_parent />`.
 
 ## Parameters
 
 * none
 
 ## Example
+
 **Parent**
 ```html
 <head>
@@ -33,7 +34,7 @@ layout: default
 </cms:block>
 ```
 
-**Output**
+**Combined output**
 ```html
 <head>
     <link rel="stylesheet" href="style.css" />
@@ -44,7 +45,7 @@ layout: default
 </head>
 ```
 
-For more information visit [https://www.couchcms.com/forum/viewtopic.php?f=5&t=10984]
+For more information visit page [Template inheritance - a new method for organizing layouts](https://www.couchcms.com/forum/viewtopic.php?f=5&t=10984)
 
 ## Related Tags
 

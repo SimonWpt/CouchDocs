@@ -6,7 +6,7 @@ layout: default
 
 # embed
 
-The **Embed** tag can be used to divide your templates into manageable chunks.<br/>
+The **embed** tag can be used to divide your templates into manageable chunks.<br/>
 Parts of the templates that are reused at several places can be placed in discrete files and the files then embedded via this tag.<br/>
 e.g. most of the templates share the same header code. This can be cut and pasted into a file named 'header.inc' (the extension does not matter - it can be anything) and the file then saved into 'couch/snippets' folder.
 
