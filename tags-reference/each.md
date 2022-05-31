@@ -6,7 +6,7 @@ layout: default
 
 # each
 
-The **Each** tag, given a string containing values separated by a known separator, splits it up along the separator and returns each value.<br/>
+The **each** tag, given a string containing values separated by a known separator, splits it up along the separator and returns each value.<br/>
 For example, assume we have a variable 'msg' -
 
 ```html
@@ -41,6 +41,11 @@ do
 * var
 * as
 * sep
+* key
+* startcount
+* token
+* is_json
+* is_regex
 
 ### var
 
