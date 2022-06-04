@@ -48,20 +48,7 @@ Anonymous functions are stored in a variable, hence we supply the variable itsel
 
 ## Variables
 
-Call conveniently sets variables that become available *only* inside the function.
-
-* k\_func &ndash; contains either name of the function or a word `anonymous`
-* k\_args &ndash; associative array of passed arguments, e.g.
-```json
-[{"name":"size","val":"small"},{"name":"type","val":"espresso"}]
-```
-
-* k\_named_args &ndash; array of passed named arguments, e.g.
-```json
-{"type":"espresso","size":"small"}
-```
-
-Sets no variables of its own that can be used within its opening and closing tags.
+Sets no variables of its own.
 
 ## Related Tags
 
@@ -70,5 +57,5 @@ Sets no variables of its own that can be used within its opening and closing tag
 
 ## Links
 
-- An exemplar tutorial on using functions as well as examples in [official forum post.](https://www.couchcms.com/forum/viewtopic.php?f=8&t=11368&start=10#p30174)
-- Invoking anonymous functions in Conditional Fields as explained in tutorial in [official forum post.](https://www.couchcms.com/forum/viewtopic.php?f=5&t=11512)
+- An exemplar tutorial on using functions as well as examples are in [this post](https://www.couchcms.com/forum/viewtopic.php?f=8&t=11368&start=10#p30174)
+- Invoking anonymous functions in Conditional Fields is explained in tutorial in [this topic](https://www.couchcms.com/forum/viewtopic.php?f=5&t=11512)

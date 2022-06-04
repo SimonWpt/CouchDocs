@@ -52,6 +52,11 @@ The **get** tag is useful in the cases where we have to fetch the values of vari
 
 * var
 * local_only
+* default
+* scope
+* as_json
+* into
+* into_scope
 
 ### var
 
