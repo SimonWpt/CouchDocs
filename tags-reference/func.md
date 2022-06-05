@@ -17,11 +17,13 @@ Enclosed code may be configured to output different results depending on differe
 
 Functions can be **named** and **anonymous**.<br>
 
-**Anonymous** functions are not registered with Couch and their code is only saved to a variable. Often used in conditional fields, they fulfill an auxiliary role and can be configured to appear within a specific **scope** &ndash; *global*, *local* or *parent*. This feature allows to view them as 'helpers' that perform some action and disappear outside their scope, mimicking the behaviour or regular variables.
+**Anonymous** functions are not registered with Couch and their code is only saved to a variable. Often used in conditional fields, they fulfill an auxiliary role and can be configured to appear within a specific **scope** &ndash; *global*, *local* or *parent*. This feature allows to view them as 'helpers' that perform some action and disappear outside their scope, mimicking the behaviour or regular variables. Functions defined with the same name can 'replace' the previous ones.
 
 **Named** functions are registered within Couch, cached to database to improve loading and are visible in global scope e.g. can be called from inside other functions or tags. Presence of a named function can be verified by the tag 'cms:func_exists'. Functions with the same name should not appear twice - Couch will treat it as error and halt.
 
 Functions can be nested within each other.
+
+Functions can be chained by calling another one in code.
 
 ## Parameters
 
@@ -66,6 +68,29 @@ Anonymous functions are stored in a variable. To call such function we supply th
 => show
 ```
 
+Functions can accept any kind of value to its parameter - strings, arrays, even other anonymous functions.
+
+The following example illustrates a method of **callback** - a function's name is passed as a parameter and will be called upon.
+```html
+<cms:func 'purchase' product='' amount='' reason=''>
+    I have purchased a <cms:show product /> for <cms:show amount />.
+    I want to <cms:call reason />
+</cms:func>
+
+<cms:func _into='travel'>see the world.</cms:func>
+<cms:func _into='donate'>donate it to charity.</cms:func>
+<cms:func 'gift'>send it as a present.</cms:func>
+
+<cms:call 'purchase' 'phone' '$200' 'gift' />
+=> I have purchased a phone for $200. I want to send it as a present.
+
+<cms:call 'purchase' 'toy' '$100' donate />
+=> I have purchased a toy for $100. I want to donate it to charity.
+
+<cms:call 'purchase' 'tour' '$500' travel />
+=> I have purchased a tour for $500. I want to see the world.
+```
+In the example above there is no need for complicated conditions within the main function 'purchase'. Also if the number of reasons grows, there is no need to edit that function! Simply adding a smaller 'reason' function we achieve the desired effect. Here 'reason' is a callback function.
 
 ## Variables
 
