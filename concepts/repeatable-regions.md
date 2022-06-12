@@ -53,26 +53,26 @@ You are free to add as many images as you desire
 
 This was the 'Repeatable regions' feature in action and I'm sure you'll agree this is a much better way of doing things.
 
-> At this point you might want to ask if 'image' is the only type of editable region that can be repeated.  
-> Well, no! Of the 12 native types of editable regions in Couch, the **[repeatable](../tags-reference/repeatable.html)** tag supports the following 8 -  
-> - **text**  
-> - **password**  
-> - **textarea**  
-> - **image**  
-> - **file**  
-> - **radio**  
-> - **checkbox**  
-> - **dropdown**  
-> 
+> At this point you might want to ask if 'image' is the only type of editable region that can be repeated.
+> Well, no! Of the 12 native types of editable regions in Couch, the **[repeatable](../tags-reference/repeatable.html)** tag supports the following 8 -
+> - **text**
+> - **password**
+> - **textarea**
+> - **image**
+> - **file**
+> - **radio**
+> - **checkbox**
+> - **dropdown**
+>
 > Out of the remaining 4 types that are unsupported, the 'message' and 'group' types actually make no sense getting repeated.<br/>
 > However the 'richtext' and 'thumbnail' types are really far too important to be left out.<br/>
 > The reason for the two being left out is rather technical however considering the importance that 'richtext' and 'thumbnail' types carry, Couch v1.3 offers us alternatives for both.<br/>
-> 
+>
 > Instead of using the 'richtext' type we can now use a new type of editable region named [**nicedit**](../tags-reference/editable/nicedit.html).<br/>
 > 'nicedit' uses a very light-weight wysiwyg editor of the same name. It is not as full-featured as the CKEditor that 'richtext' uses however it gets the job done well and is light enough to be repeated any number of times on a single page (we'll find an example of its use below).<br/>
-> 
+>
 > **We can also use 'nicedit' type as a regular editable region (i.e. as the usual non-repeatable regions)**.<br/>
-> 
+>
 > As for the 'thumbnail' type, we do not have any substitute editable region for it but v1.3 has a new tag named [**thumbnail**](../tags-reference/thumbnail.html) that does an identical job. Please see [**thumbnail**](../tags-reference/thumbnail.html) documentation for this tag's use.
 
 ## Repeating multiple regions together
