@@ -13,7 +13,17 @@ The **addslashes** has become a necessary addition to escape characters. Very he
 * unnamed
 * quote (optional)
 
+### quote
+
+Default value is *double* for the double quotes to be escaped. Alternative value is *single*.
+
+```html
+<cms:addslashes quote='single'><cms:show test /></cms:addslashes>
+```
+
 ## Example
+
+### set PHP variables
 
 ```html
 <cms:set test="O'Reilly" />
@@ -23,6 +33,22 @@ The **addslashes** has become a necessary addition to escape characters. Very he
     $test = '<cms:addslashes quote='single'><cms:show test /></cms:addslashes>'; //default is 'double'
     echo '<h1>' . $test . '</h1>';
 </cms:php>
+```
+
+### build JSON
+
+Extremely helpful in getting Couch data as json to keep output correctly formatted e.g.
+
+```html
+<cms:content_type "application/json"/>
+ [
+    <cms:pages masterpage='products.php' skip_custom_fields='1'>
+       {
+         "name":"<cms:addslashes><cms:show k_page_title/></cms:addslashes>",
+         "link":"<cms:addslashes><cms:show k_page_link/></cms:addslashes>"
+       }<cms:if "<cms:not k_paginated_bottom/>">,</cms:if>
+     </cms:pages>
+ ]
 ```
 
 ## Related Tags

@@ -8,6 +8,8 @@ layout: default
 
 The **zebra** tag, when used within any Couch tag that repeats its contents (e.g. repeat, while, pages, folders, templates etc.), outputs its first parameter at the first iteration, its second parameter at the second iteration and so on. If the number of iterations exceed the number of its parameters, it wraps around and starts from the first parameter.
 
+## Usage
+
 The **zebra** tag can be used to output a different class to every alternate row of a table, thus creating a 'zebra' striping that gives this tag its name.
 
 Some examples:

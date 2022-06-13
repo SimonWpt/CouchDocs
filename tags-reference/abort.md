@@ -70,7 +70,7 @@ Respects Content-Type &mdash;
 <cms:abort>{ "error" : "1" }</cms:abort>
 ```
 
-Sets its enclosed contents as the output of the current page &mdash;
+Sets its enclosed contents as the output of the current page —
 ```html
 <cms:abort>
    <h1>Any enclosed content would be outputted before killing off the current page</h1>

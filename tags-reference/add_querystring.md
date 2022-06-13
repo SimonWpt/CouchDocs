@@ -14,8 +14,17 @@ This tag takes care to prefix the provided querystring by a '?' if there are no 
 <a href="<cms:add_querystring k_page_link 'param1=some_value' />" >Some link</a>
 ```
 
+## Usage
+
+Add multiple query string parameters —
+
 ```html
 <a href="<cms:add_querystring k_page_link 'param1=some_value&param2=other_value' />" >Some link</a>
+```
+
+Common application is to redirect page with some parameter attached to URL e.g.
+```html
+ <cms:redirect "<cms:add_querystring my_redirect_link 'close=1' />" />
 ```
 
 ## Parameters
