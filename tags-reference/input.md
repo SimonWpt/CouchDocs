@@ -6,6 +6,8 @@ layout: default
 
 # input
 
+Tag is an essential part of a form, a Couch equivalent of `<input>` in HTML.
+
 Please see [**Core Concepts - Form**](../concepts/forms.html) for an in-depth discussion about this tag.
 
 ## Parameters
@@ -77,11 +79,11 @@ The **input** tag shares these parameters with the **editable** tag. Please see 
 
 ### width
 
-Width in pixels.
+Width in pixels e.g. width='200'.
 
 ### height
 
-Height in pixels.
+Height in pixels e.g. height='450'
 
 ### style
 
@@ -89,9 +91,44 @@ Inline CSS styling.
 
 ### format
 
+Parameter is for the _captcha_ type and expects a text string that can consist of 4 different characters - 't', 'i', 'r' and '-', where t = textbox, i = image, r = reload text, - = HTML break
+
 ### reload_text
 
 The _format_ and *reload_text* parameters pertain exclusively to input of _captcha_ type. Please see [**Core Concepts - Form**](../concepts/forms.html) where the _captcha_ type of input, along with its parameters, is described in detail.
+
+## Example
+
+```html
+<cms:input type="text" size="10" maxlength="40" name="name" />
+
+<cms:input type="password" size="10" maxlength="10" name="password" />
+
+<cms:input type="submit" name="submit" value="Send" />
+
+<cms:input type="hidden" name="max_val" value="100" />
+
+<cms:input type='textarea' rows="5" cols="20" wrap="physical" name="comments">
+  Enter Comments Here
+</cms:input>
+
+<cms:input type="radio" name="size" opt_values="Small=small | Medium=medium | Large=large" />
+
+<cms:input type="checkbox" name="toon" opt_values="Goofy | Donald | Bugs Bunny=Bugs | Scooby Doo=Scoob" />
+
+<cms:input type="dropdown" name="degree" opt_values="Choose One | High School Degree | Some College | Bachelor's Degree | Doctorate" />
+
+<cms:input type='captcha' name='my-captcha' format='i-r-t' />
+```
+
+In a **fieldset** &mdash;
+
+```html
+<cms:fieldset>
+   <cms:input type="text" size="10" maxlength="40" name="name" required='1' />
+   <cms:input type="password" size="10" maxlength="10" name="password" />
+</cms:fieldset>
+```
 
 ## Variables
 
